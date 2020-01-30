@@ -1,0 +1,619 @@
+page-carmaintain {
+    .scroll-content {
+       
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .select-md .select-icon {
+        position: relative !important;
+        width: 12px;
+        height: 33px !important;
+      }
+      .select-ios .select-icon {
+        position: relative !important;
+        width: 12px;
+        height: 33px !important;
+      }
+    .alert-md .alert-head{
+        display:none !important;
+      }
+      .alert-ios .alert-head{
+        display:none !important;
+      }
+     .select-md .select-icon .select-icon-inner {
+        left: 0px !important;
+        top: 50%;
+        margin-top: -3px;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 5px solid;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        color: #d63932 !important;
+        pointer-events: none;
+    }
+   
+    .select-md {
+    padding: 4px 8px 13px 16px !important;
+}
+   .select-ios {
+    padding: 4px 8px 13px 16px !important;
+}
+    .item-md.item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+     border-bottom-color: #ffffff !important;  
+ -webkit-box-shadow: inset 0 0px 0 0 #ffffff !important; 
+    box-shadow: inset 0 0px 0 0 #ffffff !important; 
+}
+    .item-md.item-block .item-inner {
+    padding-right: 0px !important;
+    border-bottom: 0px solid #ffffff;
+}
+      ion-select {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    max-width: 100% !important; 
+}
+  
+    .form-group
+    {
+        margin-bottom: 12px;
+    }
+    .item-md {
+     padding-left: 0px !important;
+        }
+        .item-md.item-block .item-inner {
+    padding-right: 8px;
+     border-bottom: 0px solid #ffffff;
+}
+.label-md {
+    margin: 6px 0px 10px 0 !important;
+}
+.label-ios {
+    margin: 6px 0px 10px 0 !important;
+}
+
+    @media screen and (min-width:320px){
+        .item-md {
+     padding-left: 0px !important;
+        }
+        .item-md.item-block .item-inner {
+    padding-right: 8px;
+     border-bottom: 0px solid #ffffff;
+}
+ 
+        .button1
+        {
+           background-color: #449802;
+         
+          // margin-right: 32%;
+           color:#ffffff ;
+            border: 1px solid #d63932;
+        }
+      
+        .name
+        {
+            color: #d63932;
+           
+         }
+         .jop
+         {
+            color:#d63932;
+            margin-left:29px;
+         }
+         .phone
+         {
+            color:#d63932;
+            margin-left:10px;
+
+         }
+             .year
+             {
+                color:#d63932 ;
+                margin-top:3px ;
+                 padding:0px ; 
+                   margin-right:-1px ;
+                   z-index:1;
+                   margin-left:26px;
+
+             }
+             .valid
+             {
+             color: #080808;
+    margin-right: 48%;
+    margin-top: 0px;
+    margin-bottom: 4px;
+
+            
+             }
+    }
+    @media screen and (min-width:380px){
+        .button1
+        {
+           background-color: #449802;
+         
+          // margin-right: 32%;
+           color:#ffffff ;
+            border: 1px solid #d63932;
+        }
+        [col-8]
+        {
+            margin-right: -27px !important;
+        }
+        
+        ion-select {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            overflow: hidden;
+            max-width: 115% !important ;
+            width: 115% !important;
+        }
+       
+        
+     
+        .name
+        {
+           color:#d63932;
+           margin-left:14px;
+
+         }
+         .jop
+         {
+            color: #d63932;
+            margin-left: 29px;
+        
+         }
+         .phone
+         {
+            color:#d63932;
+            margin-left:10px;
+
+         }
+             .year
+             {
+                color:#d63932 ;
+                margin-top:3px ;
+                 padding:0px ; 
+                  font-size:14px;
+                   margin-right:-1px ;
+                   z-index:1;
+
+             }
+             .valid
+             {
+                    color: #080808;
+                    margin-right: 48%;
+                    margin-top: 0px;
+                    margin-bottom: 4px;
+
+            
+             }
+    }
+    @media screen  and (min-width:500px){
+        .button1
+        {
+           background-color: #449802;
+         
+          // margin-right: 38%;
+           color:#ffffff ;
+            border: 1px solid #d63932;
+        }
+        [col-8]
+        {
+            margin-right: -62px !important;
+        }
+        
+        ion-select {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            overflow: hidden;
+            max-width: 121% !important ;
+            width: 121% !important;
+        }
+       
+        
+     
+        
+    }
+    @media screen  and (min-width:600px){
+        .button1
+        {
+           background-color: #449802;
+         
+          // margin-right: 42%;
+           color:#ffffff ;
+            border: 1px solid #d63932;
+        }
+        [col-8]
+        {
+            margin-right: -95px !important;
+        }
+        
+        ion-select {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            overflow: hidden;
+            max-width: 126% !important ;
+            width: 126% !important;
+        }
+       
+        
+     
+    }
+    @media screen  and (min-width:680px){
+        .button1
+        {
+           background-color: #449802;
+         
+         //  margin-right: 38%;
+           color:#ffffff ;
+            border: 1px solid #d63932;
+            width:175px;
+        }
+        [col-8]
+        {
+            margin-right: -125px !important;
+        }
+        
+        ion-select {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            overflow: hidden;
+            max-width: 130% !important ;
+            width: 130% !important;
+        }
+               
+        .data
+        {
+           font-size: 18px;
+        }
+    }
+    @media screen  and (min-width:800px){
+        .button1
+        {
+           background-color: #449802;
+         
+           //margin-right: 38%;
+           color:#ffffff ;
+            border: 1px solid #d63932;
+            width:175px;
+        }
+        [col-8]
+        {
+            margin-right: -125px !important;
+        }
+        
+        ion-select {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            overflow: hidden;
+            max-width: 130% !important ;
+            width: 130% !important;
+        }
+        .data
+        {
+           font-size: 21px;
+        }
+    }
+
+    @media screen  and (min-width:740px){
+        .button1
+        {
+           background-color: #449802;
+         
+          // margin-right: 38%;
+           color:#ffffff ;
+            border: 1px solid #d63932;
+            width:175px;
+        }
+        [col-8]
+        {
+            margin-right: -145px !important;
+        }
+        
+        ion-select {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            overflow: hidden;
+            max-width: 132% !important ;
+            width: 132% !important;
+        }
+        .data
+        {
+           font-size: 21px;
+        }
+    }
+    @media screen  and (min-width:780px){
+        .button1
+        {
+           background-color: #449802;
+         
+          // margin-right: 38%;
+           color:#ffffff ;
+            border: 1px solid #d63932;
+            width:175px;
+        }
+        [col-8]
+        {
+            margin-right: -160px !important;
+        }
+        
+        ion-select {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            overflow: hidden;
+            max-width: 133% !important ;
+            width: 133% !important;
+        }
+        .data
+        {
+           font-size: 21px;
+        }
+    }
+    @media screen  and (min-width:840px){
+        .button1
+        {
+           background-color: #449802;
+         
+          // margin-right:40%;
+           color:#ffffff ;
+            border: 1px solid #d63932;
+            width:175px;
+        }
+        [col-8]
+        {
+            margin-right: -175px !important;
+        }
+        
+        ion-select {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            overflow: hidden;
+            max-width: 133% !important ;
+            width: 133% !important;
+        }
+        .data
+        {
+           font-size: 21px;
+        }
+    }
+    @media screen and (min-width:524px){
+        .button1
+        {
+           background-color: #449802;
+         
+          // margin-right:38%;
+           color:#ffffff ;
+            border: 1px solid #d63932;
+            
+        }
+        .name
+        {
+           color:#d63932;
+           margin-left:10px;
+
+         }
+         .jop
+         {
+            color:#d63932;
+            margin-left:26px;
+         }
+         .phone
+         {
+            color:#d63932;
+            margin-left:6px;
+
+         }
+             .year
+             {
+                color:#d63932 ;
+                margin-top:3px ;
+                 padding:0px ; 
+                  font-size:16px;
+                   margin-right:-1px ;
+                   z-index:1;
+                   margin-left:14px;
+
+             }
+             .valid
+             {
+                  color: #080808;
+                    margin-right: 48%;
+                    margin-top: 0px;
+                    margin-bottom: 4px;
+            
+             }
+    }
+    @media screen and (min-width:690px) and (max-width:999){
+
+        .button1
+        {
+           background-color: #449802;
+         
+         //  margin-right:40%;
+           color:#ffffff ;
+            border: 1px solid #d63932;
+            width:175px;
+        }
+     
+        .name
+        {
+           color:#d63932;
+           margin-left:14px;
+
+         }
+         .jop
+         {
+            color:#d63932;
+            margin-left:48px;
+         }
+         .phone
+         {
+            color:#d63932;
+            margin-left:10px;
+
+         }
+             .year
+             {
+                color:#d63932 ;
+                margin-top:3px ;
+                 padding:0px ; 
+                  font-size:16px;
+                   margin-right:-1px ;
+                   z-index:1;
+                   margin-left:16px;
+
+             }  
+             .valid
+             {
+                    color: #080808;
+                    margin-right: 48%;
+                    margin-top: 0px;
+                    margin-bottom: 4px;
+            
+             }            
+            }
+             @media screen and (min-width:1000px) and (max-width:1024px) {
+                .button1
+                {
+                   background-color: #449802;
+                 
+                 //  margin-right:40%;
+                   color:#ffffff ;
+                    border: 1px solid #d63932;
+                    width:175px;
+                }
+                    [col-8]
+                    {
+                        margin-right: -222px !important;
+                    }
+                    
+                    ion-select {
+                        display: -webkit-box;
+                        display: -webkit-flex;
+                        display: -ms-flexbox;
+                        display: flex;
+                        overflow: hidden;
+                        max-width: 135% !important ;
+                        width: 135% !important;
+                    }
+                    .data
+                    {
+                       font-size: 21px;
+                    }
+                
+                  .data
+                 {
+                    font-size: 21px;
+                 }
+                 .valid
+                 {
+                      color: #080808;
+                    margin-right: 48%;
+                    margin-top: 0px;
+                    margin-bottom: 4px;
+                
+                 }
+                .name
+                {
+                   color:#d63932;
+                   margin-left:14px;
+                   font-size: 21px;
+        
+                 }
+                 .jop
+                 {
+                    color: #d63932;
+                    margin-left: 37px;
+                    font-size: 21px;
+                
+
+                 }
+                 .phone
+                 {
+                    color: #d63932;
+                    margin-left: 8px;
+                    font-size: 21px;
+
+        
+                 }
+                     .year
+                     {
+                        color: #d63932;
+                        margin-top: 3px;
+                        padding: 0px;
+                        font-size: 16px;
+                        margin-right: -1px;
+                        z-index: 1;
+                        margin-left: 31px;
+                        font-size: 21px;
+
+        
+                     }   
+                .form-control
+                {
+                    widows: 86% !important;
+                }
+             }
+             @media screen and (min-width:900px) and(max-width:999px){
+                .button1
+                {
+                   background-color: #449802;
+                 
+                  // margin-right:40%;
+                   color:#ffffff ;
+                    border: 1px solid #d63932;
+                    width:175px;
+                }
+                    [col-8]
+                    {
+                        margin-right: -201px !important;
+                    }
+                    
+                    ion-select {
+                        display: -webkit-box;
+                        display: -webkit-flex;
+                        display: -ms-flexbox;
+                        display: flex;
+                        overflow: hidden;
+                        max-width: 134% !important ;
+                        width: 134% !important;
+                    }
+                    .data
+                    {
+                       font-size: 21px;
+                    }
+                
+                .jop
+                {
+                   color: #d63932;
+                   margin-left: 48px;
+               
+
+                }
+                .data
+                {
+                   font-size: 21px;
+                }
+             }
+    
+}

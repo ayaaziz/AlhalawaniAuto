@@ -1,0 +1,26 @@
+page_tabs{
+ .tabs-md-danger .tab-button[aria-selected=true] .tab-button-icon {
+        color: #fff;
+         font-size: 7rem !important;
+     }
+    .tabs-ios-danger .tab-button[aria-selected=true] .tab-button-icon {
+         color: #fff;
+         font-size: 7rem !important;
+     }
+     @media screen and (min-width: 1024px)
+     {
+        .tabs-ios .tab-button-icon {
+            margin-top: 14px !important;
+            margin-bottom: 1px;
+            min-width: 35px;
+            height: 60px !important;
+            font-size: 47px !important;
+        }
+         .tabs-md .tab-button-icon
+         {
+             margin-top: 1px;
+     min-width: 2.4rem;
+     font-size: 4.5rem !important;
+         }
+        }
+    }

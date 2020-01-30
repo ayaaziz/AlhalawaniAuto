@@ -1,0 +1,28 @@
+<ion-header >
+
+  <ion-navbar color="danger" hideBackButton>
+      <ion-buttons right>
+          <button ion-button icon-only (click)="viewCtrl.dismiss()">
+              <ion-icon name="arrow-back" arrow-dripright></ion-icon>
+          </button>
+          </ion-buttons>
+          <ion-col col-9 style="padding: 0px;">
+            <ion-searchbar style="background-color: #d63932"  [(ngModel)]="myInput" (ionInput)="onInput(myInput)" [placeholder]="searchPlaceholder"
+               (ionCancel)="onCancel($event)" >
+              </ion-searchbar>
+         
+          </ion-col>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-color:#ffffff ">
+  <h2 [hidden]="hide"  style="color:#d63932;text-align: center;font-size: 1.5rem">لا توجد نتائج للبحث</h2>
+    <ion-spinner name="circles" [hidden]="show" style=" margin-right: 45%;"></ion-spinner>
+  <ion-list  no-lines >
+    <ion-item *ngFor="let item of array" (click)="getoffer(item.id,item.name)">
+      {{item.name}}
+    </ion-item>
+  </ion-list>
+</ion-content>

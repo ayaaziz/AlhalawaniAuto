@@ -1,0 +1,41 @@
+
+<ion-header>
+
+  <ion-navbar color="danger" hideBackButton>
+   
+    <ion-title style="text-align:center">حدد الموقع</ion-title>
+ 
+    <ion-buttons left>
+      <button ion-button icon-only (click)="doRefresh($event)">
+          <ion-icon ios="md-refresh" md="md-refresh" arrow-dripright style="color:white"></ion-icon>
+      </button>
+      </ion-buttons>
+      
+   
+  </ion-navbar>
+  <script src="https://cdn.klokantech.com/maptilerlayer/v1/index.js"></script>
+
+</ion-header>
+
+
+<ion-content padding>
+    <!-- <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+        pullingIcon="arrow-dropdown"
+        refreshingSpinner="circles">
+        </ion-refresher-content>
+      </ion-refresher> -->
+    <div id="floating-panel">
+      <ion-row >
+        <h6  style="color:rgba(0, 0, 0, 0.78); font-size:1.3rem; margin-top: 2px;">قم بتحريك المؤشر علي الخريطه</h6><ion-icon name="ios-hand" style="    margin-right: 8px;"></ion-icon>
+      </ion-row>
+      </div>
+      <div id="floating-panel2" (click)="back()">
+         <button ion-button style="background-color:#d63932;color:#ffffff;" >التاكيد على الموقع</button>
+          </div>
+<div #map id="map"> </div>
+
+<!-- <h1 #h1 id='h1' style="overflow: hidden;color:#ffffff;height:10px"></h1>
+<h1 #h2 id='h2' style="overflow: hidden;color:#ffffff;height:10px"></h1> -->
+
+</ion-content>

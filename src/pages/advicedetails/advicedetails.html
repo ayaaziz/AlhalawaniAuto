@@ -1,0 +1,52 @@
+
+<ion-header>
+
+  <ion-navbar color="danger" hideBackButton>
+     
+         
+          
+    <ion-title>نصائح وارشادات</ion-title>
+ 
+    <ion-buttons right>
+      <button class="arrow" ion-button icon-only (click)="ViewCtrl.dismiss()">
+          <ion-icon name="arrow-back" arrow-dripright></ion-icon>
+      </button>
+      </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-color:#fdeeee "  #myContent1>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+        pullingIcon="arrow-dropdown"
+        refreshingSpinner="circles">
+        </ion-refresher-content>
+      </ion-refresher> 
+  <ion-grid *ngFor="let item of spedata">
+      <div class="form-group">
+        <ion-col col-12>
+          <ion-row style="height: 100%;margin-top: 10px" >
+              <img [defaultImage]="defaultimage" [lazyLoad]="img+item.image" [scrollObservable]="myContent1.ionScroll" class="img" style="    border: 1px solid #ccc8c7;">
+
+          </ion-row>
+          <div class="form-group">
+          <ion-row  >
+            <ion-col col-10>
+            <p class="name"> {{item.name}}</p>
+            <p class="detail"> {{item.description}}</p>
+          </ion-col>
+          <ion-col col-2 class="col2" style="    text-align: left;" (click)="share(item.description,img+item.image)">
+              <ion-icon ios="md-share" md="md-share" class="more" style="color:#d63932" > </ion-icon>
+
+          </ion-col>
+            </ion-row>
+          </div>
+        </ion-col>
+  
+    
+    </div>
+    
+    </ion-grid>
+</ion-content>

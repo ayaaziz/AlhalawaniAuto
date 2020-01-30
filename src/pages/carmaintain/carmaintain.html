@@ -1,0 +1,124 @@
+<ion-header >
+
+  <ion-navbar color="danger" hideBackButton>
+      <ion-buttons right>
+          <button ion-button icon-only (click)="viewCtrl.dismiss()">
+              <ion-icon name="arrow-back" arrow-dripright></ion-icon>
+          </button>
+          </ion-buttons>
+    <h2 style="margin-right: 18px; color:#ffffff ;margin-top: 10px;font-size:19px ;    margin-right: 10px;"> صيانه دوريه</h2>
+  </ion-navbar>
+ 
+ 
+
+</ion-header>
+
+
+
+<ion-content padding  padding style="background-color:#fdeeee ">
+  
+  <form [formGroup]="data" >
+  
+      <ion-row item style="background-color: #fdeeee">
+        <ion-col col-4> 
+          <ion-label   style="color:#d63932"> ماركة السياره</ion-label>
+        </ion-col>
+        <ion-col col-8>
+          <ion-select   (ionChange)="optionsFn()" okText="تم" cancelText="الغاء" style=" height:35px;border:1px solid rgba(214, 57, 50, 0.58) ; background-color: #ffffff ;"  formControlName="mark">
+              <ion-option value="" disabled [hidden]="true" selected style="color:gray"> اختر الماركه</ion-option>
+
+            <ion-option  *ngFor="let item of brand_data" style="padding:0px"  value="{{item.id}}">{{item.name}}</ion-option>
+            
+          </ion-select>
+        </ion-col>
+      </ion-row>
+        
+        <ion-row *ngIf="mark.hasError('required') && mark.touched">
+            <ion-col col-4></ion-col>
+            <ion-col col-8 style="margin-top: -14px;margin-bottom: -11px;">
+          <p >* قم باختيار الماركة</p>
+            </ion-col>
+        </ion-row>
+      <ion-row style="background-color: #fdeeee"> 
+        <ion-col col-4>
+            <ion-label  style="color:#d63932">موديل السياره</ion-label>
+        </ion-col>
+        <ion-col col-8>
+          <ion-select   (ionChange)="optionsFn2()" okText="تم" cancelText="الغاء" style=" height:35px;border:1px solid rgba(214, 57, 50, 0.58); background-color: #ffffff ;"  formControlName="model">
+              <ion-option value="" disabled [hidden]="true" selected style="color:gray"> اختر الموديل</ion-option>
+
+            <ion-option  *ngFor="let item of alldata" style="padding:0px" value="{{item.id}}">{{item.name}}</ion-option>
+
+            </ion-select>
+           
+        </ion-col>
+      </ion-row>
+      
+    <ion-row *ngIf="(model.hasError('required') && model.touched ) ">
+      <ion-col col-4></ion-col>
+      <ion-col col-8 style="margin-top: -14px;margin-bottom: -11px;">
+      <p >* قم باختيار الموديل</p>
+    </ion-col>
+    </ion-row>
+      <ion-row style="background-color: #fdeeee"> 
+        <ion-col col-4>
+        <ion-label style="color:#d63932">سنة الصنع</ion-label>
+        </ion-col>
+        <ion-col col-8>
+          <ion-select   (ionChange)="options()" okText="تم" cancelText="الغاء" style=" height:35px;border:1px solid rgba(214, 57, 50, 0.58); background-color: #ffffff ;"  formControlName="year">
+              <ion-option value="" disabled [hidden]="true" selected style="color:gray"> اختر السنة</ion-option>
+
+            <ion-option  *ngFor="let item of maufacturedata" style="padding:0px" value={{item.id}}>{{item.name}}</ion-option>
+        </ion-select>
+        </ion-col>
+      </ion-row>
+      <ion-row *ngIf="year.hasError('required') && year.touched">
+          <ion-col col-4></ion-col>
+          <ion-col col-8 style="margin-top: -14px;margin-bottom: -11px;">
+        <p >* قم باختيار السنه</p>
+          </ion-col>
+      </ion-row>
+      <ion-row style="background-color: #fdeeee"> 
+        <ion-col col-4>
+          <ion-label style="color:#d63932">نوع الصيانه</ion-label>
+        </ion-col>
+        <ion-col col-8>
+          <ion-select   (ionChange)="optionsFn1()" okText="تم" cancelText="الغاء" style=" height:35px;border:1px solid rgba(214, 57, 50, 0.58) ; background-color: #ffffff ;"  formControlName="mintype">
+              <ion-option value="" disabled [hidden]="true" selected style="color:gray"> اختر نوع الصيانه</ion-option>
+
+            <ion-option  *ngFor="let item of maufacturetype" style="padding:0px" value="{{item.id}}">{{item.name}}</ion-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+        <ion-row *ngIf="mintype.hasError('required') && mintype.touched">
+            <ion-col col-4></ion-col>
+            <ion-col col-8 style="margin-top: -14px;margin-bottom: -11px;">
+          <p >* قم باختيار نوع الصيانه</p>
+            </ion-col>
+        </ion-row>
+        
+        <div [hidden]="show" (click)="showGroup()">
+            <ion-row style="height: 38px;background-color:#f3bbbb;margin-bottom: 15px;width: 100%;    margin-top: 20px;"> 
+          <ion-col col-10>
+           <p style="color:#0e0d0d ; font-size: 17px;
+           margin-top: 4px;
+           margin-right: 9px;">  السعر {{price}} ر.س</p>
+         </ion-col>
+           <ion-col col-2 >
+             <span  > <ion-icon *ngIf="detail==true" ios="ios-add-circle" md="md-add" style="color: #464545; margin-top: 6px; "></ion-icon> </span>
+             <span > <ion-icon  *ngIf="detail==false"  ios="ios-remove-circle" md="md-remove" style="color: #464545; margin-top: 6px; "></ion-icon> </span>
+ 
+           </ion-col>
+         </ion-row>
+          
+        
+       </div>
+       <div [innerHTML]=htmlContent class="data" [hidden]="detail"></div>
+        <p style="margin-top:30px;text-align: center;" [hidden]="show">
+          <button ion-button round outline style="text-align: center" class="button1" [disabled]="isenabled" (click)="receive()">
+             حجز موعد
+          </button>
+        </p>
+    </form>
+
+</ion-content>

@@ -1,0 +1,259 @@
+
+<ion-header >
+
+  <ion-navbar color="danger" hideBackButton style="padding: 0px;background-image: url(../assets/imgs/header.png);min-height:0px;    min-width: 100%;">
+    <ion-row>
+        <ion-col col-11>
+            <h2 style="margin-right: 8px; color:#ffffff ;margin-top: 10px;font-size:18px">حاسبه التمويل</h2>
+          </ion-col>
+   <ion-col  col-1 style="margin-top:9px">
+       <ion-icon name="menu"  (click)="openmenu()" class="menu"></ion-icon> 
+     </ion-col>
+     </ion-row>
+  
+  </ion-navbar>
+
+    
+  </ion-header>
+
+
+<ion-content padding style="background-color:#fdeeee ">
+
+<form [formGroup]="data"  [hidden]="hide">
+<ion-row class="row1">
+  <ion-col col-5>
+  <h4 style="color:#d63932 ;margin-top:3px ;   font-size:14px;   ">بيانات السياره </h4>
+</ion-col>
+<ion-col col-7 class="colname">
+  <h3 style="font-size:13px ;margin-top: 4px;; color:#d63932;font-weight: bold"> {{carname}}</h3>
+</ion-col>
+</ion-row>
+
+<ion-row class="row2" >
+  <ion-col col-5>
+  <h4 class="price0">السعر </h4>
+</ion-col>
+<ion-col col-7>
+  <h3  class="pdata" *ngIf="!(convernumber == null)" style="font-weight: bold" [hidden]="hide2">  {{convernumber}}  ر . س (شامل الضريبه) </h3>
+</ion-col>
+</ion-row>
+          <ion-row style="background-color:#fdeeee">
+    <ion-col col-4>
+      <ion-label for="email" class="name">الاسم بالكامل</ion-label>
+    </ion-col>
+    <ion-col col-8>
+      <ion-input  placeholder="اختياري" text-right type="text"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="name">
+      </ion-input>
+    </ion-col>
+ 
+          </ion-row>
+
+
+
+          <ion-row style="background-color:#fdeeee">
+    <ion-col col-4>
+      <ion-label for="email" class="phone">رقم الجوال</ion-label>
+    </ion-col>
+    <ion-col col-8>
+      <ion-input (focus)="delphone()" style="-webkit-text-security:disc;" type="tel" pattern="[0-9]*"  text-right   id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="phone">
+      </ion-input>
+    </ion-col>
+ 
+          </ion-row>
+<ion-row *ngIf="(phone.hasError('required') && phone.touched) || phonee=='true'">
+    <ion-col col-4></ion-col>
+    <ion-col col-8 style="margin-top: -14px;margin-bottom: -11px;">
+  <p >* من فضلك ادخل رقم الجوال</p>
+    </ion-col>
+</ion-row>
+          <ion-row style="background-color:#fdeeee">
+    <ion-col col-4>
+      <ion-label for="email" class="email"> البريد الالكتروني</ion-label>
+    </ion-col>
+    <ion-col col-8>
+      <ion-input  placeholder="اختياري" text-right type="email"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="email">
+      </ion-input>
+    </ion-col>
+ 
+          </ion-row>
+
+
+          <ion-row style="background-color:#fdeeee">
+    <ion-col col-4>
+      <ion-label for="email" class="jop">الراتب</ion-label>
+    </ion-col>
+    <ion-col col-8>
+      <ion-input (focus)="delsalary()" (ionChange)="changerabic()" text-right  type="tel"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="salary">
+      </ion-input>
+    </ion-col>
+ 
+          </ion-row>
+  
+  <ion-row *ngIf="(salary.hasError('required') && salary.touched) || salaryy=='true'">
+      <ion-col col-4></ion-col>
+      <ion-col col-8 style="margin-top: -14px;margin-bottom: -11px;">
+    <p >* من فضلك ادخل الراتب</p>
+      </ion-col>
+  </ion-row>
+  <ion-row style="background-color:#fdeeee">
+    <ion-col col-4>
+      <ion-label for="email" class="jop">الالتزامات</ion-label>
+    </ion-col>
+    <ion-col col-8>
+      <ion-input text-right type="number" (ionChange)="changerabiceltzam()"  (focus)="deleltzam()" id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="eltzam">
+      </ion-input>
+    </ion-col>
+  
+          </ion-row>
+  
+  
+          <ion-row style="background-color:#fdeeee">
+      <ion-col col-4>
+        <ion-label for="email"  class="paid">القسط الشهري</ion-label>
+      </ion-col>
+      <ion-col col-8>
+        <ion-input text-right type="number"  (ionChange)="changerabic()" (focus)="delpaid()"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="monthlypaid">
+        </ion-input>
+      </ion-col>
+   
+          </ion-row>
+          <ion-row >
+            <ion-col col-4></ion-col>
+                                  <ion-col col-8 style="margin-top: -14px;color:#d63932;margin-bottom: -11px;">
+           <p class="hint" > * أدخل  القسط الشهري او الدفعه المقدمه(اختياري)</p>
+                                  </ion-col>
+         </ion-row>
+         
+    
+          <ion-row style="background-color:#fdeeee">
+            <ion-col col-4>
+              <ion-label for="email" class="branch">الدفعه المقدمه</ion-label>
+            </ion-col>
+            <ion-col col-8>
+              <ion-input text-right type="number" (ionChange)="changerabicpaid()" (focus)="delmonthly()"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="paid">
+              </ion-input>
+            </ion-col>
+         
+                  </ion-row>
+                  <ion-row >
+                    <ion-col col-4></ion-col>
+                                          <ion-col col-8 style="margin-top: -14px;color:#d63932;margin-bottom: -11px;">
+                   <p class="hint"> * أدخل الدفعه المقدمه او القسط الشهري(اختياري)</p>
+                                          </ion-col>
+                 </ion-row>
+          <ion-row style="background-color:#fdeeee">
+            <ion-col col-4>
+      <ion-label for="exampleFormControlSelect1" class="year"> الممول</ion-label>
+            </ion-col>
+             <ion-col col-8>
+      <ion-select okText="تم" cancelText="الغاء" (ionChange)="getpercent()"  id="exampleFormControlSelect1" style=" height:35px;border:1px solid rgba(214, 57, 50, 0.58); background-color: #ffffff ;"  formControlName="bank">
+          <ion-option value="" disabled [hidden]="true" selected style="color:gray"> اختر الممول</ion-option>
+
+        <ion-option  *ngFor="let item of bankdata" style="padding:0px" value="{{item.id}}" >{{item.name}}</ion-option>
+      </ion-select>
+             </ion-col>
+          </ion-row>
+
+ <ion-row *ngIf="(bank.hasError('required') && bank.touched) || bankk=='true'">
+    <ion-col col-4></ion-col>
+                          <ion-col col-8 style="margin-top: -14px;margin-bottom: -11px;">
+   <p >* قم باختيار الممول</p>
+                          </ion-col>
+ </ion-row>
+
+          <ion-row>
+          <ion-col col-4>
+            <ion-label for="email" class="date">الدفعه الأخيره %</ion-label>
+          </ion-col>
+          <ion-col col-8>
+            <ion-input text-right type="number"  disabled [(ngModel)]="ownership" id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="have">
+            </ion-input>
+          </ion-col>
+        </ion-row>
+     
+
+          <ion-row style="background-color:#fdeeee">
+            <ion-col col-4>
+    <ion-label for="exampleFormControlSelect1" class="delevier"> مدة الدفع</ion-label>
+            </ion-col>
+            <ion-col col-8>
+    <ion-select okText="تم" cancelText="الغاء"  id="exampleFormControlSelect1" style=" height:35px;border:1px solid rgba(214, 57, 50, 0.58) ; background-color: #ffffff ;"  formControlName="period">
+ <!-- <ion-option value="" disabled [hidden]="true" selected style="color:gray">60 شهر</ion-option> -->
+
+     <ion-option   style="padding:0px">12 شهر </ion-option>
+     <ion-option   style="padding:0px">18 شهر </ion-option>
+     <ion-option   style="padding:0px">24 شهر </ion-option>
+     <ion-option   style="padding:0px">30 شهر </ion-option>
+     <ion-option   style="padding:0px">36 شهر </ion-option>
+     <ion-option   style="padding:0px">42 شهر </ion-option>
+     <ion-option   style="padding:0px">48 شهر </ion-option>
+     <ion-option   style="padding:0px">54 شهر </ion-option>
+     <ion-option   style="padding:0px" selected>60 شهر </ion-option>
+
+
+
+   </ion-select>
+            </ion-col>
+          </ion-row> 
+ <ion-row *ngIf="(period.hasError('required') && period.touched) || period=='true'">
+    <ion-col col-4></ion-col>
+                          <ion-col col-8 style="margin-top: -14px;margin-bottom: -11px;">
+   <p >* قم باختيار مده الدفع</p>
+                          </ion-col>
+ </ion-row>
+
+          <ion-row style="background-color:#fdeeee">
+    <ion-col col-4>
+      <ion-label for="email" class="remark">الملاحظات </ion-label>
+    </ion-col>
+    <ion-col col-8>
+      <ion-textarea text-right row="8" type="text"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:80px ;background-color: #ffffff  " formControlName="remarks">
+      </ion-textarea>
+      </ion-col>
+ 
+</ion-row>
+<p style="margin-top:30px;text-align:center;">
+  <button ion-button round outline class="button3"  (click)="showdetails()">
+     حساب التمويل
+  </button>
+</p>
+</form>
+<div [hidden]="show" style="margin-right: 12px;">
+  
+  <h2 style="text-align: center"> النتائج</h2><h4  style="text-align: center;font-size: 1em;">( نتيجه تقريبيه قابله للزياده والنقصان )</h4>
+  
+
+  <h3 style="font-size: 1.6rem;font-weight: bold">المدة </h3>
+  <h5 style="font-size: 1.5rem;margin-top: -1px;">{{speriod}}</h5>
+  <hr style="    margin-top: -1px;
+  margin-bottom: -4px;">
+  <h3 style="font-size: 1.6rem;font-weight: bold">الدفعه الاخيره- التملك * </h3>
+  <h5 style="font-size: 1.5rem;margin-top: -1px;">{{lastpaid1}} ريال -- {{havepercent}} %</h5>
+  <hr style="    margin-top: -1px;
+  margin-bottom: -4px;">
+  <h3 style="font-size: 1.6rem;font-weight: bold">الدفعه المقدمه</h3>
+  <h5 style="font-size: 1.5rem;margin-top: -1px;">{{paidmoney}} ريال</h5>
+  <hr style="    margin-top: -1px;
+  margin-bottom: -4px;">
+  <h3 style="font-size: 1.6rem;font-weight: bold">القسط الشهري</h3>
+  <h5 style="font-size: 1.5rem;margin-top: -1px;">{{rent}} ريال</h5>
+  <hr style="    margin-top: -1px;
+  margin-bottom: -4px;">
+  <h3 style="font-size: 1.6rem;font-weight: bold"> السعر الاجمالي</h3>
+  <h5 style="font-size: 1.5rem;margin-top: -1px;">{{allprice}} ريال</h5>
+  <h3 [hidden]="showegmaly" style="font-size: 1.6rem;font-weight: bold">اجمالي الدفعه الأولي مع القسط المقدم والرسوم الاداريه شامل الضريبه </h3>
+  <h3 [hidden]="showegmaly1"  style="font-size: 1.6rem;font-weight: bold">اجمالي الدفعه الأولي والرسوم الاداريه شامل الضريبه </h3>
+  <h5 style="font-size: 1.5rem;margin-top: -1px;">{{egmaly}}</h5>
+  <p style="margin-top:30px;text-align:center;" class="row6">
+  <button ion-button round outline class="button1" [disabled]="isenabled" (click)="confirmorder()">
+    تاكيد الطلب
+  </button>
+  <button ion-button round outline class="button2" (click)="cancelorder()">
+   الغاء الطلب
+  </button>
+</p>
+</div>
+
+
+
+</ion-content>

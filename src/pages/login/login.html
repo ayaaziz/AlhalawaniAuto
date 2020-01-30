@@ -1,0 +1,95 @@
+
+<ion-header >
+
+  <ion-navbar color="danger" hideBackButton>
+      <ion-buttons right>
+          <button ion-button icon-only (click)="ViewCtrl.dismiss()">
+              <ion-icon name="arrow-back" arrow-dripright></ion-icon>
+          </button>
+          </ion-buttons>
+    <h2 style="margin-right: 12px; color:#ffffff ;margin-top: 10px;font-size:17px"> تاريخ الصيانه</h2>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-color:#fdeeee ">
+    <form [formGroup]="data" style="margin-top: 24px;" >
+              <ion-row style="background-color:#fdeeee">
+          <ion-col col-4>
+              <ion-label for="email" class="phone" >رقم الجوال</ion-label>
+          </ion-col>
+          <ion-col col-8>
+              <ion-row style="    background-color: #fdeeee;">
+              <ion-input (focus)="delphone()"  text-right style="-webkit-text-security:disc;" pattern="[0-9]*" type="tel"    maxLength="10" minlength="10" (focus)="deldata()" id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="phone">
+              </ion-input>
+            </ion-row>
+          </ion-col>
+              </ion-row>
+                  <ion-row *ngIf="(phone.hasError('required') &&phone.touched) || phonee=='true'">
+                      <ion-col col-4></ion-col>
+                      <ion-col col-8 style="margin-top: -14px;margin-bottom: -11px;">
+                    <p >* من فضلك ادخل رقم الجوال</p></ion-col>
+                  </ion-row>
+              <ion-row style="background-color:#fdeeee">
+                      <ion-col col-4>
+                        <ion-label for="email" class="car">رقم اللوحه</ion-label>
+                      </ion-col>
+                      <ion-col col-8>
+                        <ion-row style="    background-color: #fdeeee;">
+                        <ion-input (focus)="delnumber()"  text-right type="text"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="car_number">
+                        </ion-input>
+                      </ion-row>
+                      </ion-col>
+              </ion-row>
+                      <ion-row *ngIf="(car_number.hasError('required') &&car_number.touched) || number=='true'">
+                          <ion-col col-4></ion-col>
+                          <ion-col col-8 style="margin-top: -14px;margin-bottom: -11px;">
+                        <p >* من فضلك ادخل رقم اللوحه</p></ion-col>
+                      </ion-row>
+                      <p style="margin-top:12px" style="margin-top:20px;text-align: center;" >
+                            <button ion-button round outline class="button1" (click)="confirm()" style="text-align: center">
+                              عرض 
+                            </button>
+                          </p>
+                      
+                        <ion-grid *ngIf="table== false"  class="grid">
+                         
+                          <div *ngFor="let item of alldata" style="margin-bottom: 10px;border-left:1px solid rgba(214, 57, 50, 0.38); border-top:1px solid rgba(214, 57, 50, 0.38);  border-right:1px solid rgba(214, 57, 50, 0.38);  border-bottom:1px solid rgba(214, 57, 50, 0.38);    width: 104.5%;margin-right: -6px;">
+                          <ion-row style="background-color: #ffffff ; margin-right: 2px;margin-left: 2px;height:42px">
+                            <ion-col>
+                              <p style="margin-top: 4px">الاسم بالكامل</p>
+                            </ion-col>
+                            <ion-col>
+                              <p style="margin-top: 4px"> {{item.customer_name}}</p>
+                            </ion-col>
+                          </ion-row>
+                          <ion-row style="height:42px">
+                            <ion-col>
+                              <p style="margin-top: 4px">رقم السيارة</p>
+                            </ion-col>
+                            <ion-col>
+                              <p style="margin-top: 4px">{{item.car_number}} </p>
+                            </ion-col>
+                          </ion-row>
+                          <ion-row style="background-color: #ffffff ; margin-right: 2px;margin-left: 2px;height:42px">
+                            <ion-col>
+                              <p style="margin-top: 4px"> العملية</p>
+                            </ion-col>
+                            <ion-col>
+                              <p style="color:#d63932;margin-top: 4px;height:42px">{{item.operation}} </p>
+                            </ion-col>
+                          </ion-row>
+                          <ion-row style="height:42px">
+                            <ion-col>
+                              <p style="margin-top: 4px">  التاريخ</p>
+                            </ion-col>
+                            <ion-col class="col1">
+                              <p class="del" class="date"> {{item.date}} </p>
+                            </ion-col>
+                          </ion-row>
+                            
+                        </div>
+                        </ion-grid>
+    </form>
+</ion-content>

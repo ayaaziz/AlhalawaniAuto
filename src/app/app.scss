@@ -1,0 +1,424 @@
+
+@font-face {
+
+    font-family: "JF-Flat";
+    src: url('../assets/waferfonts/flat-jooza-regular.ttf');  
+}
+ion-segment {
+  border: 1px solid #d63932 !important;
+}
+
+ion-navbar.toolbar.toolbar-ios.statusbar-padding {
+  padding: 20px 0 0 0 !important;
+}
+
+.alert-button-group {
+  flex-direction: row-reverse !important;
+  justify-content: flex-start !important;
+}
+.swiper-pagination-bullet-active
+{
+    background: #d63932 !important;
+}
+ion-segment {
+  border: 0px solid #d63932 !important;
+}
+.segment-ios .segment-button {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  width: 0;
+  height: 3.2rem;
+  border-width: 1px;
+  border-style: solid;
+   border-color: #d63932;
+  font-size: 1.3rem;
+  line-height: 3rem;
+  color: #488aff;
+  background-color: transparent;
+}
+.tabs-md-danger .tab-button[aria-selected=true] {
+  color: #fff;
+  background-color: rgba(165, 28, 28, 0.6196078431372549) !important;
+}
+.tabs-ios-danger .tab-button[aria-selected=true] {
+  color: #fff;
+  background-color: rgba(165, 28, 28, 0.6196078431372549) !important;
+}
+.segment-md .segment-button.segment-activated {
+  border-color: #d63932;
+  opacity: 1;
+  color:#fdeeee;
+  
+  background-color: #d63932;
+}
+.tabs-md .tab-button-icon {
+  margin-top: 3px !important;
+}
+.tabs-ios .tab-button-icon {
+  margin-top: 3px !important;
+}
+.segment-ios .segment-button.segment-activated {
+  border-color: #d63932;
+  opacity: 1;
+  color:#fdeeee;
+  ;
+  background-color: #d63932;
+}
+.segment-md .segment-button {
+  // border-bottom-color: rgb(253, 238, 238) !important;
+
+  opacity: 1;
+  background-color: #fdeeee;
+  color:#d63932;
+  font-size:16px;
+  border: 1px solid #d63932;
+}
+.segment-ios .segment-button {
+  // border-bottom-color: rgb(253, 238, 238) !important;
+  opacity: 1;
+  background-color: #fdeeee;
+  color: #d63932;
+  font-size: 18px !important;
+  /* margin-top: 0px; */
+}
+.text-input-md {
+  margin: 5px 8px !important;
+  padding: 0;
+  width: calc(100% - 8px - 8px);
+}
+.select-text {
+  overflow: unset !important;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  min-width: 16px;
+  font-size: inherit;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.alert-md .alert-radio-label {
+  margin-top: 10px !important;
+
+}
+.alert-ios .alert-radio-label {
+  margin-top: 10px !important;
+
+}
+.alert-md .alert-radio-icon {
+  margin-top: 10px !important;
+
+}
+.alert-ios .alert-radio-icon {
+  margin-top: 10px !important;
+
+}
+
+::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none !important;
+}
+
+.alert-ios .alert-head {
+  text-align: left;
+  text-align: start;
+  padding: -1px 21px 8px;
+}
+.alert-md .alert-head {
+  text-align: left;
+  text-align: start;
+  padding: -1px 21px 8px;
+}
+// .select-ios .select-icon {
+//   position: relative;
+//   width: 12px;
+//   height: 33px !important;
+// }
+.text-input-ios {
+  margin: 5px 8px !important;
+  padding: 0;
+  width: calc(100% - 8px - 8px);
+}
+.tabs-md-danger .tabbar{
+  background-image: url("../assets/imgs/footer.png");
+}
+// .alert-md .alert-radio-icon {
+//   display: none;
+//   }
+  .tabs-ios-danger .tabbar{
+    background-image: url("../assets/imgs/footer.png");
+  }
+  .select-md .select-icon .select-icon-inner {
+    left: 0px !important;
+    top: 50%;
+    margin-top: -3px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    color: #d63932 !important;
+    pointer-events: none;
+}
+.select-ios .select-icon .select-icon-inner {
+    left: 0px !important;
+    top: 50%;
+    margin-top: -3px;
+    width: 0;
+    height: 0;
+    border-top: 5px solid;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    color: #d63932 !important;
+    pointer-events: none;
+}
+
+  .alert-md .alert-tappable {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    min-height: 3.9rem !important;
+}
+.alert-ios .alert-tappable {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    min-height: 3.9rem !important;
+}
+.alert-md .alert-radio-icon {
+  margin-top:10px !important;
+  left: -7px !important;
+  top: 0;
+  border-radius: 50%;
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #787878;
+}
+.alert-ios .alert-radio-icon {
+  margin-top:10px !important;
+  left: 5px !important;
+  top: 0;
+  border-radius: 50%;
+  position: relative;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+  border-style: unset !important;
+  border-color: #787878;
+}
+  // .alert-ios .alert-radio-icon {
+  //   display: none;
+  //   }
+    .alert-md .alert-radio-label {
+    overflow: hidden;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: initial;
+    padding: 12px 22px !important;
+}
+.alert-ios .alert-radio-label {
+    overflow: hidden;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: initial;
+    padding: 12px 22px !important; 
+}
+@font-face {
+
+    font-family: "alda7ian";
+    src:url("../assets/dahayan/alda7ian.eot");
+    src:url("../assets/dahayan/alda7ian.eot") format("embedded-opentype"),
+      url("../assets/dahayan/alda7ian.woff") format("woff"),
+      url("../assets/dahayan/alda7ian.ttf") format("truetype"),
+      url("../assets/dahayan/alda7ian.svg") format("svg");
+    font-weight: normal;
+    font-style: normal;
+  
+  }
+  [data-icon]:before {
+    font-family: "alda7ian" !important;
+    content: attr(data-icon);
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  [class^="ad-icon-"]:before,
+  [class*=" ad-icon-"]:before {
+    font-family: "alda7ian" !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .ion-ios-money:before ,
+  .ion-ios-money-circle:before ,
+  .ion-ios-money-circle-outline:before ,
+  .ion-ios-money-outline:before ,
+  .ion-md-money:before ,
+  .ion-md-money-circle:before ,
+  .ion-md-money-circle-outline:before ,
+  .ion-md-money-outline:before  {
+    font-family: "alda7ian" !important;
+    content: '\61';
+  }
+
+  .ion-ios-bullhorn:before ,
+  .ion-ios-bullhorn-circle:before ,
+  .ion-ios-bullhorn-circle-outline:before ,
+  .ion-ios-bullhorn-outline:before ,
+  .ion-md-bullhorn:before ,
+  .ion-md-bullhorn-circle:before ,
+  .ion-md-bullhorn-circle-outline:before ,
+  .ion-md-bullhorn-outline:before  {
+    font-family: "alda7ian" !important;
+    content: '\63';
+  }
+
+
+  .ion-ios-android-checkbox-outline:before ,
+  .ion-ios-android-checkbox-outline-circle:before ,
+  .ion-ios-android-checkbox-outline-circle-outline:before ,
+  .ion-ios-android-checkbox-outline-outline:before ,
+  .ion-md-android-checkbox-outline:before ,
+  .ion-md-android-checkbox-outline-circle:before ,
+  .ion-md-android-checkbox-outline-circle-outline:before ,
+  .ion-md-android-checkbox-outline-outline:before  {
+    font-family: "alda7ian" !important;
+    content: '\64';
+
+  }
+  .ion-ios-android-clipboard:before ,
+  .ion-ios-android-clipboard-circle:before ,
+  .ion-ios-android-clipboard-circle-outline:before ,
+  .ion-ios-android-clipboard-outline:before ,
+  .ion-md-android-clipboard:before ,
+  .ion-md-android-clipboard-circle:before ,
+  .ion-md-android-clipboard-circle-outline:before ,
+  .ion-md-android-clipboard-outline:before  {
+    font-family: "alda7ian" !important;
+    content: '\65';
+
+  }
+
+  .ion-ios-help-buoy:before ,
+  .ion-ios-help-buoy-circle:before ,
+  .ion-ios-help-buoy-circle-outline:before ,
+  .ion-ios-help-buoy-outline:before ,
+  .ion-md-help-buoy:before ,
+  .ion-md-help-buoy-circle:before ,
+  .ion-md-help-buoy-circle-outline:before ,
+  .ion-md-help-buoy-outline:before  {
+    font-family: "alda7ian" !important;
+    content: '\66';
+
+  }
+  
+  .ion-ios-dollar-icon:before ,
+  .ion-ios-dollar-icon-circle:before ,
+  .ion-ios-dollar-icon-circle-outline:before ,
+  .ion-ios-dollar-icon-outline:before ,
+  .ion-md-dollar-icon:before ,
+  .ion-md-dollar-icon-circle:before ,
+  .ion-md-dollar-icon-circle-outline:before ,
+  .ion-md-dollar-icon-outline:before  {
+    font-family: "alda7ian" !important;
+    content: '\62';
+
+  }
+ 
+  .ion-ios-iu-2:before ,
+  .ion-ios-iu-2-circle:before ,
+  .ion-ios-iu-2-circle-outline:before ,
+  .ion-ios-iu-2-outline:before ,
+  .ion-md-iu-2:before ,
+  .ion-md-iu-2-circle:before ,
+  .ion-md-iu-2-circle-outline:before ,
+  .ion-md-iu-2-outline:before  {
+    font-family: "alda7ian" !important;
+    content: '\67';
+
+  }
+
+  .ion-ios-offers:before ,
+  .ion-ios-offers-circle:before ,
+  .ion-ios-offers-circle-outline:before ,
+  .ion-ios-offers-outline:before ,
+  .ion-md-offers:before ,
+  .ion-md-offers-circle:before ,
+  .ion-md-offers-circle-outline:before ,
+  .ion-md-offers-outline:before  {
+    font-family: "alda7ian" !important;
+    content: '\68';
+
+  }
+
+  .ion-ios-repair:before ,
+  .ion-ios-repair-circle:before ,
+  .ion-ios-repair-circle-outline:before ,
+  .ion-ios-repair-outline:before ,
+  .ion-md-repair:before ,
+  .ion-md-repair-circle:before ,
+  .ion-md-repair-circle-outline:before ,
+  .ion-md-repair-outline:before  {
+    font-family: "alda7ian" !important;
+    content: '\69';
+
+  }
+
+  .ion-ios-setting:before ,
+  .ion-ios-setting-circle:before ,
+  .ion-ios-setting-circle-outline:before ,
+  .ion-ios-setting-outline:before ,
+  .ion-md-setting:before ,
+  .ion-md-setting-circle:before ,
+  .ion-md-setting-circle-outline:before ,
+  .ion-md-setting-outline:before  {
+    font-family: "alda7ian" !important;
+    content: '\6a';
+
+  }
+
+
+ion-app.ios, ion-app.md{
+    font-family:  "JF-Flat";
+}
+body{
+   font-family:  "JF-Flat";
+}
+// @import "../pages/home/home";
+// .content
+//     {
+//         background: url(../../imgs/back.jpg) no-repeat fixed center;
+//         background-size: cover;
+//     }

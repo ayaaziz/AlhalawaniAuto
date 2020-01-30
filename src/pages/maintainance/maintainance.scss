@@ -1,0 +1,1452 @@
+page-maintainance {
+   
+    .scroll-content {
+        padding: 16px;
+        margin-top: 45px;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .toolbar-md-light .toolbar-background-md {
+        background: #fdeeee !important;
+    }
+   
+       ion-select {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    overflow: hidden;
+    max-width: 100% ; 
+}
+   .select-ios {
+    padding: 4px 8px 13px 16px ;
+}
+
+.select-md {
+    padding: 4px 8px 13px 16px !important;
+}
+  
+    .toolbar-background-md {
+        border-color: #b2b2b200;
+        background: #fdeeee;
+    }
+    
+    .toolbar-md-light .toolbar-background-md {
+        background: #f4f4f400;
+    }
+    .toolbar-background-md {
+        border-color: #b2b2b200;
+        background: #fdeeee;
+    }
+    .toolbar-md {
+        padding: 4px;
+        min-height: 56px;
+        background: #fdeeee !important;
+
+        }
+   
+   
+        .label-md {
+            margin: 6px 0px 10px 0 !important;
+        }
+        .label-ios {
+            margin: 6px 0px 10px 0 !important;
+        }
+    
+    .select-md .select-icon .select-icon-inner {
+        left: 0px !important;
+        top: 50%;
+        margin-top: -3px;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 5px solid;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        color: #d63932 !important;
+        pointer-events: none;
+    }
+    .select-ios.select-icon .select-icon-inner {
+        left: 0px !important;
+        top: 50%;
+        margin-top: -3px;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 5px solid;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        color: #d63932 !important;
+        pointer-events: none;
+    }
+
+    .toolbar-ios-light .toolbar-background-ios {
+        background: #fdeeee !important;
+    }
+    .toolbar-background-ios {
+        border-color: #b2b2b200;
+        background: #fdeeee;
+    }
+    .toolbar-ios .segment-button {
+        max-width: 156px !important;
+        height: 3rem !important;
+        font-size: 1.2rem;
+        line-height: 2.5rem !important;
+    }
+   
+    .segment-ios .segment-button:last-of-type {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+        border-bottom-left-radius: 0;
+        margin-left: 0;
+        border-left-width: 0;
+    }
+    .segment-ios .segment-button:first-of-type {
+        border-top-left-radius: 0px !important;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0px !important;
+        margin-right: 0;
+    }
+    
+    .toolbar-ios-light .toolbar-background-ios {
+        background: #f4f4f400;
+    }
+    .toolbar-background-ios {
+        border-color: #b2b2b200;
+        background: #fdeeee;
+    }
+    .toolbar-ios {
+        padding: 4px;
+        min-height: 56px;
+        background: #fdeeee !important;
+
+        }
+   
+   
+   
+    
+    .select-ios .select-icon .select-icon-inner {
+        left: 0px !important;
+        top: 50%;
+        margin-top: -3px;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-top: 5px solid;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        color: #d63932 !important;
+        pointer-events: none;
+    }
+    .button2
+    {
+       background-color: #646363;color:#ffffff ; border: 1px solid rgba(214, 57, 50, 0.5) 
+    }
+    .form-group
+    {
+        margin-bottom: 12px;
+    }
+    .valid
+    {
+      color: #080808;
+    
+      margin-top: -5px;
+      margin-bottom: 1px;
+              } 
+              .valid1
+              {
+                color: #080808;
+               
+                margin-top: -5px;
+                margin-bottom: 1px;
+                        }
+    @media screen and (min-width:320px){
+       
+        .buttonicon
+        {
+       border-left:1px solid rgba(214, 57, 50, 0.38);  margin-right: -11px;  height: 35px; border-top:1px solid rgba(214, 57, 50, 0.38); border-bottom:1px solid rgba(214, 57, 50, 0.38);background: #ffc6c6;
+        }
+        .details
+              {
+                height: 38px;background-color:#f3bbbb;width: 100%;
+              }
+        .type
+        {
+            color: #d63932;
+            margin-top: 3px;
+            padding: 0;
+            margin-right: -1px;
+            z-index: 1;
+            margin-left: 29px;
+        }
+        .button2
+        {
+           background-color: #646363;color:#ffffff ; border: 1px solid rgba(214, 57, 50, 0.5) 
+        }
+        .form-control
+        {
+            width:64%
+        }
+        
+        .name
+        {
+           color:#d63932;
+           margin-left:4px;
+           margin-right: -5px;
+         }
+         .cmark
+         {
+             color: #d63932;
+             margin-left: 18px;
+             margin-right: -1px;
+ 
+          }
+          .cyear
+          {
+            margin-left: 33px;
+            margin-right: -1px;
+  
+           }
+         .remark
+        {
+           color:#d63932;
+           margin-left: 24px;
+
+         }
+         .branch
+        {
+           color:#d63932;
+           margin-left: 28px;
+           margin-right: 0px;
+
+         }
+         .date
+         {
+            color:#d63932;
+            margin-left:15px;
+         }
+         .delevier
+        {
+            color:#d63932;
+           margin-left:-1px;
+
+        }
+         .receive
+        {
+            color:#d63932;
+           margin-left:-4px;
+        }
+         .jop
+         {
+            color: #d63932;
+            margin-left: 14px;
+         }
+         .phone
+         {
+            color:#d63932;
+            margin-left:21px;
+            margin-right: -5px;
+         }
+         .email
+         {
+            color:#d63932;
+            margin-left:-11px; 
+            margin-right: -5px; 
+         }
+             .year
+             {
+                color:#d63932 ;
+                margin-top:3px ;
+                 padding:0px ; 
+                   margin-right:-5px ;
+                   z-index:1;
+                   margin-left:19px;
+
+             }
+             .button1
+             {
+                background-color: #449802;
+               // margin-right: 15px; 
+                color:#ffffff ;
+                 border: 1px solid #d63932;
+             }
+             .valid
+             {
+               color: #080808;
+              
+               margin-top: -5px;
+               margin-bottom: 1px;
+                       } 
+                       .valid1
+                       {
+                         color: #080808;
+                        
+                         margin-top: -5px;
+                         margin-bottom: 1px;
+                                 } 
+    }
+
+
+    
+    @media screen and (min-width:400px) {
+        [col-8]
+        {
+          //  margin-right: -28px !important;
+        }
+        ion-input {
+            position: relative;
+            display: block;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            width: 100% !important;
+            text-align: right;
+                }
+        ion-select {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            overflow: hidden;
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+        [col-6] {
+           //margin-right: -28px !important;
+        }
+        
+        .buttonicon
+        {
+       border-left:1px solid rgba(214, 57, 50, 0.38);  margin-right: -11px;  height: 35px; border-top:1px solid rgba(214, 57, 50, 0.38); border-bottom:1px solid rgba(214, 57, 50, 0.38);background: #ffc6c6;
+        }
+        .form-control {
+            width: 73%!important;
+        }
+        .button1
+        {
+           background-color: #449802;
+          // margin-right: 61px !important; 
+           color:#ffffff ;
+            border: 1px solid #f3473e;
+        }
+    }
+    @media screen and (min-width:448px) {
+        [col-8]
+        {
+           // margin-right: -50px !important;
+        }
+        ion-input {
+            position: relative;
+            display: block;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            width: 100% !important;
+            text-align: right;
+                }
+        ion-select {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            overflow: hidden;
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+        [col-6] {
+           // margin-right: -50px !important;
+        }
+        .buttonicon
+        {
+       border-left:1px solid rgba(214, 57, 50, 0.38);  margin-right: -11px !important;  height: 35px; border-top:1px solid rgba(214, 57, 50, 0.38); border-bottom:1px solid rgba(214, 57, 50, 0.38);background: #ffc6c6;
+        }
+        .button1
+        {
+           background-color: #449802;
+           //margin-right: 85px !important; 
+           color:#ffffff ;
+            border: 1px solid #d63932;
+        }
+    }
+    @media screen and (min-width:500px) {
+        [col-8]
+        {
+          //  margin-right: -59px !important;
+        }
+        ion-input {
+            position: relative;
+            display: block;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            width: 100% !important;
+            text-align: right;
+                }
+        ion-select {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            overflow: hidden;
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+        [col-6] {
+           // margin-right: -59px !important;
+        }
+        .buttonicon {
+            border-left: 1px solid rgba(214, 57, 50, 0.38);
+            margin-right: -11px !important;
+            height: 35px;
+            border-top: 1px solid rgba(214, 57, 50, 0.38);
+            border-bottom: 1px solid rgba(214, 57, 50, 0.38);
+            background: #ffc6c6;
+        }
+        .jop {
+            color: #d63932;
+            margin-left: 12px !important;
+        }
+        .button1
+        {
+           background-color: #449802;
+          // margin-right: 106px !important; 
+           color:#ffffff ;
+            border: 1px solid #d63932;
+        }
+    }
+    @media screen and (min-width:550px) {
+        [col-8]
+        {
+          //  margin-right: -86px !important;
+        }
+        ion-input {
+            position: relative;
+            display: block;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            width: 100% !important;
+            text-align: right;
+                }
+        ion-select {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            overflow: hidden;
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+        [col-6] {
+          //  margin-right: -86px !important;
+        }
+        .buttonicon {
+            border-left: 1px solid rgba(214, 57, 50, 0.38);
+            margin-right:-11px !important;
+            height: 35px;
+            border-top: 1px solid rgba(214, 57, 50, 0.38);
+            border-bottom: 1px solid rgba(214, 57, 50, 0.38);
+            background: #ffc6c6;
+        }
+        .button1
+        {
+           background-color: #449802;
+          // margin-right: 145px !important; 
+           color:#ffffff ;
+            border: 1px solid #d63932;
+        }
+    }
+    @media screen and (min-width:620px) {
+        [col-8]
+        {
+           // margin-right: -93px !important;
+        }
+        ion-input {
+            position: relative;
+            display: block;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            width: 100% !important;
+            text-align: right;
+                }
+        ion-select {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            overflow: hidden;
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+        [col-6] {
+           // margin-right: -93px !important;
+        }
+        .buttonicon {
+            border-left: 1px solid rgba(214, 57, 50, 0.38);
+            margin-right: -11px !important;
+            height: 35px;
+            border-top: 1px solid rgba(214, 57, 50, 0.38);
+            border-bottom: 1px solid rgba(214, 57, 50, 0.38);
+            background: #ffc6c6;
+        }
+        .button1
+        {
+           background-color: #449802;
+          // margin-right: 172px !important; 
+           color:#ffffff ;
+            border: 1px solid #d63932;
+        }
+    }
+    @media screen and (min-width:680px) {
+        [col-8]
+        {
+           // margin-right: -99px !important;
+        }
+        ion-input {
+            position: relative;
+            display: block;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            width: 100% !important;
+            text-align: right;
+                }
+        ion-select {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            overflow: hidden;
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+        [col-6] {
+          //  margin-right: -99px !important;
+        }
+        .buttonicon {
+            border-left: 1px solid rgba(214, 57, 50, 0.38);
+            margin-right: -11px !important;
+            height: 35px;
+            border-top: 1px solid rgba(214, 57, 50, 0.38);
+            border-bottom: 1px solid rgba(214, 57, 50, 0.38);
+            background: #ffc6c6;
+        }
+        .button1
+        {
+           background-color: #449802;
+         //  margin-right: 215px !important; 
+           color:#ffffff ;
+            border: 1px solid #d63932;
+        }
+    }
+    @media screen and (min-width:380px){
+        [col-8]
+        {
+           // margin-right: -14px ;
+        }
+        ion-input {
+            position: relative;
+            display: block;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            width: 100% ;
+            text-align: right;
+                }
+        ion-select {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            overflow: hidden;
+            max-width: 100%  ;
+            width: 100% ;
+        }
+        [col-6] {
+           // margin-right: -14px ;
+        }
+        .buttonicon
+        {
+       border-left:1px solid rgba(214, 57, 50, 0.38);  margin-right: -11px;  height: 35px; border-top:1px solid rgba(214, 57, 50, 0.38); border-bottom:1px solid rgba(214, 57, 50, 0.38);background: #ffc6c6;
+        }
+        .button2
+        {
+           background-color: #646363;color:#ffffff ; border: 1px solid rgba(214, 57, 50, 0.5) 
+        }
+        .form-control
+        {
+            width:70%
+        }
+       
+        .name
+        {
+           color:#d63932;
+           margin-left:4px;
+
+         }
+         .remark
+        {
+           color:#d63932;
+           margin-left:24px;
+
+         }
+         .branch
+        {    color: #d63932;
+            margin-left: 28px;
+
+         }
+         .date
+         {
+            color:#d63932;
+            margin-left:15px;
+         }
+         .delevier
+        {
+            color:#d63932;
+           margin-left:-1px;
+
+        }
+         .receive
+        {
+            color:#d63932;
+           margin-left:-4px;
+        }
+         .jop
+         {
+            color: #d63932;
+            margin-left: 7px;
+         }
+         .phone
+         {
+            color:#d63932;
+            margin-left:21px;
+
+         }
+             .year
+             {
+                color: #d63932;
+                margin-top: 3px;
+                padding: 0px;
+                margin-right: -1px;
+                z-index: 1;
+                margin-left: 14px;
+
+             }
+             .button1
+             {
+                background-color: #449802;
+              //  margin-right: 52px; 
+                color:#ffffff ;
+                 border: 1px solid #d63932;
+             }
+             .valid
+             {
+               color: #080808;
+            
+               margin-top: -5px;
+               margin-bottom: 1px;
+                       } 
+                       .valid1
+                       {
+                         color: #080808;
+                         
+                         margin-top: -5px;
+                         margin-bottom: 1px;
+                                 }
+    }
+    @media screen and (min-width:524px){
+        .buttonicon
+        {
+       border-left:1px solid rgba(214, 57, 50, 0.38);  margin-right: -11px;  height: 35px; border-top:1px solid rgba(214, 57, 50, 0.38); border-bottom:1px solid rgba(214, 57, 50, 0.38);background: #ffc6c6;
+        }
+        .button2
+        {
+           background-color: #646363;color:#ffffff ; border: 1px solid rgba(214, 57, 50, 0.5) 
+        }
+        .form-control
+        {
+            width:78%
+        }
+     
+        .name
+        {
+           color:#d63932;
+           margin-left:4px;
+
+         }
+         .remark
+        {
+           color:#d63932;
+           margin-left:24px;
+
+         }
+         .branch
+        {
+           color:#d63932;
+           margin-left:28px;
+
+         }
+         .form-control {
+            width: 79% !important;
+        }
+         .date
+         {
+            color:#d63932;
+            margin-left:15px;
+         }
+         .delevier
+        {
+            color:#d63932;
+           margin-left:-1px;
+
+        }
+         .receive
+        {
+            color:#d63932;
+           margin-left:-4px;
+        }
+         .jop
+         {
+            color: #d63932;
+    margin-left: 14px;
+         }
+         .phone
+         {
+            color:#d63932;
+            margin-left:21px;
+
+         }
+             .year
+             {
+                color: #d63932;
+                margin-top: 3px;
+                padding: 0px;
+                margin-right: -6px;
+                z-index: 1;
+                margin-left: 19px;
+
+             }
+             .button1
+             {
+                background-color: #449802;
+               // margin-right: 125px; 
+                color:#ffffff ;
+                 border: 1px solid #d63932;
+             }
+             .valid
+             {
+               color: #080808;
+            
+               margin-top: -5px;
+               margin-bottom: 1px;
+                       } 
+                       .valid1
+                       {
+                         color: #080808;
+                         
+                         margin-top: -5px;
+                         margin-bottom: 1px;
+                                 }
+    }
+    @media screen and (min-width:690px){
+        [col-8]
+        {
+           // margin-right: -110px !important;
+        }
+        ion-input {
+            position: relative;
+            display: block;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            width: 100% !important;
+            text-align: right;
+                }
+        ion-select {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            overflow: hidden;
+            max-width: 100% !important ;
+            width: 100% !important;
+        }
+        [col-6] {
+          //  margin-right: -110px !important;
+        }
+        .button2
+        {
+           background-color: #646363;color:#ffffff ; border: 1px solid rgba(214, 57, 50, 0.5) 
+        }
+        .form-control
+        {
+            width:78%
+        }
+        .buttonicon
+    {
+   border-left:1px solid rgba(214, 57, 50, 0.38);  margin-right: -11px !important;  height: 35px; border-top:1px solid rgba(214, 57, 50, 0.38); border-bottom:1px solid rgba(214, 57, 50, 0.38);background: #ffc6c6;
+    }
+        .name
+        {       color: #d63932;
+          
+
+         }
+         .cmark
+        {
+            color: #d63932;
+           
+           
+
+
+         }
+         .cyear
+        {
+           color:#d63932;
+         
+         
+
+         }
+         .remark
+        {
+            color: #d63932;
+          
+
+         }
+         .branch
+        {    color: #d63932;
+            
+        }
+         .date
+         {
+            color: #d63932;
+           
+
+         }
+         .delevier
+        {
+            color: #d63932;
+            
+
+
+        }
+         .receive
+        {
+            color: #d63932;
+           
+
+        }
+         .jop
+         {
+            color: #d63932;
+         
+
+         }
+         .phone
+         {
+            color: #d63932;
+           
+
+
+
+         }
+         .email
+         {    color: #d63932;
+            }
+             .year
+             {
+                color: #d63932;
+                margin-top: 3px;
+                padding: 0px;
+              
+                z-index: 1;
+               
+              
+
+
+             }
+             .button1
+             {
+                background-color: #449802;
+              //  margin-right: 240px !important;
+                color:#ffffff ;
+                 border: 1px solid #d63932;
+             } 
+             .valid
+             {
+               color: #080808;
+               
+               margin-top: -5px;
+               margin-bottom: 1px;
+                       } 
+                       .valid1
+                       {
+                         color: #080808;
+                         
+                         margin-top: -5px;
+                         margin-bottom: 1px;
+                                 }
+            
+            }
+             @media screen and (min-width:1024px) {
+                .buttonicon
+                {
+               border-left:1px solid rgba(214, 57, 50, 0.38);  margin-right: -11px;  height: 35px; border-top:1px solid rgba(214, 57, 50, 0.38); border-bottom:1px solid rgba(214, 57, 50, 0.38);background: #ffc6c6;
+                }
+   
+                .type {
+                    color: #d63932;
+                    margin-top: 3px;
+                    padding: 0;
+                    margin-right: -1px;
+                    z-index: 1;
+                    margin-left: 46px !important;
+                }
+                .delevier
+                {
+                    color: #d63932;
+                    margin-left: 4px;
+        
+                }
+                .button2
+                {
+                   background-color: #646363;color:#ffffff ; border: 1px solid rgba(214, 57, 50, 0.5) ; 
+                }
+
+                .form-control
+                {
+                    width:85%
+                }
+              
+                .name
+                {
+                    color: #d63932;
+                    margin-left: 6px;
+                    margin-right: -2px;
+        
+                 }
+                 .remark
+                {
+                    color: #d63932;
+                    margin-left: 29px;
+        
+                 }
+                 .branch
+                {
+                    color: #d63932;
+                    margin-left: 33px;
+        
+                 }
+                 .date
+                 {       color: #d63932;
+                    margin-left: 20px;
+                 }
+               
+                 .receive
+                {
+                    color: #d63932;
+                    margin-left: 0px;
+                }
+                 .jop
+                 {
+                    color:#d63932;
+                    margin-left:18px;
+                 }
+                 .phone
+                 {
+                    color: #d63932;
+    margin-left: 26px;
+    margin-right: -2px;
+
+        
+                 }
+                     .year
+                     {
+                        color: #d63932;
+                        margin-top: 3px;
+                        padding: 0px;
+                        margin-right: -5px;
+                        z-index: 1;
+                        margin-left: 26px;
+                    
+        
+                     }
+                     .button1
+                     {
+                        background-color: #449802;
+                      //  margin-right: 373px;
+                        color:#ffffff ;
+                         border: 1px solid #d63932;
+                     }
+                     .valid
+                     {
+                       color: #080808;
+                     
+                       margin-top: -5px;
+                       margin-bottom: 1px;
+                               } 
+                               .valid1
+                               {
+                                 color: #080808;
+                                 margin-right: 40%;
+                                 margin-top: -5px;
+                                 margin-bottom: 1px;
+                                         }
+             }
+             @media screen and (min-width:375px)  {
+                .buttonicon
+                {
+               border-left:1px solid rgba(214, 57, 50, 0.38);  margin-right: -11px;  height: 35px; border-top:1px solid rgba(214, 57, 50, 0.38); border-bottom:1px solid rgba(214, 57, 50, 0.38);background: #ffc6c6;
+                }
+                .type {
+                    color: #d63932;
+                    margin-top: 3px;
+                    padding: 0;
+                    margin-right: -1px;
+                    z-index: 1;
+                    margin-left: 29px ;
+                }
+             }
+            
+          @media screen and (min-width:360px)  {
+            .buttonicon
+            {
+           border-left:1px solid rgba(214, 57, 50, 0.38);  margin-right: -11px;  height: 35px; border-top:1px solid rgba(214, 57, 50, 0.38); border-bottom:1px solid rgba(214, 57, 50, 0.38);background: #ffc6c6;
+            }
+            .form-control {
+                width: 69%;
+            }
+              .details
+              {
+                height: 38px;background-color:#f3bbbb;width: 100%;
+              }
+              .type{
+                color: #d63932;
+                margin-top: 3px;
+                padding: 0;
+                margin-right: -1px;
+                z-index: 1;
+                margin-left: 29px ;
+              }
+            .button1
+            {
+               background-color: #449802;
+              // margin-right: 36px;
+               color:#ffffff ;
+                border: 1px solid #d63932;
+            }
+          
+            .valid
+            {
+              color: #080808;
+              margin-right: 50%;
+              margin-top: -5px;
+              margin-bottom: 1px;
+                      } 
+                      .valid1
+                      {
+                        color: #080808;
+                        margin-right: 40%;
+                        margin-top: -5px;
+                        margin-bottom: 1px;
+                                }
+          }
+          @media screen and (min-width:900px) and (max-width:940px){
+            [col-8]
+            {
+              //  margin-right: -180px !important;
+            }
+            ion-input {
+                position: relative;
+                display: block;
+                -webkit-box-flex: 1;
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                width: 100% !important;
+                text-align: right;
+                    }
+            ion-select {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                overflow: hidden;
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+            [col-6] {
+              //  margin-right: -180px !important;
+            }
+            .buttonicon {
+                border-left: 1px solid rgba(214, 57, 50, 0.38);
+                margin-right: -11px !important;
+                height: 35px;
+                border-top: 1px solid rgba(214, 57, 50, 0.38);
+                border-bottom: 1px solid rgba(214, 57, 50, 0.38);
+                background: #ffc6c6;
+            }
+            .button2
+            {
+               background-color: #646363;color:#ffffff ; border: 1px solid rgba(214, 57, 50, 0.5) ; 
+            }
+            .button1 {
+                background-color: #449802;
+               // margin-right: 303px !important;
+                color: #ffffff;
+                border: 1px solid #d63932;
+            }
+          }
+          @media screen and (min-width:941px) and (max-width:999px){
+            [col-8]
+            {
+              //  margin-right: -190px !important;
+            }
+            ion-input {
+                position: relative;
+                display: block;
+                -webkit-box-flex: 1;
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                width: 100% !important;
+                text-align: right;
+                    }
+            ion-select {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                overflow: hidden;
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+            [col-6] {
+               // margin-right: -190px !important;
+            }
+            .buttonicon {
+                border-left: 1px solid rgba(214, 57, 50, 0.38);
+                margin-right: -11px !important;
+                height: 35px;
+                border-top: 1px solid rgba(214, 57, 50, 0.38);
+                border-bottom: 1px solid rgba(214, 57, 50, 0.38);
+                background: #ffc6c6;
+            }
+            .button2
+            {
+               background-color: #646363;color:#ffffff ; border: 1px solid rgba(214, 57, 50, 0.5) ; 
+            }
+            .button1 {
+                background-color: #449802;
+               // margin-right: 303px !important;
+                color: #ffffff;
+                border: 1px solid #d63932;
+            }
+          }
+
+          @media screen and (min-width:768px) and (max-width:824px){
+
+           [col-8]
+        {
+           // margin-right: -140px !important;
+        }
+        ion-input {
+            position: relative;
+            display: block;
+            -webkit-box-flex: 1;
+            -webkit-flex: 1;
+            -ms-flex: 1;
+            flex: 1;
+            width: 100% !important;
+            text-align: right;
+                }
+        ion-select {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            overflow: hidden;
+            max-width: 100% !important;
+            width: 100% !important;
+        }
+        [col-6] {
+          //  margin-right: -140px !important;
+        }
+        .buttonicon {
+            border-left: 1px solid rgba(214, 57, 50, 0.38);
+            margin-right: -11px !important;
+            height: 35px;
+            border-top: 1px solid rgba(214, 57, 50, 0.38);
+            border-bottom: 1px solid rgba(214, 57, 50, 0.38);
+            background: #ffc6c6;
+        }
+            .type {
+                color: #d63932;
+                margin-top: 3px;
+                padding: 0;
+                margin-right: -1px;
+                z-index: 1;
+                margin-left: 46px ;
+            }
+            .button1
+            {
+               background-color: #449802;
+             //  margin-right: 240px !important;
+               color:#ffffff ;
+                border: 1px solid #d63932;
+            }
+            .button2
+            {
+               background-color: #646363;color:#ffffff ; border: 1px solid rgba(214, 57, 50, 0.5) ; 
+            }
+          
+            .form-control {
+                width: 84% !important;
+            }
+            .valid
+            {
+              color: #080808;
+              margin-right: 50%;
+              margin-top: -5px;
+              margin-bottom: 1px;
+              
+                      } 
+                      .valid1
+                      {
+                        color: #080808;
+                        margin-right: 40%;
+                        margin-top: -5px;
+                        margin-bottom: 1px;
+                                }
+
+          }
+          @media screen and (min-width:825px) and (max-width:840px){
+            [col-8]
+            {
+              //  margin-right: -158px !important;
+            }
+            ion-input {
+                position: relative;
+                display: block;
+                -webkit-box-flex: 1;
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                width: 100% !important;
+                text-align: right;
+                    }
+            ion-select {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                overflow: hidden;
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+            [col-6] {
+               // margin-right: -158px !important;
+            }
+            .buttonicon {
+                border-left: 1px solid rgba(214, 57, 50, 0.38);
+                margin-right: -11px !important;
+                height: 35px;
+                border-top: 1px solid rgba(214, 57, 50, 0.38);
+                border-bottom: 1px solid rgba(214, 57, 50, 0.38);
+                background: #ffc6c6;
+            }
+                .type {
+                    color: #d63932;
+                    margin-top: 3px;
+                    padding: 0;
+                    margin-right: -1px;
+                    z-index: 1;
+                    margin-left: 46px ;
+                }
+                .button1
+                {
+                   background-color: #449802;
+                 //  margin-right: 240px !important;
+                   color:#ffffff ;
+                    border: 1px solid #d63932;
+                }
+                .button2
+                {
+                   background-color: #646363;color:#ffffff ; border: 1px solid rgba(214, 57, 50, 0.5) ; 
+                }
+              
+                .form-control {
+                    width: 84% !important;
+                }
+                .valid
+                {
+                  color: #080808;
+                  margin-right: 50%;
+                  margin-top: -5px;
+                  margin-bottom: 1px;
+                  
+                          } 
+                          .valid1
+                          {
+                            color: #080808;
+                            margin-right: 40%;
+                            margin-top: -5px;
+                            margin-bottom: 1px;
+                                    }
+    
+          }
+          @media screen and (min-width:841px) and (max-width:899px){
+            [col-8]
+            {
+               // margin-right: -170px !important;
+            }
+            ion-input {
+                position: relative;
+                display: block;
+                -webkit-box-flex: 1;
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                width: 100% !important;
+                text-align: right;
+                    }
+            ion-select {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                overflow: hidden;
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+            [col-6] {
+              //  margin-right: -170px !important;
+            }
+            .buttonicon {
+                border-left: 1px solid rgba(214, 57, 50, 0.38);
+                margin-right: -11px !important;
+                height: 35px;
+                border-top: 1px solid rgba(214, 57, 50, 0.38);
+                border-bottom: 1px solid rgba(214, 57, 50, 0.38);
+                background: #ffc6c6;
+            }
+                .type {
+                    color: #d63932;
+                    margin-top: 3px;
+                    padding: 0;
+                    margin-right: -1px;
+                    z-index: 1;
+                    margin-left: 46px ;
+                }
+                .button1
+                {
+                   background-color: #449802;
+                  // margin-right: 240px !important;
+                   color:#ffffff ;
+                    border: 1px solid #d63932;
+                }
+                .button2
+                {
+                   background-color: #646363;color:#ffffff ; border: 1px solid rgba(214, 57, 50, 0.5) ; 
+                }
+              
+                .form-control {
+                    width: 84% !important;
+                }
+                .valid
+                {
+                  color: #080808;
+                  margin-right: 50%;
+                  margin-top: -5px;
+                  margin-bottom: 1px;
+                  
+                          } 
+                          .valid1
+                          {
+                            color: #080808;
+                            margin-right: 40%;
+                            margin-top: -5px;
+                            margin-bottom: 1px;
+                                    }
+    
+          }
+          @media screen and (min-width:1000px) {
+            [col-8]
+            {
+               // margin-right: -200px !important;
+            }
+            ion-input {
+                position: relative;
+                display: block;
+                -webkit-box-flex: 1;
+                -webkit-flex: 1;
+                -ms-flex: 1;
+                flex: 1;
+                width: 100% !important;
+                text-align: right;
+                    }
+            ion-select {
+                display: -webkit-box;
+                display: -webkit-flex;
+                display: -ms-flexbox;
+                display: flex;
+                overflow: hidden;
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+            [col-6] {
+              //  margin-right: -200px !important;
+            }
+            .buttonicon {
+                border-left: 1px solid rgba(214, 57, 50, 0.38);
+                margin-right: -11px !important;
+                height: 35px;
+                border-top: 1px solid rgba(214, 57, 50, 0.38);
+                border-bottom: 1px solid rgba(214, 57, 50, 0.38);
+                background: #ffc6c6;
+            }
+            .buttonicon
+            {
+           border-left:1px solid rgba(214, 57, 50, 0.38);  margin-right: -11px;  height: 35px; border-top:1px solid rgba(214, 57, 50, 0.38); border-bottom:1px solid rgba(214, 57, 50, 0.38);background: #ffc6c6;
+            }
+            .form-control {
+                width: 87% !important;
+            }
+              .valid
+              {
+                color: #080808;
+                margin-right: 50%;
+                margin-top: -5px;
+                margin-bottom: 1px;
+                        }   
+                        .valid1
+                        {
+                          color: #080808;
+                          margin-right: 40%;
+                          margin-top: -5px;
+                          margin-bottom: 1px;
+                                  }           
+            .button2
+            {
+               background-color: #646363;color:#ffffff ; border: 1px solid rgba(214, 57, 50, 0.5) ; 
+            }
+            .button1
+            {
+                background-color: #449802;
+               // margin-right: 342px !important;
+                color: #ffffff;
+                border: 1px solid #d63932;
+            }
+           
+          }
+}

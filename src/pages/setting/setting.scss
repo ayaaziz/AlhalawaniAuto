@@ -1,0 +1,133 @@
+page-setting {
+    [col-10]
+    {
+        margin-top: 0.2em;
+    }
+   .toggle-inner {
+        left: 2px;
+        top: 0px !important;
+        border-radius: 14px;
+        position: absolute;
+        width: 25px !important;
+        height: 25px !important; 
+        background-color: #fff;
+        -webkit-box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16), 0 3px 1px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.16), 0 3px 1px rgba(0, 0, 0, 0.1);
+        -webkit-transition: width 120ms ease-in-out 80ms, left 110ms ease-in-out 80ms, right 110ms ease-in-out 80ms, -webkit-transform 300ms;
+        transition: width 120ms ease-in-out 80ms, left 110ms ease-in-out 80ms, right 110ms ease-in-out 80ms, -webkit-transform 300ms;
+        transition: transform 300ms, width 120ms ease-in-out 80ms, left 110ms ease-in-out 80ms, right 110ms ease-in-out 80ms;
+        transition: transform 300ms, width 120ms ease-in-out 80ms, left 110ms ease-in-out 80ms, right 110ms ease-in-out 80ms, -webkit-transform 300ms;
+        will-change: transform;
+        contain: strict;
+    }
+    .toggle-ios {
+        position: relative;
+        width: 42px !important;
+        height: 23px !important;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        contain: strict;
+    }
+    .toggle-md .toggle-icon {
+        border-radius: 14px;
+        position: relative;
+        display: block;
+        background-color: #dedede;
+        -webkit-transition: background-color 300ms;
+        transition: background-color 300ms;
+        pointer-events: none;
+        margin-right: -12px !important;
+        width: 42px !important;
+        height: 25px !important;
+        border-radius: 39% !important;
+    }
+    .toggle-ios .toggle-icon {
+        border-radius: 14px;
+        margin-top:10px !important;
+        position: relative;
+        display: block;
+        background-color: #dedede;
+        -webkit-transition: background-color 300ms;
+        transition: background-color 300ms;
+        pointer-events: none;
+        margin-right: -12px !important;
+        width: 47px !important;
+        height: 25px !important;
+        border-radius: 39% !important;
+    }
+    .toggle-md {
+        position: relative;
+        width: 42px !important;
+        height: 23px !important;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        contain: strict;
+    }
+      
+    .toggle-md
+    {
+        margin-top: 13px;
+    }
+    .toggle-ios
+    {
+        margin-top: 13px;
+    }
+    .toggle-md.toggle-checked .toggle-inner
+    {
+        background-color: #d63932;
+    }
+    .toggle-ios.toggle-checked .toggle-inner
+    {
+        background-color: #d63932;
+    }
+    .toggle-md.toggle-checked .toggle-icon {
+        background-color: #f6cccb;
+        margin-right: -12px !important;
+        width: 42px !important;
+        height: 25px !important;
+        border-radius: 39% !important;
+    }
+    .toggle-ios.toggle-checked .toggle-icon {
+        background-color: #f6cccb;
+        margin-right: -12px !important;
+        width: 42px !important;
+        height: 25px !important;
+        border-radius: 39% !important;
+    }
+    .all
+    {
+        font-size:17px; color:#d63932;
+    }
+    .advice
+    {
+        font-size:15px; color:#d63932;
+    }
+    .car
+    {
+        font-size:15px; color:#d63932
+    }
+    .main
+    {
+        font-size:15px; color:#d63932;
+    }
+
+    @media screen and (min-width:1024px){
+        .all
+    {
+        font-size:18px; color:#d63932;
+    }
+    .advice
+    {
+        font-size:17px; color:#d63932;
+    }
+    .car
+    {
+        font-size:17px; color:#d63932
+    }
+    .main
+    {
+        font-size:17px; color:#d63932;
+    }
+        
+    }
+}

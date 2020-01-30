@@ -1,0 +1,150 @@
+<!--
+  Generated template for the SettingPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="danger" hideBackButton>
+    <ion-buttons right>
+        <button ion-button icon-only (click)="ViewCtrl.dismiss()">
+            <ion-icon name="arrow-back" arrow-dripright></ion-icon>
+        </button>
+        </ion-buttons>
+  <h2 style="margin-right: 8px; color:#ffffff ;margin-top: 10px;font-size:18px">اعدادات التطبيق</h2>
+</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-color:#fdeeee ">
+  <div>
+    <ion-row style="border-radius: 0 0 25px 25px;background-color: #ffffff;">
+  <ion-col col-10 style="padding: 0 1em;">
+  <p class="all">  الاشعارات</p> 
+</ion-col>
+  <ion-col col-2  style="padding: 0 ;">
+    <span class="item-toggle"> 
+    <ion-toggle (checked)="catNotifichecked" [(ngModel)]="catNotifichecked" id="Cnotification-toggle" (ngModelChange)="catNotifiChanged()" style="border: none !important;">
+    </ion-toggle> 
+    </span>
+    </ion-col>
+  </ion-row>
+  </div>
+  <div [hidden]="all">
+    <ion-row style="    margin-top: -8px;">
+  <ion-col col-10 style="padding: 0 1em;">
+  <p class="advice">   تفعيل الاشعارات بالنصائح</p> 
+</ion-col>
+  <ion-col col-2  style="padding: 0 ;">
+    <span class="item-toggle"> 
+    <ion-toggle (checked)="advicechecked" [(ngModel)]="advicechecked" id="Cnotification-toggle" (ngModelChange)="adviceChanged()" style="border: none !important;">
+    </ion-toggle> 
+    </span>
+    </ion-col>
+  </ion-row>
+  <ion-row style="margin-top: -12px;">
+    <ion-col col-10 style="padding: 0 1em;">
+    <p class="car"> تفعيل الاشعارات بعروض السيارات</p> 
+  </ion-col>
+    <ion-col col-2  style="padding: 0 ;">
+      <span class="item-toggle"> 
+      <ion-toggle (checked)="carchecked" [(ngModel)]="carchecked" id="Cnotification-toggle" (ngModelChange)="carChanged()" style="border: none !important;">
+      </ion-toggle> 
+      </span>
+      </ion-col>
+    </ion-row>
+    <ion-row style="margin-top: -12px;" >
+      <ion-col col-10 style="padding: 0 1em;">
+      <p class="main"> تفعيل الاشعارات بسيارة جديده</p> 
+    </ion-col>
+      <ion-col col-2  style="padding: 0 ;">
+        <span class="item-toggle"> 
+        <ion-toggle (checked)="newcar" [(ngModel)]="newcar" id="Cnotification-toggle" (ngModelChange)="newcarChanged()" style="border: none !important;">
+        </ion-toggle> 
+        </span>
+        </ion-col>
+      </ion-row>
+      <ion-row style="margin-top: -12px;" >
+        <ion-col col-10 style="padding: 0 1em;">
+        <p class="main"> تفعيل الاشعارات بتمويل سيارة</p> 
+      </ion-col>
+        <ion-col col-2  style="padding: 0 ;">
+          <span class="item-toggle"> 
+          <ion-toggle (checked)="paid" [(ngModel)]="paid" id="Cnotification-toggle" (ngModelChange)="paidChanged()" style="border: none !important;">
+          </ion-toggle> 
+          </span>
+          </ion-col>
+        </ion-row>
+    <ion-row style="margin-top: -12px;" >
+      <ion-col col-10 style="padding: 0 1em;">
+      <p class="main"> تفعيل الاشعارات بعروض الصيانه</p> 
+    </ion-col>
+      <ion-col col-2  style="padding: 0 ;">
+        <span class="item-toggle"> 
+        <ion-toggle (checked)="maintainchecked" [(ngModel)]="maintainchecked" id="Cnotification-toggle" (ngModelChange)="maintainChanged()" style="border: none !important;">
+        </ion-toggle> 
+        </span>
+        </ion-col>
+      </ion-row>
+      <ion-row style="margin-top: -12px;" >
+        <ion-col col-10 style="padding: 0 1em;">
+        <p class="main"> تفعيل الاشعارات بتاريخ الصيانه</p> 
+      </ion-col>
+        <ion-col col-2  style="padding: 0 ;">
+          <span class="item-toggle"> 
+          <ion-toggle (checked)="date" [(ngModel)]="date" id="Cnotification-toggle" (ngModelChange)="dateChanged()" style="border: none !important;">
+          </ion-toggle> 
+          </span>
+          </ion-col>
+        </ion-row>
+        <ion-row style="margin-top: -12px;" >
+          <ion-col col-10 style="padding: 0 1em;">
+          <p class="main"> تفعيل الاشعارات بموعد الصيانه</p> 
+        </ion-col>
+          <ion-col col-2  style="padding: 0 ;">
+            <span class="item-toggle"> 
+            <ion-toggle (checked)="time" [(ngModel)]="time" id="Cnotification-toggle" (ngModelChange)="timeChanged()" style="border: none !important;">
+            </ion-toggle> 
+            </span>
+            </ion-col>
+          </ion-row>
+          
+            <ion-row style="margin-top: -12px;" >
+              <ion-col col-10 style="padding: 0 1em;">
+              <p class="main"> تفعيل الاشعارات بطلب سطحه للصيانه</p> 
+            </ion-col>
+              <ion-col col-2  style="padding: 0 ;">
+                <span class="item-toggle"> 
+                <ion-toggle (checked)="satha" [(ngModel)]="satha" id="Cnotification-toggle" (ngModelChange)="sathaChanged()" style="border: none !important;">
+                </ion-toggle> 
+                </span>
+                </ion-col>
+              </ion-row>
+      <ion-row style="margin-top: -12px;" >
+        <ion-col col-10 style="padding: 0 1em;">
+        <p class="main"> تفعيل الاشعارات بالمحادثات</p> 
+      </ion-col>
+        <ion-col col-2  style="padding: 0 ;">
+          <span class="item-toggle"> 
+          <ion-toggle (checked)="chat" [(ngModel)]="chat" id="Cnotification-toggle" (ngModelChange)="chatChanged()" style="border: none !important;">
+          </ion-toggle> 
+          </span>
+          </ion-col>
+        </ion-row>
+      
+          <ion-row style="margin-top: -12px;" >
+            <ion-col col-10 style="padding: 0 1em;">
+            <p class="main"> تفعيل الاشعارات بطلبات التوظيف</p> 
+          </ion-col>
+            <ion-col col-2  style="padding: 0 ;">
+              <span class="item-toggle"> 
+              <ion-toggle (checked)="jop" [(ngModel)]="jop" id="Cnotification-toggle" (ngModelChange)="jopChanged()" style="border: none !important;">
+              </ion-toggle> 
+              </span>
+              </ion-col>
+            </ion-row>
+           
+  </div>
+</ion-content>

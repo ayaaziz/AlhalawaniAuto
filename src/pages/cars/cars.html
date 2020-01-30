@@ -1,0 +1,170 @@
+
+<ion-header>
+
+    <ion-navbar color="danger" hideBackButton style="padding: 0px;background-image: url(../assets/imgs/header.png);min-height:0px;    min-width: 100%;">
+      <ion-row>
+          <ion-col class="search" (click)="search()">
+              <ion-icon name="search" class="search2"></ion-icon>
+            </ion-col>
+            <ion-col >
+            <h2 style="margin-right: 8px; color:#ffffff ;margin-top: 10px;font-size:18px">عروض الضحيان</h2>
+          </ion-col>
+   
+        
+      </ion-row>
+    </ion-navbar>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+  </ion-header>
+
+
+<ion-content padding style="background-color:#fdeeee " fullscreen #myContent1>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+        pullingIcon="arrow-dropdown"
+        refreshingSpinner="circles">
+        </ion-refresher-content>
+      </ion-refresher>
+    <ion-toolbar >
+        <ion-segment [(ngModel)]="offers">
+          <ion-segment-button value="cars">
+            عروض السيارات
+          </ion-segment-button>
+          <ion-segment-button  value="maintain" >
+            عروض الصيانه
+                   
+          </ion-segment-button>
+    
+        </ion-segment>
+      </ion-toolbar >
+
+      <div [ngSwitch]="offers" style="width:100%">
+        <div *ngSwitchCase="'cars'" style="width:100%">
+          <ion-grid style="width:100%">
+              <h4 *ngIf="show == false" style="    color: #d63932;
+                    text-align: center;
+                    margin-top: 200px;
+                    font-size: 1.8rem;">لا توجد عروض في الوقت الحالي</h4>
+              <div class="div" style="height: 130px;width:100%"  *ngFor="let item of alldata"  >
+                  <ion-row  style="width:100%">
+                <ion-col col-5 (click)="opendetails(item.name,item.offer_id,item.car_id)">
+                  <span class="discount" *ngIf="(item.offer_discount >'0') "> <span >خصم</span><br><span> {{item.offer_discount}} % </span></span>
+                  <img  [defaultImage]="defaultimage" [scrollObservable]="myContent1.ionScroll" [lazyLoad]="img+item.image" class="img"style="height:130px;">
+
+                  <!-- <img *ngIf="item.images.length > 0"  src="{{img+item.images[0].image_name}}" class="img" > -->
+
+                  </ion-col>
+                <ion-col col-6 class="deatilsc" (click)="opendetails(item.name,item.offer_id,item.car_id)">
+                  
+                    <ion-row >
+                        <ion-col col-12 style="padding:0px">
+
+                    <p class="name"> {{item.offer_name}}</p>
+                        </ion-col>
+                  </ion-row>
+                <ion-row class="row1" style="    margin-top: 0px;">
+                    <ion-col col-12 style="padding:0px">
+
+                    <p class="price" style="font-weight: bold;">  <span> {{item.price_after}} ر.س (شامل الضريبه)</span>
+                      
+                     <span style="color:#4e4e4e;font-weight: bold;">
+                           بدلا من
+                         </span> 
+                         <del style="color:#dc9b02;font-weight: bold;">{{item.price_before}} ر.س</del> 
+                        </p> 
+                    </ion-col>
+                 
+                 
+                      </ion-row>
+                        <ion-row style="    margin-top: 9px;" *ngIf="!(item.engine_capacity==null)">
+                            <ion-col col-12 style="padding:0px">
+
+                        <p class="engin"> سعه المحرك : {{item.engine_capacity}} لتر</p>
+                            </ion-col>
+                         
+                      </ion-row>
+                      <ion-row style="    margin-top: 4px;" *ngIf="!(item.engine_power==null)">
+                          <ion-col col-12 style="padding:0px">
+
+                        <p class="power"> قوه المحرك : {{item.engine_power}} </p>
+                          </ion-col>
+                      </ion-row>
+                                  
+                  
+                </ion-col>
+                <ion-col col-1 class="col4" style="  margin-right:-22px;">
+                    <ion-row  (click)="shareoffer(item.offer_name,item.price_after,item.price_before,img+item.image)">
+                        <ion-icon ios="md-share" md="md-share" class="share" > </ion-icon>
+                  </ion-row>
+                    <ion-row  (click)="opendetails(item.name,item.offer_id,item.car_id)">
+                        <ion-icon name="ios-more" class="more" > </ion-icon>
+            
+                      </ion-row>
+                  </ion-col>
+              </ion-row>
+              
+              </div>
+           
+          </ion-grid>
+          <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+            <ion-infinite-scroll-content></ion-infinite-scroll-content>
+          </ion-infinite-scroll>
+        </div>
+        <div *ngSwitchCase="'maintain'" style="width:100%">
+            <h4 *ngIf="show1 == false" style="color: #d63932;
+            text-align: center;
+            margin-top: 200px;
+            font-size: 1.8rem;">لا توجد عروض في الوقت الحالي</h4>
+            <ion-grid style="width:100%">
+                <div style="height: 130px;width:100%" class="div" *ngFor="let item of getdata" >
+                    <ion-row style="width:100%">
+                  <ion-col col-4 (click)="opendetails2(item.name,item.id)">
+                    <span class="discount" *ngIf="(item.discount >'0') "> <span >خصم</span><br><span> {{item.discount}} % </span></span>
+                    <!-- <img    src="{{img+item.image}}" class="img" > -->
+                    <img  [defaultImage]="defaultimage"  [scrollObservable]="myContent1.ionScroll" [lazyLoad]="img+item.image" class="img" style="height: 130px;border: 1px solid #d1d0d0">
+
+    
+                    </ion-col>
+                  <ion-col col-7 class="deatilsc" (click)="opendetails2(item.name,item.id)">
+                    <ion-row  style="width:100%;">
+                        <ion-col col-12 style="padding:0px">
+
+                           <p class="name"> {{item.name}}</p>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row class="rows" style="    margin-top: 8px;width: 100%;">
+                      <ion-col col-12>
+                           <p class="price" style="font-weight: bold;">  <span> {{item.price_after}} ر.س </span>
+                            <span style="color:#4e4e4e;font-weight: bold;">
+                                  بدلا من
+                                </span> 
+                                <del style="color:#ca9423;font-weight: bold;">{{item.price_before}} ر.س</del> 
+                               </p> 
+                              </ion-col>
+                              </ion-row>
+                                <ion-row style="margin-top: 7px;">
+                                 <p class="engin" style="    margin-left: 5px;" > الفتره من  </p> <p style="direction:rtl" class="engin">{{item.offer_start}} </p>
+                                </ion-row>
+                                <ion-row>
+                                 <p class="engin2" style="    margin-left: 5px;"> الى </p><p class="engin2" style="direction:rtl">{{item.offer_end}}</p>
+                    </ion-row>
+                  </ion-col>
+                  <ion-col col-1 class="col4"  style=" margin-right:-22px;">
+                      <ion-row (click)="shareoffer(item.name,item.price_after,item.price_before,img+item.image)">
+                            <ion-icon ios="md-share" md="md-share" class="share" > </ion-icon>
+                      </ion-row>
+                      <ion-row (click)="opendetails2(item.name,item.id)">
+                          <span >
+                              <ion-icon name="ios-more" class="more" > </ion-icon>
+                            </span>              
+                        </ion-row>
+                    </ion-col>
+                </ion-row>
+                
+                </div>
+                
+            </ion-grid>
+          </div>
+      </div>
+</ion-content>

@@ -1,0 +1,103 @@
+
+<ion-header >
+
+  <ion-navbar color="danger" hideBackButton style="padding: 0px;min-height: 0px;">
+     
+    <ion-buttons right>
+        <button ion-button icon-only (click)="viewCtrl.dismiss()">
+            <ion-icon name="arrow-back" arrow-dripright></ion-icon>
+        </button>
+        </ion-buttons>
+    <h2 class="title" >الاشعارات</h2>
+
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-color:#fdeeee " #myContent1>
+        <ion-refresher (ionRefresh)="doRefresh($event)">
+                <ion-refresher-content
+                pullingIcon="arrow-dropdown"
+                refreshingSpinner="circles">
+                </ion-refresher-content>
+              </ion-refresher> 
+              <h6 [hidden]="msg" style="text-align: center;color:#d63932;margin-top: 50%;"> لا توجد اشعارات </h6>
+    <ion-list *ngFor="let item of notiList" >
+
+
+
+        <div class="wrap" *ngIf="item.read==0 ;else content"  style="background-color: rgba(241, 238, 238, 0.8117647058823529);margin:0px;margin:0px" >
+           <ion-row (click)="showoffer(item.message,item.id,item.offer_id,item.type)" *ngIf="show==true">
+               <ion-col col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3>    
+                    <img [defaultImage]="defaultimage" [lazyLoad]="imageurl+item.notification_image" [scrollObservable]="myContent1.ionScroll" style="width:100%">
+
+               </ion-col>
+               <ion-col   col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9>
+                     <div style="margin-right: -19px;">          
+                       <p class="time" style="color:#a3a2a2"><ion-icon ios="ios-time" md="md-time"></ion-icon><span class="time">{{item.created_at}}</span></p>
+                   </div>
+                   <div class="msg">
+                       <p  class="name" >{{item.message}} </p>
+                   </div>
+                 
+               </ion-col>
+           </ion-row>
+           <ion-row (click)="showoffer(item.message,item.id,item.offer_id,item.type)"  *ngIf="show==false">
+            <ion-col col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3>    
+                <img [defaultImage]="defaultimage" [lazyLoad]="defaultimage"  [scrollObservable]="myContent1.ionScroll" style="width:100%">
+
+           </ion-col>
+            <ion-col   col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9>
+                    <div style="margin-right: -19px;">          
+                            <p class="time" style="color:#a3a2a2"><ion-icon ios="ios-time" md="md-time"></ion-icon><span class="time">{{item.created_at}}</span></p>
+                        </div>
+                <div class="msg">
+                    <p  class="name" > {{item.message}} </p>
+                </div>
+             
+            </ion-col>
+        </ion-row>
+       </div>
+       
+       
+       
+       <ng-template #content >
+       
+           <div class="wrap" *ngIf="item.read==1 " style="background-color: #ffffff ;margin:0px" >  
+           <ion-row (click)="showoffer(item.message,item.id,item.offer_id,item.type)" *ngIf="show==true">
+               <ion-col col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3>
+                       <img [defaultImage]="defaultimage" [lazyLoad]="imageurl+item.notification_image" [scrollObservable]="myContent1.ionScroll" style="width:100%">
+               </ion-col>
+               <ion-col   col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9>
+                    <div style="margin-right: -19px;">
+                            <p  class="time" style="color:#a3a2a2"> <ion-icon ios="ios-time" md="md-time"></ion-icon><span class="time"></span>{{item.created_at}}</p>
+                        </div>
+                   <div class="msg"> 
+                      <p  class="name" >  {{item.message}} </p>
+                   </div>
+                
+               </ion-col>
+               </ion-row>
+               <ion-row (click)="showoffer(item.message,item.id,item.offer_id,item.type)" *ngIf="show==false"> 
+                <ion-col col-3 col-sm-3 col-md-3 col-lg-3 col-xl-3>
+                    <img [defaultImage]="defaultimage" [lazyLoad]="defaultimage" (click)="openmodal()" [scrollObservable]="myContent1.ionScroll" style="width:100%">
+            </ion-col>
+                <ion-col   col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9>
+                        <div style="margin-right: -19px;">
+                                <p  class="time" style="color:#a3a2a2"> <ion-icon ios="ios-time" md="md-time"></ion-icon><span class="time"></span>{{item.created_at}}</p>
+                            </div>
+                    <div class="msg"> 
+                       <p  class="name" > {{item.message}} </p>
+                    </div>
+                 
+                </ion-col>
+                </ion-row>
+           </div>   
+       
+       </ng-template>
+       </ion-list>
+       <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+</ion-content>

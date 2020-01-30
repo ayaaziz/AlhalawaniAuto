@@ -1,0 +1,1422 @@
+page-warning {
+   
+    .toolbar-ios ion-title {
+        left: 0;
+        top: 0;
+        padding: 10px 0px 0px !important;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        pointer-events: none;
+    }
+    .scroll-content
+    {
+        margin-top: 44px !important;
+        }
+          .search
+          {
+            color: #ffffff;
+            font-size: 25px;
+            margin-left: 15px;
+            margin-top: 5px;
+            width: 25px;
+            height: 25px; 
+        margin-right: 5px;         }
+          .img2
+          {
+            width:90px ; height:27px;margin-right: 161px; margin-top: -8px;
+          }
+    .name
+    {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color:#d63932;
+        margin-top: 4px;
+    }
+    .img
+    {
+        color: #d48d07;width: 72px;height: 72px;margin-top:10px;margin-right: 4px;
+    }
+    .detail
+    {
+        font-size: 1.2rem;
+        font-weight: 500; 
+        color:#000000;
+        margin-top: -10px;
+    }
+
+    @media screen and (min-width:320px) {
+        .img
+        {
+            color: #d48d07;width: 72px;height: 72px;margin-top: 10px;margin-right: 4px;
+        }
+        .detail
+        {
+            font-size: 1.2rem;
+            font-weight: 500; 
+            color:#000000;
+            margin-top: -10px;
+        }
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:1px solid #d3d0d0;
+        width: 112%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+          width:90px ; height:27px;margin-right: 160px; margin-top: -1px;
+        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              {
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+                margin-right: 5px; 
+              }
+    }
+
+
+    @media screen and (min-width:336px) {
+        .img
+        {
+            color: #d48d07;width: 72px;height: 72px;margin-top: 10px;margin-right: 4px;
+        }
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 112%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+          width:90px ; height:27px;margin-right: 170px; margin-top: -1px;
+        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              {
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+                margin-right: 5px; 
+              }
+    }
+
+
+
+    @media screen and (min-width:350px) {
+        .img
+        {
+            color: #d48d07;width: 72px;height: 72px;margin-top: 10px;margin-right: 4px;
+        }
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 111%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+            width: 90px;
+            height: 27px;
+            margin-right: 154px; margin-top: -1px;
+        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              {
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+                margin-right: 5px; 
+              }
+    }
+
+
+
+    @media screen and (min-width:365px) {
+        .img
+        {
+            color: #d48d07;width: 72px;height: 72px;margin-top: 10px;margin-right: 4px;
+        }
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 110%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+          width:90px ; height:27px;margin-right: 195px; margin-top: -1px;
+        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              {
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+                margin-right: 5px; 
+              }
+    }
+
+
+
+    @media screen and (min-width:398px) {
+        .img
+        {
+            color: #d48d07;width: 72px;height: 72px;margin-top: 10px;margin-right: 4px;
+        }
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 109.5%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+          width:90px ; height:27px;margin-right: 223px; margin-top: -1px;
+        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+
+
+
+
+    @media screen and (min-width:420px) {
+        .img
+        {
+            color: #d48d07;width: 72px;height: 72px;margin-top:10px;margin-right: 4px;
+        }
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 109%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+          width:90px ; height:27px;margin-right: 242px; margin-top: -1px;
+        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+
+
+    @media screen and (min-width:446px) {
+        .img
+        {
+            color: #d48d07;width: 72px;height: 72px;margin-top: 10px;margin-right: 4px;
+        }
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 108.5%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+          width:90px ; height:27px;margin-right: 220px; margin-top: -1px;
+        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+
+
+    @media screen and (min-width:470px) {
+        .img
+        {
+            color: #d48d07;width: 72px;height: 72px;margin-top: 10px;margin-right: 4px;
+        }
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 108%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+          width:90px ; height:27px;margin-right: 275px; margin-top: -1px;
+        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+
+
+    @media screen and (min-width:480px) {
+        .img
+        {
+            color: #d48d07;width: 72px;height: 72px;margin-top: 10px;margin-right: 4px;
+        }
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 107.5%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+          width:90px ; height:27px;margin-right: 252px; margin-top: -1px;
+        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+
+
+    @media screen and (min-width:500px) {
+        .img
+        {
+            color: #d48d07;width: 72px;height: 72px;margin-top: 10px;margin-right: 4px;
+        }
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 107.5%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+            width: 90px;
+            height: 27px;
+            margin-right: 263px;
+            margin-top: -1px;        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+
+
+
+    @media screen and (min-width:530px) {
+        .img
+        {
+            color: #d48d07;width: 72px;height: 72px;margin-top: 10px;margin-right: 4px;
+        }
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 107%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+          width:90px ; height:27px;margin-right: 320px; margin-top: -1px;
+        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+
+    @media screen and (min-width:560px) {
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 106.5%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+          width:90px ; height:27px;margin-right: 365px; margin-top: -1px;
+        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+    @media screen and (min-width:590px) {
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 106%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+          width:90px ; height:27px;margin-right: 398px; margin-top: -1px;
+        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+
+
+
+    @media screen and (min-width:625px) {
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 106%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+          width:90px ; height:27px;margin-right: 362px; margin-top: -1px;
+        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+
+
+    @media screen and (min-width:650px) {
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 105.5%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+          width:90px ; height:27px;margin-right: 420px; margin-top: -1px;
+        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+
+
+    @media screen and (min-width:690px) {
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 105.5%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+          width:90px ; height:27px;margin-right: 420px; margin-top: -1px;
+        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+
+
+    @media screen and (min-width:712px) {
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 105%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+          width:90px ; height:27px;margin-right: 455px; margin-top: -1px;
+        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+
+
+
+    @media screen and (min-width:750px) {
+        .img{
+        color: #d48d07;
+    width: 72px;
+    height: 72px;
+    margin-top: 10px;
+    margin-right: 4px;
+        }
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 104.5%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+          width:90px ; height:27px;margin-right: 512px; margin-top: -1px;
+        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+
+
+    @media screen and (min-width:815px) {
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 104.5%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+          width:90px ; height:27px;margin-right: 500px; margin-top: -1px;
+        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+
+    @media screen and (min-width:800px) {
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 104.5%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+          width:90px ; height:27px;margin-right: 567px; margin-top: -1px;
+        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+
+
+    @media screen and (min-width:838px) {
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 104%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+          width:90px ; height:27px;margin-right: 580px; margin-top: -1px;
+        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+
+
+    @media screen and (min-width:870px) {
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 104%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+          width:90px ; height:27px;margin-right: 620px; margin-top: -1px;
+        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+
+
+    @media screen and (min-width:900px) {
+        .img{
+            color: #d48d07;
+        width: 108px;
+        height: 105px;
+        margin-top: 10px;
+        margin-right: 4px;
+            }
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 104%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+    .data{
+        margin-right: -31px;
+    }
+        .img2
+        {
+            width: 90px;
+            height: 27px;
+            margin-right: 637px;
+            margin-top: -1px;        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+
+
+    
+    @media screen and (min-width:922px) {
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 104%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+    .data
+    {
+        margin-right: -20px;    }
+        .img2
+        {
+            width: 90px;
+            height: 27px;
+            margin-right: 666px;
+            margin-top: -1px;        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+
+    @media screen and (min-width:950px) {
+        .img{
+            color: #d48d07;
+        width: 72px;
+        height: 72px;
+        margin-top: 10px;
+        margin-right: 4px;
+            }
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 103.5%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+    .data{
+        margin-right: -31px;
+    }
+        .img2
+        {
+            width: 90px;
+            height: 27px;
+            margin-right: 654px;
+            margin-top: -1px;        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+
+
+
+
+    @media screen and (min-width:1000px) {
+        .data{
+            margin-right: -31px;
+        }
+        .img{
+            color: #d48d07;
+        width: 72px;
+        height: 72px;
+        margin-top: 10px;
+        margin-right: 4px;
+            }
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 103.5%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+    
+        .img2
+        {
+            width: 90px;
+            height: 27px;
+            margin-right: 748px;
+            margin-top: -1px;      }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+    @media screen and (min-width:1024px) {
+        .data{
+            margin-right: -31px;
+        }
+        .img{
+            color: #d48d07;
+        width:72px;
+        height: 72px;
+        margin-top: 10px;
+        margin-right: 4px;
+            }
+        .detail
+        {
+            font-size: 1.5rem;
+            font-weight: 500; 
+            color:#000000;
+            margin-top: -10px;
+        }
+        .share
+    {
+         color:#ffffff; font-size:30px; margin-left: 12px; margin-right:25px
+          }
+        .toolbar-title-md {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+        .toolbar-title-ios {
+            padding: 0 12px;
+            font-size: 1.7rem !important;
+            font-weight: 500;
+            color: #424242;
+        }
+    .div
+    {
+        background-color: #ffffff;
+        border:.2px solid #d3d0d0;
+        width: 103.5%;
+        margin-right: -17px;
+        margin-bottom: 8px;
+    }
+        .img2
+        {
+            width: 90px;
+            height: 27px;
+            margin-right: 764px;
+            margin-top: -10px;        }
+        .share
+        {
+             color:#ffffff; font-size:27px; margin-left: 12px; margin-right:16px;
+             margin-top:5px;
+              }
+              .search
+              { margin-right: 5px; 
+                color: #ffffff;
+                font-size: 25px;
+                margin-left: 15px;
+                margin-top: 5px;
+                width: 25px;
+                height: 25px;
+              }
+    }
+
+}

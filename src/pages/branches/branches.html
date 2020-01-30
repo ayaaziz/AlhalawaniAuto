@@ -1,0 +1,169 @@
+
+<ion-header>
+
+    <ion-navbar color="danger" hideBackButton>
+              
+
+      <ion-title style="text-align:right" >تواصل معنا</ion-title>
+        
+      <ion-buttons right>
+          <button ion-button icon-only (click)="ViewCtrl.dismiss()">
+              <ion-icon name="arrow-back" arrow-dripright></ion-icon>
+          </button>
+          </ion-buttons>
+      
+    </ion-navbar>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+  </ion-header>
+  
+  
+  <ion-content padding style="background-color:#fdeeee;overflow-y: hidden; " scrollY="false" >
+    <div #map id="mymap" ></div> 
+
+  <div style="width:100%">
+    
+    <ion-row>
+    <ion-toolbar >
+      <ion-segment [(ngModel)]="data" class="seg">
+       
+        <ion-segment-button  value="branches" >
+          فروعنا
+        </ion-segment-button>
+        <ion-segment-button  value="message" >
+            ارسل رساله 
+          </ion-segment-button>
+    
+      </ion-segment>
+    </ion-toolbar >
+  </ion-row>
+
+  <ion-row>
+  <div [ngSwitch]="data" style="width:100%;margin-top: 12px;" >
+      <div *ngSwitchCase="'message'" style="width:100%">
+          <ion-row>
+              <ion-col col-5>
+          <label for="email"  style="color:#d63932 ;     margin-left: 41px;"> رقم الجوال</label>
+              </ion-col>
+              <ion-col col-7 >
+          <ion-input  text-right  style="-webkit-text-security:disc;" type="tel" pattern="[0-9]*"   [(ngModel)]="user_phone"   id="email"   style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " >
+          </ion-input>
+        </ion-col>
+          </ion-row>
+    <ion-row>
+        <ion-col col-5>
+            <label for="email"  style="color:#d63932 ;    margin-left: 9px;">البريد الالكتروني</label>
+        </ion-col>
+        <ion-col col-7  >
+            <ion-input text-right  type="email"  [(ngModel)]="user_email"   id="email"   style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " >
+            </ion-input>
+        </ion-col>
+    </ion-row>
+    
+     <ion-row>
+          <ion-col col-5>
+            <label for="email" class="remark" style="color:#d63932;margin-left: 22px;">اترك رسالتك </label>
+          </ion-col>
+          <ion-col col-7 >
+            <ion-textarea text-right [(ngModel)]="user_message" type="text"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:80px ;background-color: #ffffff  " >
+            </ion-textarea>
+            </ion-col>
+       
+     </ion-row>
+      
+      <button ion-button (click)="send()" full  class="btn" > ارسل  </button>
+
+  </div>
+  </div>
+  </ion-row>
+
+  <div style="width:100%; height: 100%;">
+
+    <div [ngSwitch]="data" style="width:100%;margin-top: 0px;" >
+        <div *ngSwitchCase="'branches'" style="width:100%" >
+            <ion-list  no-lines  *ngFor="let item of branch_data; let i=index" style="width:100%">    
+                <ion-item  text-wrap  class="item1"  *ngIf="!(show(i))"  (click)="showGroup(i,item.name)" [ngClass]="{active: show(i)}">  
+             <ion-row  >  
+               <ion-col  col-10 >   
+                  <p style="color:#000000"  > {{item.name}}  </p> 
+                </ion-col>
+                <ion-col col-2 (click)="showGroup(i,item.name)"  style="text-align:left">
+                    <span > <ion-icon   ios="md-add" md="md-add" style="color: #464545; margin-top: 6px; "></ion-icon> </span>
+                </ion-col>
+              
+                </ion-row>   
+            
+          </ion-item >
+          <ion-item  text-wrap  class="item2" *ngIf="(show(i))" (click)="showGroup(i,item.name)" [ngClass]="{active: show(i)}">  
+            <ion-row >  
+              <ion-col  col-10>   
+                 <p style="color:#000000"  >  {{item.name}}  </p> 
+               </ion-col>
+              
+               <ion-col col-2 (click)="showGroup(i,item.name)"  style="text-align:left">
+                 <span > <ion-icon  ios="md-remove" md="md-remove" style="color: #464545; margin-top: 6px; "></ion-icon> </span>
+          
+               </ion-col>
+               </ion-row>   
+           
+          </ion-item>
+          <div *ngIf="show(i)" style="width:100%">    
+            <ion-grid class="grid2" >
+                <ion-row style="margin: 0 1em;   background: #fdeeee;">
+                    <ion-col col-5> <p style="    margin-top: 2%;">   العنوان  </p> </ion-col>
+                    <ion-col col-6 >
+                      {{item.address}}
+                      </ion-col>
+                      <ion-col col-1 (click)="nav(item.latitude,item.longitude)"> <ion-icon name="md-navigate" style="color:#d63932"></ion-icon></ion-col>
+
+                    </ion-row>
+                <ion-row style="margin: 0 1em;    background: #f9f9fd;  ">
+                  <ion-col col-5> <p style="    margin-top: 2%;">  رقم الجوال  </p> </ion-col>
+                  <ion-col col-6 (click)="call(item.mobile)" >
+                      {{item.mobile}}
+  
+                    </ion-col>
+                    <ion-col col-1 (click)="call(item.mobile)"> <ion-icon ios="ios-call" md="ios-call" style="color:green"></ion-icon></ion-col>
+                  </ion-row>
+                  <ion-row style="margin: 0 1em;    background: #fdeeee;     margin-top: -10px;">
+                      <ion-col col-5> <p style="    margin-top: 2%;">  رقم الثابت  </p> </ion-col>
+                      <ion-col col-6 (click)="call(item.phone)">
+                          {{item.phone}}
+  
+                        </ion-col>
+                        <ion-col col-1 (click)="call(item.phone)"> <ion-icon ios="ios-call" md="ios-call" style="color:green"></ion-icon></ion-col>
+
+                      </ion-row>
+                      <ion-row style="margin: 0 1em;   background: #f9f9fd;    margin-top: -10px;">
+                        <ion-col col-5> <p style="    margin-top: 2%;">   مواعيد العمل  </p> </ion-col>
+                        <ion-col col-6 >
+                          <ion-row> 
+                            <ion-col col-12>
+                             من {{item.start_work}} 
+                            </ion-col>
+                          </ion-row>
+                          <ion-row>
+                              <ion-col col-12>
+                            الى {{item.end_work}}
+                              </ion-col>
+                             </ion-row>
+                                             
+                          </ion-col>
+                          <ion-col col-1 > <ion-icon name="md-calendar" ></ion-icon></ion-col>
+
+                        </ion-row>
+                   </ion-grid>
+                 </div>
+                
+          </ion-list>
+          
+        </div>
+    </div>
+
+</div>
+
+</div>
+
+  </ion-content>
+  

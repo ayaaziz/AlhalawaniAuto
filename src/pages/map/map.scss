@@ -1,0 +1,186 @@
+page-map {
+#map
+{
+    height:100%
+}
+
+#floating-panel {
+    position: absolute;
+    top: 106px;
+    left: 25%;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.43137254901960786);
+    padding: 5px;
+    /* border: 1px solid #999; */
+    text-align: center;
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+    
+  }
+  
+  @media screen and (min-width:320px) {
+  #floating-panel2 {
+    position: absolute;
+    bottom: 33px;
+    left: 50%;
+    right: 24%;
+    z-index: 5;
+    padding: 5px;
+    /* border: 1px solid #999; */
+    text-align: center;
+    font-family: 'Roboto','sans-serif';
+    line-height: 30px;
+    padding-left: 10px;
+}
+  }
+  @media screen and (min-width:360px) {
+     #floating-panel2 {
+        position: absolute;
+        bottom: 35px;
+        left: 32%;
+        right: 34%;
+        /* margin-top: 5px; */
+        z-index: 5;
+        padding: 5px;
+        /* border: 1px solid #999; */
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+    }
+  }
+  @media screen and (min-width:400px) {
+    #floating-panel2 {
+       position: absolute;
+       bottom: 28px;
+       left: 32%;
+       right: 33%;
+       /* margin-top: 5px; */
+       z-index: 5;
+       padding: 5px;
+       /* border: 1px solid #999; */
+       text-align: center;
+       font-family: 'Roboto','sans-serif';
+       line-height: 30px;
+       padding-left: 10px;
+   }
+ }
+ @media screen and (min-width:500px) {
+    #floating-panel2 {
+       position: absolute;
+       bottom: 28px;
+       left: 32%;
+       right: 36%;
+       /* margin-top: 5px; */
+       z-index: 5;
+       padding: 5px;
+       /* border: 1px solid #999; */
+       text-align: center;
+       font-family: 'Roboto','sans-serif';
+       line-height: 30px;
+       padding-left: 10px;
+   }
+ }
+ @media screen and (min-width:600px) {
+    #floating-panel2 {
+       position: absolute;
+       bottom: 28px;
+       left: 32%;
+       right: 38%;
+       /* margin-top: 5px; */
+       z-index: 5;
+       padding: 5px;
+       /* border: 1px solid #999; */
+       text-align: center;
+       font-family: 'Roboto','sans-serif';
+       line-height: 30px;
+       padding-left: 10px;
+   }
+ }
+ @media screen and (min-width:700px) {
+    #floating-panel2 {
+       position: absolute;
+       bottom: 28px;
+       left: 32%;
+       right: 33%;
+       /* margin-top: 5px; */
+       z-index: 5;
+
+       padding: 5px;
+       /* border: 1px solid #999; */
+       text-align: center;
+       font-family: 'Roboto','sans-serif';
+       line-height: 30px;
+       padding-left: 10px;
+   }
+ }
+ @media screen and (min-width:800px) {
+    #floating-panel2 {
+       position: absolute;
+       bottom: 28px;
+       left: 32%;
+       right: 39%;
+       /* margin-top: 5px; */
+       z-index: 5;
+
+       padding: 5px;
+       /* border: 1px solid #999; */
+       text-align: center;
+       font-family: 'Roboto','sans-serif';
+       line-height: 30px;
+       padding-left: 10px;
+   }
+ }
+ @media screen and (min-width:900px) {
+    #floating-panel2 {
+       position: absolute;
+       bottom: 28px;
+       left: 32%;
+       right: 34%;
+       /* margin-top: 5px; */
+       z-index: 5;
+
+       padding: 5px;
+       /* border: 1px solid #999; */
+       text-align: center;
+       font-family: 'Roboto','sans-serif';
+       line-height: 30px;
+       padding-left: 10px;
+   }
+ }
+ @media screen and (min-width:1000px) {
+    #floating-panel2 {
+       position: absolute;
+       bottom: 28px;
+       left: 32%;
+       right: 31%;
+       /* margin-top: 5px; */
+       z-index: 5;
+
+       padding: 5px;
+       /* border: 1px solid #999; */
+       text-align: center;
+       font-family: 'Roboto','sans-serif';
+       line-height: 30px;
+       padding-left: 10px;
+   }
+ }
+ @media screen and (min-width:1024px) {
+    #floating-panel2 {
+       position: absolute;
+       bottom: 28px;
+       left: 32%;
+       right: 30%;
+       /* margin-top: 5px; */
+       z-index: 5;
+
+       padding: 5px;
+       /* border: 1px solid #999; */
+       text-align: center;
+       font-family: 'Roboto','sans-serif';
+       line-height: 30px;
+       padding-left: 10px;
+   }
+ }
+}

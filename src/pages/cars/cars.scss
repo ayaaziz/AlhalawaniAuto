@@ -1,0 +1,559 @@
+page-cars {
+      .toolbar-content   {
+        background-image: url("../assets/imgs/header.png") !important  ;  
+         min-width: 100%;
+    }
+    .scroll-content {
+        padding: 0px !important;
+        border-top: 0px solid #fdeeee !important;
+        margin-top: 75px !important;
+        margin-bottom: 56px; 
+    }
+    .search
+    {
+        text-align: left; margin-left:0px;margin-right: -245px;
+    }
+    
+    .segment-ios .segment-button:last-of-type {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0px !important;
+        border-bottom-right-radius: 0px !important;
+        border-bottom-left-radius: 0;
+        margin-left: 0;
+        border-left-width: 0;
+    }
+    .segment-ios .segment-button:first-of-type {
+        border-top-left-radius: 0px !important;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0px !important;
+        margin-right: 0;
+    }
+    .toolbar-ios .segment-button {
+        max-width: 156px !important;
+        height: 3rem !important;
+        font-size: 1.2rem;
+        line-height: 2.5rem !important;
+    }
+    .search2
+    {
+          color:#ffffff; font-size:25px;margin-top: 10px;
+    }
+ 
+    .toolbar-md-light .toolbar-background-md {
+        background: #f4f4f400;
+    }
+    .toolbar-background-md {
+        border-color: #b2b2b200;
+        background: #fdeeee;
+    }
+   
+ 
+    .toolbar-ios-light .toolbar-background-ios {
+        background: #f4f4f400;
+    }
+    .toolbar-background-ios {
+        border-color: #b2b2b200;
+        background: #fdeeee;
+    }
+    .div
+    {
+        border:.2px solid #d3d0d0;width: 110%;   margin-bottom: 20px;
+        background-color: #ffffff;
+    }
+    .img
+    {
+        border: 1px solid #d1d0d0; width:100%;height:140px ;margin-right: -3px;margin-bottom: -6px;margin-top:.5px;
+    }
+    .name
+    {
+        font-size: 1.5rem;font-weight: 600;    margin-top: 3px;
+    }
+    .price
+    {
+        font-size: 1.2rem;font-weight: 500; color:#e05615;    margin-top: -4px;
+    }
+    
+    .engin
+    {
+        font-size: 1.1rem;font-weight: 500; color:#4e4e4e;margin-top: 2px;
+    }
+    .power
+    {
+        font-size: 1.1rem;font-weight: 500; color:#4e4e4e;margin-top: -7px;
+    }
+    .speed
+    {
+        font-size: 1rem;font-weight: 500; color:#4e4e4e;margin-top: -10px;
+    }
+    .share
+    {
+        color:red ; font-size: 29px;margin-top: 63px; margin-right: 18px;
+    }
+    .more
+    {
+       color:#4e4e4e ; font-size: 29px;margin-top: 11px; margin-right: 18px;
+    }
+    .imglogo
+    {
+        width:140px;height:140px ;
+        z-index: 1;
+    }
+    .discount
+    {
+        height: 38px;
+        background-color: #dc9b02;
+           
+         color: white;
+          
+         padding: 2px 5px;
+            position: absolute;
+         
+           top: 0%;
+            right: 9px;
+          
+    }
+
+
+    @media screen and ( min-width:768) {
+      
+     
+        .toolbar-md-light .toolbar-background-md {
+            background: #f4f4f400;
+        }
+        .toolbar-background-md {
+            border-color: #b2b2b200;
+            background: #fdeeee;
+        }
+       
+       
+        .toolbar-ios-light .toolbar-background-ios {
+            background: #f4f4f400;
+        }
+        .toolbar-background-ios {
+            border-color: #b2b2b200;
+            background: #fdeeee;
+        }
+        .div
+        {
+            border:.2px solid #d3d0d0;width: 110%;    margin-bottom: 20px;
+            background-color: #ffffff;
+        }
+        .img
+        {
+            border: 1px solid #d1d0d0; width:100% !important;height:200px !important;margin-right: -3px;margin-bottom: -6px;margin-top:.5px;
+        }
+        .name
+        {
+            font-size: 1.5rem;font-weight: 600;    margin-top: 3px;
+        }
+        .price
+        {
+            font-size: 1.2rem;font-weight: 500; color:#e05615;    margin-top: -4px;
+        }
+        .engin
+        {
+            font-size: 1.1rem;font-weight: 500; color:#4e4e4e;margin-top: 2px;
+        }
+        .power
+        {
+            font-size: 1.1rem;font-weight: 500; color:#4e4e4e;margin-top: -7px;
+        }
+        .speed
+        {
+            font-size: 1rem;font-weight: 500; color:#4e4e4e;margin-top: -10px;
+        }
+        .share
+        {
+            color:red ; font-size: 29px;margin-top: 63px; margin-right: 18px;
+        }
+        .more
+        {
+           color:#4e4e4e ; font-size: 29px;margin-top: 11px; margin-right: 18px;
+        }
+        .imglogo
+        {
+            width:140px;height:140px ;
+            z-index: 1;
+        }
+        .discount
+        {
+            height: 38px;
+            background-color: #dc9b02;
+               
+             color: white;
+              
+             padding: 2px 5px;
+                position: absolute;
+             
+               top: 0%;
+                right: 9px;
+                font-size: 21px;
+              
+        }
+        
+    }
+
+
+
+@media screen and (min-width:350px){
+    .deatilsc {
+        margin-right: 10px ;
+    }
+    .search{
+    text-align: left;
+    margin-left: 0px;
+    margin-right: -280px !important;    }
+    .engin
+    {
+        font-size: 1.1rem;font-weight: 500; color:#4e4e4e;margin-top: -13px;
+    }
+}
+@media screen and (min-width:420px){
+    .search{
+    text-align: left;
+    margin-left: 0px;
+    margin-right: -338px !important;
+    }
+    .engin
+    {
+        font-size: 1.1rem;font-weight: 500; color:#4e4e4e;margin-top: -12px;
+    }
+}
+@media screen and (min-width:540px){
+    .search{
+    text-align: left;
+    margin-left: 0px;
+    margin-right: -418px !important;
+    }
+}
+@media screen and (min-width:600px){
+    .search{
+    text-align: left;
+    margin-left: 0px;
+    margin-right: -470px !important;
+    }
+    .name {
+        font-size: 1.2rem !important;
+        font-weight: 600;
+        margin-top: 3px;
+    }
+    
+}
+@media screen and (min-width:650px){
+    .search{
+    text-align: left;
+    margin-left: 0px;
+    margin-right: -526px !important;
+    }
+    .name {
+        font-size: 1.2rem !important;
+        font-weight: 600;
+        margin-top: 3px;
+    }
+    
+}
+@media screen and (min-width:700px){
+    .deatilsc {
+        margin-right: 21px !important;
+    }
+    .col4
+    {
+      margin-right:-22px;
+    }
+    .search{
+    text-align: left;
+    margin-left: 0px;
+    margin-right: -607px !important;
+    }
+    .name {
+        font-size: 1.2rem !important;
+        font-weight: 600;
+        margin-top: 3px;
+    }
+    
+}
+@media screen and (min-width:780px){
+    .deatilsc {
+        margin-right: 18px!important;    }
+    .search{
+    text-align: left;
+    margin-left: 0px;
+    margin-right: -650px !important;
+    }
+    .name {
+        font-size: 1.3rem !important;
+        font-weight: 600;
+        margin-top: 3px;
+    }
+    
+}
+@media screen and (min-width:830px){
+    .deatilsc {
+        margin-right: 18px!important;    }
+    .search{
+    text-align: left;
+    margin-left: 0px;
+    margin-right: -730px !important;
+    }
+    .name {
+        font-size: 1.3rem !important;
+        font-weight: 600;
+        margin-top: 3px;
+    }
+    
+}
+
+    @media screen and (min-width:320px){
+        .deatilsc
+        {
+            margin-right: 0px;
+        }
+        .rows
+        {
+            margin-top: 0px;
+
+        }
+        .row1
+        {
+            margin-top: 0px;        }
+        .search
+        {
+            text-align: left;
+            margin-left: 0px;
+                margin-right: -238px;
+
+                    }
+     
+        .toolbar-md-light .toolbar-background-md {
+            background: #f4f4f400;
+        }
+        .toolbar-background-md {
+            border-color: #b2b2b200;
+            background: #fdeeee;
+        }
+       
+        
+        .toolbar-ios-light .toolbar-background-ios {
+            background: #f4f4f400;
+        }
+        .toolbar-background-ios {
+            border-color: #b2b2b200;
+            background: #fdeeee;
+        }
+        .div
+        {
+            border:1px solid #d3d0d0;width: 110%;    margin-bottom: 8px;
+            background-color: #ffffff;    height: 141px;
+        }
+        .img
+        {
+            border: 1px solid #d1d0d0;
+            width: 100%;
+            height: 140px;
+            margin-right: -6px;
+            margin-bottom: -6px;
+            margin-top: -6px; 
+         }
+        .name
+        {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 3px;        }
+        .price
+        {
+            font-size: 1.1rem;font-weight: 500; color:#e05615;    margin-right:-4px;    margin-top: -8px;
+        }
+        .engin
+        {
+            font-size: 1.1rem;font-weight: 500; color:#4e4e4e;margin-top: -15px;
+        }
+        .engin2
+        {
+            font-size: 1.1rem;font-weight: 500; color:#4e4e4e;margin-top: -9px;
+        }
+        .power
+        {
+            font-size: 1.1rem;font-weight: 500; color:#4e4e4e;margin-top: -9px;
+        }
+        .speed
+        {
+            font-size: 1.1rem;font-weight: 500; color:#4e4e4e;margin-top: -13px;
+        }
+        .share
+        {
+            color:red ; font-size: 22px;margin-top: 47px; margin-right: 18px;
+        }
+        .more
+        {
+           color:#4e4e4e ; font-size: 26px;margin-top: 18px; margin-right: 18px;
+        }
+        .imglogo
+        {
+            width:140px;height:140px ;
+            z-index: 1;
+        }
+        .discount
+        {
+            height: 38px;
+            background-color: #dc9b02;
+               
+             color: white;
+              
+             padding: 2px 5px;
+                position: absolute;
+             
+               top: -1%;
+                right: 9px;
+                font-size: 13px;
+              
+        }
+    
+    
+    }
+    @media screen and (min-width:900px){
+        .deatilsc {
+            margin-right: 15px !important;
+        }
+        .name
+        {
+            font-size: 2rem;font-weight: 600;    margin-top: 3px;
+        }
+    .search
+    {
+        text-align: left;
+        margin-left: 0px;
+        margin-right: -768px !important;
+        }
+    }
+    @media screen and (min-width:950px){
+        .deatilsc {
+            margin-right: 18px!important;        }
+        .name
+        {
+            font-size: 2rem;font-weight: 600;    margin-top: 3px;
+        }
+        .search
+        {
+            text-align: left;
+            margin-left: 0px;
+            margin-right: -808px !important;
+        }
+        }
+        @media screen and (min-width:1000px){
+            .name
+            {
+                font-size: 2rem;font-weight: 600;    margin-top: 3px;
+            }
+            .search
+            {
+                text-align: left;
+                margin-left: 0px;
+                margin-right: -860px !important;
+                        }
+            }
+    @media screen and (min-width:1024px) {
+        .deatilsc {
+            margin-right: 22px !important;
+        }
+        .rows
+        {
+            margin-top: 0px;
+
+        }
+        .row1
+        {
+            margin-top: -25px;        }
+        .search
+        {
+            text-align: left;
+            margin-left: 0px;
+            margin-right: -208px;
+                    }
+      
+        .toolbar-md-light .toolbar-background-md {
+            background: #f4f4f400;
+        }
+        .toolbar-background-md {
+            border-color: #b2b2b200;
+            background: #fdeeee;
+        }
+       
+      
+      
+        .toolbar-ios-light .toolbar-background-ios {
+            background: #f4f4f400;
+        }
+        .toolbar-background-ios {
+            border-color: #b2b2b200;
+            background: #fdeeee;
+        }
+        .div
+        {
+            border:1px solid #d3d0d0;width: 110%;    margin-bottom: 8px;
+            background-color: #ffffff;    height: 141px;
+        }
+        .img
+        {
+            border: 1px solid #d1d0d0;
+            width: 100%;
+            height: 140px;
+            margin-right: -6px;
+            margin-bottom: -6px;
+            margin-top: -6px;  
+           }
+        .name
+        {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-top: 3px;        }
+        .price
+        {
+            font-size: 1.2rem;font-weight: 500; color:#e05615;    margin-right: 0px;    margin-top: 0px;
+        }
+        .engin
+        {
+            font-size: 1.1rem;font-weight: 500; color:#4e4e4e;margin-top: -9px;
+        }
+        .engin2
+        {
+            font-size: 1.1rem;font-weight: 500; color:#4e4e4e;margin-top: -9px;
+        }
+        .power
+        {
+            font-size: 1.1rem;font-weight: 500; color:#4e4e4e;margin-top: -7px;
+        }
+        .speed
+        {
+            font-size: 1.1rem;font-weight: 500; color:#4e4e4e;margin-top: -10px;
+        }
+        .share
+        {
+            color:red ; font-size: 22px;margin-top: 47px; margin-right: 18px;
+        }
+        .more
+        {
+           color:#4e4e4e ; font-size: 26px;margin-top: 18px; margin-right: 18px;
+        }
+        .imglogo
+        {
+            width:140px;height:140px ;
+            z-index: 1;
+        }
+        .discount
+        {
+            height: 38px;
+            background-color: #dc9b02;
+               
+             color: white;
+              
+             padding: 2px 5px;
+                position: absolute;
+             
+               top: -1%;
+                right: 9px;
+                font-size: 13px;
+              
+        }
+    }
+}

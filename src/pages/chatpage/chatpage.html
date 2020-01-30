@@ -1,0 +1,75 @@
+<ion-header >
+
+  <ion-navbar color="danger" hideBackButton>
+      <ion-buttons right>
+          <button ion-button icon-only (click)="viewCtrl.dismiss()">
+              <ion-icon name="arrow-back" arrow-dripright></ion-icon>
+          </button>
+          </ion-buttons>
+    <h2 style="margin-right: 18px; color:#ffffff ;margin-top: 10px;font-size:21px ;    margin-right: 10px;">المحادثه</h2>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-color:#fdeeee ;  margin-top: 28px; ">
+    <ion-list>
+      <ion-item style="text-align: center;background-color: #e4e3d4" *ngIf="hide==false"> <p style="font-weight: 900;color:#666">شكرا لكم علي اختياركم لخدمه الرد المباشر , نرجو منك الانتظار حتي يتسنى لاحد ممثلي خدمة العملاء بالرد عليكم ... </p> </ion-item>
+      <ion-item *ngFor="let chat of chats" no-lines>
+        <div class="chat-status" text-center *ngIf="chat.type==='join'||chat.type==='exit';else message">
+          <span class="chat-date">{{chat.sendDate | date:'short'}}</span>
+          <span class="chat-content-center">{{chat.message}}</span>
+        </div>
+        <ng-template #message>
+          <div class="chat-message" text-right *ngIf="chat.user === user">
+            <div class="right-bubble">
+              <span class="msg-name">{{user}}</span>
+              <span class="msg-date">{{chat.sendDate | date:'short'}}</span>
+              <p text-wrap>{{chat.message}}</p>
+            </div>
+          </div>
+          <div class="chat-message" text-left *ngIf="chat.user !== user">
+            <div class="left-bubble">
+              <span class="msg-name">{{chat.user}}</span>
+              <span class="msg-date">{{chat.sendDate | date:'short'}}</span>
+              <p text-wrap>{{chat.message}}</p>
+            </div>
+          </div>
+        </ng-template>
+       
+      </ion-item>
+      <div class="chat-message" text-left *ngIf="hide==true">
+          <div class="left-bubble">
+            <span class="msg-name">خدمه عملاء الضحيان</span>
+            <span class="msg-date">{{send | date:'short'}}</span>
+            <p text-wrap>{{msg}}</p>
+          </div>
+        </div>
+    </ion-list>
+  </ion-content>
+  
+  <ion-footer>
+    <ion-grid>
+      <ion-row *ngIf="plat=='android'">
+        
+        <ion-col col-10 >
+          <ion-input  type="text" placeholder=" نص الرساله " [(ngModel)]="data.message"  (keyup.enter)="handleLogin()" name="message" style="text-align: right"></ion-input>
+
+        </ion-col>
+        <ion-col col-2 >
+            <ion-icon name="paper-plane" (click)="sendMessage()" ></ion-icon>
+          </ion-col>
+      </ion-row>
+      <ion-row *ngIf="plat=='ios'">
+      
+      <ion-col col-10 >
+        <ion-input  type="text" placeholder=" نص الرساله "  [(ngModel)]="data.message"   name="message" style="text-align: right"></ion-input>
+
+      </ion-col>
+      <ion-col col-2 style="margin:left">
+          <ion-icon name="paper-plane" (click)="sendMessage()"  ></ion-icon>
+        </ion-col>
+
+    </ion-row>
+    </ion-grid>
+  </ion-footer>

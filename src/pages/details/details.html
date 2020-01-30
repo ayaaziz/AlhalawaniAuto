@@ -1,0 +1,369 @@
+<ion-header>
+
+  <ion-navbar color="danger" hideBackButton>
+    
+        <ion-buttons left>
+            <button ion-button icon-only (click)="search()">
+                <ion-icon name="search" style="  color:#ffffff; font-size:25px"></ion-icon>
+              </button>
+            </ion-buttons>
+          
+         
+    <ion-title style="text-align:center;    font-weight: bold;" >{{name}}</ion-title>
+ 
+    <ion-buttons right>
+      <button ion-button icon-only (click)="ViewCtrl.dismiss()">
+          <ion-icon name="arrow-back" arrow-dripright></ion-icon>
+      </button>
+      </ion-buttons>
+      
+    
+  </ion-navbar>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+</ion-header>
+
+
+<ion-content padding style="background-color:#fdeeee " fullscreen #myContent1>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+        pullingIcon="arrow-dropdown"
+        refreshingSpinner="circles">
+        </ion-refresher-content>
+      </ion-refresher> 
+  <ion-grid style="width:100%;">
+    <ion-row style="width:100%">
+    <div class="div1" style="width:100%">
+        <ion-slides style="width:100%" #newSlider *ngIf="Sliders?.length == 1"  loop="true" autoplayDisableOnInteraction="false" dir="rtl" pager="true">
+            <ion-slide style="width:100%" class="slide" *ngFor="let slide of Sliders">
+                <span   *ngFor="let item of alldata">
+                <span  class="discount" *ngIf="(item.offer_discount >'0')">   خصم {{item.offer_discount}}  % </span></span>
+                <img class="imgslider" [defaultImage]="defaultimage" [scrollObservable]="myContent1.ionScroll" [lazyLoad]="image+slide.image_name" style="width:100%"> 
+        
+              
+            </ion-slide>
+          </ion-slides>
+  <ion-slides style="width:100%" #newSlider *ngIf="Sliders?.length > 1" autoplay="3000" loop="true" autoplayDisableOnInteraction="false" dir="rtl" pager="true">
+    <ion-slide style="width:100%" class="slide" *ngFor="let slide of Sliders">
+        <span   *ngFor="let item of alldata" >
+        <span  class="discount" *ngIf="(item.offer_discount >'0')">   خصم {{item.offer_discount}}  % </span></span>
+         <img class="imgslider" [defaultImage]="defaultimage" [scrollObservable]="myContent1.ionScroll" [lazyLoad]="image+slide.image_name" style="width:100%"> 
+
+      
+    </ion-slide>
+  </ion-slides>
+</div>
+</ion-row>
+<ion-row class="row11" style="width:100%">
+<ion-toolbar >
+  <ion-segment [(ngModel)]="details" class="seg">
+    <ion-segment-button value="detail" >
+      المواصفات
+    </ion-segment-button>
+    <ion-segment-button  value="maintain" >
+      التوصيات
+             
+    </ion-segment-button>
+
+  </ion-segment>
+</ion-toolbar >
+</ion-row>
+<div *ngFor="let item of alldata" style="width:100%">
+<ion-row style="width:100%">
+  <ion-col col-10 >
+      <p *ngIf="(page=='notification')" style="    font-weight: bold;font-size: 1.6rem;">{{item.name}}</p>
+  <p *ngIf="!(page=='listcars')" style="    font-weight: bold;font-size: 1.6rem;">{{item.offer_name}}</p>
+  <p *ngIf="(page=='listcars')" style="    font-weight: bold;font-size: 1.6rem;">{{item.name}}</p>
+  <p class="price" *ngIf="(!(item.price==null) && (!(item.price_after==''))) " style="font-weight:bold;">  <span> {{item.price_after}} ر.س (شامل الضريبه)</span>
+    <span style="color:#4e4e4e;font-weight:bold;">
+      بدلا من
+    </span> 
+    <del style="color:#dc9b02;font-weight:bold">{{item.price}} ر.س</del>
+  </p>
+  <p class="price" *ngIf="(!(item.price==null) && (item.price_after=='')) " style="font-weight:bold;">  
+   {{item.price}} ر.س
+  </p>
+  <p class="price" *ngIf="!(item.price_before==null)" style="font-weight:bold">  <span> {{item.price_after}} ر.س (شامل الضريبه)</span>
+    <span style="color:#4e4e4e;font-weight:bold;">
+      بدلا من
+    </span> 
+    <del style="color:#dc9b02;font-weight:bold">{{item.price_before}} ر.س</del> 
+   </p> 
+  </ion-col>
+  <ion-col col-2>
+      <ion-row >
+          <ion-icon *ngIf="!(item.price_before==null)" ios="md-share" md="md-share" class="share" (click)="shareoffer(item.price_after,image+slide)"> </ion-icon>
+          <ion-icon *ngIf="!(item.price==null)" ios="md-share" md="md-share" class="share" (click)="shareoffer(item.price,image+slide)"> </ion-icon>
+
+        </ion-row>
+  </ion-col>
+</ion-row>
+
+
+</div>
+</ion-grid>
+<div [ngSwitch]="details" style="width:100%">
+    <div *ngSwitchCase="'detail'" style="width:100%">
+<div class="form-control" style="width:100%">
+
+  <ion-list  no-lines style="width:100%">    
+      <ion-item  text-wrap  class="item1"  *ngIf="show==true" style="width:100%;height: 50px;">  
+   <ion-row (click)="showdata()">  
+     <ion-col  col-10 >   
+        <p style="color:#000000;; font-size: 1.6rem"  > المحرك والقوه  </p> 
+      </ion-col>
+      <ion-col col-2 style="text-align:left">
+          <span  > <ion-icon   ios="md-add" md="md-add" style="color: #464545; margin-top: 3px;; font-size: 1.6rem "></ion-icon> </span>
+      </ion-col>
+    
+      </ion-row>   
+  
+</ion-item>
+<ion-item  text-wrap  class="item2" *ngIf="show==false" style="width:100%;height: 50px;">  
+  <ion-row (click)="hidedata()" style="width:100%">  
+    <ion-col  col-10>   
+       <p style="color:#000000;font-size: 1.6rem"  > المحرك والقوه  </p> 
+     </ion-col>
+    
+     <ion-col col-2  style="text-align:left">
+       <span > <ion-icon  ios="md-remove" md="md-remove" style="color: #464545; margin-top: 3px; font-size: 1.6rem"></ion-icon> </span>
+
+     </ion-col>
+     </ion-row>   
+ 
+</ion-item>
+<div [hidden]="data" *ngFor="let item of alldata" style="width:100%">    
+  <ion-grid class="grid2" style=" width:100%;">
+      <ion-row  *ngIf="!(item.engine_capacity== null )" >
+        <ion-col col-7> <p style="    margin-top: 0%;">  سعه المحرك  </p> </ion-col>
+        <ion-col col-5>
+            {{item.engine_capacity}} لتر
+          </ion-col>
+        
+        </ion-row>
+        <ion-row *ngIf="!(item.engine_power== null )" >
+          <ion-col col-7> <p style="    margin-top: 0%;">  قوه المحرك  </p> </ion-col>
+          <ion-col col-5>
+                {{item.engine_power}} 
+            </ion-col>
+            
+          </ion-row>
+          <ion-row *ngIf="!(item.max_speed== null )" >
+              <ion-col col-7> <p style="    margin-top: 0%;">  السرعه القصوي </p> </ion-col>
+              <ion-col col-5>
+                    {{item.max_speed}} 
+                </ion-col>
+                
+              </ion-row>
+              <ion-row *ngIf="!(item.cylinder== null )" >
+                  <ion-col col-7> <p style="    margin-top: 0%;">  سليندرات  </p> </ion-col>
+                  <ion-col col-5>
+                        {{item.cylinder}} 
+                    </ion-col>
+                    
+                  </ion-row>
+                  <ion-row *ngIf="!(item.traction_type== null )" >
+                      <ion-col col-7> <p style="    margin-top: 0%;">  نوع الدفع/الجر </p> </ion-col>
+                      <ion-col col-5>
+                            {{item.traction_type}} 
+                        </ion-col>
+                        
+                      </ion-row>
+                      <ion-row *ngIf="!(item.fuel_tank_capacity == null )" >
+                          <ion-col col-7> <p style="    margin-top: 0%;"> سعه خزان الوقود (لتر)  </p> </ion-col>
+                          <ion-col col-5>
+                                {{item.fuel_tank_capacity}} 
+                            </ion-col>
+                            
+                          </ion-row>
+                          <ion-row *ngIf="!(item.fuel_economy == null )" >
+                              <ion-col col-7> <p style="    margin-top: 0%;">  الاقتصاد فى استهلاك الوقود   </p> </ion-col>
+                              <ion-col col-5>
+                                    {{item.fuel_economy}} 
+                                </ion-col>
+                                
+                              </ion-row>
+                              <ion-row  *ngIf="!(item.fuel_type== null )" >
+                                  <ion-col col-7> <p style="    margin-top: 0%;">  نوع الوقود  </p> </ion-col>
+                                  <ion-col col-5>
+                                        {{item.fuel_type}} 
+                                    </ion-col>
+                                    
+                                  </ion-row>
+                                  
+                                      <ion-row *ngIf="!(item.torque== null )"  >
+                                          <ion-col col-7> <p style="    margin-top: 0%;">  قوه المحرك (حصان)  </p> </ion-col>
+                                          <ion-col col-5>
+                                                {{item.torque}} 
+                                            </ion-col>
+                                            
+                                          </ion-row>
+                                          <ion-row *ngIf="!(item.motion_vector== null )" style=" border-top: 1px solid #d4d4d4;    background: #fdeeee; border-top: 1px solid #eae9e9">
+                                              <ion-col col-7> <p style="    margin-top: 0%;">  ناقل الحركه  </p> </ion-col>
+                                              <ion-col col-5>
+                                                    {{item.motion_vector}} 
+                                                </ion-col>
+                                                
+                                              </ion-row>
+                                              <ion-row *ngIf="!(item.n_of_seats== null )" style=" border-top: 1px solid #d4d4d4;    background: #f9f9fd; border-top: 1px solid #eae9e9">
+                                                  <ion-col col-7> <p style="    margin-top: 0%;">  عدد المقاعد  </p> </ion-col>
+                                                  <ion-col col-5>
+                                                        {{item.n_of_seats}} 
+                                                    </ion-col>
+                                                    
+                                                  </ion-row>
+           </ion-grid>
+       </div>
+      
+</ion-list>
+
+
+<ion-list [hidden]="done" no-lines style="width:100%">    
+  <ion-item  text-wrap  class="item3"  *ngIf="show1==true " style="width:100%;height: 50px;">  
+<ion-row (click)="showdata1()">  
+ <ion-col  col-10 >   
+    <p style="color:#000000; font-size: 1.6rem"  > القياسات والطول  </p> 
+  </ion-col>
+  <ion-col col-2  style="text-align:left">
+      <span  > <ion-icon   ios="md-add" md="md-add" style="color: #464545; margin-top: 3px; font-size: 1.6rem "></ion-icon> </span>
+  </ion-col>
+
+  </ion-row>   
+
+</ion-item>
+<ion-item   text-wrap  class="item4" *ngIf="show1==false" style="width:100%;height: 50px;">  
+<ion-row (click)="hidedata1()" >  
+<ion-col  col-10>   
+   <p style="color:#000000; font-size: 1.6rem"  > القياسات والطول  </p> 
+ </ion-col>
+
+ <ion-col col-2  style="text-align:left">
+   <span > <ion-icon  ios="md-remove" md="md-remove" style="color: #464545; margin-top: 3px; font-size: 1.6rem"></ion-icon> </span>
+
+ </ion-col>
+ </ion-row>   
+
+</ion-item>
+<div [hidden]="data1" *ngFor="let item of alldata" style="width:100%">    
+<ion-grid class="grid3" style="width:100%">
+  <ion-row *ngIf="!(item.length== null )" style=" border-top: 1px solid #d4d4d4;    background: #f9f9fd; border-top: 1px solid #eae9e9">
+    <ion-col col-7> <p style="    margin-top: 0%;">  الطول (متر )  </p> </ion-col>
+    <ion-col col-5>
+        {{item.length}} 
+      </ion-col>
+    
+    </ion-row>
+    <ion-row *ngIf="!(item.width== null )"  style=" border-top: 1px solid #d4d4d4;    background: #fdeeee; border-top: 1px solid #eae9e9">
+      <ion-col col-7> <p style="    margin-top: 0%;">  عرض (متر )  </p> </ion-col>
+      <ion-col col-5>
+            {{item.width}} 
+        </ion-col>
+        
+      </ion-row>
+      <ion-row  *ngIf="!(item.height== null )" style=" border-top: 1px solid #d4d4d4;    background: #f9f9fd; border-top: 1px solid #eae9e9">
+          <ion-col col-7> <p style="    margin-top: 0%;">  ارتفاع (متر) </p> </ion-col>
+          <ion-col col-5>
+                {{item.height}} 
+            </ion-col>
+            
+          </ion-row>
+          <ion-row *ngIf="!(item.wheelbase== null )" style=" border-top: 1px solid #d4d4d4;    background: #fdeeee; border-top: 1px solid #eae9e9">
+              <ion-col col-7> <p style="    margin-top: 0%;">  قاعده العجلات (متر)  </p> </ion-col>
+              <ion-col col-5>
+                    {{item.wheelbase}} 
+                </ion-col>
+                
+              </ion-row>
+              <ion-row *ngIf="!(item.car_trunk== null )" style=" border-top: 1px solid #d4d4d4;    background: #f9f9fd; border-top: 1px solid #eae9e9">
+                  <ion-col col-7> <p style="    margin-top: 0%;">  سعه صندوق السياره </p> </ion-col>
+                  <ion-col col-5>
+                        {{item.car_trunk}} 
+                    </ion-col>
+                    
+              </ion-row>
+       </ion-grid>
+   </div>
+  
+</ion-list>
+<div >
+<ion-list *ngIf="(tecno.length > 0)"  no-lines style="width:100%">    
+  <ion-item   text-wrap  class="item5"  *ngIf="show2==true" style="width:100%;height: 50px;">  
+<ion-row (click)="showdata2()">  
+ <ion-col  col-10 >   
+    <p style="color:#000000; font-size: 1.6rem"  > رفاهيه وتكنولوجيا  </p> 
+  </ion-col>
+  <ion-col col-2  style="text-align:left">
+      <span  > <ion-icon   ios="md-add" md="md-add" style="color: #464545; margin-top: 3px; font-size: 1.6rem "></ion-icon> </span>
+  </ion-col>
+
+  </ion-row>   
+
+</ion-item>
+<ion-item  text-wrap  class="item6" *ngIf="show2==false" style="width:100%;height: 50px;">  
+<ion-row (click)="hidedata2()">  
+<ion-col  col-10>   
+   <p style="color:#000000; font-size: 1.6rem"  > رفاهيه وتكنولوجيا  </p> 
+ </ion-col>
+
+ <ion-col col-2  style="text-align:left">
+   <span > <ion-icon  ios="md-remove" md="md-remove" style="color: #464545; margin-top: 3px; font-size:1.6rem "></ion-icon> </span>
+
+ </ion-col>
+ </ion-row>   
+
+</ion-item>
+<div [hidden]="data2" *ngFor="let item of tecno" style="width:100%">    
+<ion-grid class="grid14" style="width:100%;" >
+  <ion-row    >
+    <ion-col col-12> <p style="    margin-top: 0%;"> {{item.name}} </p> </ion-col>
+    </ion-row>
+</ion-grid>
+</div>
+</ion-list>
+</div>
+<ion-list no-lines style="width:100%">
+ 
+  <ion-item  text-wrap  class="item7" style="width:100%;height: 50px;">  
+    <ion-row (click)="hidedata3()" style="width:100%">  
+    <ion-col  col-10>   
+       <p style="color:#000000; font-size: 1.6rem"  > حاسبه تمويل  </p> 
+     </ion-col>
+    
+     <ion-col col-2  style="text-align:left">
+    
+     </ion-col>
+     </ion-row>   
+    
+    </ion-item>
+    <div  *ngFor="let item of alldata" style="width:100%">    
+    <ion-grid class="grid5" style="background: #f9f9fd; width:100% ">
+      <ion-row  style="background: #f9f9fd; height:40px;width:100%">
+        <ion-col > <p style="    margin-top: 0%;">   شركة الضحيان التجاريه تقدم خدمه فريده لعملائها بتسهيل جميع الاجراءات البنكيه . يمكنك الان طلب تمويل بنكي لشراء السياره التى تحلم بها . </p> </ion-col> 
+        </ion-row>
+        <ion-row >
+          <button ion-button round class="btn" *ngIf="(!(item.price==null) && !(item.price_after==''))" (click)="openpaid(item.id,item.price_after,item.name)">حاسبه تمويل
+            </button>
+            <button ion-button round class="btn" *ngIf="(!(item.price==null) && (item.price_after==''))" (click)="openpaid(item.id,item.price,item.name)">حاسبه تمويل
+            </button>
+           <button *ngIf="!(item.price_before==null)" ion-button round class="btn" (click)="openpaid(item.car_id,item.price_after,item.name)">  حاسبه تمويل  </button>  
+          </ion-row>
+           </ion-grid>
+       </div>
+      
+    </ion-list>
+
+  </div>
+</div>
+ 
+</div>
+<div [ngSwitch]="details" >
+<div *ngSwitchCase="'maintain'" >
+  <div *ngFor="let item of maindata" style="background-color: #ffffff">
+        <ion-row style=" margin-right: 8px; padding: 5px;;margin-right: 8px;">
+          {{item.advice}}
+        </ion-row>
+      </div>
+      </div>
+</div>
+</ion-content>

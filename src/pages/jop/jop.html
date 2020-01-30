@@ -1,0 +1,137 @@
+
+<ion-header >
+
+  <ion-navbar color="danger" hideBackButton>
+      <ion-buttons right>
+          <button ion-button icon-only (click)="viewCtrl.dismiss()">
+              <ion-icon name="arrow-back" arrow-dripright></ion-icon>
+          </button>
+          </ion-buttons>
+    <ion-title  style="text-align:right">طلب توظيف</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding style="background-color:#fdeeee ;  margin-top: 28px; ">
+
+  <form [formGroup]="data"  >
+              <ion-row style="background-color:#fdeeee">
+<ion-col col-4>
+        <ion-label style="color:#d63932" > الاسم بالكامل</ion-label>
+</ion-col>
+<ion-col col-8>
+        <ion-input   (focus)="delname()" text-right type="text"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="name"></ion-input>
+</ion-col>
+              </ion-row>
+  <ion-row *ngIf="(name.hasError('required') && name.touched) || namee=='true'">
+      <ion-col col-4></ion-col>
+      <ion-col col-8 style="margin-top: -14px;margin-bottom: -11px;">
+      <p > * من فضلك ادخل الاسم</p>
+      </ion-col>
+   </ion-row>
+                   <ion-row style="background-color:#fdeeee">
+<ion-col col-4>
+        <ion-label  style="color:#d63932" >رقم الجوال</ion-label>
+    </ion-col>
+<ion-col col-8>
+        <ion-input style="-webkit-text-security:disc;" type="tel" pattern="[0-9]*"  (focus)="delphone()" text-right   id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="phone">
+
+        </ion-input>
+             </ion-col>
+                   </ion-row>
+  <ion-row *ngIf="(phone.hasError('required') && phone.touched) || phonee=='true'">
+      <ion-col col-4></ion-col>
+      <ion-col col-8 style="margin-top: -14px;margin-bottom: -11px;">
+      <p > * ادخل رقم الجوال</p>
+      </ion-col>
+   </ion-row>
+  
+   
+         
+<ion-row>
+  <ion-col col-4>
+    <ion-label style="color:#d63932"> الوظيفه </ion-label>
+
+  </ion-col>
+  <ion-col col-8>
+    <ion-select (ionChange)="deljop()" okText="تم" cancelText="الغاء"    style=" height:35px;border:1px solid rgba(214, 57, 50, 0.58) ; background-color: #ffffff ;"  formControlName="experience">
+        <ion-option value="" disabled [hidden]="true" selected style="color:gray"> اختر الوظيفه</ion-option>
+
+      <ion-option  *ngFor="let item of alldata" style="padding:0px" value="{{item.id}}">{{item.name}}</ion-option>
+    </ion-select>
+  </ion-col>
+</ion-row>
+                     
+ 
+  <ion-row *ngIf="(experience.hasError('required') && experience.touched) || exp=='true'">
+      <ion-col col-4></ion-col>
+      <ion-col col-8 style="margin-top: -14px;margin-bottom: -11px;">
+      <p >* ادخل الوظيفه</p>
+      </ion-col>
+   </ion-row>       
+    
+        <ion-row style="background-color:#fdeeee">
+            <ion-col col-4>
+                    <ion-label style="color:#d63932" >  المؤهلات</ion-label>
+            </ion-col>
+            <ion-col col-8>
+                    <ion-input (focus)="delqua()" text-right type="text"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="qualification"></ion-input>
+            </ion-col>
+                          </ion-row>
+              <ion-row *ngIf="(qualification.hasError('required') && qualification.touched) || qua=='true'">
+                  <ion-col col-4></ion-col>
+                  <ion-col col-8 style="margin-top: -14px;margin-bottom: -11px;"> 
+                <p > * من فضلك ادخل مؤهلاتك</p>
+                  </ion-col>
+               </ion-row>
+               <ion-row style="background-color:#fdeeee">
+                  <ion-col col-4>
+                          <ion-label style="color:#d63932" > المهارات</ion-label>
+                  </ion-col>
+                  <ion-col col-8>
+                          <ion-input (focus)="delskill()" text-right type="text"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="skills"></ion-input>
+                  </ion-col>
+                                </ion-row>
+                    <ion-row *ngIf="(skills.hasError('required') && skills.touched) || skill=='true'">
+                        <ion-col col-4></ion-col>
+                        <ion-col col-8 style="margin-top: -14px;margin-bottom: -11px;"> 
+                      <p > * من فضلك ادخل مهاراتك</p>
+                        </ion-col>
+                     </ion-row>
+                     <ion-row style="background-color:#fdeeee">
+                        <ion-col col-4>
+                          <ion-label for="email" class="remark" style="color:#d63932">الملاحظات والخبرات </ion-label>
+                        </ion-col>
+                        <ion-col col-8>
+                          <ion-textarea text-right  type="text"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:80px ;background-color: #ffffff  " formControlName="remarks">
+                          </ion-textarea>
+                          </ion-col>
+                          </ion-row>
+        <ion-row>
+       <ion-col col-4>
+    <ion-label for="exampleFormControlSelect1" class="cv">  السيره الذاتيه</ion-label>
+       </ion-col>
+      <ion-col col-8 >
+    <h3 class="cvname" style="font-size: 17px">{{filename}}</h3>
+      </ion-col>
+   
+   </ion-row>
+     <ion-row>
+       <ion-col col-4></ion-col>
+      <ion-col col-4 class="colb" style=" text-align: left;">
+        <button ion-button class="buton" (click)="uploadd()"> تحميل الملف</button>
+        </ion-col>
+        <ion-col col-4></ion-col>
+     </ion-row>
+  
+   <p class="form-group" style="margin-top:40px;text-align: center;" >
+      <button ion-button round outline class="button1" (click)="confirmorder()">
+      تاكيد الطلب
+    </button>
+    <button ion-button round outline class="button2" (click)="cancelorder()">
+     الغاء الطلب
+    </button>
+  </p>
+  </form>
+  </ion-content>

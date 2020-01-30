@@ -1,0 +1,97 @@
+<ion-header>
+
+  <ion-navbar color="danger" hideBackButton>
+      <ion-buttons left >
+          <button ion-button icon-only (click)="search()">
+              <ion-icon name="search" style="  color:#ffffff; font-size:25px"></ion-icon>
+            </button>
+          </ion-buttons>
+       
+    <ion-title style="text-align: center;font-weight:bold;">{{name}}</ion-title>
+
+    <ion-buttons right >
+      <button ion-button icon-only (click)="ViewCtrl.dismiss()">
+          <ion-icon name="arrow-back" arrow-dripright></ion-icon>
+      </button>
+      </ion-buttons>
+      
+  </ion-navbar>
+<script src="../hijricalc/js/CreatMemoCalender.js"></script>
+<script src="../hijricalc/js/hijri-date-rtl.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+</ion-header>
+
+
+<ion-content padding style="background-color:#fdeeee " #myContent1>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+        pullingIcon="arrow-dropdown"
+        refreshingSpinner="circles">
+        </ion-refresher-content>
+      </ion-refresher> 
+    <ion-grid style="width:100%;">
+      <ion-row style="width:100%">
+      <div class="div1" style="width:100%">
+          <ion-slides style="width:100%" #newSlider *ngIf="Sliders?.length == 1"  loop="true" autoplayDisableOnInteraction="false" dir="rtl" pager="true">
+              <ion-slide style="width:100%" class="slide" *ngFor="let slide of Sliders">
+                  <span   *ngFor="let item of getdata" >
+                  <span  class="discount" *ngIf="(item.discount >'0')">   خصم {{item.discount}}  % </span></span>
+                  <img class="imgslider" [defaultImage]="defaultimage" [scrollObservable]="myContent1.ionScroll" [lazyLoad]="image+slide" style="width:100%">
+        
+                      <!-- <img class="imgslider" src="{{image+slide}}"  style="width:100%" /> -->
+                
+              </ion-slide>
+            </ion-slides>
+    <ion-slides style="width:100%" #newSlider *ngIf="Sliders?.length > 1" autoplay="3000" loop="true" autoplayDisableOnInteraction="false" dir="rtl" pager="true">
+      <ion-slide style="width:100%" class="slide" *ngFor="let slide of Sliders">
+          <span   *ngFor="let item of getdata" >
+          <span  class="discount" *ngIf="(item.discount >'0')">   خصم {{item.discount}}  % </span></span>
+          <img class="imgslider" [defaultImage]="defaultimage" [scrollObservable]="myContent1.ionScroll" [lazyLoad]="image+slide" style="width:100%">
+
+              <!-- <img class="imgslider" src="{{image+slide}}"  style="width:100%" /> -->
+        
+      </ion-slide>
+    </ion-slides>
+  </div>
+  </ion-row>
+ 
+  <div *ngFor="let item of getdata" style="width:100%">
+  <ion-row style="width:100%">
+    <ion-col col-10>
+    <p>{{name}}</p>
+    <p class="engin" style="    margin-left: 5px; color:#4e4e4e;font-size: 1.1rem;" > الفتره من {{item.offer_start}} الى {{item.offer_end}}</p>
+
+    <p class="price" style="font-weight:bold;">  <span> {{item.price_after}} ر.س </span>
+      <span style="color:#4e4e4e;font-weight:bold;">
+        بدلا من
+      </span> 
+      <del style="color:#dc9b02;font-weight:bold;">{{item.price_before}} ر.س</del> 
+     </p> 
+  
+
+
+    </ion-col>
+    <ion-col col-2 style="text-align:left;">
+        <ion-row>
+            <ion-icon ios="md-share" md="md-share" class="share" (click)="shareoffer(item.description,item.price_after,image+slide)"> </ion-icon>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  
+  
+  </div>
+  </ion-grid>
+  
+      
+  <div class="form-control" style="width:100%">
+<ion-row *ngFor="let item of getdata" style="    margin-right: 10px;">
+{{item.description}}
+</ion-row>
+  </div>
+
+
+   
+   
+</ion-content>
