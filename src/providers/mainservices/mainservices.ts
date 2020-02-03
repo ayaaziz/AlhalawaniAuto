@@ -332,7 +332,7 @@ export class MainservicesProvider {
     let encryptedSearch=JSON.stringify(this.cent.encrypt(params));
     let parameter = new HttpParams().set('data', encryptedSearch)
     headers = headers.set('Content-Type', 'application/x-www-form-urlencoded').set('Authorization', 'Bearer ' + access_token).set('Accept','application/json');
-    let serviceUrl = this.cent.serviceurl + 'brands?';
+    let serviceUrl = this.cent.serviceurl + 'brands?maintanince_view='+maintainance;
 
 
 
