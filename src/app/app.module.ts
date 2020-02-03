@@ -57,7 +57,11 @@ import { setupEvents } from 'ionic-angular/util/events';
 import { SettingPage } from '../pages/setting/setting';
 import { MaindetailPage } from '../pages/maindetail/maindetail';
 import { LaunchNavigator } from '@ionic-native/launch-navigator';
+import { Camera } from '@ionic-native/camera';
+import { PdfPopupPage } from '../pages/pdf-popup/pdf-popup';
+import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer'
 
+import { FileOpener } from '@ionic-native/file-opener';
 // import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
 
 // const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
@@ -87,7 +91,8 @@ import { LaunchNavigator } from '@ionic-native/launch-navigator';
     SearchPage,
     AdvicedetailsPage,
     LoginPage,
-    SettingPage
+    SettingPage,
+    PdfPopupPage
 
   ],
   imports: [
@@ -124,7 +129,8 @@ import { LaunchNavigator } from '@ionic-native/launch-navigator';
     WarningPage,
     AdvicedetailsPage,
     LoginPage,
-    SettingPage
+    SettingPage,
+    PdfPopupPage
   ],
   providers: [
     InAppBrowser,
@@ -155,7 +161,10 @@ import { LaunchNavigator } from '@ionic-native/launch-navigator';
     Screenshot,
     GoogleMaps,
     FileTransfer,
-    Transfer
+    Transfer,
+    Camera,
+    DocumentViewer,
+    FileOpener
   ]
 })
 export class AppModule {}

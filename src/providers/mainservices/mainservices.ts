@@ -318,7 +318,7 @@ export class MainservicesProvider {
 }
  
 
-  brands(access_token,brandsSuccessCallback,brandsFailureCallback) {
+  brands(maintainance,access_token,brandsSuccessCallback,brandsFailureCallback) {
    
     
        
@@ -326,13 +326,31 @@ export class MainservicesProvider {
     
     let headers = new HttpHeaders();
     let params={
+      'maintanince_view':maintainance
     }
     console.log(access_token)
     let encryptedSearch=JSON.stringify(this.cent.encrypt(params));
     let parameter = new HttpParams().set('data', encryptedSearch)
     headers = headers.set('Content-Type', 'application/x-www-form-urlencoded').set('Authorization', 'Bearer ' + access_token).set('Accept','application/json');
-    let serviceUrl = this.cent.serviceurl + 'brands';
+    let serviceUrl = this.cent.serviceurl + 'brands?';
+
+
+
+    // headers.append('Access-Control-Allow-Origin' , '*');
+    // headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS, PUT');
+    // headers.append('Accept','application/json');
+    // headers.append('content-type','application/json');
+    // let encryptedSearch=JSON.stringify(this.cent.encrypt(params));
+    // let parameter = new HttpParams().set('data', encryptedSearch)
+    // headers = headers.set('Content-Type', 'application/x-www-form-urlencoded').set('Authorization', 'Bearer ' + access_token).set('Accept','application/json');
+
+
+
+
+
     this.http.get(serviceUrl, { headers: headers })
+    // this.http.post(serviceUrl,params ,{ headers: headers })
+    
      
      .subscribe(
       data => {
@@ -348,16 +366,13 @@ export class MainservicesProvider {
   
 }
   
-  brandtype(access_token,branch_id,brandtypeSuccessCallback,brandtypeFailureCallback) {
+  brandtype(maintainance,access_token,branch_id,brandtypeSuccessCallback,brandtypeFailureCallback) {
   
- 
-      
-   
-    
     let headers = new HttpHeaders();
     this.cent.appAccess=access_token;
     let params={
-      'brand_id':branch_id
+      'brand_id':branch_id,
+      'maintanince_view':maintainance
     }
     
 
@@ -390,7 +405,7 @@ export class MainservicesProvider {
 }
   
 
-  branch(access_token,branchSuccessCallback,branchFailureCallback) {
+  branch(maintainance,access_token,branchSuccessCallback,branchFailureCallback) {
     let loading = this.loadingCtrl.create({
       spinner: 'bubbles',
     
@@ -407,7 +422,7 @@ export class MainservicesProvider {
     let encryptedSearch=JSON.stringify(this.cent.encrypt(params));
     let parameter = new HttpParams().set('data', encryptedSearch)
     headers = headers.set('Content-Type', 'application/x-www-form-urlencoded').set('Authorization', 'Bearer ' + access_token);
-    let serviceUrl = this.cent.serviceurl + 'branches';
+    let serviceUrl = this.cent.serviceurl + 'branches?maintanince_view='+maintainance;
     this.http.get(serviceUrl, { headers: headers })
      
      .subscribe(

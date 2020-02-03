@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform, PopoverController } from 'ionic-angular';
 import { ViewController } from 'ionic-angular/navigation/view-controller';
 import { MainservicesProvider } from '../../providers/mainservices/mainservices';
 import { CentralProvider } from '../../providers/central/central';
@@ -10,6 +10,11 @@ import { ToastController } from 'ionic-angular/components/toast/toast-controller
 import { Storage } from '@ionic/storage';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { GESTURE_PRIORITY_MENU_SWIPE } from 'ionic-angular/gestures/gesture-controller';
+import { PdfPopupPage } from '../pdf-popup/pdf-popup';
+import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer'
+import { File } from '@ionic-native/file';
+import { FileOpener } from '@ionic-native/file-opener';
+import { FileTransfer } from '@ionic-native/file-transfer';
 
 
 @Component({
@@ -44,7 +49,22 @@ fixedtime:any
 details:any="detail"
 tecno:any=[]
 accestoken:any
-  constructor(public plt:Platform,public storage:Storage,public toastCtrl:ToastController,public social :SocialSharing,public navCtrl: NavController, public cent:CentralProvider,public mainservice:MainservicesProvider,public navParams: NavParams,public ViewCtrl:ViewController) {
+  constructor(public plt:Platform,
+              public storage:Storage,
+              public toastCtrl:ToastController,
+              public social :SocialSharing,
+              public navCtrl: NavController, 
+              public cent:CentralProvider,
+              public mainservice:MainservicesProvider,
+              public navParams: NavParams,
+              public ViewCtrl:ViewController,
+              public popoverCtrl:PopoverController,
+              private document: DocumentViewer,
+              private fileOpener:FileOpener,
+              private transfer:FileTransfer,
+              private file:File,
+              private platform:Platform) {
+
     this.accestoken= localStorage.getItem('adftrmee')
     this.cent.status=0
     this.id=this.navParams.get("Item")
@@ -327,4 +347,44 @@ ionViewDidLoad()
   
       }
     }
+
+    downloadAndOpenPdf() {
+
+      let path = null;
+  
+      if(this.platform.is('ios')) {
+        path = this.file.documentsDirectory;
+      } else {
+        path = this.file.dataDirectory;
+      }
+  
+      const fileTransfer = this.transfer.create();
+  
+      fileTransfer.download('https://motivationletter.net/wp-content/uploads/2018/09/Motivation-Letter-For-Master-Degree-Sample-PDF.pdf',path + 'CarFeatures.pdf').then(entry => {
+        let url = entry.toURL();
+  
+        console.log(url);
+        // this.document.viewDocument(url, 'application/pdf',{});
+        this.fileOpener.open(url, 'application/pdf');
+      })
+    }
+  
+    openPdf() {
+      this.downloadAndOpenPdf();
+    }
+
+
+
+    // openPdf(data) {
+    //   let popover = this.popoverCtrl.create(PdfPopupPage,{
+    
+    //   });
+  
+
+    //   // const options: DocumentViewerOptions = {
+    //   //   title: 'My PDF'
+    //   // }
+      
+    //   // this.document.viewDocument('file:///android_asset/www/assets/1a.pdf', 'application/pdf', options)
+    // }
 }

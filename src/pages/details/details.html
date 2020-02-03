@@ -71,7 +71,7 @@
 </ion-row>
 <div *ngFor="let item of alldata" style="width:100%">
 <ion-row style="width:100%">
-  <ion-col col-10 >
+  <ion-col col-8 >
       <p *ngIf="(page=='notification')" style="    font-weight: bold;font-size: 1.6rem;">{{item.name}}</p>
   <p *ngIf="!(page=='listcars')" style="    font-weight: bold;font-size: 1.6rem;">{{item.offer_name}}</p>
   <p *ngIf="(page=='listcars')" style="    font-weight: bold;font-size: 1.6rem;">{{item.name}}</p>
@@ -91,11 +91,14 @@
     <del style="color:#dc9b02;font-weight:bold">{{item.price_before}} ر.س</del> 
    </p> 
   </ion-col>
-  <ion-col col-2>
+  <ion-col col-4>
       <ion-row >
+
+         <!--ayaaaaa-->
+         <ion-icon class="customicon" (click)="openPdf(item.pdfPath)"> </ion-icon>
+
           <ion-icon *ngIf="!(item.price_before==null)" ios="md-share" md="md-share" class="share" (click)="shareoffer(item.price_after,image+slide)"> </ion-icon>
           <ion-icon *ngIf="!(item.price==null)" ios="md-share" md="md-share" class="share" (click)="shareoffer(item.price,image+slide)"> </ion-icon>
-
         </ion-row>
   </ion-col>
 </ion-row>

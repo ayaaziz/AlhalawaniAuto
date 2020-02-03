@@ -56,7 +56,7 @@ export class ChatPage {
       if(!(val==null))
       {
        this.mark.setValue(val)
-       this.mainservice.brandtype(this.accestoken,this.mark.value,(data) => this.brandtypeSuccessCallback(data),(data) => this.brandtypeFailureCallback(data))
+       this.mainservice.brandtype(0,this.accestoken,this.mark.value,(data) => this.brandtypeSuccessCallback(data),(data) => this.brandtypeFailureCallback(data))
 
       }
      })
@@ -80,7 +80,7 @@ export class ChatPage {
      this.name.setValue(val)
     }
    })
-    this.mainservice.brands(this.accestoken,(data) => this.brandsSuccessCallback(data),(data) => this.brandsFailureCallback(data))
+    this.mainservice.brands(0,this.accestoken,(data) => this.brandsSuccessCallback(data),(data) => this.brandsFailureCallback(data))
     this.data = this.formBuilder.group({
       name: ['',Validators.required],
       chasiss: ['',Validators.required,],
@@ -117,7 +117,7 @@ export class ChatPage {
     this.storage.set('mark',this.mark.value)
     this.storage.set('model',this.model.value)
     this.storage.set('year',this.year.value)
-    this.mainservice.branch(this.accestoken,(data) => this.branchSuccessCallback(data),(data) => this.branchFailureCallback(data))
+    this.mainservice.branch(0,this.accestoken,(data) => this.branchSuccessCallback(data),(data) => this.branchFailureCallback(data))
 
   
 
@@ -152,7 +152,7 @@ export class ChatPage {
 }
   optionsFn()
   {
-        this.mainservice.brandtype(this.accestoken,this.mark.value,(data) => this.brandtypeSuccessCallback(data),(data) => this.brandtypeFailureCallback(data))
+        this.mainservice.brandtype(0,this.accestoken,this.mark.value,(data) => this.brandtypeSuccessCallback(data),(data) => this.brandtypeFailureCallback(data))
   }
   cancelorder()
   {
@@ -276,7 +276,7 @@ this.presentToast()
 
    
     this.cent.appAccess=data.access_token;
-    this.mainservice.brands(this.cent.appAccess,(data) => this.brandsSuccessCallback(data),(data) => this.brandsFailureCallback(data))
+    this.mainservice.brands(0,this.cent.appAccess,(data) => this.brandsSuccessCallback(data),(data) => this.brandsFailureCallback(data))
 
   
   }

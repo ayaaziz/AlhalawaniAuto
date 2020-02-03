@@ -52,7 +52,7 @@ show:any
   ionViewDidLoad(){
   this.mainservice.getallliscar(this.accestoken,this.offset,(data) => this.getliscarSuccessCallback(data),(data) => this.getliscarFailureCallback(data))
 
-  this.mainservice.brands(this.accestoken,(data) => this.brandsSuccessCallback(data),(data) => this.brandsFailureCallback(data))
+  this.mainservice.brands(0,this.accestoken,(data) => this.brandsSuccessCallback(data),(data) => this.brandsFailureCallback(data))
   this.mainservice.manufactureyear(this.accestoken,(data) => this.manufactureyearSuccessCallback(data),(data) => this.manufactureyearFailureCallback(data))
 
 }
@@ -101,7 +101,7 @@ show:any
       console.log("no")
  
         this.brandtype=item
-        this.mainservice.brandtype(this.accestoken,this.brandtype,(data) => this.brandtypeSuccessCallback(data),(data) => this.brandtypeFailureCallback(data))
+        this.mainservice.brandtype(0,this.accestoken,this.brandtype,(data) => this.brandtypeSuccessCallback(data),(data) => this.brandtypeFailureCallback(data))
 
         if(this.value ==null && this.value1==null)
         {
@@ -306,7 +306,7 @@ show:any
     this.hide1=false
     this.hide2=false
      this.mainservice.getallliscar(this.accestoken,this.offset,(data) => this.getliscarSuccessCallback(data),(data) => this.getliscarFailureCallback(data))
-                  this.mainservice.brands(this.accestoken,(data) => this.brandsSuccessCallback(data),(data) => this.brandsFailureCallback(data))
+                  this.mainservice.brands(0,this.accestoken,(data) => this.brandsSuccessCallback(data),(data) => this.brandsFailureCallback(data))
                   this.mainservice.manufactureyear(this.accestoken,(data) => this.manufactureyearSuccessCallback(data),(data) => this.manufactureyearFailureCallback(data))
                    refresher.complete()
   }

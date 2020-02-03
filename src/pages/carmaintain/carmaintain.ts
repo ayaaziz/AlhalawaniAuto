@@ -53,7 +53,7 @@ export class CarmaintainPage {
       if(!(val==null))
       {
        this.mark.setValue(val)
-       this.mainservice.brandtype(this.accestoken,this.mark.value,(data) => this.brandtypeSuccessCallback(data),(data) => this.brandtypeFailureCallback(data))
+       this.mainservice.brandtype(1,this.accestoken,this.mark.value,(data) => this.brandtypeSuccessCallback(data),(data) => this.brandtypeFailureCallback(data))
 
       }
      })
@@ -104,7 +104,7 @@ export class CarmaintainPage {
     this.mintype=this.data.controls['mintype'];
     this.mainservice.manufactureyear(this.accestoken,(data) => this.manufactureyearSuccessCallback(data),(data) => this.manufactureyearFailureCallback(data))
 
-    this.mainservice.brands(this.accestoken,(data) => this.brandsSuccessCallback(data),(data) => this.brandsFailureCallback(data))
+    this.mainservice.brands(1,this.accestoken,(data) => this.brandsSuccessCallback(data),(data) => this.brandsFailureCallback(data))
     
   }
 
@@ -121,7 +121,7 @@ export class CarmaintainPage {
   {
  this.brand_id=this.mark.value
     
-     this.mainservice.brandtype(this.accestoken,this.brand_id,(data) => this.brandtypeSuccessCallback(data),(data) => this.brandtypeFailureCallback(data))
+     this.mainservice.brandtype(1,this.accestoken,this.brand_id,(data) => this.brandtypeSuccessCallback(data),(data) => this.brandtypeFailureCallback(data))
    
   }
   brandtypeSuccessCallback(data)

@@ -422,3 +422,21 @@ body{
 //         background: url(../../imgs/back.jpg) no-repeat fixed center;
 //         background-size: cover;
 //     }
+
+
+
+
+// .ion-ios-customicon-outline,
+// .ion-ios-customicon2,
+// .ion-md-customicon2,
+// .ion-md-customicon2-outline {
+//   content: url('../assets/imgs/chatIcon.png');
+// }
+
+.customicon {
+  content: url('../assets/imgs/pdf.png');
+  width: 27px;
+  height: 27px;
+  margin-top: 15px;
+  margin-left: 10px;
+}

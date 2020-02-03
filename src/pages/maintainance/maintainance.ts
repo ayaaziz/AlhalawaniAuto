@@ -114,7 +114,7 @@ accestoken:any
     this.cent.status=0
     this.mainservice.manufactureyear(this.accestoken,(data) => this.manufactureyearSuccessCallback(data),(data) => this.manufactureyearFailureCallback(data))
     this.mainservice.maintenancetype(this.accestoken,(data) => this.maintenancetypeSuccessCallback(data),(data) => this.maintenancetypeFailureCallback(data))
-    this.mainservice.branch(this.accestoken,(data) => this.branchSuccessCallback(data),(data) => this.branchFailureCallback(data))
+    this.mainservice.branch(1,this.accestoken,(data) => this.branchSuccessCallback(data),(data) => this.branchFailureCallback(data))
 
     this.storage.get('number').then(val=>{
       if(!(val==null))
@@ -162,7 +162,7 @@ accestoken:any
       if(!(val==null))
       {
         this.mark.setValue(val)
-        this.mainservice.brandtype(this.accestoken,this.mark.value,(data) => this.brandtypeSuccessCallback(data),(data) => this.brandtypeFailureCallback(data))
+        this.mainservice.brandtype(1,this.accestoken,this.mark.value,(data) => this.brandtypeSuccessCallback(data),(data) => this.brandtypeFailureCallback(data))
 
       }
     })
@@ -181,7 +181,7 @@ accestoken:any
       }
     })
   }
-    this.mainservice.brands(this.accestoken,(data) => this.brandsSuccessCallback(data),(data) => this.brandsFailureCallback(data))
+    this.mainservice.brands(1,this.accestoken,(data) => this.brandsSuccessCallback(data),(data) => this.brandsFailureCallback(data))
     this.today = new Date().getDate()
 
      this.data = this.formBuilder.group({
@@ -384,7 +384,7 @@ this.presentToast1()
     this.markk='false'
     this.markk1='false'
     this.brandtype=this.mark.value
-    this.mainservice.brandtype(this.accestoken,this.brandtype,(data) => this.brandtypeSuccessCallback(data),(data) => this.brandtypeFailureCallback(data))
+    this.mainservice.brandtype(1,this.accestoken,this.brandtype,(data) => this.brandtypeSuccessCallback(data),(data) => this.brandtypeFailureCallback(data))
     
   }
   presentConfirm() {

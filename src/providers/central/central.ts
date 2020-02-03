@@ -27,6 +27,8 @@ export class CentralProvider {
   public default='assets/imgs/default.png'
   public BASE_64_PREFIX='base64'
   public serviceurl:string="http://www.aldahayanautosa.com/aldahyan/api/";
+  // public serviceurl:string="http://www.aldahayanautosa.com/aldahyandev/api/";
+  
   constructor(public http: HttpClient) {
     console.log('Hello CentralProvider Provider');
   }

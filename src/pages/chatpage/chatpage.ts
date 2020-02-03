@@ -1,5 +1,5 @@
 import { Component ,ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams ,Content, Platform } from 'ionic-angular';
+import { IonicPage, NavController, NavParams ,Content, Platform, ActionSheetController } from 'ionic-angular';
 import { ViewController } from 'ionic-angular/navigation/view-controller';
 // import { Socket } from 'ng-socket-io';
 import { Observable } from 'rxjs/Observable';
@@ -12,6 +12,14 @@ import { CentralProvider } from '../../providers/central/central';
 import { HttpClient } from '@angular/common/http/';
 import { HttpHeaders } from '@angular/common/http';
 import { MainservicesProvider } from '../../providers/mainservices/mainservices';
+
+
+//ayaaaaa
+import { Camera } from '@ionic-native/camera';
+import { File } from '@ionic-native/file';
+import { FileTransfer } from '@ionic-native/file-transfer';
+import { FilePath } from '@ionic-native/file-path';
+
 @Component({
   selector: 'page-chatpage',
   templateUrl: 'chatpage.html',
@@ -19,7 +27,9 @@ import { MainservicesProvider } from '../../providers/mainservices/mainservices'
 export class ChatpagePage {
   alldata:any
   @ViewChild (Content) content:Content;  
-  data = { type:'', user:'', message:'',deviceid:'',regid:'' };
+  // data = { type:'', user:'', message:'',deviceid:'',regid:'' };
+  data = { type:'', user:'', message:'',deviceid:'',regid:'',image:'' };
+  
 chats = [];
 roomkey:string;
 nickname:string;
@@ -40,8 +50,21 @@ hide:any=false
 msg:any
 send:any
 Page:any
-plat:any
-  constructor(public plt:Platform,public mainservice:MainservicesProvider,public http: HttpClient,public cent : CentralProvider,public toastCtrl:ToastController,public viewCtrl:ViewController,public navCtrl: NavController, public navParams: NavParams) {
+plat:any;
+lastImage: string = null;
+
+  constructor(public plt:Platform,
+              public mainservice:MainservicesProvider,
+              public http: HttpClient,
+              public cent : CentralProvider,
+              public toastCtrl:ToastController,
+              public viewCtrl:ViewController,
+              public navCtrl: NavController, 
+              public navParams: NavParams,
+              public actionSheetCtrl:ActionSheetController,
+              public camera:Camera,
+              private file: File, 
+              private filePath: FilePath) {
    
     this.cent.status=1
     if(this.plt.is('ios'))
@@ -124,7 +147,7 @@ plat:any
   sendMessage()
   {    
 
-    if(this.data.message == "" )  
+    if(this.data.message == "" && this.lastImage == null)  
       {}
 else
 {
@@ -135,7 +158,8 @@ else
     message:this.data.message,
     devid:this.data.deviceid,
     regid:this.data.regid,
-    sendDate:Date.now()
+    sendDate:Date.now(),
+    image:this.data.image
 
   });
   this.data.message = '';
@@ -196,6 +220,146 @@ else
   }
 }
 }
+
+
+  //ayaaaaaaa
+  public presentActionSheet() {
+    let actionSheet = this.actionSheetCtrl.create({
+      title: 'Select Image Source',
+      buttons: [
+        {
+          text: 'Load from Library',
+          handler: () => {
+            this.takePicture(this.camera.PictureSourceType.PHOTOLIBRARY);
+          }
+        },
+        {
+          text: 'Use Camera',
+          handler: () => {
+            this.takePicture(this.camera.PictureSourceType.CAMERA);
+          }
+        },
+        {
+          text: 'Cancel',
+          role: 'cancel'
+        }
+      ]
+    });
+    actionSheet.present();
+  }
+
+  public takePicture(sourceType) {
+    // Create options for the Camera Dialog
+    var options = {
+      quality: 100,
+      sourceType: sourceType,
+      saveToPhotoAlbum: false,
+      correctOrientation: true
+    };
+   
+    // Get the data of an image
+    this.camera.getPicture(options).then((imagePath) => {
+      console.log("getPicture");
+      // Special handling for Android library
+      if (this.plt.is('android') && sourceType === this.camera.PictureSourceType.PHOTOLIBRARY) {
+        this.filePath.resolveNativePath(imagePath)
+          .then(filePath => {
+            let correctPath = filePath.substr(0, filePath.lastIndexOf('/') + 1);
+            let currentName = imagePath.substring(imagePath.lastIndexOf('/') + 1, imagePath.lastIndexOf('?'));
+            this.copyFileToLocalDir(correctPath, currentName, this.createFileName());
+          });
+
+      console.log("getPicture android");
+          
+      } else {
+        var currentName = imagePath.substr(imagePath.lastIndexOf('/') + 1);
+        var correctPath = imagePath.substr(0, imagePath.lastIndexOf('/') + 1);
+        this.copyFileToLocalDir(correctPath, currentName, this.createFileName());
+      
+      console.log("getPicture ios");
+        
+      }
+    }, (err) => {
+      console.log("getPicture error "+JSON.stringify(err));
+      
+      this.presentToast1('Error while selecting image.');
+    });
+  }
+
+
+  // Create a new name for the image
+  private createFileName() {
+    var d = new Date(),
+    n = d.getTime(),
+    newFileName =  n + ".jpg";
+    return newFileName;
+  }
+
+  // Copy the image to a local folder
+  private copyFileToLocalDir(namePath, currentName, newFileName) {
+    console.log("copyFileToLocalDir");
+
+    this.file.copyFile(namePath, currentName, this.file.dataDirectory, newFileName).then(success => {
+      this.lastImage = newFileName;
+
+      //aya
+      // this.lastImage = this.file.dataDirectory + newFileName;
+      console.log("this.lastImage "+this.lastImage );
+    }, error => {
+      this.presentToast1('Error while storing file.');
+    });
+  }
+  
+  private presentToast1(text) {
+    let toast = this.toastCtrl.create({
+      message: text,
+      duration: 3000,
+      position: 'top'
+    });
+    toast.present();
+  }
+  
+  // Always get the accurate path to your apps folder
+  public pathForImage(img) {
+    console.log("pathForImage "+ img);
+
+    if (img === null) {
+      // alert("null")
+      return '';
+    } else {
+      // alert(this.file.dataDirectory);
+      // alert(img);
+      
+      this.data.image = this.file.dataDirectory + img + new Date().getMilliseconds();
+
+      if(this.data.message == "" && this.lastImage == null)  
+      {}
+      else
+      {
+          let newData = firebase.database().ref('chatrooms/'+this.nickname+'/chats').push();
+        newData.set({
+          type:this.data.type,
+          user:this.data.user,
+          message:this.data.message,
+          devid:this.data.deviceid,
+          regid:this.data.regid,
+          sendDate:Date.now(),
+          image:this.data.image
+
+        });
+        this.data.message = '';
+        if((this.time< this.start_work && this.time>this.end_work))
+        {
+          this.hide=true
+          this.send=Date.now()
+        this.msg=" شكرا لاستخدامك خدمه التواصل  تطبيق الضحيان اوتو مواعيد العمل من ٩ صباحا حتي ٩ مساءا سيتم التواصل معك غدا"
+        }
+      }
+
+      return this.file.dataDirectory + img + new Date().getMilliseconds();
+    }
+  }
+
 }
 
 export const snapshotToArray = snapshot => {
