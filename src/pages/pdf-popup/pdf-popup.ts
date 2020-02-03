@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { DocumentViewerOptions, DocumentViewer } from '@ionic-native/document-viewer';
-import { FileOpener } from '@ionic-native/file-opener';
+import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
+import { Platform } from 'ionic-angular/platform/platform';
+import { FileTransfer } from '@ionic-native/file-transfer';
+import { File } from '@ionic-native/file';
+
+
 @IonicPage()
 @Component({
   selector: 'page-pdf-popup',
@@ -9,28 +12,44 @@ import { FileOpener } from '@ionic-native/file-opener';
 })
 export class PdfPopupPage {
 
-  constructor(public navCtrl: NavController, 
-              public navParams: NavParams,
-              public document:DocumentViewer,
-              private fileOpener: FileOpener) {
+  pdfSrc:string = "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf";
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,
+              public platform:Platform,
+              private transfer: FileTransfer, private file: File,
+              private viewCtrl:ViewController) {
+
+                // this.pdfSrc = this.navParams.get("pdfFile");
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PdfPopupPage');
+  }
 
-    // const options: DocumentViewerOptions = {
-    //   title: 'My PDF'
-    // }
-    
-    // this.document.viewDocument('file:///android_asset/www/assets/1a.pdf', 'application/pdf', options)
+  downloadPdf() {
+    let path = null;
 
-  //   this.fileOpener.open('../src/assets/1a.pdf', 'application/pdf')
-  // .then(() => console.log('File is opened'))
-  // .catch(e => console.log('Error opening file', e));
+    if(this.platform.is('ios')) {
+      path = this.file.documentsDirectory;
+    } else {
+      path = this.file.dataDirectory;
+    }
 
-  // this.fileOpener.showOpenWithDialog('path/to/file.pdf', 'application/pdf')
-  //   .then(() => console.log('File is opened'))
-  //   .catch(e => console.log('Error opening file', e))
+    const fileTransfer = this.transfer.create();
+
+    // fileTransfer.download('https://motivationletter.net/wp-content/uploads/2018/09/Motivation-Letter-For-Master-Degree-Sample-PDF.pdf',path + 'myFile.pdf').then(entry => {
+    fileTransfer.download(this.pdfSrc,path + 'CarFeatures.pdf').then(entry => {
+      let url = entry.toURL();
+
+      console.log(url);
+      // this.document.viewDocument(url, 'application/pdf',{});
+      // this.fileOpener.open(url, 'application/pdf');
+    })
+  }
+
+
+  closePopup() {
+    this.viewCtrl.dismiss();
   }
 
 }

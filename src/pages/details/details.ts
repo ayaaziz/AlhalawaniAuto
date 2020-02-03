@@ -16,6 +16,8 @@ import { File } from '@ionic-native/file';
 import { FileOpener } from '@ionic-native/file-opener';
 import { FileTransfer } from '@ionic-native/file-transfer';
 
+import { InAppBrowser } from '@ionic-native/in-app-browser';
+
 
 @Component({
   selector: 'page-details',
@@ -63,7 +65,8 @@ accestoken:any
               private fileOpener:FileOpener,
               private transfer:FileTransfer,
               private file:File,
-              private platform:Platform) {
+              private platform:Platform,
+              private iab:InAppBrowser) {
 
     this.accestoken= localStorage.getItem('adftrmee')
     this.cent.status=0
@@ -348,7 +351,9 @@ ionViewDidLoad()
       }
     }
 
-    downloadAndOpenPdf() {
+    downloadAndOpenPdf(pdf_file) {
+
+      console.log("pdf_file "+pdf_file);
 
       let path = null;
   
@@ -360,17 +365,32 @@ ionViewDidLoad()
   
       const fileTransfer = this.transfer.create();
   
-      fileTransfer.download('https://motivationletter.net/wp-content/uploads/2018/09/Motivation-Letter-For-Master-Degree-Sample-PDF.pdf',path + 'CarFeatures.pdf').then(entry => {
+      // fileTransfer.download('https://motivationletter.net/wp-content/uploads/2018/09/Motivation-Letter-For-Master-Degree-Sample-PDF.pdf',path + 'CarFeatures.pdf').then(entry => {
+      fileTransfer.download(pdf_file?pdf_file:"",path + 'CarFeatures.pdf').then(entry => {
+        
         let url = entry.toURL();
   
         console.log(url);
         // this.document.viewDocument(url, 'application/pdf',{});
         this.fileOpener.open(url, 'application/pdf');
+        // const browser = this.iab.create("chrome-extension://gphandlahdpffmccakmbngmbjnjiiahp/"+pdf_file);
+
+        // browser.show();
+        
+
+        // //         browser.executeScript();
+
+        // // browser.insertCSS(...);
+        // browser.on('loadstop').subscribe(event => {
+        //   browser.insertCSS({ code: "body{color: red;" });
+        // });
+
+        // browser.close();
       })
     }
   
-    openPdf() {
-      this.downloadAndOpenPdf();
+    openPdf(pdf_file) {
+      this.downloadAndOpenPdf(pdf_file);
     }
 
 

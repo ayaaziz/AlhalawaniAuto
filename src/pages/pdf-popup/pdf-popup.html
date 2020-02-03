@@ -1,6 +1,18 @@
+<ion-header>
+    <ion-navbar>
+        <ion-buttons right>
+          <button icon-only ion-button (click)="downloadPdf()"><ion-icon name="download" color="primary"></ion-icon></button>
+        </ion-buttons>
 
-
+        <ion-buttons left>
+          <button icon-only ion-button (click)="closePopup()"><ion-icon name="close" color="primary"></ion-icon></button>
+        </ion-buttons>
+      </ion-navbar>
+</ion-header>
 
 <ion-content>
-
+  <pdf-viewer [src]="pdfSrc"
+    [render-text]="true"
+    style="display: block;">
+  </pdf-viewer>
 </ion-content>

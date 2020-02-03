@@ -42,7 +42,7 @@ markers:any=[]
   constructor(public launchNavigator: LaunchNavigator,public storage:Storage,public geo:Geolocation,public Alert:AlertController,public mainservice:MainservicesProvider,public cent:CentralProvider,public navCtrl: NavController,private callNumber: CallNumber, public toastCtrl:ToastController,public navParams: NavParams,public ViewCtrl:ViewController,public googleMaps: GoogleMaps , public platform:Platform) {
     this.accestoken= localStorage.getItem('adftrmee')
     this.cent.status=0
-    this.mainservice.branch(this.accestoken,(data) => this.branchSuccessCallback(data),(data) => this.branchFailureCallback(data))
+    this.mainservice.branch(0,this.accestoken,(data) => this.branchSuccessCallback(data),(data) => this.branchFailureCallback(data))
 
     this.platform.ready().then(()=>{
       // this.geo.getCurrentPosition().then((resp) => {

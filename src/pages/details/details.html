@@ -95,7 +95,7 @@
       <ion-row >
 
          <!--ayaaaaa-->
-         <ion-icon class="customicon" (click)="openPdf(item.pdfPath)"> </ion-icon>
+         <ion-icon class="customicon" (click)="openPdf(item.pdf_file)"> </ion-icon>
 
           <ion-icon *ngIf="!(item.price_before==null)" ios="md-share" md="md-share" class="share" (click)="shareoffer(item.price_after,image+slide)"> </ion-icon>
           <ion-icon *ngIf="!(item.price==null)" ios="md-share" md="md-share" class="share" (click)="shareoffer(item.price,image+slide)"> </ion-icon>

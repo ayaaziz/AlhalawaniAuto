@@ -62,6 +62,8 @@ import { PdfPopupPage } from '../pages/pdf-popup/pdf-popup';
 import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer'
 
 import { FileOpener } from '@ionic-native/file-opener';
+
+import { PdfViewerModule } from 'ng2-pdf-viewer';
 // import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
 
 // const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
@@ -102,6 +104,7 @@ import { FileOpener } from '@ionic-native/file-opener';
     BrowserModule,
     LazyLoadImageModule,
     IonicModule.forRoot(MyApp),
+    PdfViewerModule
     // SocketIoModule.forRoot(config)
   ],
   bootstrap: [IonicApp],
