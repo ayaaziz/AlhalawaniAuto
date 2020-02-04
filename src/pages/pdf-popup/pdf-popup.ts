@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ViewController } from 'ionic-angular';
-import { Platform } from 'ionic-angular/platform/platform';
+import { IonicPage, NavController, NavParams, ToastController, ViewController, Platform } from 'ionic-angular';
+import { SocialSharing } from '@ionic-native/social-sharing';
 import { FileTransfer } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
+
 
 
 @IonicPage()
@@ -13,18 +14,28 @@ import { File } from '@ionic-native/file';
 export class PdfPopupPage {
 
   pdfSrc:string = "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf";
+  
 
   constructor(public navCtrl: NavController, public navParams: NavParams,
               public platform:Platform,
               private transfer: FileTransfer, private file: File,
-              private viewCtrl:ViewController) {
-
-                // this.pdfSrc = this.navParams.get("pdfFile");
+              private viewCtrl:ViewController,
+              private toastCtrl:ToastController,
+              private social:SocialSharing) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad PdfPopupPage');
+    console.log(this.pdfSrc);
+    
   }
+
+
+  ngOnInit() {
+    // this.pdfSrc = "https://vadimdez.github.io/ng2-pdf-viewer/assets/pdf-test.pdf";
+
+  }
+
 
   downloadPdf() {
     let path = null;
@@ -44,12 +55,43 @@ export class PdfPopupPage {
       console.log(url);
       // this.document.viewDocument(url, 'application/pdf',{});
       // this.fileOpener.open(url, 'application/pdf');
+
+      this.presentToast()
     })
+  }
+
+  presentToast() {
+    let toast = this.toastCtrl.create({
+      message: 'تم تحميل الملف',
+      duration: 4000,
+      position: 'bottom'
+    });
+    toast.present();
   }
 
 
   closePopup() {
     this.viewCtrl.dismiss();
+  }
+
+
+  share()
+  {
+    // if (this.plt.is('ios')) {
+    console.log()
+    this.social.share("Message", "sub" ,this.pdfSrc).then(() => {
+      console.log(" share success")
+    }).catch(() => {
+      console.log("not available")
+    });
+  // }
+  // else{
+  //   this.social.share(this.name , dis ,img ,"https://play.google.com/store/apps/details?id=com.ITRoots.AldahayanAuto&ah=51fJvaVo7chCzf2mS2Fykmh_EBs").then(() => {
+  //     console.log("success")
+  //   }).catch(() => {
+  //     console.log("not available")
+  //   });
+  // }
   }
 
 }

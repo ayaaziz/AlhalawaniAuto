@@ -91,16 +91,26 @@
     <del style="color:#dc9b02;font-weight:bold">{{item.price_before}} ر.س</del> 
    </p> 
   </ion-col>
-  <ion-col col-4>
+  <!-- <ion-col col-4>
       <ion-row >
-
-         <!--ayaaaaa-->
-         <ion-icon class="customicon" (click)="openPdf(item.pdf_file)"> </ion-icon>
 
           <ion-icon *ngIf="!(item.price_before==null)" ios="md-share" md="md-share" class="share" (click)="shareoffer(item.price_after,image+slide)"> </ion-icon>
           <ion-icon *ngIf="!(item.price==null)" ios="md-share" md="md-share" class="share" (click)="shareoffer(item.price,image+slide)"> </ion-icon>
+
+          <ion-icon class="customicon" *ngIf="item.pdf_file" (click)="openPdf(item.pdf_file)"> </ion-icon>
         </ion-row>
+  </ion-col> -->
+
+  <ion-col col style="display: flex; justify-content: center;">
+    <ion-icon *ngIf="!(item.price_before==null)" ios="md-share" md="md-share" class="share" (click)="shareoffer(item.price_after,image+slide)"> </ion-icon>
+    <ion-icon *ngIf="!(item.price==null)" ios="md-share" md="md-share" class="share" (click)="shareoffer(item.price,image+slide)"> </ion-icon>
   </ion-col>
+
+  <ion-col col style="display: flex; justify-content: center;" *ngIf="item.pdf_file">
+    <ion-icon class="customicon" *ngIf="item.pdf_file" (click)="openPdf(item.pdf_file)"> </ion-icon>
+  </ion-col>
+
+
 </ion-row>
 
 
@@ -369,4 +379,6 @@
       </div>
       </div>
 </div>
+
+
 </ion-content>

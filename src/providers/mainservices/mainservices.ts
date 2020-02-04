@@ -1569,5 +1569,9 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
     )
  
 }
+
+changeProfilePicture(imageData,type,succes,error) {
+
+}
  
 }

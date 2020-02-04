@@ -58,12 +58,12 @@ import { SettingPage } from '../pages/setting/setting';
 import { MaindetailPage } from '../pages/maindetail/maindetail';
 import { LaunchNavigator } from '@ionic-native/launch-navigator';
 import { Camera } from '@ionic-native/camera';
-import { PdfPopupPage } from '../pages/pdf-popup/pdf-popup';
 import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer'
 
 import { FileOpener } from '@ionic-native/file-opener';
 
-import { PdfViewerModule } from 'ng2-pdf-viewer';
+// import { PdfViewerModule } from 'ng2-pdf-viewer';
+// import { PdfPopupPage } from '../pages/pdf-popup/pdf-popup';
 // import { SocketIoModule, SocketIoConfig } from 'ng-socket-io';
 
 // const config: SocketIoConfig = { url: 'http://localhost:3001', options: {} };
@@ -94,7 +94,7 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     AdvicedetailsPage,
     LoginPage,
     SettingPage,
-    PdfPopupPage
+    // PdfPopupPage
 
   ],
   imports: [
@@ -104,7 +104,7 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     BrowserModule,
     LazyLoadImageModule,
     IonicModule.forRoot(MyApp),
-    PdfViewerModule
+    // PdfViewerModule
     // SocketIoModule.forRoot(config)
   ],
   bootstrap: [IonicApp],
@@ -133,7 +133,7 @@ import { PdfViewerModule } from 'ng2-pdf-viewer';
     AdvicedetailsPage,
     LoginPage,
     SettingPage,
-    PdfPopupPage
+    // PdfPopupPage
   ],
   providers: [
     InAppBrowser,

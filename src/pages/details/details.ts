@@ -10,13 +10,13 @@ import { ToastController } from 'ionic-angular/components/toast/toast-controller
 import { Storage } from '@ionic/storage';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { GESTURE_PRIORITY_MENU_SWIPE } from 'ionic-angular/gestures/gesture-controller';
-import { PdfPopupPage } from '../pdf-popup/pdf-popup';
 import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer'
 import { File } from '@ionic-native/file';
 import { FileOpener } from '@ionic-native/file-opener';
 import { FileTransfer } from '@ionic-native/file-transfer';
 
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+// import { PdfPopupPage } from '../pdf-popup/pdf-popup';
 
 
 @Component({
@@ -24,6 +24,8 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
   templateUrl: 'details.html',
 })
 export class DetailsPage {
+  
+
   price_after:any=null
   type: any;
   data3: any=true;
@@ -391,6 +393,10 @@ ionViewDidLoad()
   
     openPdf(pdf_file) {
       this.downloadAndOpenPdf(pdf_file);
+
+      // let popup = this.popoverCtrl.create(PdfPopupPage,{pdfFile:pdf_file});
+      // popup.present();
+
     }
 
 
