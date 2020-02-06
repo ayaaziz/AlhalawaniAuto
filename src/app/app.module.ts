@@ -61,6 +61,7 @@ import { Camera } from '@ionic-native/camera';
 import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer'
 
 import { FileOpener } from '@ionic-native/file-opener';
+import { PdfPopupPage } from '../pages/pdf-popup/pdf-popup';
 
 // import { PdfViewerModule } from 'ng2-pdf-viewer';
 // import { PdfPopupPage } from '../pages/pdf-popup/pdf-popup';
@@ -94,7 +95,7 @@ import { FileOpener } from '@ionic-native/file-opener';
     AdvicedetailsPage,
     LoginPage,
     SettingPage,
-    // PdfPopupPage
+    PdfPopupPage
 
   ],
   imports: [
@@ -133,7 +134,7 @@ import { FileOpener } from '@ionic-native/file-opener';
     AdvicedetailsPage,
     LoginPage,
     SettingPage,
-    // PdfPopupPage
+    PdfPopupPage
   ],
   providers: [
     InAppBrowser,

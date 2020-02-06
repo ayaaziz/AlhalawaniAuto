@@ -215,7 +215,7 @@
 //#endregion
 
 import { Component ,ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams ,Content, Platform, ActionSheetController,normalizeURL} from 'ionic-angular';
+import { IonicPage, NavController, NavParams ,Content, Platform, ActionSheetController, PopoverController} from 'ionic-angular';
 import { ViewController } from 'ionic-angular/navigation/view-controller';
 // import { Socket } from 'ng-socket-io';
 import { Observable } from 'rxjs/Observable';
@@ -235,6 +235,7 @@ import { Camera } from '@ionic-native/camera';
 import { File } from '@ionic-native/file';
 import { FileTransfer } from '@ionic-native/file-transfer';
 import { FilePath } from '@ionic-native/file-path';
+import { PdfPopupPage } from '../pdf-popup/pdf-popup';
 
 @Component({
   selector: 'page-chatpage',
@@ -281,6 +282,7 @@ lastImage: string = null;
               public camera:Camera,
               private file: File, 
               private filePath: FilePath,
+              public popoverCtrl:PopoverController
               // private firebaseService:firebase
             ) {
    
@@ -696,6 +698,13 @@ else
     }
   }
 
+
+openImg(img) {
+  let popup = this.popoverCtrl.create(PdfPopupPage,{img:img})
+
+  popup.present();
+}
+
 }
 
 export const snapshotToArray = snapshot => {
@@ -710,4 +719,6 @@ export const snapshotToArray = snapshot => {
 
     return returnArr;
 };
+
+
 
