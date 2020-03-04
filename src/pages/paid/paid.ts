@@ -628,13 +628,10 @@ this.isenabled=true
           this.bankname=this.bankdata[i].name
           this.financeprecent=this.bankdata[i].finance_rate
           this.taamenprecent=this.bankdata[i].insurance_rate
-          this.ownership=this.bankdata[i].ownership_rate
+          this.ownership=this.bankdata[i].ownership_rate      
           this.resom=this.bankdata[i].administrative_fees
-        
-
         }
       }
-     
     }
     bankfail(data)
     {

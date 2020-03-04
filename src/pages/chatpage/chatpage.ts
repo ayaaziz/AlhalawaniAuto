@@ -215,7 +215,7 @@
 //#endregion
 
 import { Component ,ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams ,Content, Platform, ActionSheetController, PopoverController} from 'ionic-angular';
+import { IonicPage, NavController, NavParams ,Content, Platform, ActionSheetController, PopoverController, LoadingController} from 'ionic-angular';
 import { ViewController } from 'ionic-angular/navigation/view-controller';
 // import { Socket } from 'ng-socket-io';
 import { Observable } from 'rxjs/Observable';
@@ -282,7 +282,8 @@ lastImage: string = null;
               public camera:Camera,
               private file: File, 
               private filePath: FilePath,
-              public popoverCtrl:PopoverController
+              public popoverCtrl:PopoverController,
+              public loadingCtrl:LoadingController
               // private firebaseService:firebase
             ) {
    
@@ -554,6 +555,7 @@ else
   // }
 
   getimg() {
+
     let actionSheet = this.actionSheetCtrl.create({
       buttons: [
         {
@@ -603,6 +605,8 @@ else
 
       // this.uploadImageToFirebase(imageData);
 
+      let loading = this.loadingCtrl.create();
+      loading.present();
 
       let storageRef = firebase.storage().ref();
       let imageRef = storageRef.child('image').child('pic'+new Date().getMilliseconds());
@@ -629,7 +633,11 @@ else
             this.send=Date.now()
           this.msg=" شكرا لاستخدامك خدمه التواصل  تطبيق الضحيان اوتو مواعيد العمل من ٩ صباحا حتي ٩ مساءا سيتم التواصل معك غدا"
           }
+
+          loading.dismiss();
         }, err => {
+          loading.dismiss();
+          
           // reject(err);
         })
       // this.mainservice.changeProfilePicture(imageData,'jpeg',data => {

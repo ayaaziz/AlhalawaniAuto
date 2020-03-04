@@ -5,8 +5,6 @@ import { FileTransfer } from '@ionic-native/file-transfer';
 import { File } from '@ionic-native/file';
 
 
-
-@IonicPage()
 @Component({
   selector: 'page-pdf-popup',
   templateUrl: 'pdf-popup.html',

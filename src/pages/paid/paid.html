@@ -135,12 +135,12 @@
             </ion-col>
          
                   </ion-row>
-                  <ion-row >
-                    <ion-col col-4></ion-col>
-                                          <ion-col col-8 style="margin-top: -14px;color:#d63932;margin-bottom: -11px;">
-                   <p class="hint"> * أدخل الدفعه المقدمه او القسط الشهري(اختياري)</p>
-                                          </ion-col>
-                 </ion-row>
+          <ion-row >
+            <ion-col col-4></ion-col>
+                                  <ion-col col-8 style="margin-top: -14px;color:#d63932;margin-bottom: -11px;">
+            <p class="hint"> * أدخل الدفعه المقدمة او القسط الشهري(اختياري)</p>
+                                  </ion-col>
+          </ion-row>
           <ion-row style="background-color:#fdeeee">
             <ion-col col-4>
       <ion-label for="exampleFormControlSelect1" class="year"> الممول</ion-label>
@@ -165,8 +165,12 @@
           <ion-col col-4>
             <ion-label for="email" class="date">الدفعه الأخيره %</ion-label>
           </ion-col>
-          <ion-col col-8>
+          <!-- <ion-col col-8>
             <ion-input text-right type="number"  disabled [(ngModel)]="ownership" id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="have">
+            </ion-input>
+          </ion-col> -->
+          <ion-col col-8>
+            <ion-input text-right type="number"  [(ngModel)]="ownership" id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="have">
             </ion-input>
           </ion-col>
         </ion-row>
