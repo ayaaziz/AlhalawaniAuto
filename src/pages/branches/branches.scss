@@ -69,11 +69,11 @@ page-branches {
    
     .button-md
     {
-        background-color: #d63932 ;
+        background-color: #790c1b ;
     }
     .button-ios
     {
-        background-color: #d63932 ;
+        background-color: #790c1b ;
     }
     .row1
     {
@@ -102,7 +102,8 @@ page-branches {
     {
         width: 65%;
         border-radius: 17px;
-        margin-right: 114px;
+        margin: 5px auto;
+        
     }
 //     @media screen and (min-width:412){
 //         .btn{
@@ -161,8 +162,8 @@ page-branches {
         .btn
         {
             width: 44%;
-    border-radius: 17px;
-    margin-right: 128px;
+            border-radius: 17px;
+            margin: 5px auto;
         }
         .form-control
         {
@@ -295,8 +296,7 @@ page-branches {
         {
             width: 33%;
             border-radius: 17px;
-            margin-right: 288px;
-            margin-top: 11px;       }
+            margin: 5px auto;      }
     }
 
 
@@ -308,7 +308,7 @@ page-branches {
         .btn {
             width: 36%;
             border-radius: 17px;
-            margin-right: 400px;
+            margin: 5px auto;
         }
     }
     @media screen and (min-width:800px) and (max-width:849px){
@@ -319,7 +319,7 @@ page-branches {
         .btn {
             width: 36%;
             border-radius: 17px;
-            margin-right: 365px;
+            margin: 5px auto;
         }
     }
     @media screen and (min-width:750px)and (max-width:799px) {
@@ -330,7 +330,7 @@ page-branches {
         .btn {
             width: 36%;
             border-radius: 17px;
-            margin-right: 330px;
+            margin: 5px auto;
         }
     }
     @media screen and (min-width:700px)and (max-width:749px) {
@@ -341,7 +341,7 @@ page-branches {
         .btn {
             width: 36%;
             border-radius: 17px;
-            margin-right: 315px;
+            margin: 5px auto;
         }
     }
     @media screen and (min-width:650px) and (max-width:699px){
@@ -352,7 +352,7 @@ page-branches {
         .btn {
             width: 36%;
             border-radius: 17px;
-            margin-right: 275px;
+            margin: 5px auto;
         }
     }
     @media screen and (min-width:600px) and (max-width:649px){
@@ -363,7 +363,7 @@ page-branches {
         .btn {
             width: 36%;
             border-radius: 17px;
-            margin-right: 270px;
+            margin: 5px auto;
         }
     }
     @media screen and (min-width:550px)and (max-width:599px) {
@@ -374,7 +374,7 @@ page-branches {
         .btn {
             width: 36%;
             border-radius: 17px;
-            margin-right: 240px;
+            margin: 5px auto;
         }
     }
     @media screen and (min-width:500px) and (max-width:549px){
@@ -385,7 +385,7 @@ page-branches {
         .btn {
             width: 36%;
             border-radius: 17px;
-            margin-right: 198px;
+            margin: 5px auto;
         }
     }
     @media screen and (min-width:450px) and (max-width:499px){
@@ -396,7 +396,7 @@ page-branches {
         .btn {
             width: 36%;
             border-radius: 17px;
-            margin-right: 193px;
+            margin: 5px auto;
         }
     }
     @media screen and (min-width:400px) and (max-width:449px){
@@ -407,7 +407,7 @@ page-branches {
         .btn {
             width: 36%;
             border-radius: 17px;
-            margin-right: 157px;
+            margin: 5px auto;
         }
     }
     @media screen and (min-width:350px)and (max-width:399px) {
@@ -418,7 +418,7 @@ page-branches {
         .btn {
             width: 36%;
             border-radius: 17px;
-            margin-right: 142px;
+            margin: 5px auto;
         }
     }
   
@@ -483,8 +483,7 @@ page-branches {
         {
             width: 33%;
             border-radius: 17px;
-            margin-right: 288px;
-            margin-top: 11px;       }
+            margin: 5px auto;      }
     }
 
 
@@ -546,8 +545,7 @@ page-branches {
         {
             width: 33%;
             border-radius: 17px;
-            margin-right: 475px;
-            margin-top: 11px;       }
+            margin: 5px auto;      }
     }
 
 
@@ -609,8 +607,34 @@ page-branches {
         {
             width: 33%;
             border-radius: 17px;
-            margin-right: 490px;
-            margin-top: 11px;       }
+            margin: 5px auto;      }
+    }
+
+
+    .segment-md .segment-button,
+    .segment-ios .segment-button {
+        opacity: 1;
+        // background-color: #790c1b;
+        background-color: #fdeeee;
+        // color: #d63932;
+        color: #790c1b;
+        font-size: 16px;
+        border: 1px solid #790c1b;
+        font-weight: 100;
+    }
+
+    .segment-md .segment-button.segment-activated,
+    .segment-ios .segment-button.segment-activated {
+        border-color: #790c1b;
+        opacity: 1;
+        color: #fdeeee;
+        background-color: #790c1b;
+        font-weight: 100;
+    }
+
+
+    .toolbar-title-md, .toolbar-title-ios {
+        margin-right: -15px !important;
     }
 }
 

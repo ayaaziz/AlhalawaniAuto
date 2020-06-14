@@ -1,64 +1,79 @@
-<ion-header >
-  <ion-navbar color="danger" style="padding: 0px;" >
-    
-    <ion-row >
-      <ion-col col-7>
-        <img src="assets/imgs/logo main.png" class="homeimg">
-      </ion-col>
-          <ion-col class="col3" col-1 >
-               <ion-icon name="ios-notifications-outline" class="search" (click)="noti()"> 
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-buttons left>
+      <button ion-button (click)="openmenu()" icon-only>
+        <ion-icon name="menu" class="menu"></ion-icon> 
+      </button>
+    </ion-buttons>
 
-                  <ion-badge class="badge" id="notifications-badge"  *ngIf="badgeg>0"> 
-                    <p style="text-align: center;margin-right: -4px;
-                    margin-top: 1px;">  {{badgeg}}‏ </p>
-           
-                 </ion-badge>
-                 </ion-icon>
-            </ion-col>
-      <ion-col class="col1" col-1 style="margin-top: 10px">
-        <ion-icon name="search" class="search" (click)="search()"></ion-icon> </ion-col>
-      <ion-col class="col2"  col-1 style="margin-top: 10px">
-        <ion-icon name="menu"  (click)="openmenu()" class="menu"></ion-icon> 
-      </ion-col>
-    </ion-row>
+    <ion-title style="text-align: center;color: #fff;">الرئيسية</ion-title>
+
+    <ion-buttons right>
+      <button ion-button (click)="noti()" icon-only>
+        <ion-icon name="ios-notifications-outline"> 
+          <ion-badge class="badge" id="notifications-badge"  *ngIf="badgeg>0"> 
+            <p style="text-align: center;margin-right: -4px;
+            margin-top: 1px;">  {{badgeg}}‏ </p>
+         </ion-badge>
+        </ion-icon>
+      </button>
+
+      <button ion-button (click)="search()" icon-only>
+        <ion-icon name="search" class="search"></ion-icon> 
+      </button>
+    </ion-buttons>
+
   </ion-navbar>
 </ion-header>
 
-<ion-content padding  class="content2" style="background-image: url(assets/imgs/background.jpg);">
-  <div class="blackcircle" ><div>
-   <div class="redcircle"> <img src="assets/imgs/logo-part1.png" class="img"></div>
-  </div></div>
-<div class="allsquare" >
-  <ion-row class="square1">
-    <ion-col class="colsquare1">
-     <div class="divsquare1" (click)="opencarspage()">
-        <ion-icon name="iu-2" class="iconsquare1"></ion-icon>
-      <p class="wordsquare1"> السيارات</p>
-     </div>
-    </ion-col>
-    <ion-col class="colsquare2">
-        <div class="divsquare2" (click)="optain()">
-            <ion-icon name="setting" class="iconsquare2"></ion-icon>
-        <p class="wordsquare2"> الصيانه</p>
-          </div>
-    </ion-col>
-  </ion-row>
-  <ion-row class="square3">
-      <ion-col class="colsquare3">
-       <div class="divsquare3" round (click)="openparts()">
-        <ion-icon name="repair" style="color:#ffffff" class="iconsquare3"></ion-icon> 
-        
-        <p class="wordsquare3"> قطع غيار</p>
-       </div>
-      </ion-col>
-      <ion-col class="square4">
-          <div class="divsquare4" (click)="offers()">
-              <div class="icon ad-icon-offers"></div>
-              <ion-icon name="offers" class="iconsquare4"></ion-icon>
-
-               <p class="wordsquare4"> العروض</p>
+<ion-content no-padding>
+  <div class="bg_wrapper">
+    <img src="assets/imgs/pattern-bg.png" alt="pattern" style="width: 100%;">
+    <!-- <img src="assets/imgs/bg.png" alt="background" class="bg_img"> -->
+    <div class="wrapper_div">
+      <ion-row style="justify-content: center;">
+        <ion-col col-5 class="col_wrapper"> 
+          <div class="black_box" (click)="opencarspage()">
+            <div class="service_icon_wrapper"> 
+              <img src="assets/imgs/car.png" alt="maintanince">
             </div>
-      </ion-col>
-    </ion-row>
+            <p>السيارات</p>
+          </div>
+         
+        </ion-col>
+        <ion-col col-5 class="col_wrapper">
+          <div class="black_box" (click)="optain()">
+            <div class="service_icon_wrapper"> 
+              <img src="assets/imgs/maintanince.png" alt="maintanince">
+            </div>
+            <p>الصيانة</p>
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row style="margin-top: 25px;justify-content: center;">
+        <ion-col col-5 class="col_wrapper"> 
+          <div class="black_box" (click)="openparts()">
+            <div class="service_icon_wrapper"> 
+              <img src="assets/imgs/spare.png" alt="maintanince">
+            </div>
+            <p>قطع الغيار</p>
+          </div>
+        </ion-col>
+        <ion-col col-5 class="col_wrapper">
+          <div class="black_box" (click)="offers()">
+            <div class="service_icon_wrapper"> 
+              <img src="assets/imgs/discount.png" alt="maintanince">
+            </div>
+            <p>العروض</p>
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+    <div class="logo_img" (click)="readAboutCompany()">
+      <!-- <img src="assets/imgs/Halwani-Logo-new.png" alt="logo" class="logo_img"> -->
+    </div>
   </div>
 </ion-content>
+
+

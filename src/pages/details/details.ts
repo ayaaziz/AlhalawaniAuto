@@ -218,7 +218,7 @@ CaradviceSuccessCallback(data)
     });
   }
   else{
-    this.social.share(this.name , dis ,img ,"https://play.google.com/store/apps/details?id=com.ITRoots.AldahayanAuto&ah=51fJvaVo7chCzf2mS2Fykmh_EBs").then(() => {
+    this.social.share(this.name , dis ,img ,"https://play.google.com/store/apps/details?id=com.ITRoots.AlhalwanyMotors").then(() => {
       console.log("success")
     }).catch(() => {
       console.log("not available")

@@ -1,12 +1,12 @@
 
 <ion-header>
 
-    <ion-navbar color="danger" hideBackButton>
+    <ion-navbar hideBackButton>
               
 
-      <ion-title style="text-align:right" >تواصل معنا</ion-title>
+      <ion-title>تواصل معنا</ion-title>
         
-      <ion-buttons right>
+      <ion-buttons left>
           <button ion-button icon-only (click)="ViewCtrl.dismiss()">
               <ion-icon name="arrow-back" arrow-dripright></ion-icon>
           </button>
@@ -25,18 +25,18 @@
   <div style="width:100%">
     
     <ion-row>
-    <ion-toolbar >
+    <!-- <ion-toolbar > -->
       <ion-segment [(ngModel)]="data" class="seg">
        
         <ion-segment-button  value="branches" >
           فروعنا
         </ion-segment-button>
         <ion-segment-button  value="message" >
-            ارسل رساله 
+            ارسل رسالة 
           </ion-segment-button>
     
       </ion-segment>
-    </ion-toolbar >
+    <!-- </ion-toolbar > -->
   </ion-row>
 
   <ion-row>

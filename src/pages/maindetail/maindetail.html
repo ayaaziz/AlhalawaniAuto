@@ -1,24 +1,24 @@
 <ion-header>
 
-  <ion-navbar color="danger" hideBackButton>
-      <ion-buttons left >
+  <ion-navbar hideBackButton>
+      <ion-buttons right>
           <button ion-button icon-only (click)="search()">
-              <ion-icon name="search" style="  color:#ffffff; font-size:25px"></ion-icon>
+              <ion-icon name="search"></ion-icon>
             </button>
           </ion-buttons>
        
-    <ion-title style="text-align: center;font-weight:bold;">{{name}}</ion-title>
+    <ion-title>{{name}}</ion-title>
 
-    <ion-buttons right >
+    <ion-buttons left>
       <button ion-button icon-only (click)="ViewCtrl.dismiss()">
           <ion-icon name="arrow-back" arrow-dripright></ion-icon>
       </button>
-      </ion-buttons>
+    </ion-buttons>
       
   </ion-navbar>
-<script src="../hijricalc/js/CreatMemoCalender.js"></script>
-<script src="../hijricalc/js/hijri-date-rtl.js"></script>
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="../hijricalc/js/CreatMemoCalender.js"></script>
+  <script src="../hijricalc/js/hijri-date-rtl.js"></script>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   
 </ion-header>

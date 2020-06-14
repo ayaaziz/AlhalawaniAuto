@@ -23,7 +23,10 @@ export class MainservicesProvider {
             let headers = new HttpHeaders()
         headers = headers.set('Content-Type', 'application/x-www-form-urlencoded');
         let params = new HttpParams().set('client_id','2').set('client_secret', 'G3RYH2aOWloclC9wmOcuCjNojdCpzA1HNa8dVzMl').set('grant_type', 'password').set('username','admin@aldahayanautosa.com').set('password','Aldahayan@2018');
-        let serviceUrl = 'http://www.aldahayanautosa.com/aldahyan/oauth/token';
+        // let serviceUrl = 'http://www.aldahayanautosa.com/aldahyan/oauth/token';
+        let serviceUrl = 'http://alhalawani.aldahayanautosa.com/oauth/token';
+
+        
         this.http.post(serviceUrl, params, { headers: headers }).subscribe(
           data => {
             authSuccessCallback(data)  

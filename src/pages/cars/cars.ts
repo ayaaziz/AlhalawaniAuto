@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform, MenuController } from 'ionic-angular';
 import { ViewController } from 'ionic-angular/navigation/view-controller';
 import { MainservicesProvider } from '../../providers/mainservices/mainservices';
 import { CentralProvider } from '../../providers/central/central';
@@ -28,7 +28,7 @@ export class CarsPage {
   fixedtime:any
   getdata:any=[]
   accestoken:any
-  constructor(public toastctrl:ToastController,public plt:Platform,public storage:Storage,public toastCtrl:ToastController,public navCtrl: NavController,public cent:CentralProvider,public mainservice:MainservicesProvider,public social:SocialSharing,public navParams: NavParams,public ViewCtrl:ViewController) {
+  constructor(public toastctrl:ToastController,public plt:Platform,public storage:Storage,public toastCtrl:ToastController,public navCtrl: NavController,public cent:CentralProvider,public mainservice:MainservicesProvider,public social:SocialSharing,public navParams: NavParams,public ViewCtrl:ViewController,public menue :MenuController) {
     this.accestoken= localStorage.getItem('adftrmee')
     this.cent.status=0
     this.mainservice.CarOffer(this.accestoken,this.offset,(data)=> this.CarOfferSuccessCallback(data),(data)=> this.CarOfferFailureCallback(data))
@@ -101,7 +101,7 @@ this.img=this.cent.imgUrl
     }
     else
     {
-      this.social.share(name , price ,img ,"https://play.google.com/store/apps/details?id=com.ITRoots.AldahayanAuto&ah=51fJvaVo7chCzf2mS2Fykmh_EBs").then(() => {
+      this.social.share(name , price ,img ,"https://play.google.com/store/apps/details?id=com.ITRoots.AlhalwanyMotors").then(() => {
         console.log("success")
       }).catch(() => {
         console.log("not available")
@@ -166,6 +166,11 @@ this.img=this.cent.imgUrl
       position: 'bottom'
       });
       toast.present();
+      }
+
+
+      openmenu() {
+        this.menue.open()
       }
       
 }

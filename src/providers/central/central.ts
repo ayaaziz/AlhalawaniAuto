@@ -23,11 +23,15 @@ export class CentralProvider {
   badge:any
   DeviceId:any;
   public apiKey = 'base64:v1ShGAmp2IOkG6vjD79Qe4GBoeZrkZvT4i2jYOdXPbs=';
-  public imgUrl='http://www.aldahayanautosa.com/aldahyan/public/images/'
+  // public imgUrl='http://www.aldahayanautosa.com/aldahyan/public/images/'
+  public imgUrl='http://alhalawani.aldahayanautosa.com/public/images/'
+
   public default='assets/imgs/default.png'
   public BASE_64_PREFIX='base64'
-  public serviceurl:string="http://www.aldahayanautosa.com/aldahyan/api/";
-  // public serviceurl:string="http://www.aldahayanautosa.com/aldahyandev/api/";
+  // public serviceurl:string="http://www.aldahayanautosa.com/aldahyan/api/";
+  public serviceurl:string="http://alhalawani.aldahayanautosa.com/api/";
+
+
   
   constructor(public http: HttpClient) {
     console.log('Hello CentralProvider Provider');

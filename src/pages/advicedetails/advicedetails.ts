@@ -66,7 +66,7 @@ export class AdvicedetailsPage {
   {
     console.log(name,img)
     if (this.plt.is('ios')) {
-    this.socialSharing.share("الضحيان للسيارات" , name , img ,"https://itunes.apple.com/us/app/%D8%A7%D9%84%D8%B6%D8%AD%D9%8A%D8%A7%D9%86-%D9%84%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA/id1421240637?ls=1&mt=8").then(() => {
+    this.socialSharing.share("الحلواني اوتو" , name , img ,"https://itunes.apple.com/us/app/%D8%A7%D9%84%D8%B6%D8%AD%D9%8A%D8%A7%D9%86-%D9%84%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA/id1421240637?ls=1&mt=8").then(() => {
       console.log("success")
     }).catch(() => {
       console.log("not available")
@@ -74,7 +74,7 @@ export class AdvicedetailsPage {
   }
   else
   {
-    this.socialSharing.share("الضحيان للسيارات" , name , img ,"https://play.google.com/store/apps/details?id=com.ITRoots.AldahayanAuto&ah=51fJvaVo7chCzf2mS2Fykmh_EBs").then(() => {
+    this.socialSharing.share("الحلواني اوتو" , name , img ,"https://play.google.com/store/apps/details?id=com.ITRoots.AlhalwanyMotors").then(() => {
       console.log("success")
     }).catch(() => {
       console.log("not available")

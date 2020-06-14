@@ -1,20 +1,13 @@
-
-<ion-header >
-
-  <ion-navbar color="danger" hideBackButton style="padding: 0px;background-image: url(../assets/imgs/header.png);min-height:0px;    min-width: 100%;">
-    <ion-row>
-        <ion-col col-11>
-            <h2 style="margin-right: 8px; color:#ffffff ;margin-top: 10px;font-size:18px">حاسبه التمويل</h2>
-          </ion-col>
-   <ion-col  col-1 style="margin-top:9px">
-       <ion-icon name="menu"  (click)="openmenu()" class="menu"></ion-icon> 
-     </ion-col>
-     </ion-row>
-  
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-buttons left>
+      <button ion-button icon-only (click)="openmenu()">
+        <ion-icon name="menu"></ion-icon> 
+      </button>
+    </ion-buttons>
+    <ion-title>حاسبة التمويل</ion-title>
   </ion-navbar>
-
-    
-  </ion-header>
+</ion-header>
 
 
 <ion-content padding style="background-color:#fdeeee ">
@@ -22,7 +15,8 @@
 <form [formGroup]="data"  [hidden]="hide">
 <ion-row class="row1">
   <ion-col col-5>
-  <h4 style="color:#d63932 ;margin-top:3px ;   font-size:14px;   ">بيانات السياره </h4>
+  <h2 style="color:#d63932 ;margin-top:3px ;font-size:15px;
+  font-weight: bold;">بيانات السيارة </h2>
 </ion-col>
 <ion-col col-7 class="colname">
   <h3 style="font-size:13px ;margin-top: 4px;; color:#d63932;font-weight: bold"> {{carname}}</h3>
@@ -120,14 +114,14 @@
           <ion-row >
             <ion-col col-4></ion-col>
                                   <ion-col col-8 style="margin-top: -14px;color:#d63932;margin-bottom: -11px;">
-           <p class="hint" > * أدخل  القسط الشهري او الدفعه المقدمه(اختياري)</p>
+           <p class="hint" > * أدخل  القسط الشهري او الدفعة المقدمة(اختياري)</p>
                                   </ion-col>
          </ion-row>
          
     
           <ion-row style="background-color:#fdeeee">
             <ion-col col-4>
-              <ion-label for="email" class="branch">الدفعه المقدمه</ion-label>
+              <ion-label for="email" class="branch">الدفعة المقدمة</ion-label>
             </ion-col>
             <ion-col col-8>
               <ion-input text-right type="number" (ionChange)="changerabicpaid()" (focus)="delmonthly()"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="paid">
@@ -163,7 +157,7 @@
 
           <ion-row>
           <ion-col col-4>
-            <ion-label for="email" class="date">الدفعه الأخيره %</ion-label>
+            <ion-label for="email" class="date">الدفعة الأخيرة %</ion-label>
           </ion-col>
           <!-- <ion-col col-8>
             <ion-input text-right type="number"  disabled [(ngModel)]="ownership" id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="have">
@@ -235,7 +229,7 @@
   <h5 style="font-size: 1.5rem;margin-top: -1px;">{{lastpaid1}} ريال -- {{havepercent}} %</h5>
   <hr style="    margin-top: -1px;
   margin-bottom: -4px;">
-  <h3 style="font-size: 1.6rem;font-weight: bold">الدفعه المقدمه</h3>
+  <h3 style="font-size: 1.6rem;font-weight: bold">الدفعة المقدمة</h3>
   <h5 style="font-size: 1.5rem;margin-top: -1px;">{{paidmoney}} ريال</h5>
   <hr style="    margin-top: -1px;
   margin-bottom: -4px;">

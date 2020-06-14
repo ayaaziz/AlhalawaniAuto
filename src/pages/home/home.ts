@@ -24,6 +24,7 @@ import { ToastController } from 'ionic-angular/components/toast/toast-controller
 import { RefreshTokenInterceptor } from '../../providers/mainservices/refresh-token.interceptor';
 import { AlertController } from 'ionic-angular/components/alert/alert-controller';
 import { ViewController } from 'ionic-angular/navigation/view-controller';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -179,6 +180,10 @@ export class HomePage {
   openparts()
   {
     this.navCtrl.push(ChatPage)
+  }
+
+  readAboutCompany() {
+    this.navCtrl.push("AboutCompanyPage");
   }
   
 }

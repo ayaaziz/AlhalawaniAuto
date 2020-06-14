@@ -1,10 +1,10 @@
 
-<ion-menu [content]="content" side="left">
+<ion-menu [content]="content" side="right">
         <ion-header>
                
           <ion-toolbar color='side'>
                 <div class="text-center">
-              <img src="assets/imgs/logo side menu.png" style="max-width: 50%;">
+              <img src="assets/imgs/logo-main-white.png" style="max-width: 235px;margin-right: 10px;margin-top: 3px;">
            </div>
           </ion-toolbar>
         </ion-header>
@@ -13,64 +13,64 @@
             <button ion-item style="border-bottom:1px solid #a1a0a0" (click)="opencarspage()">
               <ion-row style="direction: rtl;margin-right: 0px;">
                   <ion-icon name="iu-2" style="font-size:35px"></ion-icon>
-                  <h2 style="margin-right:10px ; color:black ; font-size:18px">ابحث عن سيارة</h2>
+                  <h2 style="margin-right:10px ; color:black ; font-size:18px;margin-top: 5px;">ابحث عن سيارة</h2>
                 </ion-row>
             </button>
             <button ion-item style="border-bottom:1px solid #a1a0a0" (click)="optain()">
             <ion-row style="direction: rtl;margin-right: 0px;">
                 <ion-icon name="setting" style="font-size:30px"></ion-icon>
-                <h2 style="margin-right:10px ; color:black ; font-size:18px" >اطلب صيانتك</h2>
+                <h2 style="margin-right:10px ; color:black ; font-size:18px;margin-top: 5px;" >اطلب صيانتك</h2>
           </ion-row>
         </button>
        
       <button ion-item (click)="openparts()" style="border-bottom:1px solid #a1a0a0">
           <ion-row style="direction: rtl">
               <ion-icon name="help-buoy" style="font-size:30px"></ion-icon>
-              <h2 style="margin-right:10px ; color:black ; font-size:18px"> صيانه دوريه</h2>
+              <h2 style="margin-right:10px ; color:black ; font-size:18px;margin-top: 5px;"> صيانة دورية</h2>
         </ion-row>
       </button>
 
 <button ion-item style="border-bottom:1px solid #a1a0a0" (click)="offers()">
     <ion-row style="direction: rtl;margin-right: 0px;">
         <ion-icon name="offers" style="font-size:30px"></ion-icon>
-        <h2 style="margin-right:10px ; color:black ; font-size:18px">العروض</h2>
+        <h2 style="margin-right:10px ; color:black ; font-size:18px;margin-top: 5px;">العروض</h2>
   </ion-row>
 </button>
 <button ion-item style="border-bottom:1px solid #a1a0a0" (click)="openpaid()">
     <ion-row style="direction: rtl;margin-right: 0px;">
         <ion-icon name="ios-calculator" style="font-size:30px"></ion-icon>
-        <h2 style="margin-right:10px ; color:black ; font-size:18px">حاسبه تمويل</h2>
+        <h2 style="margin-right:10px ; color:black ; font-size:18px;margin-top: 5px;">حاسبة تمويل</h2>
   </ion-row>
 </button>
 <button ion-item (click)="openchat()" style="border-bottom:1px solid #a1a0a0">
     <ion-row style="direction: rtl;margin-right: 0px;">
         <img src="assets/imgs/chat-icon.png" name="call" style="font-size:30px;max-width: 13%;
         height: 28px;">
-        <h2 style="margin-right:10px ; color:black ; font-size:18px">  تواصل مع البائع</h2>
+        <h2 style="margin-right:10px ; color:black ; font-size:18px;margin-top: 5px;">  تواصل مع البائع</h2>
     </ion-row>
     </button>
 <button ion-item style="border-bottom:1px solid #a1a0a0" (click)="loginpage()">
     <ion-row style="direction: rtl;margin-right: 0px;">
         <ion-icon ios="md-alarm" md="md-alarm" style="font-size:30px"></ion-icon>
-        <h2 style="margin-right:10px ; color:black ; font-size:18px">تاريخ الصيانة</h2>
+        <h2 style="margin-right:10px ; color:black ; font-size:18px;margin-top: 5px;">تاريخ الصيانة</h2>
   </ion-row>
   </button>
 <button ion-item style="border-bottom:1px solid #a1a0a0" (click)="openadvices()">
   <ion-row style="direction: rtl;margin-right: 0px;">
       <ion-icon name="android-clipboard" style="font-size:30px"></ion-icon>
-      <h2 style="margin-right:10px ; color:black ; font-size:18px">نصائح و ارشادات</h2>
+      <h2 style="margin-right:10px ; color:black ; font-size:18px;margin-top: 5px;">نصائح و إرشادات</h2>
 </ion-row>
 </button>
 <button ion-item style="border-bottom:1px solid #a1a0a0" (click)="openwarning()">
 <ion-row style="direction: rtl;margin-right: 0px;">
     <ion-icon name="warning" style="font-size:30px"></ion-icon>
-    <h2 style="margin-right:10px ; color:black ; font-size:18px">العلامات التحذيرية</h2>
+    <h2 style="margin-right:10px ; color:black ; font-size:18px;margin-top: 5px;">العلامات التحذيرية</h2>
 </ion-row>
 </button>
 <button ion-item style="border-bottom:1px solid #a1a0a0" (click)="openjopp()">
     <ion-row style="direction: rtl;margin-right: 0px;">
         <ion-icon name="ios-briefcase-outline" style="font-size:30px"></ion-icon>
-        <h2 style="margin-right:10px ; color:black ; font-size:18px">طلب توظيف</h2>
+        <h2 style="margin-right:10px ; color:black ; font-size:18px;margin-top: 5px;">طلب توظيف</h2>
     </ion-row>
     </button>
   
@@ -79,37 +79,38 @@
 <button ion-item style="border-bottom:1px solid #a1a0a0" (click)="apprate()">
 <ion-row style="direction: rtl;margin-right: 0px;">
     <ion-icon name="star-half" style="font-size:30px"></ion-icon>
-    <h2 style="margin-right:10px ; color:black ; font-size:18px">تقييم التطبيق</h2>
+    <h2 style="margin-right:10px ; color:black ; font-size:18px;margin-top: 5px;">تقييم التطبيق</h2>
 </ion-row>
 </button>
 <button ion-item  (click)="shareapp()" style="border-bottom:1px solid #a1a0a0">
 <ion-row style="direction: rtl;margin-right: 0px;">
     <ion-icon ios="md-share" md="md-share" style="font-size:30px"></ion-icon>
-    <h2 style="margin-right:10px ; color:black ; font-size:18px">مشاركة التطبيق</h2>
+    <h2 style="margin-right:10px ; color:black ; font-size:18px;margin-top: 5px;">مشاركة التطبيق</h2>
 </ion-row>
 </button>
 <button ion-item (click)="opencontactus()" style="border-bottom:1px solid #a1a0a0">
     <ion-row style="direction: rtl;margin-right: 0px;">
-        <img src="assets/imgs/chat.png" name="call" style="font-size:30px;max-width: 13%;
+        <img src="assets/imgs/group.png" name="call" style="font-size:30px;max-width: 13%;
         height: 28px;">
-        <h2 style="margin-right:10px ; color:black ; font-size:18px">فروع الضحيان</h2>
+        <h2 style="margin-right:10px ; color:black ; font-size:18px;margin-top: 5px;">فروع الحلواني </h2>
     </ion-row>
     </button>
 <button ion-item (click)="opensetting()" >
     <ion-row style="direction: rtl;margin-right: 0px;">
         <ion-icon name="ios-settings" style="font-size:30px"></ion-icon>
-        <h2 style="margin-right:10px ; color:black ; font-size:18px">اعدادات التطبيق</h2>
+        <h2 style="margin-right:10px ; color:black ; font-size:18px;margin-top: 5px;">إعدادات التطبيق</h2>
     </ion-row>
     </button>
   
-        <ion-row style="direction: rtl;    margin-right: 45px;">
-                <ion-col col-4>
-                        <ion-icon (click)="opentwitter()" name="logo-twitter" style="font-size:30px;color:#06aee4;"></ion-icon>
+        <ion-row style="justify-content: center;">
+            <ion-col col-2>
+                <ion-icon (click)="openinsta()" name="logo-instagram" style="font-size:30px;color:#e32129;"></ion-icon>
+            </ion-col>
+                <ion-col col-2>
+                        <ion-icon (click)="openSnapchat()" name="logo-snapchat" style="font-size:23px;color:#fff;background-color: #FEF851;margin-top: 4px;"></ion-icon>
                     </ion-col>
-                    <ion-col col-4>
-                            <ion-icon (click)="openinsta()" name="logo-instagram" style="font-size:30px;color:#e32129;"></ion-icon>
-                        </ion-col>
-            <ion-col col-4>
+                   
+            <ion-col col-2>
             <ion-icon (click)="openfacebook()" name="logo-facebook" style="font-size:30px;color:#0909af;"></ion-icon>
         </ion-col>
       

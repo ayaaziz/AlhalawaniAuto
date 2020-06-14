@@ -2,18 +2,21 @@
 
   <ion-navbar color="danger" hideBackButton>
     <ion-row>
-      <img src="assets/imgs/share-shot icon.png"    class="search" (click)="share()">
-     
-            
-        
-    <ion-title style="text-align:center;margin-top: 10px;" >العلامات التحذيريه</ion-title>
+      
+    <ion-title>العلامات التحذيرية</ion-title>
  
     </ion-row>
-    <ion-buttons right>
+    <ion-buttons left>
       <button ion-button icon-only (click)="ViewCtrl.dismiss()">
-          <ion-icon name="arrow-back" arrow-dripright></ion-icon>
+        <ion-icon name="arrow-back" arrow-dripright></ion-icon>
       </button>
-      </ion-buttons>
+    </ion-buttons>
+
+    <ion-buttons right>
+      <button ion-button icon-only (click)="share()">
+        <img src="assets/imgs/share-shot icon.png" class="search">
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>

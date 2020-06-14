@@ -172,7 +172,7 @@ page-jop {
     margin-bottom: 0px;
          }
          .buton{
-         background-color:#d63932;    font-size: 1.1rem;    text-align: left;
+         background-color:#790C1B;    font-size: 1.1rem;    text-align: left;
          }
     }
     @media screen  and (min-width:360px){
@@ -186,7 +186,7 @@ page-jop {
         }
 
         .buton{
-             background-color:#d63932;    font-size: 1.1rem;    text-align: left;width:100px;
+             background-color:#790C1B;    font-size: 1.1rem;    text-align: left;width:100px;
         }
         ion-input {
             position: relative;
@@ -250,7 +250,7 @@ page-jop {
 
         // }
         .buton{
-             background-color:#d63932;    font-size: 1.2rem;    text-align: left;width:109px;
+             background-color:#790C1B;    font-size: 1.2rem;    text-align: left;width:109px;
         }
         // [col-8]
         // {
@@ -353,7 +353,7 @@ page-jop {
 
         // }
         .buton{
-             background-color:#d63932;    font-size: 1.2rem;    text-align: left;width:109px;
+             background-color:#790C1B;    font-size: 1.2rem;    text-align: left;width:109px;
         }
         // [col-8]
         // {
@@ -453,7 +453,7 @@ page-jop {
 
         // }
         .buton{
-             background-color:#d63932;    font-size: 1.3rem;    text-align: left;width:127px;
+             background-color:#790C1B;    font-size: 1.3rem;    text-align: left;width:127px;
         }
         // [col-8]
         // {
@@ -553,7 +553,7 @@ page-jop {
 
         // }
         .buton{
-             background-color:#d63932;    font-size: 1.5rem;    text-align: left;width:150px;
+             background-color:#790C1B;    font-size: 1.5rem;    text-align: left;width:150px;
         }
         // [col-8]
         // {
@@ -641,7 +641,7 @@ page-jop {
 
         // }
         .buton{
-             background-color:#d63932;    font-size: 1.5rem;    text-align: left;width:150px;
+             background-color:#790C1B;    font-size: 1.5rem;    text-align: left;width:150px;
         }
         // [col-8]
         // {
@@ -730,7 +730,7 @@ page-jop {
 
         // }
         .buton{
-             background-color:#d63932;    font-size: 1.5rem;    text-align: left;width:150px;
+             background-color:#790C1B;    font-size: 1.5rem;    text-align: left;width:150px;
         }
         // [col-8]
         // {
@@ -818,7 +818,7 @@ page-jop {
 
         // }
         .buton{
-             background-color:#d63932;    font-size: 1.5rem;    text-align: left;width:150px;
+             background-color:#790C1B;    font-size: 1.5rem;    text-align: left;width:150px;
         }
         // [col-8]
         // {
@@ -907,7 +907,7 @@ page-jop {
 
         // }
         .buton{
-             background-color:#d63932;    font-size: 1.5rem;    text-align: left;width:150px;
+             background-color:#790C1B;    font-size: 1.5rem;    text-align: left;width:150px;
         }
         // [col-8]
         // {
@@ -995,7 +995,7 @@ page-jop {
 
         // }
         .buton{
-             background-color:#d63932;    font-size: 1.5rem;    text-align: left;width:150px;
+             background-color:#790C1B;    font-size: 1.5rem;    text-align: left;width:150px;
         }
         // [col-8]
         // {
@@ -1083,7 +1083,7 @@ page-jop {
 
         // }
         .buton{
-             background-color:#d63932;    font-size: 1.5rem;    text-align: left;width:150px;
+             background-color:#790C1B;    font-size: 1.5rem;    text-align: left;width:150px;
         }
         // [col-8]
         // {
@@ -1171,7 +1171,7 @@ page-jop {
 
         // }
         .buton{
-             background-color:#d63932;    font-size: 1.5rem;    text-align: left;width:150px;
+             background-color:#790C1B;    font-size: 1.5rem;    text-align: left;width:150px;
         }
         // [col-8]
         // {
@@ -1259,7 +1259,7 @@ page-jop {
 
         // }
         .buton{
-             background-color:#d63932;    font-size: 1.5rem;    text-align: left;width:150px;
+             background-color:#790C1B;    font-size: 1.5rem;    text-align: left;width:150px;
         }
         // [col-8]
         // {
@@ -1340,6 +1340,18 @@ page-jop {
     }
 
 
+    .select-text {
+        margin-top: 5px !important;
+    }
+
+    .select-md .select-icon,
+    .select-ios .select-icon {
+        height: 31px !important;
+    }
 
 
+
+    .toolbar-title-md, .toolbar-title-ios {
+        margin-right: -15px !important;
+    }
 }

@@ -9,7 +9,9 @@ $font-path: "../assets/fonts";
 // The app direction is used to include
 // rtl styles in your app. For more info, please see:
 // http://ionicframework.com/docs/theming/rtl-support/
-$app-direction: ltr;
+// $app-direction: ltr;
+$app-direction: rtl;
+
 // $tabs-ios-tab-icon-color-active:#488aff;
 // $tabs-md-tab-icon-color-active: #488aff;
 @media screen and (min-width: 1024px)

@@ -2,19 +2,19 @@
 <ion-header>
 
   <ion-navbar color="danger" hideBackButton>
-      <ion-buttons left>
+      <ion-buttons right>
 
       <button ion-button icon-only (click)="search()">
           <ion-icon name="search" class="search"></ion-icon>
         </button>
       </ion-buttons>
-    <ion-title style="text-align:center">السيارات</ion-title>
+    <ion-title>السيارات</ion-title>
   
-    <ion-buttons right>
+    <ion-buttons left>
       <button ion-button icon-only (click)="ViewCtrl.dismiss()">
           <ion-icon name="arrow-back" arrow-dripright></ion-icon>
       </button>
-      </ion-buttons>
+    </ion-buttons>
       
     
   </ion-navbar>
@@ -33,7 +33,7 @@
     <ion-row style="width:100%">
       <ion-col col-4 >
     <ion-item class="item1" nolines>
-        <ion-label [hidden]="hide" style="color:#d63932;overflow: unset;">  الماركه</ion-label>
+        <ion-label [hidden]="hide" style="color:#d63932;overflow: unset;margin:4px 4px 0 0;">  الماركة</ion-label>
       <ion-select  [(ngModel)]="val" (ionChange)="optionsFn(val)" cancelText="الغاء" okText="تم"  >
       
         <ion-option *ngFor="let item of brand_data" value="{{item.id}}" style="padding:0px;color:#d63932" >{{item.name}}</ion-option>
@@ -43,7 +43,7 @@
    </ion-col>
    <ion-col col-4>
     <ion-item class="item2" nolines>
-        <ion-label  [hidden]="hide1" style="color:#d63932;    overflow: unset;">  الموديل</ion-label>
+        <ion-label  [hidden]="hide1" style="color:#d63932;    overflow: unset;margin:4px 4px 0 0;">  الموديل</ion-label>
       <ion-select [(ngModel)]="value" [disabled]="disable1"   (ionChange)="options(value)"  okText="تم" cancelText="الغاء" >
         <ion-option  *ngFor="let item of date" value="{{item.id}}" style="padding:0px ;" >{{item.name}}</ion-option>
       </ion-select>
@@ -51,7 +51,7 @@
   </ion-col>
   <ion-col col-4>
   <ion-item class="item2" nolines>
-    <ion-label  [hidden]="hide2" style="color:#d63932;    overflow: unset;"> السنه </ion-label>
+    <ion-label  [hidden]="hide2" style="color:#d63932;    overflow: unset;margin:4px 4px 0 0;"> السنة </ion-label>
   <ion-select [(ngModel)]="value1"   (ionChange)="options1(value1)" okText="تم" cancelText="الغاء" >
     <!-- [disabled]="butDisabled1"  -->
    

@@ -76,18 +76,16 @@
   </ion-footer> -->
 
 
-  <ion-header >
-
-    <ion-navbar color="danger" hideBackButton>
-        <ion-buttons right>
-            <button ion-button icon-only (click)="viewCtrl.dismiss()">
-                <ion-icon name="arrow-back" arrow-dripright></ion-icon>
-            </button>
-            </ion-buttons>
-      <h2 style="margin-right: 18px; color:#ffffff ;margin-top: 10px;font-size:21px ;    margin-right: 10px;">المحادثه</h2>
-    </ion-navbar>
-  
-  </ion-header>
+<ion-header>
+  <ion-navbar hideBackButton>
+    <ion-buttons left>
+        <button ion-button icon-only (click)="viewCtrl.dismiss()">
+            <ion-icon name="arrow-back" arrow-dripright></ion-icon>
+        </button>
+      </ion-buttons>
+    <ion-title>المحادثة</ion-title>
+  </ion-navbar>
+</ion-header>
   
   
   <ion-content padding style="background-color:#fdeeee ;  margin-top: 28px; ">
@@ -128,7 +126,7 @@
         </ion-item>
         <div class="chat-message" text-left *ngIf="hide==true">
             <div class="left-bubble">
-              <span class="msg-name">خدمه عملاء الضحيان</span>
+              <span class="msg-name">خدمه عملاء الحلواني اوتو</span>
               <span class="msg-date">{{send | date:'short'}}</span>
               <p text-wrap>{{msg}}</p>
             </div>

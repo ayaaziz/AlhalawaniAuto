@@ -1,17 +1,17 @@
 <ion-header>
 
-  <ion-navbar color="danger" hideBackButton>
+  <ion-navbar hideBackButton>
     
-        <ion-buttons left>
+        <ion-buttons right>
             <button ion-button icon-only (click)="search()">
-                <ion-icon name="search" style="  color:#ffffff; font-size:25px"></ion-icon>
+                <ion-icon name="search"></ion-icon>
               </button>
             </ion-buttons>
           
          
-    <ion-title style="text-align:center;    font-weight: bold;" >{{name}}</ion-title>
+    <ion-title>{{name}}</ion-title>
  
-    <ion-buttons right>
+    <ion-buttons left>
       <button ion-button icon-only (click)="ViewCtrl.dismiss()">
           <ion-icon name="arrow-back" arrow-dripright></ion-icon>
       </button>
@@ -56,7 +56,7 @@
 </div>
 </ion-row>
 <ion-row class="row11" style="width:100%">
-<ion-toolbar >
+<!-- <ion-toolbar > -->
   <ion-segment [(ngModel)]="details" class="seg">
     <ion-segment-button value="detail" >
       المواصفات
@@ -67,7 +67,7 @@
     </ion-segment-button>
 
   </ion-segment>
-</ion-toolbar >
+<!-- </ion-toolbar > -->
 </ion-row>
 <div *ngFor="let item of alldata" style="width:100%">
 <ion-row style="width:100%">
@@ -129,7 +129,7 @@
       <ion-item  text-wrap  class="item1"  *ngIf="show==true" style="width:100%;height: 50px;">  
    <ion-row (click)="showdata()">  
      <ion-col  col-10 >   
-        <p style="color:#000000;; font-size: 1.6rem"  > المحرك والقوه  </p> 
+        <p style="color:#000000;; font-size: 1.6rem"  > المحرك والقوة  </p> 
       </ion-col>
       <ion-col col-2 style="text-align:left">
           <span  > <ion-icon   ios="md-add" md="md-add" style="color: #464545; margin-top: 3px;; font-size: 1.6rem "></ion-icon> </span>
@@ -141,7 +141,7 @@
 <ion-item  text-wrap  class="item2" *ngIf="show==false" style="width:100%;height: 50px;">  
   <ion-row (click)="hidedata()" style="width:100%">  
     <ion-col  col-10>   
-       <p style="color:#000000;font-size: 1.6rem"  > المحرك والقوه  </p> 
+       <p style="color:#000000;font-size: 1.6rem"  > المحرك والقوة  </p> 
      </ion-col>
     
      <ion-col col-2  style="text-align:left">
@@ -345,7 +345,7 @@
   <ion-item  text-wrap  class="item7" style="width:100%;height: 50px;">  
     <ion-row (click)="hidedata3()" style="width:100%">  
     <ion-col  col-10>   
-       <p style="color:#000000; font-size: 1.6rem"  > حاسبه تمويل  </p> 
+       <p style="color:#000000; font-size: 1.6rem"  > حاسبة تمويل  </p> 
      </ion-col>
     
      <ion-col col-2  style="text-align:left">
@@ -357,7 +357,7 @@
     <div  *ngFor="let item of alldata" style="width:100%">    
     <ion-grid class="grid5" style="background: #f9f9fd; width:100% ">
       <ion-row  style="background: #f9f9fd; height:40px;width:100%">
-        <ion-col > <p style="    margin-top: 0%;">   شركة الضحيان التجاريه تقدم خدمه فريده لعملائها بتسهيل جميع الاجراءات البنكيه . يمكنك الان طلب تمويل بنكي لشراء السياره التى تحلم بها . </p> </ion-col> 
+        <ion-col > <p style="    margin-top: 0%;">   شركة محمد صالح الحلواني المحدودة تقدم خدمه فريده لعملائها بتسهيل جميع الاجراءات البنكيه . يمكنك الان طلب تمويل بنكي لشراء السياره التى تحلم بها . </p> </ion-col> 
         </ion-row>
         <ion-row >
           <button ion-button round class="btn" *ngIf="(!(item.price==null) && !(item.price_after==''))" (click)="openpaid(item.id,item.price_after,item.name)">حاسبه تمويل

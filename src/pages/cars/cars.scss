@@ -1,18 +1,18 @@
 page-cars {
-      .toolbar-content   {
-        background-image: url("../assets/imgs/header.png") !important  ;  
-         min-width: 100%;
-    }
+    //   .toolbar-content   {
+    //     background-image: url("../assets/imgs/header.png") !important  ;  
+    //      min-width: 100%;
+    // }
     .scroll-content {
         padding: 0px !important;
         border-top: 0px solid #fdeeee !important;
         margin-top: 75px !important;
         margin-bottom: 56px; 
     }
-    .search
-    {
-        text-align: left; margin-left:0px;margin-right: -245px;
-    }
+    // .search
+    // {
+    //     text-align: left; margin-left:0px;margin-right: -245px;
+    // }
     
     .segment-ios .segment-button:last-of-type {
         border-top-left-radius: 0;
@@ -35,27 +35,27 @@ page-cars {
         font-size: 1.2rem;
         line-height: 2.5rem !important;
     }
-    .search2
-    {
-          color:#ffffff; font-size:25px;margin-top: 10px;
-    }
+    // .search2
+    // {
+    //       color:#ffffff; font-size:25px;margin-top: 10px;
+    // }
  
-    .toolbar-md-light .toolbar-background-md {
-        background: #f4f4f400;
-    }
-    .toolbar-background-md {
-        border-color: #b2b2b200;
-        background: #fdeeee;
-    }
+    // .toolbar-md-light .toolbar-background-md {
+    //     background: #f4f4f400;
+    // }
+    // .toolbar-background-md {
+    //     border-color: #b2b2b200;
+    //     background: #fdeeee;
+    // }
    
  
-    .toolbar-ios-light .toolbar-background-ios {
-        background: #f4f4f400;
-    }
-    .toolbar-background-ios {
-        border-color: #b2b2b200;
-        background: #fdeeee;
-    }
+    // .toolbar-ios-light .toolbar-background-ios {
+    //     background: #f4f4f400;
+    // }
+    // .toolbar-background-ios {
+    //     border-color: #b2b2b200;
+    //     background: #fdeeee;
+    // }
     .div
     {
         border:.2px solid #d3d0d0;width: 110%;   margin-bottom: 20px;
@@ -332,6 +332,7 @@ page-cars {
             border-color: #b2b2b200;
             background: #fdeeee;
         }
+
        
         
         .toolbar-ios-light .toolbar-background-ios {
@@ -556,4 +557,28 @@ page-cars {
               
         }
     }
+
+    .segment-md .segment-button,
+    .segment-ios .segment-button {
+        opacity: 1;
+        // background-color: #790c1b;
+        background-color: #fdeeee;
+        // color: #d63932;
+        color: #790c1b;
+        font-size: 16px;
+        border: 1px solid #790c1b;
+        font-weight: 100;
+    }
+
+    .segment-md .segment-button.segment-activated,
+    .segment-ios .segment-button.segment-activated {
+        border-color: #790c1b;
+        opacity: 1;
+        color: #fdeeee;
+        background-color: #790c1b;
+        font-weight: 100;
+    }
+   
 }
+
+

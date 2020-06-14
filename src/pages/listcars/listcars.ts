@@ -68,7 +68,7 @@ show:any
   }
   else{
     console.log(name,price,img)
-    this.social.share(name , price , img ,"https://play.google.com/store/apps/details?id=com.ITRoots.AldahayanAuto&ah=51fJvaVo7chCzf2mS2Fykmh_EBs").then(() => {
+    this.social.share(name , price , img ,"https://play.google.com/store/apps/details?id=com.ITRoots.AlhalwanyMotors").then(() => {
       console.log("success")
     }).catch(() => {
       console.log("not available")

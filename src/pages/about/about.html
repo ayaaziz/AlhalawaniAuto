@@ -1,17 +1,13 @@
 
-<ion-header >
-
-  <ion-navbar color="danger" hideBackButton style="padding: 0px;min-height: 0px;">
-     
-    <ion-buttons right>
+<ion-header>
+  <ion-navbar hideBackButton> 
+    <ion-buttons left>
         <button ion-button icon-only (click)="viewCtrl.dismiss()">
             <ion-icon name="arrow-back" arrow-dripright></ion-icon>
         </button>
-        </ion-buttons>
-    <h2 class="title" >الاشعارات</h2>
-
+    </ion-buttons>
+    <ion-title>الإشعارات</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
@@ -22,7 +18,7 @@
                 refreshingSpinner="circles">
                 </ion-refresher-content>
               </ion-refresher> 
-              <h6 [hidden]="msg" style="text-align: center;color:#d63932;margin-top: 50%;"> لا توجد اشعارات </h6>
+              <h6 [hidden]="msg" style="text-align: center;color:#d63932;margin-top: 50%;"> لا توجد إشعارات </h6>
     <ion-list *ngFor="let item of notiList" >
 
 

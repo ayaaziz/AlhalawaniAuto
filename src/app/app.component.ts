@@ -37,12 +37,12 @@ import { MainservicesProvider } from '../providers/mainservices/mainservices';
 import { SearchPage } from '../pages/search/search';
 import { Device } from '@ionic-native/device';
 var config = {
-  apiKey: "AIzaSyCxvnhDX69U0eJ2jlyBdULbTZ8PTh8Bklw",
-  authDomain: "aldhyan-a76f0.firebaseapp.com",
-  databaseURL: "https://aldhyan-a76f0.firebaseio.com",
-  projectId: "aldhyan-a76f0",
-  storageBucket: "aldhyan-a76f0.appspot.com",
-  messagingSenderId: "74928871835"
+  apiKey: "AIzaSyB9Zx37mn8D6XiboHffxA-ibDKVCtTUPSc",
+  authDomain: "alhalwanymotors.firebaseapp.com",
+  databaseURL: "https://alhalwanymotors.firebaseio.com",
+  projectId: "alhalwanymotors",
+  storageBucket: "alhalwanymotors.appspot.com",
+  messagingSenderId: "958559604712"
 };
 
 
@@ -151,14 +151,14 @@ shareapp()
 {
 
   if (this.plt.is('ios')) {
-  this.socialSharing.share("الضحيان للسيارات" , null , null ,"https://itunes.apple.com/us/app/%D8%A7%D9%84%D8%B6%D8%AD%D9%8A%D8%A7%D9%86-%D9%84%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA/id1421240637?ls=1&mt=8").then(() => {
+  this.socialSharing.share("الحلواني اوتو" , null , null ,"https://itunes.apple.com/us/app/%D8%A7%D9%84%D8%B6%D8%AD%D9%8A%D8%A7%D9%86-%D9%84%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA/id1421240637?ls=1&mt=8").then(() => {
     console.log("success")
   }).catch(() => {
     console.log("not available")
   });
 }
 else{
-  this.socialSharing.share("الضحيان للسيارات" , null , null ,"https://play.google.com/store/apps/details?id=com.ITRoots.AldahayanAuto&ah=51fJvaVo7chCzf2mS2Fykmh_EBs").then(() => {
+  this.socialSharing.share("الحلواني اوتو" , null , null ,"https://play.google.com/store/apps/details?id=com.ITRoots.AlhalwanyMotors").then(() => {
     console.log("success")
   }).catch(() => {
     console.log("not available")
@@ -188,12 +188,12 @@ apprate()
   this.platform.ready().then(()=>{
   this.appRate.preferences.storeAppURL = {
     ios: '1421240637',
-    android: 'market://details?id=com.ITRoots.AldahayanAuto',
+    android: 'market://details?id=com.ITRoots.AlhalwanyMotors',
   },
 
   this.appRate.preferences.customLocale={
-    title: 'قيم الضحيان للسيارات',
-     message: 'اذا اعجبك تطبيق الضحيان للسيارات , هل تمانع من اخذ دقيقه لتقيمه؟ شكرا لدعمك',
+    title: 'قيم الحلواني اوتو',
+     message: 'إذا اعجبك تطبيق الحلولني للسيارات , هل تمانع من اخذ دقيقه لتقيمه؟ شكرا لدعمك',
       rateButtonLabel: 'قيم البرنامج الان',
       cancelButtonLabel:'الغاء',
        laterButtonLabel:'ذكرني لاحقا'
@@ -213,7 +213,7 @@ notification()
    
     const options: PushOptions = {
       android: {
-        senderID:"74928871835",
+        senderID:"958559604712",
         forceShow: true,
          clearNotifications: false
       },
@@ -496,24 +496,24 @@ notification()
     });
     toast.present();
   }
-  opentwitter()
+  openSnapchat()
   {
     
-   this.inap.create('https://twitter.com/toyotaaldahayan', '_system', 'location=yes');
+   this.inap.create('https://www.snapchat.com/add/alhalawaniauto', '_system', 'location=yes');
    this.menue.close()
 
   }
   openinsta()
   {
    
-   this.inap.create('https://www.instagram.com/toyotaaldahayan/', '_system', 'location=yes');
+   this.inap.create('http://www.instagram.com/alhalawaniauto/', '_system', 'location=yes');
    this.menue.close()
 
   }
   openfacebook()
   {
    
-   this.inap.create('https://www.facebook.com/Aldahayan.Auto', '_system', 'location=yes');
+   this.inap.create('https://www.facebook.com/alhalawaniauto', '_system', 'location=yes');
    this.menue.close()
 
   }

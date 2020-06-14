@@ -48,37 +48,37 @@ page-paid{
     color: initial;
     padding: 11px 18px !important; 
 }
-    .toolbar-content   {
-        background-image: url("../assets/imgs/header.png") !important  ;  
-         min-width: 100%;
-    }
+    // .toolbar-content   {
+    //     background-image: url("../assets/imgs/header.png") !important  ;  
+    //      min-width: 100%;
+    // }
           
-  .select-md .select-icon .select-icon-inner {
-        left: 0px !important;
-        top: 50%;
-        margin-top: -3px;
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-top: 5px solid;
-        border-right: 5px solid transparent;
-        border-left: 5px solid transparent;
-        color: #d63932 !important;
-        pointer-events: none;
-    }
-      .select-ios .select-icon .select-icon-inner {
-        left: 0px !important;
-        top: 50%;
-        margin-top: -3px;
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-top: 5px solid;
-        border-right: 5px solid transparent;
-        border-left: 5px solid transparent;
-        color: #d63932 !important;
-        pointer-events: none;
-    }
+//   .select-md .select-icon .select-icon-inner {
+//         left: 0px !important;
+//         top: 50%;
+//         margin-top: -3px;
+//         position: absolute;
+//         width: 0;
+//         height: 0;
+//         border-top: 5px solid;
+//         border-right: 5px solid transparent;
+//         border-left: 5px solid transparent;
+//         color: #d63932 !important;
+//         pointer-events: none;
+//     }
+//       .select-ios .select-icon .select-icon-inner {
+//         left: 0px !important;
+//         top: 50%;
+//         margin-top: -3px;
+//         position: absolute;
+//         width: 0;
+//         height: 0;
+//         border-top: 5px solid;
+//         border-right: 5px solid transparent;
+//         border-left: 5px solid transparent;
+//         color: #d63932 !important;
+//         pointer-events: none;
+//     }
 
     .form-group
     {
@@ -1143,6 +1143,8 @@ page-paid{
         }
 
 
-        
+        .toolbar-title-md, .toolbar-title-ios {
+            margin-right: -15px !important;
+        }
     }
     

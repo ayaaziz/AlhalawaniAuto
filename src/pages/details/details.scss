@@ -951,4 +951,30 @@ ion-row:nth-child(odd)
     margin-top: 15px;
 }
 }
+
+
+.segment-md .segment-button,
+.segment-ios .segment-button {
+    opacity: 1;
+    // background-color: #790c1b;
+    background-color: #fdeeee;
+    // color: #d63932;
+    color: #790c1b;
+    font-size: 16px;
+    border: 1px solid #790c1b;
+    font-weight: 100;
+}
+
+.segment-md .segment-button.segment-activated,
+.segment-ios .segment-button.segment-activated {
+    border-color: #790c1b;
+    opacity: 1;
+    color: #fdeeee;
+    background-color: #790c1b;
+    font-weight: 100;
+}
+
+.toolbar-title-md, .toolbar-title-ios {
+    margin-right: -15px !important;
+}
 }

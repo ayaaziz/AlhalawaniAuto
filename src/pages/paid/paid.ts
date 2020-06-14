@@ -804,7 +804,7 @@ this.isenabled=true
   presentToast8()
   {
     let toast = this.toastCtrl.create({
-      message: 'الدفعه المقدمه لا يمكن ان تزيد عن سعر السياره',
+      message: 'الدفعة المقدمة لا يمكن ان تزيد عن سعر السياره',
       duration: 4000,
       position: 'bottom'
     });

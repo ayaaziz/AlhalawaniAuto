@@ -1,22 +1,21 @@
 
 <ion-header>
-
-    <ion-navbar color="danger" hideBackButton style="padding: 0px;background-image: url(../assets/imgs/header.png);min-height:0px;    min-width: 100%;">
-      <ion-row>
-          <ion-col class="search" (click)="search()">
-              <ion-icon name="search" class="search2"></ion-icon>
-            </ion-col>
-            <ion-col >
-            <h2 style="margin-right: 8px; color:#ffffff ;margin-top: 10px;font-size:18px">عروض الضحيان</h2>
-          </ion-col>
-   
-        
-      </ion-row>
-    </ion-navbar>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    
-  </ion-header>
+  <ion-navbar hideBackButton>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="search()">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>عروض الحلواني اوتو</ion-title>
+    <ion-buttons left>
+        <button ion-button (click)="openmenu()" icon-only>
+            <ion-icon name="menu" class="menu"></ion-icon> 
+          </button>
+      </ion-buttons>
+  </ion-navbar>
+  <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+</ion-header>
 
 
 <ion-content padding style="background-color:#fdeeee " fullscreen #myContent1>
@@ -26,18 +25,18 @@
         refreshingSpinner="circles">
         </ion-refresher-content>
       </ion-refresher>
-    <ion-toolbar >
+    <!-- <ion-toolbar > -->
         <ion-segment [(ngModel)]="offers">
           <ion-segment-button value="cars">
             عروض السيارات
           </ion-segment-button>
           <ion-segment-button  value="maintain" >
-            عروض الصيانه
+            عروض الصيانة
                    
           </ion-segment-button>
     
         </ion-segment>
-      </ion-toolbar >
+      <!-- </ion-toolbar > -->
 
       <div [ngSwitch]="offers" style="width:100%">
         <div *ngSwitchCase="'cars'" style="width:100%">

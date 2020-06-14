@@ -1,70 +1,37 @@
 {
   "project_info": {
-    "project_number": "74928871835",
-    "firebase_url": "https://aldhyan-a76f0.firebaseio.com",
-    "project_id": "aldhyan-a76f0",
-    "storage_bucket": "aldhyan-a76f0.appspot.com"
+    "project_number": "958559604712",
+    "firebase_url": "https://alhalwanymotors.firebaseio.com",
+    "project_id": "alhalwanymotors",
+    "storage_bucket": "alhalwanymotors.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:74928871835:android:f101d6ca170bd239",
+        "mobilesdk_app_id": "1:958559604712:android:8f2d1b8cda417460779e5d",
         "android_client_info": {
-          "package_name": "com.ITRoots.AldahayanAuto"
+          "package_name": "com.ITRoots.AlhalwanyMotors"
         }
       },
       "oauth_client": [
         {
-          "client_id": "74928871835-2pgq0k33sfbhk3lf4pfmcls5npeumi4j.apps.googleusercontent.com",
+          "client_id": "958559604712-s5oukfbouo5li6tbdlrjdms4q97sb97h.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDs1_KVVAoTaqiPDrlqSyzEIumXeRBn1xg"
+          "current_key": "AIzaSyCkhhLroGI8Y78aclBrpJpZSy6FOBRJ-HM"
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:74928871835:android:4535a31022036df7",
-        "android_client_info": {
-          "package_name": "com.dahayan"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "74928871835-2pgq0k33sfbhk3lf4pfmcls5npeumi4j.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyDs1_KVVAoTaqiPDrlqSyzEIumXeRBn1xg"
-        }
-      ],
-      "services": {
-        "analytics_service": {
-          "status": 1
-        },
-        "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
-        },
-        "ads_service": {
-          "status": 2
+          "other_platform_oauth_client": [
+            {
+              "client_id": "958559604712-s5oukfbouo5li6tbdlrjdms4q97sb97h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

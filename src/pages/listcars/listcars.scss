@@ -27,32 +27,32 @@ page-listcars {
   {
    text-align: left; margin-left:0px;margin-right: -245px;
   }
-  .select-md .select-icon .select-icon-inner {
-    left: 0px !important;
-    top: 50%;
-    margin-top: -3px;
-    position: unset !important;
-    width: 0;
-    height: 0;
-    border-top: 5px solid;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-    color: #d63932 !important;
-    pointer-events: none;
-}
-.select-ios.select-icon .select-icon-inner {
-    left: 0px !important;
-    top: 50%;
-    margin-top: -3px;
-    position: unset !important;
-    width: 0;
-    height: 0;
-    border-top: 5px solid;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-    color: #d63932 !important;
-    pointer-events: none;
-}
+//   .select-md .select-icon .select-icon-inner {
+//     left: 0px !important;
+//     top: 50%;
+//     margin-top: -3px;
+//     position: unset !important;
+//     width: 0;
+//     height: 0;
+//     border-top: 5px solid;
+//     border-right: 5px solid transparent;
+//     border-left: 5px solid transparent;
+//     color: #d63932 !important;
+//     pointer-events: none;
+// }
+// .select-ios.select-icon .select-icon-inner {
+//     left: 0px !important;
+//     top: 50%;
+//     margin-top: -3px;
+//     position: unset !important;
+//     width: 0;
+//     height: 0;
+//     border-top: 5px solid;
+//     border-right: 5px solid transparent;
+//     border-left: 5px solid transparent;
+//     color: #d63932 !important;
+//     pointer-events: none;
+// }
     ion-select {
         display: -webkit-box;
         display: -webkit-flex;
@@ -76,6 +76,7 @@ page-listcars {
 .select-text
 {
 color:#d63932;
+margin: 4px 4px 0 0;
 
 }
  .select-md {
@@ -157,6 +158,7 @@ color:#d63932;
     .select-text {
         color: #d63932;
         margin-top: 0px;
+        margin: 4px 4px 0 0;
     }
 }
 @media screen and (min-width : 400px) 
@@ -173,6 +175,7 @@ color:#d63932;
     .select-text {
         color: #d63932;
         margin-top: 0px;
+        margin: 4px 4px 0 0;
     }
 }
 @media screen and (min-width : 480px) 
@@ -190,6 +193,7 @@ color:#d63932;
     .select-text {
         color: #d63932;
         margin-top: 0px;
+        margin: 4px 4px 0 0;
     }
 }
 @media screen and (min-width : 520px) 
@@ -208,6 +212,7 @@ color:#d63932;
         color: #d63932;
         // font-size: 15px !important;
         margin-top: 0px;
+        margin: 4px 4px 0 0;
     }
 }
 @media screen and (min-width : 600px) 
@@ -226,6 +231,7 @@ color:#d63932;
         color: #d63932;
         // font-size: 15px !important;
         margin-top: 0px;
+        margin: 4px 4px 0 0;
     }
 }
 @media screen and (min-width : 660px) 
@@ -244,6 +250,7 @@ color:#d63932;
         color: #d63932;
         // font-size: 17px !important;
         margin-top: 0px;
+        margin: 4px 4px 0 0;
     }
 }
 @media screen and (min-width : 700px) 
@@ -262,6 +269,7 @@ color:#d63932;
         color: #d63932;
         // font-size: 17px !important;
         margin-top: 0px;
+        margin: 4px 4px 0 0;
     }
 }
 @media screen and (min-width : 750px) 
@@ -280,6 +288,7 @@ color:#d63932;
         color: #d63932;
         // font-size: 17px !important;
         margin-top: 0px;
+        margin: 4px 4px 0 0;
     }
 }
 @media screen and (min-width : 800px) 
@@ -298,6 +307,7 @@ color:#d63932;
         color: #d63932;
         // font-size: 17px !important;
         margin-top: 0px;
+        margin: 4px 4px 0 0;
     }
 }
 @media screen and (min-width : 850px) 
@@ -316,6 +326,7 @@ color:#d63932;
         color: #d63932;
         // font-size: 17px !important;
         margin-top: 0px;
+        margin: 4px 4px 0 0;
     }
 }
 // @media screen and (min-width : 320px) and  (max-width : 1024px) {
@@ -363,6 +374,7 @@ color:#d63932;
     color: #d63932;
     // font-size: 11px;
     margin-top: 0px;
+    margin: 4px 4px 0 0;
 }
 .select-md {
     width:100% !important;
@@ -377,19 +389,19 @@ color:#d63932;
    width: 12px !important;
    /* height: 19px; */
 }
-.select-md .select-icon .select-icon-inner {
-    left: 3px !important;
-    top: 50%;
-    margin-top: -3px;
-    position: unset !important;
-    width: 0;
-    height: 0;
-    border-top: 5px solid;
-    border-right: 5px solid transparent;
-    border-left: 5px solid transparent;
-    color: #d63932 !important;
-    pointer-events: none;
-}
+// .select-md .select-icon .select-icon-inner {
+//     left: 3px !important;
+//     top: 50%;
+//     margin-top: -3px;
+//     position: unset !important;
+//     width: 0;
+//     height: 0;
+//     border-top: 5px solid;
+//     border-right: 5px solid transparent;
+//     border-left: 5px solid transparent;
+//     color: #d63932 !important;
+//     pointer-events: none;
+// }
 .item1
 {
     border:1px solid #d63932 ;border-radius: 7px;        margin-right: 0px;
@@ -567,5 +579,25 @@ color:#d63932;
     color:  #d9342e;
     margin-top: -12px;
 }
+}
+
+
+
+.select-md .select-icon {
+    margin-top: 10px !important;
+    height: 11px !important;
+    margin-right: -11px !important;
+}
+
+.select-md .select-icon .select-icon-inner {
+    right: 14px !important;
+    margin-top: 0 !important;
+    color: #d63932 !important;
+}
+
+.select-ios .select-icon .select-icon-inner {
+    right: 14px !important; 
+    margin-top: 0 !important;
+    color: #d63932 !important;
 }
 }

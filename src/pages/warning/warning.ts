@@ -67,7 +67,7 @@ export class WarningPage {
         this.socialSharing.share(" للمزيد حول العلامات التحذيريه حمل التطبيق الآن", null,'file://' + data.filePath, appurl)
       }
       else {
-        let appurl="https://play.google.com/store/apps/details?id=com.ITRoots.AldahayanAuto&ah=51fJvaVo7chCzf2mS2Fykmh_EBs";
+        let appurl="https://play.google.com/store/apps/details?id=com.ITRoots.AlhalwanyMotors";
 
         //For android
         this.socialSharing.share(" للمزيد حول العلامات التحذيريه حمل التطبيق الآن", null, 'file://' + data.filePath, appurl);

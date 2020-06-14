@@ -1,26 +1,91 @@
 page_tabs{
- .tabs-md-danger .tab-button[aria-selected=true] .tab-button-icon {
-        color: #fff;
-         font-size: 7rem !important;
-     }
-    .tabs-ios-danger .tab-button[aria-selected=true] .tab-button-icon {
-         color: #fff;
-         font-size: 7rem !important;
-     }
-     @media screen and (min-width: 1024px)
-     {
-        .tabs-ios .tab-button-icon {
-            margin-top: 14px !important;
-            margin-bottom: 1px;
-            min-width: 35px;
-            height: 60px !important;
-            font-size: 47px !important;
-        }
-         .tabs-md .tab-button-icon
-         {
-             margin-top: 1px;
-     min-width: 2.4rem;
-     font-size: 4.5rem !important;
-         }
-        }
-    }
+//  .tabs-md-danger .tab-button[aria-selected=true] .tab-button-icon {
+//         color: #fff;
+//          font-size: 7rem !important;
+//      }
+//     .tabs-ios-danger .tab-button[aria-selected=true] .tab-button-icon {
+//          color: #fff;
+//          font-size: 7rem !important;
+//      }
+//      @media screen and (min-width: 1024px)
+//      {
+//         .tabs-ios .tab-button-icon {
+//             margin-top: 14px !important;
+//             margin-bottom: 1px;
+//             min-width: 35px;
+//             height: 60px !important;
+//             font-size: 47px !important;
+//         }
+//          .tabs-md .tab-button-icon
+//          {
+//              margin-top: 1px;
+//      min-width: 2.4rem;
+//      font-size: 4.5rem !important;
+//          }
+//         }
+   
+}
+
+.tabs-md .tabbar,
+.tabs-ios .tabbar {
+	background: url("../assets/imgs/footer.png") !important;
+}
+
+.ion-md-customhome,
+.ion-md-customhome-outline,
+.ion-ios-customhome,
+.ion-ios-customhome-outline {
+	content: url('../assets/imgs/home.png');
+	// max-width: .8em;
+	height: 1.2em;
+	// margin-top: -4px !important;
+}
+
+.ion-md-customsale,
+.ion-md-customsale-outline,
+.ion-ios-customsale,
+.ion-ios-customsale-outline {
+	content: url('../assets/imgs/sale.png');
+	// max-width: .8em;
+	height: 1.2em;
+	// margin-top: -4px !important;
+}
+
+.ion-md-customchat,
+.ion-md-customchat-outline,
+.ion-ios-customchat, 
+.ion-ios-customchat-outline {
+	content: url('../assets/imgs/chat.png');
+	// max-width: .8em;
+	height: 1.2em;
+	// margin-top: -4px !important;
+}
+
+.ion-md-customcalculator,
+.ion-md-customcalculator-outline,
+.ion-ios-customcalculator,
+.ion-ios-customcalculator-outline {
+	content: url('../assets/imgs/caclc.png');
+	// max-width: .5em;
+	height: 1.2em;
+	// margin-top: -4px !important;
+}
+
+
+// .ion-ios-customhome,
+// .ion-ios-customhome-outline,
+// .ion-ios-customsale,
+// .ion-ios-customsale-outline,
+// .ion-ios-customchat, 
+// .ion-ios-customchat-outline, 
+// .ion-ios-customcalculator,
+// .ion-ios-customcalculator-outline  {
+// 	// height: 20px;
+// 	// width: 10px;
+// }
+
+.tabs-ios .tab-button-icon {
+	min-width: 27px !important;
+	height: .9em;
+}
+
