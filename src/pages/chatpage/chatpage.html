@@ -142,8 +142,9 @@
             <ion-icon (click)="getimg()"  name="camera" style="text-align: right"></ion-icon>
           </ion-col>
           <ion-col col-8 >
-            <ion-input  type="text" placeholder=" نص الرساله " [(ngModel)]="data.message"  (keyup.enter)="handleLogin()" name="message" style="text-align: right"></ion-input>
-  
+            <ion-item class="noPadding">
+              <ion-input  type="text" placeholder=" نص الرساله " [(ngModel)]="data.message"  (keyup.enter)="handleLogin()" name="message" style="text-align: right"></ion-input>
+            </ion-item>
           </ion-col>
           <ion-col col-2 >
               <ion-icon name="paper-plane" (click)="sendMessage()" ></ion-icon>
@@ -155,7 +156,9 @@
           </ion-col>
   
         <ion-col col-8 >
-          <ion-input  type="text" placeholder=" نص الرساله "  [(ngModel)]="data.message"   name="message" style="text-align: right"></ion-input>
+          <ion-item class="noPadding">
+            <ion-input  type="text" placeholder=" نص الرساله "  [(ngModel)]="data.message"   name="message" style="text-align: right"></ion-input>
+          </ion-item>
   
         </ion-col>
         <ion-col col-2 style="margin:left">

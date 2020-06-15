@@ -59,7 +59,7 @@
  
   <div *ngFor="let item of getdata" style="width:100%">
   <ion-row style="width:100%">
-    <ion-col col-10>
+    <ion-col col-8>
     <p>{{name}}</p>
     <p class="engin" style="    margin-left: 5px; color:#4e4e4e;font-size: 1.1rem;" > الفتره من {{item.offer_start}} الى {{item.offer_end}}</p>
 
@@ -73,7 +73,7 @@
 
 
     </ion-col>
-    <ion-col col-2 style="text-align:left;">
+    <ion-col col-4 style="justify-content: flex-end;display: flex;">
         <ion-row>
             <ion-icon ios="md-share" md="md-share" class="share" (click)="shareoffer(item.description,item.price_after,image+slide)"> </ion-icon>
       </ion-row>

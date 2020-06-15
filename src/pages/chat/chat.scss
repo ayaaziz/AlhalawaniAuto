@@ -318,4 +318,8 @@ margin-left: 35px;
     .toolbar-title-md, .toolbar-title-ios {
         margin-right: -15px !important;
     }
+
+    ion-item.noPadding {
+        padding: 0 !important;
+    }
 }

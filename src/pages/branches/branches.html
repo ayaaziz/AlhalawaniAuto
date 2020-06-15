@@ -24,7 +24,7 @@
 
   <div style="width:100%">
     
-    <ion-row>
+    <ion-row style="margin-top: 5px;">
     <!-- <ion-toolbar > -->
       <ion-segment [(ngModel)]="data" class="seg">
        
@@ -32,7 +32,7 @@
           فروعنا
         </ion-segment-button>
         <ion-segment-button  value="message" >
-            ارسل رسالة 
+            أرسل رسالة 
           </ion-segment-button>
     
       </ion-segment>
@@ -47,8 +47,11 @@
           <label for="email"  style="color:#d63932 ;     margin-left: 41px;"> رقم الجوال</label>
               </ion-col>
               <ion-col col-7 >
-          <ion-input  text-right  style="-webkit-text-security:disc;" type="tel" pattern="[0-9]*"   [(ngModel)]="user_phone"   id="email"   style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " >
-          </ion-input>
+                <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  ">
+                  <ion-input  text-right  style="-webkit-text-security:disc;" type="tel" pattern="[0-9]*"   [(ngModel)]="user_phone"   id="email" >
+                  </ion-input>
+                </ion-item>
+       
         </ion-col>
           </ion-row>
     <ion-row>
@@ -56,8 +59,11 @@
             <label for="email"  style="color:#d63932 ;    margin-left: 9px;">البريد الالكتروني</label>
         </ion-col>
         <ion-col col-7  >
-            <ion-input text-right  type="email"  [(ngModel)]="user_email"   id="email"   style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " >
+          <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  ">
+            <ion-input text-right  type="email"  [(ngModel)]="user_email"   id="email" >
             </ion-input>
+          </ion-item>
+           
         </ion-col>
     </ion-row>
     
@@ -66,13 +72,16 @@
             <label for="email" class="remark" style="color:#d63932;margin-left: 22px;">اترك رسالتك </label>
           </ion-col>
           <ion-col col-7 >
-            <ion-textarea text-right [(ngModel)]="user_message" type="text"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:80px ;background-color: #ffffff  " >
-            </ion-textarea>
+            <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58);background-color: #ffffff  " >
+              <ion-textarea text-right [(ngModel)]="user_message" rows="8" type="text"  id="email"  name="email">
+              </ion-textarea>
+            </ion-item>
+           
             </ion-col>
        
      </ion-row>
       
-      <button ion-button (click)="send()" full  class="btn" > ارسل  </button>
+      <button ion-button (click)="send()" full  class="btn" > أرسل  </button>
 
   </div>
   </div>

@@ -84,13 +84,13 @@ page-carmaintain {
     border-bottom: 0px solid #ffffff;
 }
 
-       .button1
-       {
-          background-color: #449802;
+       .button1,
+       .button1:hover {
+          background-color: #449802 !important;
         
          // margin-right: 32%;
-          color:#ffffff ;
-           border: 1px solid #d63932;
+          color:#fff !important;
+           border: 1px solid #449802;
        }
      
        .name
@@ -131,6 +131,11 @@ page-carmaintain {
 
              .toolbar-title-md, .toolbar-title-ios {
                 margin-right: -15px !important;
+            }
+
+
+            .data {
+                padding: 0 20px;
             }
     
 }

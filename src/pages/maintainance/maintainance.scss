@@ -146,7 +146,7 @@ page-maintainance {
          
                         .buttonicon
                         {
-                       border-left:1px solid rgba(214, 57, 50, 0.38);  margin-right: -11px;  height: 35px; border-top:1px solid rgba(214, 57, 50, 0.38); border-bottom:1px solid rgba(214, 57, 50, 0.38);background: #ffc6c6;
+                       border-left:1px solid rgba(214, 57, 50, 0.38);  margin-right: -11px;  height: 44px; border-top:1px solid rgba(214, 57, 50, 0.38); border-bottom:1px solid rgba(214, 57, 50, 0.38);background: #ffc6c6;
                         }
                         .details
                               {
@@ -299,4 +299,9 @@ page-maintainance {
           .toolbar-title-md, .toolbar-title-ios {
             margin-right: -15px !important;
         }
+
+        ion-item.noPadding {
+            padding: 0 !important;
+        }
+
 }

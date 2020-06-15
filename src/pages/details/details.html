@@ -71,49 +71,51 @@
 </ion-row>
 <div *ngFor="let item of alldata" style="width:100%">
 <ion-row style="width:100%">
-  <ion-col col-8 >
+  <ion-col col-8>
       <p *ngIf="(page=='notification')" style="    font-weight: bold;font-size: 1.6rem;">{{item.name}}</p>
   <p *ngIf="!(page=='listcars')" style="    font-weight: bold;font-size: 1.6rem;">{{item.offer_name}}</p>
   <p *ngIf="(page=='listcars')" style="    font-weight: bold;font-size: 1.6rem;">{{item.name}}</p>
-  <p class="price" *ngIf="(!(item.price==null) && (!(item.price_after==''))) " style="font-weight:bold;">  <span> {{item.price_after}} ر.س (شامل الضريبه)</span>
-    <span style="color:#4e4e4e;font-weight:bold;">
-      بدلا من
-    </span> 
-    <del style="color:#dc9b02;font-weight:bold">{{item.price}} ر.س</del>
-  </p>
-  <p class="price" *ngIf="(!(item.price==null) && (item.price_after=='')) " style="font-weight:bold;">  
-   {{item.price}} ر.س
-  </p>
-  <p class="price" *ngIf="!(item.price_before==null)" style="font-weight:bold">  <span> {{item.price_after}} ر.س (شامل الضريبه)</span>
-    <span style="color:#4e4e4e;font-weight:bold;">
-      بدلا من
-    </span> 
-    <del style="color:#dc9b02;font-weight:bold">{{item.price_before}} ر.س</del> 
-   </p> 
+
   </ion-col>
-  <!-- <ion-col col-4>
-      <ion-row >
+<ion-col col-4>
+   <!-- /////////// -->
 
-          <ion-icon *ngIf="!(item.price_before==null)" ios="md-share" md="md-share" class="share" (click)="shareoffer(item.price_after,image+slide)"> </ion-icon>
-          <ion-icon *ngIf="!(item.price==null)" ios="md-share" md="md-share" class="share" (click)="shareoffer(item.price,image+slide)"> </ion-icon>
+    <ion-icon style="float:left;" *ngIf="!(item.price_before==null)" ios="md-share" md="md-share" class="share" (click)="shareoffer(item.price_after,image+slide)"> </ion-icon>
+    <ion-icon style="float:left;" *ngIf="!(item.price==null)" ios="md-share" md="md-share" class="share" (click)="shareoffer(item.price,image+slide)"> </ion-icon>
+ 
+    <ion-icon style="float:left;" class="customicon" *ngIf="item.pdf_file" (click)="openPdf(item.pdf_file)"> </ion-icon>
+ 
+    <!-- ////////////// -->
+</ion-col>
+ 
+<ion-col col-12>
+    <p class="price" *ngIf="(!(item.price==null) && (!(item.price_after==''))) " style="font-weight:bold;">  <span> {{item.price_after}} ر.س (شامل الضريبه)</span>
+      <span style="color:#4e4e4e;font-weight:bold;">
+        بدلا من
+      </span> 
+      <del style="color:#dc9b02;font-weight:bold">{{item.price}} ر.س</del>
+    </p>
+    <p class="price" *ngIf="(!(item.price==null) && (item.price_after=='')) " style="font-weight:bold;">  
+    {{item.price}} ر.س
+    </p>
+    <p class="price" *ngIf="!(item.price_before==null)" style="font-weight:bold">  <span> {{item.price_after}} ر.س (شامل الضريبه)</span>
+      <span style="color:#4e4e4e;font-weight:bold;">
+        بدلا من
+      </span> 
+      <del style="color:#dc9b02;font-weight:bold">{{item.price_before}} ر.س</del> 
+    </p> 
+</ion-col>
 
-          <ion-icon class="customicon" *ngIf="item.pdf_file" (click)="openPdf(item.pdf_file)"> </ion-icon>
-        </ion-row>
-  </ion-col> -->
 
-  <ion-col col style="display: flex; justify-content: center;">
+  <!-- <ion-col col style="display: flex; justify-content: center;">
     <ion-icon *ngIf="!(item.price_before==null)" ios="md-share" md="md-share" class="share" (click)="shareoffer(item.price_after,image+slide)"> </ion-icon>
     <ion-icon *ngIf="!(item.price==null)" ios="md-share" md="md-share" class="share" (click)="shareoffer(item.price,image+slide)"> </ion-icon>
-  </ion-col>
-
-  <ion-col col style="display: flex; justify-content: center;" *ngIf="item.pdf_file">
-    <ion-icon class="customicon" *ngIf="item.pdf_file" (click)="openPdf(item.pdf_file)"> </ion-icon>
-  </ion-col>
-
-  <!-- <ion-col col style="display: flex; align-items: center;flex-direction: column;" *ngIf="item.pdf_file">
-    <ion-icon class="customicon" *ngIf="item.pdf_file" (click)="openPdf(item.pdf_file)"> </ion-icon>    
-    <p style="text-align: center;font-weight: bold">تحميل المواصفات</p>
   </ion-col> -->
+
+  <!-- <ion-col col style="display: flex; justify-content: center;" *ngIf="item.pdf_file">
+    <ion-icon class="customicon" *ngIf="item.pdf_file" (click)="openPdf(item.pdf_file)"> </ion-icon>
+  </ion-col> -->
+
 
 
 </ion-row>

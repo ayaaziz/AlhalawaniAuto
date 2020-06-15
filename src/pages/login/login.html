@@ -19,8 +19,10 @@
           </ion-col>
           <ion-col col-8>
               <ion-row style="    background-color: #fdeeee;">
-              <ion-input (focus)="delphone()"  text-right style="-webkit-text-security:disc;" pattern="[0-9]*" type="tel"    maxLength="10" minlength="10" (focus)="deldata()" id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="phone">
-              </ion-input>
+                <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " >
+                  <ion-input (focus)="delphone()"  text-right style="-webkit-text-security:disc;" pattern="[0-9]*" type="tel"    maxLength="10" minlength="10" (focus)="deldata()" id="email"  name="email" formControlName="phone">
+                  </ion-input>
+                </ion-item>
             </ion-row>
           </ion-col>
               </ion-row>
@@ -35,8 +37,10 @@
                       </ion-col>
                       <ion-col col-8>
                         <ion-row style="    background-color: #fdeeee;">
-                        <ion-input (focus)="delnumber()"  text-right type="text"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="car_number">
-                        </ion-input>
+                          <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " >
+                            <ion-input (focus)="delnumber()"  text-right type="text"  id="email"  name="email" formControlName="car_number">
+                            </ion-input>
+                          </ion-item>
                       </ion-row>
                       </ion-col>
               </ion-row>
@@ -55,31 +59,31 @@
                          
                           <div *ngFor="let item of alldata" style="margin-bottom: 10px;border-left:1px solid rgba(214, 57, 50, 0.38); border-top:1px solid rgba(214, 57, 50, 0.38);  border-right:1px solid rgba(214, 57, 50, 0.38);  border-bottom:1px solid rgba(214, 57, 50, 0.38);    width: 104.5%;margin-right: -6px;">
                           <ion-row style="background-color: #ffffff ; margin-right: 2px;margin-left: 2px;height:42px">
-                            <ion-col>
+                            <ion-col col-3>
                               <p style="margin-top: 4px">الاسم بالكامل</p>
                             </ion-col>
                             <ion-col>
                               <p style="margin-top: 4px"> {{item.customer_name}}</p>
                             </ion-col>
                           </ion-row>
-                          <ion-row style="height:42px">
-                            <ion-col>
+                          <ion-row>
+                            <ion-col col-3>
                               <p style="margin-top: 4px">رقم السيارة</p>
                             </ion-col>
                             <ion-col>
                               <p style="margin-top: 4px">{{item.car_number}} </p>
                             </ion-col>
                           </ion-row>
-                          <ion-row style="background-color: #ffffff ; margin-right: 2px;margin-left: 2px;height:42px">
-                            <ion-col>
+                          <ion-row style="background-color: #ffffff ; margin-right: 2px;margin-left: 2px;">
+                            <ion-col col-3>
                               <p style="margin-top: 4px"> العملية</p>
                             </ion-col>
                             <ion-col>
-                              <p style="color:#d63932;margin-top: 4px;height:42px">{{item.operation}} </p>
+                              <p style="color:#d63932;margin-top: 3px;">{{item.operation}} </p>
                             </ion-col>
                           </ion-row>
-                          <ion-row style="height:42px">
-                            <ion-col>
+                          <ion-row>
+                            <ion-col col-3>
                               <p style="margin-top: 4px">  التاريخ</p>
                             </ion-col>
                             <ion-col class="col1">

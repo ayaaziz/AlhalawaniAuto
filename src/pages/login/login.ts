@@ -115,7 +115,7 @@ if(this.car_number.value=="")
   }
   presentConfirm5() {
     let alert = this.toastCtrl.create({
-      message: 'رقم الجوال غير صحيح',
+      message: 'رقم الجوال غير صحيح. يجب إدخال ١٠ أرقام',
       duration: 3000,
       position: 'bottom'
     });

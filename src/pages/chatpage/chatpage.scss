@@ -151,4 +151,8 @@ ion-content {
       }
     }
 }
+
+ion-item.noPadding {
+  padding: 0 !important;
+}
 }

@@ -30,13 +30,13 @@
 
                </ion-col>
                <ion-col   col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9>
-                     <div style="margin-right: -19px;">          
-                       <p class="time" style="color:#a3a2a2"><ion-icon ios="ios-time" md="md-time"></ion-icon><span class="time">{{item.created_at}}</span></p>
-                   </div>
                    <div class="msg">
                        <p  class="name" >{{item.message}} </p>
                    </div>
-                 
+                   <div style="margin-right: -19px;">          
+                        <p class="time" style="color:#a3a2a2"> <ion-icon ios="ios-time" md="md-time"></ion-icon><span class="time">{{item.created_at}}</span></p>
+                    </div>
+
                </ion-col>
            </ion-row>
            <ion-row (click)="showoffer(item.message,item.id,item.offer_id,item.type)"  *ngIf="show==false">
@@ -45,11 +45,12 @@
 
            </ion-col>
             <ion-col   col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9>
-                    <div style="margin-right: -19px;">          
-                            <p class="time" style="color:#a3a2a2"><ion-icon ios="ios-time" md="md-time"></ion-icon><span class="time">{{item.created_at}}</span></p>
-                        </div>
                 <div class="msg">
                     <p  class="name" > {{item.message}} </p>
+                </div>
+                     
+                <div style="margin-right: -19px;">          
+                    <p class="time" style="color:#a3a2a2"> <ion-icon ios="ios-time" md="md-time"></ion-icon><span class="time">{{item.created_at}}</span></p>
                 </div>
              
             </ion-col>
@@ -66,13 +67,13 @@
                        <img [defaultImage]="defaultimage" [lazyLoad]="imageurl+item.notification_image" [scrollObservable]="myContent1.ionScroll" style="width:100%">
                </ion-col>
                <ion-col   col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9>
+                    <div class="msg"> 
+                        <p  class="name" >  {{item.message}} </p>
+                    </div>
                     <div style="margin-right: -19px;">
-                            <p  class="time" style="color:#a3a2a2"> <ion-icon ios="ios-time" md="md-time"></ion-icon><span class="time"></span>{{item.created_at}}</p>
-                        </div>
-                   <div class="msg"> 
-                      <p  class="name" >  {{item.message}} </p>
-                   </div>
-                
+                        <p  class="time" style="color:#a3a2a2"> <ion-icon ios="ios-time" md="md-time"></ion-icon><span class="time"></span>{{item.created_at}}</p>
+                    </div>
+                  
                </ion-col>
                </ion-row>
                <ion-row (click)="showoffer(item.message,item.id,item.offer_id,item.type)" *ngIf="show==false"> 
@@ -80,11 +81,12 @@
                     <img [defaultImage]="defaultimage" [lazyLoad]="defaultimage" (click)="openmodal()" [scrollObservable]="myContent1.ionScroll" style="width:100%">
             </ion-col>
                 <ion-col   col-9 col-sm-9 col-md-9 col-lg-9 col-xl-9>
-                        <div style="margin-right: -19px;">
-                                <p  class="time" style="color:#a3a2a2"> <ion-icon ios="ios-time" md="md-time"></ion-icon><span class="time"></span>{{item.created_at}}</p>
-                            </div>
+                        
                     <div class="msg"> 
                        <p  class="name" > {{item.message}} </p>
+                    </div>
+                    <div style="margin-right: -19px;">
+                        <p  class="time" style="color:#a3a2a2"> <ion-icon ios="ios-time" md="md-time"></ion-icon><span class="time"></span>{{item.created_at}}</p>
                     </div>
                  
                 </ion-col>

@@ -19,7 +19,9 @@
         <ion-label style="color:#d63932" > الاسم بالكامل</ion-label>
 </ion-col>
 <ion-col col-8>
-        <ion-input   (focus)="delname()" text-right type="text"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="name"></ion-input>
+  <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " >
+    <ion-input   (focus)="delname()" text-right type="text"  id="email"  name="email" formControlName="name"></ion-input>
+  </ion-item>
 </ion-col>
               </ion-row>
   <ion-row *ngIf="(name.hasError('required') && name.touched) || namee=='true'">
@@ -33,9 +35,12 @@
         <ion-label  style="color:#d63932" >رقم الجوال</ion-label>
     </ion-col>
 <ion-col col-8>
-        <ion-input style="-webkit-text-security:disc;" type="tel" pattern="[0-9]*"  (focus)="delphone()" text-right   id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="phone">
 
-        </ion-input>
+    <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " >
+      <ion-input style="-webkit-text-security:disc;" type="tel" pattern="[0-9]*"  (focus)="delphone()" text-right   id="email"  name="email" formControlName="phone">
+      </ion-input>
+    </ion-item>
+   
              </ion-col>
                    </ion-row>
   <ion-row *ngIf="(phone.hasError('required') && phone.touched) || phonee=='true'">
@@ -74,9 +79,11 @@
                     <ion-label style="color:#d63932" >  المؤهلات</ion-label>
             </ion-col>
             <ion-col col-8>
-                    <ion-input (focus)="delqua()" text-right type="text"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="qualification"></ion-input>
+              <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " >
+                <ion-input (focus)="delqua()" text-right type="text"  id="email"  name="email" formControlName="qualification"></ion-input>
+              </ion-item>
             </ion-col>
-                          </ion-row>
+            </ion-row>
               <ion-row *ngIf="(qualification.hasError('required') && qualification.touched) || qua=='true'">
                   <ion-col col-4></ion-col>
                   <ion-col col-8 style="margin-top: -14px;margin-bottom: -11px;"> 
@@ -88,7 +95,9 @@
                           <ion-label style="color:#d63932" > المهارات</ion-label>
                   </ion-col>
                   <ion-col col-8>
-                          <ion-input (focus)="delskill()" text-right type="text"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="skills"></ion-input>
+                    <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " >
+                        <ion-input (focus)="delskill()" text-right type="text"  id="email"  name="email" formControlName="skills"></ion-input>
+                    </ion-item>                         
                   </ion-col>
                                 </ion-row>
                     <ion-row *ngIf="(skills.hasError('required') && skills.touched) || skill=='true'">
@@ -102,8 +111,10 @@
                           <ion-label for="email" class="remark" style="color:#d63932">الملاحظات والخبرات </ion-label>
                         </ion-col>
                         <ion-col col-8>
-                          <ion-textarea text-right  type="text"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:80px ;background-color: #ffffff  " formControlName="remarks">
-                          </ion-textarea>
+                          <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58); height:80px ;background-color: #ffffff  " >
+                            <ion-textarea text-right  type="text" rows="8" id="email"  name="email" formControlName="remarks">
+                            </ion-textarea>
+                          </ion-item>
                           </ion-col>
                           </ion-row>
         <ion-row>

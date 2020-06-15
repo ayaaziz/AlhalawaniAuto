@@ -36,8 +36,10 @@
       <ion-label for="email" class="name">الاسم بالكامل</ion-label>
     </ion-col>
     <ion-col col-8>
-      <ion-input  placeholder="اختياري" text-right type="text"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="name">
-      </ion-input>
+      <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " >
+        <ion-input  placeholder="اختياري" text-right type="text"  id="email"  name="email" formControlName="name">
+        </ion-input>
+      </ion-item>
     </ion-col>
  
           </ion-row>
@@ -49,8 +51,10 @@
       <ion-label for="email" class="phone">رقم الجوال</ion-label>
     </ion-col>
     <ion-col col-8>
-      <ion-input (focus)="delphone()" style="-webkit-text-security:disc;" type="tel" pattern="[0-9]*"  text-right   id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="phone">
-      </ion-input>
+      <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " >
+        <ion-input (focus)="delphone()" style="-webkit-text-security:disc;" type="tel" pattern="[0-9]*"  text-right   id="email"  name="email" formControlName="phone">
+        </ion-input>
+      </ion-item>
     </ion-col>
  
           </ion-row>
@@ -65,8 +69,10 @@
       <ion-label for="email" class="email"> البريد الالكتروني</ion-label>
     </ion-col>
     <ion-col col-8>
-      <ion-input  placeholder="اختياري" text-right type="email"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="email">
-      </ion-input>
+      <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " >
+        <ion-input  placeholder="اختياري" text-right type="email"  id="email"  name="email" formControlName="email">
+        </ion-input>
+      </ion-item>
     </ion-col>
  
           </ion-row>
@@ -77,8 +83,10 @@
       <ion-label for="email" class="jop">الراتب</ion-label>
     </ion-col>
     <ion-col col-8>
-      <ion-input (focus)="delsalary()" (ionChange)="changerabic()" text-right  type="tel"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="salary">
-      </ion-input>
+      <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " >
+        <ion-input (focus)="delsalary()" (ionChange)="changerabic()" text-right  type="tel"  id="email"  name="email" formControlName="salary">
+        </ion-input>
+      </ion-item>
     </ion-col>
  
           </ion-row>
@@ -94,8 +102,10 @@
       <ion-label for="email" class="jop">الالتزامات</ion-label>
     </ion-col>
     <ion-col col-8>
-      <ion-input text-right type="number" (ionChange)="changerabiceltzam()"  (focus)="deleltzam()" id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="eltzam">
-      </ion-input>
+      <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " >
+        <ion-input text-right type="number" (ionChange)="changerabiceltzam()"  (focus)="deleltzam()" id="email"  name="email" formControlName="eltzam">
+        </ion-input>
+      </ion-item>
     </ion-col>
   
           </ion-row>
@@ -106,8 +116,10 @@
         <ion-label for="email"  class="paid">القسط الشهري</ion-label>
       </ion-col>
       <ion-col col-8>
-        <ion-input text-right type="number"  (ionChange)="changerabic()" (focus)="delpaid()"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="monthlypaid">
-        </ion-input>
+        <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " >
+          <ion-input text-right type="number"  (ionChange)="changerabic()" (focus)="delpaid()"  id="email"  name="email" formControlName="monthlypaid">
+          </ion-input>
+        </ion-item>
       </ion-col>
    
           </ion-row>
@@ -124,8 +136,10 @@
               <ion-label for="email" class="branch">الدفعة المقدمة</ion-label>
             </ion-col>
             <ion-col col-8>
-              <ion-input text-right type="number" (ionChange)="changerabicpaid()" (focus)="delmonthly()"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="paid">
-              </ion-input>
+              <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  ">
+                <ion-input text-right type="number" (ionChange)="changerabicpaid()" (focus)="delmonthly()"  id="email"  name="email"  formControlName="paid">
+                </ion-input>
+              </ion-item>
             </ion-col>
          
                   </ion-row>
@@ -164,8 +178,10 @@
             </ion-input>
           </ion-col> -->
           <ion-col col-8>
-            <ion-input text-right type="number"  [(ngModel)]="ownership" id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " formControlName="have">
-            </ion-input>
+            <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  " >
+              <ion-input text-right type="number"  [(ngModel)]="ownership" id="email"  name="email" formControlName="have">
+              </ion-input>
+            </ion-item>
           </ion-col>
         </ion-row>
      
@@ -205,8 +221,10 @@
       <ion-label for="email" class="remark">الملاحظات </ion-label>
     </ion-col>
     <ion-col col-8>
-      <ion-textarea text-right row="8" type="text"  id="email"  name="email" style="border:1px solid rgba(214, 57, 50, 0.58); height:80px ;background-color: #ffffff  " formControlName="remarks">
-      </ion-textarea>
+      <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58); height:80px ;background-color: #ffffff  " >
+        <ion-textarea text-right rows="8" type="text"  id="email"  name="email" formControlName="remarks">
+        </ion-textarea>
+      </ion-item>
       </ion-col>
  
 </ion-row>

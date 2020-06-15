@@ -510,3 +510,34 @@ body{
 // //     transform: translateX(-305px) !important;
 // // }
 
+
+.instagram-wrapper {
+  background-image: url("../assets/imgs/Social Media Icon Set.svg");
+  background-size: 185px;
+  background-position: -14px 130px;
+  border-radius: 11px;
+  width: 35px;
+  height: 35px;
+}
+
+.snapchat-wrapper {
+  background-image: url("../assets/imgs/Social Media Icon Set.svg");
+  background-size: 185px;
+  background-position: -135px 130px;
+  border-radius: 7px;
+  width: 35px;
+  height: 35px;
+}
+
+.facebook-wrapper {
+  background-image: url("../assets/imgs/Social Media Icon Set.svg");
+  background-size: 185px;
+  background-position: 355px 356px;
+  border-radius: 7px;
+  width: 35px;
+  height: 35px;
+}
+
+// ion-textarea {
+//   height: 80px !important;
+// }
