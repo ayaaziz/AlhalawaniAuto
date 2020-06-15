@@ -337,6 +337,12 @@ ionViewDidLoad()
     doRefresh(ev)
     {
       this.alldata=[]
+
+      //ayaaaaa
+      this.maindata = [];
+      ////////
+
+
       ev.complete()
       if(this.page=="listcars")
       {

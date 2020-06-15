@@ -40,11 +40,12 @@
 
       <div [ngSwitch]="offers" style="width:100%">
         <div *ngSwitchCase="'cars'" style="width:100%">
-          <ion-grid style="width:100%">
-              <h4 *ngIf="show == false" style="    color: #d63932;
-                    text-align: center;
-                    margin-top: 200px;
-                    font-size: 1.8rem;">لا توجد عروض في الوقت الحالي</h4>
+         
+          <h4 *ngIf="show == false" style="    color: #d63932;
+                text-align: center;
+                margin-top: 200px;
+                font-size: 1.8rem;">لا توجد عروض في الوقت الحالي</h4>
+          <ion-grid style="width:100%" *ngIf="show != false">
               <div class="div" style="height: 130px;width:100%"  *ngFor="let item of alldata"  >
                   <ion-row  style="width:100%">
                 <ion-col col-5 (click)="opendetails(item.name,item.offer_id,item.car_id)">
@@ -115,7 +116,7 @@
             text-align: center;
             margin-top: 200px;
             font-size: 1.8rem;">لا توجد عروض في الوقت الحالي</h4>
-            <ion-grid style="width:100%">
+            <ion-grid style="width:100%" *ngIf="show1 != false">
                 <div style="height: 130px;width:100%" class="div" *ngFor="let item of getdata" >
                     <ion-row style="width:100%">
                   <ion-col col-4 (click)="opendetails2(item.name,item.id)">

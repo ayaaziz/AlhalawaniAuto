@@ -31,31 +31,47 @@ export class CarsPage {
   constructor(public toastctrl:ToastController,public plt:Platform,public storage:Storage,public toastCtrl:ToastController,public navCtrl: NavController,public cent:CentralProvider,public mainservice:MainservicesProvider,public social:SocialSharing,public navParams: NavParams,public ViewCtrl:ViewController,public menue :MenuController) {
     this.accestoken= localStorage.getItem('adftrmee')
     this.cent.status=0
-    this.mainservice.CarOffer(this.accestoken,this.offset,(data)=> this.CarOfferSuccessCallback(data),(data)=> this.CarOfferFailureCallback(data))
-this.mainservice.mainOffer(this.accestoken,(data)=> this.mainOfferSuccessCallback(data),(data)=> this.mainOfferFailureCallback(data))
+    
 
 this.defaultimage=this.cent.default
 this.img=this.cent.imgUrl
 }
 
- 
-  mainOfferSuccessCallback(data)
-  {
-    this.getdata=data;
-    if(this.getdata.length==0)
-    {
-      this.show1=false
-    }
-    this.storage.set("mainoffer",this.getdata)
-  }
-  mainOfferFailureCallback(data)
-  {
-    this.storage.get("mainoffer").then((val)=>{
-      this.getdata=val
-    })
-    this.presentToast()
 
+
+
+//ayaaaaaa
+loadData() {
+  this.show = true;
+  this.show1 = true;
+
+  this.mainservice.CarOffer(this.accestoken,this.offset,(data)=> this.CarOfferSuccessCallback(data),(data)=> this.CarOfferFailureCallback(data))
+  this.mainservice.mainOffer(this.accestoken,(data)=> this.mainOfferSuccessCallback(data),(data)=> this.mainOfferFailureCallback(data)) 
+}
+
+///ayaaaaaa
+ionViewWillEnter() {
+  this.loadData();
+}
+
+ 
+mainOfferSuccessCallback(data)
+{
+  this.getdata=data;
+  if(this.getdata.length==0)
+  {
+    this.show1=false
   }
+  this.storage.set("mainoffer",this.getdata)
+}
+mainOfferFailureCallback(data)
+{
+  this.storage.get("mainoffer").then((val)=>{
+    this.getdata=val
+  })
+  this.presentToast()
+
+}
   search()
   {
     this.navCtrl.push(SearchPage)
@@ -119,13 +135,13 @@ this.img=this.cent.imgUrl
   }
   doRefresh(refresher) {
     
-                  this.mainservice.CarOffer(this.accestoken,this.offset,(data)=> this.CarOfferSuccessCallback(data),(data)=> this.CarOfferFailureCallback(data))
-                  this.mainservice.mainOffer(this.accestoken,(data)=> this.mainOfferSuccessCallback(data),(data)=> this.mainOfferFailureCallback(data))
+                  // this.mainservice.CarOffer(this.accestoken,this.offset,(data)=> this.CarOfferSuccessCallback(data),(data)=> this.CarOfferFailureCallback(data))
+                  // this.mainservice.mainOffer(this.accestoken,(data)=> this.mainOfferSuccessCallback(data),(data)=> this.mainOfferFailureCallback(data))
+
+                  //ayaaaaaaa
+                  this.loadData();
                   refresher.complete();
 
-
-     
-   
   }
   doInfinite(ev)
   {
