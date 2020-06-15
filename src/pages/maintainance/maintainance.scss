@@ -1,24 +1,20 @@
 page-maintainance {
    
     .scroll-content {
-        padding: 16px;
-        margin-top: 45px;
-        padding-left: 0 !important;
-        padding-right: 0 !important;
+        padding: 16px !important; 
+        // margin-top: 45px;
+        // padding-left: 0 !important;
+        // padding-right: 0 !important;
     }
     // .toolbar-md-light .toolbar-background-md {
     //     background: #fdeeee !important;
     // }
    
-       ion-select {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    overflow: hidden;
+ion-select {
     max-width: 100% ; 
 }
-   .select-ios {
+
+.select-ios {
     padding: 4px 8px 13px 16px ;
 }
 
@@ -67,21 +63,21 @@ page-maintainance {
     //     line-height: 2.5rem !important;
     // }
    
-    .segment-ios .segment-button:last-of-type {
-        border-top-left-radius: 0;
-        border-top-right-radius: 0px !important;
-        border-bottom-right-radius: 0px !important;
-        border-bottom-left-radius: 0;
-        margin-left: 0;
-        border-left-width: 0;
-    }
-    .segment-ios .segment-button:first-of-type {
-        border-top-left-radius: 0px !important;
-        border-top-right-radius: 0;
-        border-bottom-right-radius: 0;
-        border-bottom-left-radius: 0px !important;
-        margin-right: 0;
-    }
+    // .segment-ios .segment-button:last-of-type {
+    //     border-top-left-radius: 0;
+    //     border-top-right-radius: 0px !important;
+    //     border-bottom-right-radius: 0px !important;
+    //     border-bottom-left-radius: 0;
+    //     margin-left: 0;
+    //     border-left-width: 0;
+    // }
+    // .segment-ios .segment-button:first-of-type {
+    //     border-top-left-radius: 0px !important;
+    //     border-top-right-radius: 0;
+    //     border-bottom-right-radius: 0;
+    //     border-bottom-left-radius: 0px !important;
+    //     margin-right: 0;
+    // }
     
     // .toolbar-ios-light .toolbar-background-ios {
     //     background: #f4f4f400;
@@ -127,153 +123,119 @@ page-maintainance {
     {
         margin-bottom: 12px;
     }
-    .valid
-    {
-      color: #080808;
-    
-      margin-top: -5px;
-      margin-bottom: 1px;
-              } 
-              .valid1
-              {
-                color: #080808;
-               
-                margin-top: -5px;
-                margin-bottom: 1px;
-                        }
   
 
          
-                        .buttonicon
-                        {
-                       border-left:1px solid rgba(214, 57, 50, 0.38);  margin-right: -11px;  height: 44px; border-top:1px solid rgba(214, 57, 50, 0.38); border-bottom:1px solid rgba(214, 57, 50, 0.38);background: #ffc6c6;
-                        }
-                        .details
-                              {
-                                height: 38px;background-color:#f3bbbb;width: 100%;
-                              }
-                        .type
-                        {
-                            color: #d63932;
-                            margin-top: 3px;
-                            padding: 0;
-                            margin-right: -1px;
-                            z-index: 1;
-                            margin-left: 29px;
-                        }
-                        .button2
-                        {
-                           background-color: #646363;color:#ffffff ; border: 1px solid rgba(214, 57, 50, 0.5) 
-                        }
-                        .form-control
-                        {
-                            width:64%
-                        }
-                        
-                        .name
-                        {
-                           color:#d63932;
-                           margin-left:4px;
-                           margin-right: -5px;
-                         }
-                         .cmark
-                         {
-                             color: #d63932;
-                             margin-left: 18px;
-                             margin-right: -1px;
-                 
-                          }
-                          .cyear
-                          {
-                            margin-left: 33px;
-                            margin-right: -1px;
-                  
-                           }
-                         .remark
-                        {
-                           color:#d63932;
-                           margin-left: 24px;
-                
-                         }
-                         .branch
-                        {
-                           color:#d63932;
-                           margin-left: 28px;
-                           margin-right: 0px;
-                
-                         }
-                         .date
-                         {
-                            color:#d63932;
-                            margin-left:15px;
-                         }
-                         .delevier
-                        {
-                            color:#d63932;
-                           margin-left:-1px;
-                
-                        }
-                         .receive
-                        {
-                            color:#d63932;
-                           margin-left:-4px;
-                        }
-                         .jop
-                         {
-                            color: #d63932;
-                            margin-left: 14px;
-                         }
-                         .phone
-                         {
-                            color:#d63932;
-                            margin-left:21px;
-                            margin-right: -5px;
-                         }
-                         .email
-                         {
-                            color:#d63932;
-                            margin-left:-11px; 
-                            margin-right: -5px; 
-                         }
-                             .year
-                             {
-                                color:#d63932 ;
-                                margin-top:3px ;
-                                 padding:0px ; 
-                                   margin-right:-5px ;
-                                   z-index:1;
-                                   margin-left:19px;
-                
-                             }
-                             .button1
-                             {
-                                background-color: #449802;
-                               // margin-right: 15px; 
-                                color:#ffffff ;
-                                 border: 1px solid #d63932;
-                             }
-                             .valid
-                             {
-                               color: #080808;
-                              
-                               margin-top: -5px;
-                               margin-bottom: 1px;
-                                       } 
-                                       .valid1
-                                       {
-                                         color: #080808;
-                                        
-                                         margin-top: -5px;
-                                         margin-bottom: 1px;
-                                                 } 
+.buttonicon
+{
+border-left:1px solid rgba(214, 57, 50, 0.38);  margin-right: -11px;  height: 44px; border-top:1px solid rgba(214, 57, 50, 0.38); border-bottom:1px solid rgba(214, 57, 50, 0.38);background: #ffc6c6;
+}
+.details
+    {
+    height: 38px;background-color:#f3bbbb;width: 100%;
+    }
+.type
+{
+color: #d63932;
+margin-top: 3px;
+padding: 0;
+margin-right: -1px;
+z-index: 1;
+margin-left: 29px;
+}
+.button2
+{
+background-color: #646363;color:#ffffff ; border: 1px solid rgba(214, 57, 50, 0.5) 
+}
+.form-control
+{
+width:64%
+}
 
+.name
+{
+color:#d63932;
+margin-left:4px;
+margin-right: -5px;
+}
+.cmark
+{
+    color: #d63932;
+    margin-left: 18px;
+    margin-right: -1px;
 
-    
+}
+.cyear
+{
+margin-left: 33px;
+margin-right: -1px;
 
-   
+}
+.remark
+{
+color:#d63932;
+margin-left: 24px;
 
+}
+.branch
+{
+color:#d63932;
+margin-left: 28px;
+margin-right: 0px;
 
+}
+.date
+{
+color:#d63932;
+margin-left:15px;
+}
+.delevier
+{
+color:#d63932;
+margin-left:-1px;
 
+}
+.receive
+{
+color:#d63932;
+margin-left:-4px;
+}
+.jop
+{
+color: #d63932;
+margin-left: 14px;
+}
+.phone
+{
+color:#d63932;
+margin-left:21px;
+margin-right: -5px;
+}
+.email
+{
+color:#d63932;
+margin-left:-11px; 
+margin-right: -5px; 
+}
+    .year
+    {
+    color:#d63932 ;
+    margin-top:3px ;
+        padding:0px ; 
+        margin-right:-5px ;
+        z-index:1;
+        margin-left:19px;
+
+    }
+    .button1
+    {
+    background-color: #449802;
+    // margin-right: 15px; 
+    color:#ffffff ;
+        border: 1px solid #d63932;
+    }
+
+ 
           .segment-md .segment-button,
           .segment-ios .segment-button {
               opacity: 1;
@@ -296,9 +258,9 @@ page-maintainance {
           }
 
 
-          .toolbar-title-md, .toolbar-title-ios {
-            margin-right: -15px !important;
-        }
+        //   .toolbar-title-md, .toolbar-title-ios {
+        //     margin-right: -15px !important;
+        // }
 
         ion-item.noPadding {
             padding: 0 !important;

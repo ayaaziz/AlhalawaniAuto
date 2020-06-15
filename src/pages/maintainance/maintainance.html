@@ -45,8 +45,9 @@
           <ion-label for="email" class="phone">رقم الجوال</ion-label>
        </ion-col>
        <ion-col col-8>
-         <ion-item style="border:1px solid rgba(214, 57, 50, 0.58) ; height:35px ;background-color: #ffffff  ">
-          <ion-input (focus)="delphone()"  style="-webkit-text-security:disc;" type="tel" pattern="[0-9]*"  text-right  id="email"  name="email"  formControlName="phone"></ion-input>
+         <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58) ; height:35px ;background-color: #ffffff  ">
+          <!-- <ion-input (focus)="delphone()"  style="-webkit-text-security:disc;" type="tel" pattern="[0-9]*"  text-right  id="email"  name="email"  formControlName="phone"></ion-input> -->
+          <ion-input (focus)="delphone()" type="tel" pattern="[0-9]*"  text-right  id="email"  name="email"  formControlName="phone"></ion-input>
          </ion-item>
        </ion-col>
           </ion-row>
@@ -389,7 +390,7 @@
         </ion-col>
         <ion-col col-8>
           <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58); height:35px ;background-color: #ffffff  ">
-            <ion-input text-right  (focus)="delphone()" style="-webkit-text-security:disc;" type="tel" pattern="[0-9]*"   id="email"  name="email" formControlName="phone">
+            <ion-input text-right  (focus)="delphone()" type="tel" pattern="[0-9]*"   id="email"  name="email" formControlName="phone">
             </ion-input>
           </ion-item>
         
