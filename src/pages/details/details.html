@@ -25,7 +25,7 @@
 </ion-header>
 
 
-<ion-content padding style="background-color:#fdeeee " fullscreen #myContent1>
+<ion-content padding style="background-color:#fdeeee " #myContent1>
     <ion-refresher (ionRefresh)="doRefresh($event)">
         <ion-refresher-content
         pullingIcon="arrow-dropdown"
@@ -35,26 +35,44 @@
   <ion-grid style="width:100%;">
     <ion-row style="width:100%">
     <div class="div1" style="width:100%">
-        <ion-slides style="width:100%" #newSlider *ngIf="Sliders?.length == 1"  loop="true" autoplayDisableOnInteraction="false" dir="rtl" pager="true">
-            <ion-slide style="width:100%" class="slide" *ngFor="let slide of Sliders">
-                <span   *ngFor="let item of alldata">
-                <span  class="discount" *ngIf="(item.offer_discount >'0')">   خصم {{item.offer_discount}}  % </span></span>
-                <img class="imgslider" [defaultImage]="defaultimage" [scrollObservable]="myContent1.ionScroll" [lazyLoad]="image+slide.image_name" style="width:100%"> 
+      <ion-slides style="width:100%" #newSlider *ngIf="Sliders?.length == 1"  loop="true" autoplayDisableOnInteraction="false" dir="rtl" pager="true">
+          <ion-slide style="width:100%" class="slide" *ngFor="let slide of Sliders">
+              <span   *ngFor="let item of alldata">
+              <span  class="discount" *ngIf="(item.offer_discount >'0')">   خصم {{item.offer_discount}}  % </span></span>
+              <img class="imgslider" [defaultImage]="defaultimage" [lazyLoad]="image+slide.image_name" style="width:100%">  
+          </ion-slide>
+        </ion-slides>
         
-              
-            </ion-slide>
-          </ion-slides>
-  <ion-slides style="width:100%" #newSlider *ngIf="Sliders?.length > 1" autoplay="3000" loop="true" autoplayDisableOnInteraction="false" dir="rtl" pager="true">
-    <ion-slide style="width:100%" class="slide" *ngFor="let slide of Sliders">
-        <span   *ngFor="let item of alldata" >
-        <span  class="discount" *ngIf="(item.offer_discount >'0')">   خصم {{item.offer_discount}}  % </span></span>
-         <img class="imgslider" [defaultImage]="defaultimage" [scrollObservable]="myContent1.ionScroll" [lazyLoad]="image+slide.image_name" style="width:100%"> 
-
-      
-    </ion-slide>
-  </ion-slides>
-</div>
+        <ion-slides style="width:100%" #newSlider *ngIf="Sliders?.length > 1" autoplay="3000" loop="true" autoplayDisableOnInteraction="false" dir="rtl" pager="true">
+          <ion-slide style="width:100%" class="slide" *ngFor="let slide of Sliders">
+              <span   *ngFor="let item of alldata" >
+              <span  class="discount" *ngIf="(item.offer_discount >'0')">   خصم {{item.offer_discount}}  % </span></span>
+              <img class="imgslider" [defaultImage]="defaultimage" [lazyLoad]="image+slide.image_name" style="width:100%">             
+          </ion-slide>
+        </ion-slides>
+    </div>
 </ion-row>
+
+<!-- <ion-row style="width:100%">
+    <div class="div1" style="width:100%">
+      <ion-slides style="width:100%" #newSlider *ngIf="Sliders?.length == 1"  loop="true" autoplayDisableOnInteraction="false" dir="rtl" pager="true">
+          <ion-slide style="width:100%" class="slide" *ngFor="let slide of Sliders">
+              <span   *ngFor="let item of alldata">
+              <span  class="discount" *ngIf="(item.offer_discount >'0')">   خصم {{item.offer_discount}}  % </span></span>
+              <img class="imgslider" [defaultImage]="defaultimage" [lazyLoad]="image+slide.image_name" style="width:100%">  
+          </ion-slide>
+        </ion-slides>
+        
+        <ion-slides style="width:100%" #newSlider *ngIf="Sliders?.length > 1" autoplay="3000" loop="true" autoplayDisableOnInteraction="false" dir="rtl" pager="true">
+          <ion-slide style="width:100%" class="slide" *ngFor="let slide of Sliders">
+              <span   *ngFor="let item of alldata" >
+              <span  class="discount" *ngIf="(item.offer_discount >'0')">   خصم {{item.offer_discount}}  % </span></span>
+              <img class="imgslider" [defaultImage]="defaultimage" [lazyLoad]="image+slide.image_name" style="width:100%">             
+          </ion-slide>
+        </ion-slides>
+    </div>
+</ion-row> -->
+
 <ion-row class="row11" style="width:100%">
 <!-- <ion-toolbar > -->
   <ion-segment [(ngModel)]="details" class="seg">
@@ -80,10 +98,10 @@
 <ion-col col-4>
    <!-- /////////// -->
 
+   <ion-icon style="float:left; margin-right: 10px;" class="customicon" *ngIf="item.pdf_file" (click)="openPdf(item.pdf_file)"> </ion-icon>
+
     <ion-icon style="float:left;" *ngIf="!(item.price_before==null)" ios="md-share" md="md-share" class="share" (click)="shareoffer(item.price_after,image+slide)"> </ion-icon>
     <ion-icon style="float:left;" *ngIf="!(item.price==null)" ios="md-share" md="md-share" class="share" (click)="shareoffer(item.price,image+slide)"> </ion-icon>
- 
-    <ion-icon style="float:left;" class="customicon" *ngIf="item.pdf_file" (click)="openPdf(item.pdf_file)"> </ion-icon>
  
     <!-- ////////////// -->
 </ion-col>
@@ -123,6 +141,8 @@
 
 </div>
 </ion-grid>
+
+
 <div [ngSwitch]="details" style="width:100%">
     <div *ngSwitchCase="'detail'" style="width:100%">
 <div class="form-control" style="width:100%">
@@ -377,15 +397,18 @@
 </div>
  
 </div>
+<ion-grid>
+
 <div [ngSwitch]="details" >
 <div *ngSwitchCase="'maintain'" >
   <div *ngFor="let item of maindata" style="background-color: #ffffff">
-        <ion-row style=" margin-right: 8px; padding: 5px;;margin-right: 8px;">
-          {{item.advice}}
-        </ion-row>
+      <div style=" margin-right: 8px; padding: 5px 5px 15px 5px;">
+        {{item.advice}}
       </div>
-      </div>
+    </div>
+  </div>
 </div>
 
+</ion-grid>
 
 </ion-content>

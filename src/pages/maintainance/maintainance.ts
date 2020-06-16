@@ -352,6 +352,8 @@ this.phonee1='true'
   }
   configFailureCallback(data)
   {
+    this.disable1=false
+    this.disable=false
 this.presentToast1()
   }
   configSuccessCallback(data)
@@ -434,11 +436,15 @@ manufactureyearSuccessCallback(data)
 }
 manufactureyearFailureCallback(data)
 {
+  this.disable1=false
+  this.disable=false
 this.presentToast1()
 }
   
   brandtypeFailureCallback(data)
   {
+    this.disable1=false
+    this.disable=false
 this.presentToast1()
   }
   modal()
@@ -828,7 +834,8 @@ this.presentConfirm2()
   sathaorderFailureCallback(data)
   {
     this.disable=false
-    this.disable1=true
+    // this.disable1=true
+    this.disable1=false
 this.presentToast1()
   }
   presentToast(){
@@ -926,6 +933,8 @@ this.detail=true
  }
  carmaintenanceFailureCallback(data)
  {
+  this.disable1=false
+  this.disable=false
 this.presentToast1()
  }
  maintenancetypeSuccessCallback(data)
@@ -936,7 +945,8 @@ this.presentToast1()
  maintenancetypeFailureCallback(data)
  {
   
- 
+  this.disable1=false
+    this.disable=false
  }
   maintainanceorderSuccessCallback(data)
   {
@@ -1069,6 +1079,8 @@ confirmorder()
   }
   brandsFailureCallback(data)
   {
+    this.disable1=false
+    this.disable=false
     console.log(JSON.stringify(data))
 
   }
@@ -1089,6 +1101,8 @@ this.branch_id=this.appear
   }
   branchFailureCallback(data)
   {
+    this.disable1=false
+    this.disable=false
 this.presentToast1()
     console.log(JSON.stringify(data))
 
@@ -1102,7 +1116,8 @@ this.presentToast1()
   }
   dateFailureCallback(data)
   {
-
+    this.disable1=false
+    this.disable=false
 this.presentToast1()
   }
   presentToast1() {

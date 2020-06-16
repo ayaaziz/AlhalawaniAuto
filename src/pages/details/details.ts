@@ -79,6 +79,10 @@ accestoken:any
     this.type=this.navParams.get("Type")
     this.defaultimage=this.cent.default
     this.image=this.cent.imgUrl
+
+    this.alldata = [];
+    this.maindata = [];
+
     if(this.page=="listcars")
     {
       this.mainservice.getCarbyid(this.accestoken,this.carid,(data)=> this.getcarbyidSuccessCallback(data),(data)=> this.getcarbyidFailureCallback(data))
@@ -98,6 +102,10 @@ accestoken:any
   {
     console.log("list car"+JSON.stringify(data))
 
+      // //
+      // if(!this.name) this.name = data.carDetails.name;
+      // ////////
+    
       this.alldata.push(data.carDetails)
       this.alldata.forEach(item => {
         if((item.length==null) && (item.width==null) && (item.height==null)&& (item.wheelbase==null) && (item.car_trunk==null))
@@ -109,6 +117,7 @@ accestoken:any
     }
       });
       this.Sliders=data.images
+
       this.Sliders.forEach(element => {
         this.slide=element.image_name
         
@@ -157,10 +166,15 @@ this.navCtrl.push(PaidPage,{Id:id,CarName:name,Price:price})
     this.data3=true
   }
   
+
   CarOfferSuccessCallback(data)
   {
      this.alldata=data
-     
+
+    //  //
+    //  if(!this.name) this.name = data[0].name;
+    //  ////////
+
      this.alldata.forEach(item => {
       if((item.length==null) && (item.width==null) && (item.height==null)&& (item.wheelbase==null)&& (item.car_trunk==null))
   {
@@ -174,6 +188,8 @@ this.navCtrl.push(PaidPage,{Id:id,CarName:name,Price:price})
     for(var j=0;j<this.alldata.length;j++)
     {
       this.Sliders=this.alldata[j].images
+      // alert("sliders numbers: "+ JSON.stringify(this.Sliders));
+
       this.tecno=this.alldata[j].luxuryTechnology
 
   }
@@ -297,6 +313,8 @@ presentToast() {
 ionViewDidLoad()
     {
   
+      this.alldata = [];
+      this.maindata = [];
       // this.storage.get('access_token').then((val) => {
       //   console.log(val)
       //   if(!(val==null) ){
@@ -336,7 +354,7 @@ ionViewDidLoad()
     }
     doRefresh(ev)
     {
-      this.alldata=[]
+      this.alldata = [];
 
       //ayaaaaa
       this.maindata = [];
@@ -369,7 +387,10 @@ ionViewDidLoad()
         path = this.file.documentsDirectory;
       } else {
         path = this.file.dataDirectory;
+        // path = this.file.externalApplicationStorageDirectory
       }
+
+      console.log("path***** "+path);
   
       const fileTransfer = this.transfer.create();
   
@@ -377,6 +398,9 @@ ionViewDidLoad()
       fileTransfer.download(pdf_file?pdf_file:"",path + 'CarFeatures.pdf').then(entry => {
         
         let url = entry.toURL();
+
+        console.log("url***** "+url);
+
   
         console.log(url);
         // this.document.viewDocument(url, 'application/pdf',{});

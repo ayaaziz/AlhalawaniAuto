@@ -30,12 +30,12 @@
     "@ionic-native/device": "^4.15.0",
     "@ionic-native/diagnostic": "^4.15.0",
     "@ionic-native/document-viewer": "^4.0.0",
-    "@ionic-native/file": "^4.15.0",
+    "@ionic-native/file": "^4.0.0",
     "@ionic-native/file-chooser": "^4.7.0",
     "@ionic-native/file-opener": "^4.0.0",
     "@ionic-native/file-path": "^4.7.0",
     "@ionic-native/file-picker": "^4.15.0",
-    "@ionic-native/file-transfer": "^4.7.0",
+    "@ionic-native/file-transfer": "^4.0.0",
     "@ionic-native/geolocation": "^4.7.0",
     "@ionic-native/google-maps": "^4.7.0",
     "@ionic-native/in-app-browser": "^4.0.0",
@@ -116,7 +116,6 @@
       "cordova-plugin-device": {},
       "cordova-plugin-apprate": {},
       "cordova-plugin-filechooser": {},
-      "cordova-plugin-file-transfer": {},
       "mx.ferreyra.callnumber": {},
       "cordova-plugin-whitelist": {},
       "cordova-plugin-splashscreen": {},
@@ -149,7 +148,8 @@
       "cordova.plugins.diagnostic": {
         "ANDROID_SUPPORT_VERSION": "28.+"
       },
-      "call-number": {}
+      "call-number": {},
+      "cordova-plugin-file-transfer": {}
     },
     "platforms": [
       "android"

@@ -368,7 +368,7 @@ lastImage: string = null;
   sendMessage()
   {    
 
-    if(this.data.message == "")  
+    if(this.data.message.trim() == "" ||  !this.data.message.trim())  
       {}
 else
 {

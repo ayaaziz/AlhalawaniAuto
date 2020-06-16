@@ -597,6 +597,7 @@ this.eltzam.setValue(0)
 this.monthlypaid.setValue(0)
 this.hide2=true
 this.isenabled=true
+this.salary.setValue(0);
 
   }
   presentToast(){

@@ -226,6 +226,15 @@ else{
   {
     this.data.reset();
     this.filename=""
+    this.name.setValue("");
+    this.phone.setValue("");
+    this.email.setValue("");
+    this.address.setValue("");
+    this.experience.setValue("");
+    this.cv.setValue("");
+    this.qualification.setValue("");
+    this.skills.setValue("");
+    this.remarks.setValue("");
   }
   carrierSuccessCallback(data)
   {

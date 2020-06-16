@@ -64,6 +64,8 @@ accestoken:any
    else if (data.status==false)
    {
      this.presentoast()
+     this.phone.setValue("");
+     this.car_number.setValue("");
    }
 else{
   this.alldata=data
@@ -80,23 +82,25 @@ this.presentToast()
     let car=this.car_number.value + ""
     if(this.phone.value=="" || this.car_number.value==""  )
     {
-this.presentConfirm4()
-if(this.phone.value=="")
-{
-  this.phonee='true'
-}
-if(this.car_number.value=="")
-{
-  this.number='true'
-}
+      this.presentConfirm4()
+      if(this.phone.value=="")
+      {
+        this.phonee='true'
+      }
+      if(this.car_number.value=="")
+      {
+        this.number='true'
+      }
     }
     else if (!(num.length ==10)  )
     {
+      this.phone.setValue("");
       this.presentConfirm5()
     }
   
     else if (car.length < 7)
     {
+      this.car_number.setValue("");
       this.presentConfirm2()
     }
     else{

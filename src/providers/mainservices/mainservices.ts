@@ -45,9 +45,11 @@ export class MainservicesProvider {
     
      getliscar(access_token,brand_id,brandtype,year,offset,listcarsSuccessCallback,listcarsFailureCallback)
   {
+    
     let loading = this.loadingCtrl.create({
-      spinner: 'bubbles',
+      spinner: '',
     });
+    loading.present();
 
 
    
@@ -71,15 +73,11 @@ export class MainservicesProvider {
     //console.log("params " + serviceUrl)
     this.http.post(serviceUrl, params, { headers: headers }).subscribe(
       data => {
-        loading.present();
-
         let decryptedStores =JSON.parse(this.cent.decrypt(data))     
         listcarsSuccessCallback(decryptedStores)
         loading.dismiss()
       },
       err => {
-        loading.present();
-
         listcarsFailureCallback(err);
         loading.dismiss()
       }
@@ -91,7 +89,11 @@ export class MainservicesProvider {
   getallliscar(access_token,offset,listcarsSuccessCallback,listcarsFailureCallback)
   { 
      
-    
+    let loading = this.loadingCtrl.create({
+      spinner: '',
+    });
+    loading.present();
+
       
       let headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded').set('Authorization', 'Bearer ' + this.cent.appAccess).set('Accept','application/json');;
         
@@ -104,11 +106,15 @@ export class MainservicesProvider {
     //console.log("params " + serviceUrl)
     this.http.get(serviceUrl,  { headers: headers }).subscribe(
       data => {
+        loading.dismiss();
+
         let decryptedStores =JSON.parse(this.cent.decrypt(data))   
   
         listcarsSuccessCallback(decryptedStores)
+        
       },
       err => {
+        loading.dismiss();
 
         listcarsFailureCallback(err);
       }
@@ -124,7 +130,10 @@ export class MainservicesProvider {
   //طلب صيانه من مكاني ( طلب ساطحه 
   sathaorder(access_token,name,phone,brand,car_model,manufact,mid,car_number,date,branch_id,remarks,email,device,sathaorderSuccessCallback,sathaorderFailureCallback) {
     
-       
+    let loading = this.loadingCtrl.create({
+      spinner: '',
+    });
+    loading.present();
      
     
     let headers = new HttpHeaders();
@@ -154,6 +163,7 @@ export class MainservicesProvider {
      .subscribe(
       data => {
 
+        loading.dismiss();
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
             
 
@@ -162,7 +172,7 @@ export class MainservicesProvider {
       },
       err => {
        
-
+        loading.dismiss();
         sathaorderFailureCallback(err)
         
       }
@@ -173,7 +183,10 @@ export class MainservicesProvider {
   //customer maintainence order
   maintainanceorder(access_token,name,phone,brand,car_model,manufact,car_number,receive_place_lat,receive_place_long,deliver_place_lat,deliver_place_long,date,branch_id,remarks,email,device,maintainanceSuccessCallback,maintainanceFailureCallback) {
 
-      
+    let loading = this.loadingCtrl.create({
+      spinner: '',
+    });
+    loading.present();
     
     
     let headers = new HttpHeaders();
@@ -204,15 +217,17 @@ export class MainservicesProvider {
      
      .subscribe(
       data => {
+
+        loading.dismiss();
+
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
-        
 
         maintainanceSuccessCallback(decryptedStores)
        
       },
       err => {
       
-
+        loading.dismiss();
         maintainanceFailureCallback(err)
         
       }
@@ -222,10 +237,11 @@ export class MainservicesProvider {
 
   //طلب تمويل
   financeorder(access_token,device,status,car_id,customer_name,mobile,salary,bank,paid,have,period,remarks,id,email,monthlypaid,eltezam,financeorderSuccessCallback,financeorderFailureCallback) {
+   
     let loading = this.loadingCtrl.create({
-      spinner: 'bubbles',
+      spinner: '',
     });
- 
+    loading.present();
         
    
   
@@ -258,14 +274,11 @@ export class MainservicesProvider {
      .subscribe(
       data => {
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
-        loading.present();
 
         financeorderSuccessCallback(decryptedStores)
         loading.dismiss()
       },
       err => {
-        loading.present();
-
         financeorderFailureCallback(err)
         loading.dismiss()
       }
@@ -276,9 +289,11 @@ export class MainservicesProvider {
 
 //طلب قطع غيار
   sparepartsorder(access_token,name,mobile,car_model,brand_id,area,spare,branch_id,remarkes,sparepartsorderSuccessCallback,sparepartsorderFailureCallback) {
+   
     let loading = this.loadingCtrl.create({
-      spinner: 'bubbles',
+      spinner: '',
     });
+    loading.present();
   
      
      
@@ -306,14 +321,11 @@ export class MainservicesProvider {
      .subscribe(
       data => {
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
-        loading.present();
 
         sparepartsorderSuccessCallback(decryptedStores)
         loading.dismiss()
       },
       err => {
-        loading.present();
-
         sparepartsorderFailureCallback(err)
         loading.dismiss()
       }
@@ -410,10 +422,11 @@ export class MainservicesProvider {
   
 
   branch(maintainance,access_token,branchSuccessCallback,branchFailureCallback) {
-    let loading = this.loadingCtrl.create({
-      spinner: 'bubbles',
     
+    let loading = this.loadingCtrl.create({
+      spinner: '',
     });
+    loading.present();
   
      
      
@@ -431,15 +444,12 @@ export class MainservicesProvider {
      
      .subscribe(
       data => {
-        loading.present();
-
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
        
         branchSuccessCallback(decryptedStores)
         loading.dismiss()
       },
       err => {
-        loading.present();
 
         branchFailureCallback(err)
         loading.dismiss()
@@ -449,9 +459,11 @@ export class MainservicesProvider {
 }
 
  WarningSign(access_token, WarningSignSuccessCallback, WarningSignFailureCallback) {
+ 
   let loading = this.loadingCtrl.create({
-    spinner: 'bubbles',
+    spinner: '',
   });
+  loading.present();
  
        
   
@@ -470,13 +482,11 @@ export class MainservicesProvider {
      .subscribe(
       data => {
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
-        loading.present();
 
         WarningSignSuccessCallback(decryptedStores)
         loading.dismiss()
       },
       err => {
-        loading.present();
 
         WarningSignFailureCallback(err)
         loading.dismiss()
@@ -486,11 +496,11 @@ export class MainservicesProvider {
 }
 
  Advaices(access_token, AdvaicesSuccessCallback, AdvaicesFailureCallback) {
-  let loading = this.loadingCtrl.create({
-    spinner: 'bubbles',
   
- });
-
+  let loading = this.loadingCtrl.create({
+    spinner: '',
+  });
+  loading.present();
   
    
   
@@ -508,13 +518,11 @@ export class MainservicesProvider {
      .subscribe(
       data => {
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
-        loading.present();
 
         AdvaicesSuccessCallback(decryptedStores)
         loading.dismiss()
       },
       err => {
-        loading.present();
 
         AdvaicesFailureCallback(err)
         loading.dismiss()
@@ -526,7 +534,10 @@ export class MainservicesProvider {
 
   CarAdvice(access_token,car_id,CarAdviceSuccessCallback,CarAdviceFailureCallback) {
    
-    
+    let loading = this.loadingCtrl.create({
+      spinner: '',
+    });
+    loading.present();
      
      
     
@@ -545,12 +556,15 @@ export class MainservicesProvider {
      
      .subscribe(
       data => {
+        loading.dismiss();
+
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
 
         CarAdviceSuccessCallback(decryptedStores)
       },
       err => {
 
+        loading.dismiss();
         CarAdviceFailureCallback(err)
       }
     )
@@ -561,7 +575,10 @@ export class MainservicesProvider {
   CarOffer(access_token,offset, CarOfferSuccessCallback, CarOfferFailureCallback) {
    
    
-     
+    let loading = this.loadingCtrl.create({
+      spinner: '',
+    });
+    loading.present();
     
     
     let headers = new HttpHeaders();
@@ -579,12 +596,15 @@ export class MainservicesProvider {
      
      .subscribe(
       data => {
+
+        loading.dismiss();
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
 
         CarOfferSuccessCallback(decryptedStores)
       },
       err => {
 
+        loading.dismiss();
         CarOfferFailureCallback(err)
       }
     )
@@ -595,7 +615,10 @@ export class MainservicesProvider {
 CarOfferbyid(access_token,car_id, CarOfferbyidSuccessCallback, CarOfferbyidFailureCallback) {
  
 
-   
+  let loading = this.loadingCtrl.create({
+    spinner: '',
+  });
+  loading.present();
    
   
   let headers = new HttpHeaders();
@@ -613,6 +636,9 @@ CarOfferbyid(access_token,car_id, CarOfferbyidSuccessCallback, CarOfferbyidFailu
    
    .subscribe(
     data => {
+
+      loading.dismiss();
+
       let decryptedStores =JSON.parse(this.cent.decrypt(data))
      
 
@@ -621,7 +647,7 @@ CarOfferbyid(access_token,car_id, CarOfferbyidSuccessCallback, CarOfferbyidFailu
     },
     err => {
      
-
+      loading.dismiss();
       CarOfferbyidFailureCallback(err)
       
     }
@@ -633,11 +659,11 @@ CarOfferbyid(access_token,car_id, CarOfferbyidSuccessCallback, CarOfferbyidFailu
 
 
 getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCallback) {
+ 
   let loading = this.loadingCtrl.create({
-    spinner: 'bubbles',
+    spinner: '',
   });
-
-   
+  loading.present();
    
   
   let headers = new HttpHeaders();
@@ -656,13 +682,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
    .subscribe(
     data => {
       let decryptedStores =JSON.parse(this.cent.decrypt(data))
-      loading.present();
 
       getCarbyidSuccessCallback(decryptedStores)
       loading.dismiss()
     },
     err => {
-      loading.present();
 
       getCarbyidFailureCallback(err)
       loading.dismiss()
@@ -674,7 +698,10 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
 }
  mainOffer(access_token, mainOfferSuccessCallback, mainOfferFailureCallback) {
   
- 
+  let loading = this.loadingCtrl.create({
+    spinner: '',
+  });
+  loading.present();
    
    
   
@@ -693,6 +720,8 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
      
      .subscribe(
       data => {
+
+        loading.dismiss();
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
        
 
@@ -701,7 +730,7 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
       },
       err => {
       
-
+        loading.dismiss();
         mainOfferFailureCallback(err)
        
       }
@@ -711,9 +740,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
 
 }
   MaintainanceDate(access_token,MaintainanceDateSuccessCallback,MaintainanceDateFailureCallback) {
+    
     let loading = this.loadingCtrl.create({
-      spinner: 'bubbles',
+      spinner: '',
     });
+    loading.present();
    
       
       
@@ -731,14 +762,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
      .subscribe(
       data => {
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
-        loading.present();
 
         MaintainanceDateSuccessCallback(decryptedStores)
         loading.dismiss()
       },
       err => {
-        loading.present();
-
         MaintainanceDateFailureCallback(err)
         loading.dismiss()
       }
@@ -748,10 +776,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
 
   }
   Maintainancedvice(access_token,MaintainancedviceSuccessCallback,MaintainancedviceFailureCallback) {
+   
     let loading = this.loadingCtrl.create({
-      spinner: 'bubbles',
+      spinner: '',
     });
-  
+    loading.present();
       
   
     
@@ -768,13 +797,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
      .subscribe(
       data => {
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
-        loading.present();
 
         MaintainancedviceSuccessCallback(decryptedStores)
         loading.dismiss()
       },
       err => {
-        loading.present();
 
         MaintainancedviceFailureCallback(err)
         loading.dismiss()
@@ -787,10 +814,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
 
 
   contact(access_token,user_msg,user_mail,mobile, contactSuccessCallback, contactFailureCallback) {
+    
     let loading = this.loadingCtrl.create({
-      spinner: 'bubbles',
+      spinner: '',
     });
- 
+    loading.present();
       
      
     
@@ -810,14 +838,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
      .subscribe(
       data => {
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
-        loading.present();
 
         contactSuccessCallback(decryptedStores)
         loading.dismiss()
       },
       err => {
-        loading.present();
-
         contactFailureCallback(err)
         loading.dismiss()
       }
@@ -831,7 +856,10 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
   searchcar(access_token,car_name, searchcarSuccessCallback, searchcarFailureCallback) {
   
   
-      
+    let loading = this.loadingCtrl.create({
+      spinner: '',
+    });
+    loading.present();
      
     
     
@@ -849,13 +877,15 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
      
      .subscribe(
       data => {
+
+        loading.dismiss();
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
       
         searchcarSuccessCallback(decryptedStores)
        
       },
       err => {
-       
+       loading.dismiss();
         searchcarFailureCallback(err)
       
       }
@@ -866,13 +896,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
   }  
 
   carrier(access_token,name,mobile,jop,cv,ext,qualification,skills,remarks, device,carrierSuccessCallback, carrierFailureCallback) {
+   
     let loading = this.loadingCtrl.create({
-      spinner: 'bubbles',
-    }); 
-  
-      
-       
-      loading.present();
+      spinner: '',
+    });
+    loading.present();
 
     let headers = new HttpHeaders();
     let params={
@@ -930,7 +958,10 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
   }
   Notification(access_token, device_id, reg_id,type, NotificationSuccessCallback,   NotificationFailureCallback) {
   
-    
+    let loading = this.loadingCtrl.create({
+      spinner: '',
+    });
+    loading.present();
       
       
     
@@ -949,12 +980,15 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
      
      .subscribe(
       data => {
+
+        loading.dismiss();
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
 
        NotificationSuccessCallback(decryptedStores)
       },
       err => {
 
+        loading.dismiss();
         NotificationFailureCallback(err)
       }
     )
@@ -1000,9 +1034,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
 
 }
   LogIn(access_token, device_id,phone, car_number,LogInSuccessCallback,LogInFailureCallback) {
+  
     let loading = this.loadingCtrl.create({
-      spinner: 'bubbles',
+      spinner: '',
     });
+    loading.present();
   
       
       
@@ -1023,13 +1059,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
      .subscribe(
       data => {
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
-        loading.present();
 
        LogInSuccessCallback(decryptedStores)
        loading.dismiss()
       },
       err => {
-        loading.present();
 
         LogInFailureCallback(err)
         loading.dismiss()
@@ -1041,11 +1075,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
   }
 
   itemcode(access_token, code,itemcodeSuccessCallback,itemcodeFailureCallback) {
+   
     let loading = this.loadingCtrl.create({
-      spinner: 'bubbles',
+      spinner: '',
     });
-  
-      
+    loading.present();
      
     
     let headers = new HttpHeaders();
@@ -1063,13 +1097,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
      .subscribe(
       data => {
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
-        loading.present();
 
         itemcodeSuccessCallback(decryptedStores)
         loading.dismiss()
       },
       err => {
-        loading.present();
 
         itemcodeFailureCallback(err)
         loading.dismiss()
@@ -1083,7 +1115,10 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
 
   shownotification(access_token,device_id,read, count,shownotificationSuccessCallback,shownotificationFailureCallback) {
 
-        
+    let loading = this.loadingCtrl.create({
+      spinner: '',
+    });
+    loading.present();
 
     let headers = new HttpHeaders();
     let params={
@@ -1100,13 +1135,13 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
      
      .subscribe(
       data => {
+        loading.dismiss();
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
         shownotificationSuccessCallback(decryptedStores)
-        // loading.dismiss()
       },
       err => {
+        loading.dismiss();
         shownotificationFailureCallback(err)
-        // loading.dismiss()
       }
     )
   
@@ -1116,10 +1151,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
   
 
   choosebank(access_token,shownotificationSuccessCallback,shownotificationFailureCallback) {
-    let loading = this.loadingCtrl.create({
-      spinner: 'bubbles',
-    });
    
+    let loading = this.loadingCtrl.create({
+      spinner: '',
+    });
+    loading.present();
       
      
     
@@ -1137,13 +1173,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
      .subscribe(
       data => {
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
-        loading.present();
 
         shownotificationSuccessCallback(decryptedStores)
         loading.dismiss()
       },
       err => {
-        loading.present();
 
         shownotificationFailureCallback(err)
         loading.dismiss()
@@ -1156,11 +1190,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
 
 
   financerate(access_token,device,financeSuccessCallback,financeFailureCallback) {
-    let loading = this.loadingCtrl.create({
-      spinner: 'bubbles',
-    });
-  
-      
+   
+    // let loading = this.loadingCtrl.create({
+    //   spinner: 'bubbles',
+    // });
+    // loading.present();
      
     
     let headers = new HttpHeaders();
@@ -1177,16 +1211,14 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
      .subscribe(
       data => {
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
-        loading.present();
 
         financeSuccessCallback(decryptedStores)
-        loading.dismiss()
+        // loading.dismiss()
       },
       err => {
-        loading.present();
 
         financeFailureCallback(err)
-        loading.dismiss()
+        // loading.dismiss()
       }
     )
   
@@ -1313,11 +1345,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
  
 
   changeAllStatusNotification(access_token,device_id,status,changeAllStatusNotificationSuccessCallback,changeAllStatusNotificationFailureCallback) {
+   
     let loading = this.loadingCtrl.create({
-      spinner: 'bubbles',
+      spinner: '',
     });
-  
-      
+    loading.present();
     
     
     let headers = new HttpHeaders();
@@ -1336,13 +1368,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
      .subscribe(
       data => {
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
-        loading.present();
 
         changeAllStatusNotificationSuccessCallback(decryptedStores)
         loading.dismiss()
       },
       err => {
-        loading.present();
 
         changeAllStatusNotificationFailureCallback(err)
         loading.dismiss()
@@ -1354,10 +1384,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
   
 
   changeStatusNotification(access_token,device_id,status,type, changeStatusNotificationSuccessCallback, changeStatusNotificationFailureCallback) {
-    let loading = this.loadingCtrl.create({
-      spinner: 'bubbles',
-    });
   
+    let loading = this.loadingCtrl.create({
+      spinner: '',
+    });
+    loading.present();
       
      
     
@@ -1378,13 +1409,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
      .subscribe(
       data => {
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
-        loading.present();
 
         changeStatusNotificationSuccessCallback(decryptedStores)
         loading.dismiss()
       },
       err => {
-        loading.present();
 
         changeStatusNotificationFailureCallback(err)
         loading.dismiss()
@@ -1398,11 +1427,7 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
 
   chat(access_token,brand_id,model_id,manufacture_id,name,device, chatSuccessCallback, chatFailureCallback) {
   
-      
-      // let loading = this.loadingCtrl.create({
-      // });
-    
-      // loading.present();
+ 
     let headers = new HttpHeaders();
     let params={
       'brand_id':brand_id,
@@ -1432,11 +1457,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
 }
   
   jobs(access_token,jobsSuccessCallback,jobsFailureCallback) {
+  
     let loading = this.loadingCtrl.create({
-      spinner: 'bubbles',
+      spinner: '',
     });
- 
-      
+    loading.present();
    
     
     let headers = new HttpHeaders();
@@ -1452,13 +1477,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
      .subscribe(
       data => {
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
-        loading.present();
 
         jobsSuccessCallback(decryptedStores)
         loading.dismiss()
       },
       err => {
-        loading.present();
 
         jobsFailureCallback(err)
         loading.dismiss()
@@ -1470,7 +1493,10 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
 
   config(access_token,configSuccessCallback,configFailureCallback) {
   
-  
+    let loading = this.loadingCtrl.create({
+      spinner: '',
+    });
+    loading.present();
       
      
     
@@ -1486,6 +1512,8 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
      
      .subscribe(
       data => {
+
+        loading.dismiss();
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
      
 
@@ -1493,7 +1521,7 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
       
       },
       err => {
-       
+       loading.dismiss();
 
         configFailureCallback(err)
         
@@ -1503,11 +1531,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
 }
   
   devicestatus(access_token,device_id , devicestatusSuccessCallback,  devicestatusFailureCallback) {
+    
     let loading = this.loadingCtrl.create({
-      spinner: 'bubbles',
+      spinner: '',
     });
-   
-      
+    loading.present();
      
     
     let headers = new HttpHeaders();
@@ -1526,13 +1554,11 @@ getCarbyid(access_token,car_id, getCarbyidSuccessCallback, getCarbyidFailureCall
      .subscribe(
       data => {
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
-        loading.present();
 
         devicestatusSuccessCallback(decryptedStores)
         loading.dismiss()
       },
       err => {
-        loading.present();
 
         devicestatusFailureCallback(err)
         loading.dismiss()

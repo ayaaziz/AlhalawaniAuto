@@ -108,6 +108,12 @@ export class CarmaintainPage {
     
   }
 
+  //ayaaaaa
+  ionViewWillEnter() {
+    this.isenabled = false;
+  }
+  //////////
+
  
   brandsSuccessCallback(data)
   {
