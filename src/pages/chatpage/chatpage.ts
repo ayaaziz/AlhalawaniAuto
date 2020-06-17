@@ -390,6 +390,10 @@ else
     this.send=Date.now()
   this.msg=" شكرا لاستخدامك خدمة التواصل  تطبيق الحلواني اوتو مواعيد العمل من ٩ صباحا حتي ٩ مساءا سيتم التواصل معك غدا"
   }
+
+  
+  //save chat
+  this.mainservice.chat(this.accestoken,this.markid,this.modlid,this.yearid,this.data.user,this.cent.DeviceId,(data) =>this.chatSuccessCallback(data),(data) =>this.chatFailureCallback(data))
 }
   }
   chatSuccessCallback(data)

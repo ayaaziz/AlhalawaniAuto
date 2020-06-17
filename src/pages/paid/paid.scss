@@ -137,6 +137,13 @@ page-paid{
             margin-right: -5px;
 
         }
+
+        .button2,
+        .button2:focus
+        {
+            background-color: #646363;color:#ffffff ;
+            border: 1px solid rgba(214, 57, 50, 0.38);font-size: 18px 
+        }
     // .toolbar-content   {
     //     background-image: url("../assets/imgs/header.png") !important  ;  
     //      min-width: 100%;
@@ -203,7 +210,8 @@ page-paid{
         border: 1px solid #d63932;
     }
 
-    .button3 {
+    .button3,
+    .button3:focus {
         // margin-right: 39% !important;
         border: 1px solid #d63932;
         background-color: #449802;
@@ -1299,6 +1307,13 @@ page-paid{
 
         ion-item.noPadding {
             padding: 0 !important;
+        }
+
+
+        //ayaaaaa
+        .txtarea {
+            width: calc(100% - 33.33333% - 10px) !important;
+            margin-right: 5px !important;
         }
     }
     

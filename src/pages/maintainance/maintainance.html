@@ -10,10 +10,10 @@
   </ion-header>
   
 
+
   <ion-content padding style="background-color:#fdeeee">
-    <!-- <ion-toolbar  color="light"> -->
+    <ion-toolbar  color="light">
       <ion-segment [(ngModel)]="part">
-      <!-- <ion-segment> -->
         <ion-segment-button  value="time" >
             تحديد موعد للصيانة
           </ion-segment-button>
@@ -21,7 +21,7 @@
           طلب سطحة للصيانة
         </ion-segment-button>
       </ion-segment>
-    <!-- </ion-toolbar > -->
+    </ion-toolbar >
   
     <div [ngSwitch]="part" >
   <div *ngSwitchCase="'order'">
@@ -223,7 +223,7 @@
         <ion-label for="email" class="remark">الملاحظات </ion-label>
       </ion-col>
       <!-- <ion-col col-8> -->
-        <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58);background-color: #ffffff  " >
+        <ion-item class="noPadding txtarea" style="border:1px solid rgba(214, 57, 50, 0.58);background-color: #ffffff;" >
           <ion-textarea text-right rows="8" type="text"  id="email"  name="email" formControlName="remarks">
           </ion-textarea>
         </ion-item>
@@ -476,7 +476,7 @@
             <ion-label for="email" class="remark">الملاحظات </ion-label>
           </ion-col>
           <!-- <ion-col col-8> -->
-            <ion-item class="noPadding" style="border:1px solid rgba(214, 57, 50, 0.58);background-color: #ffffff;margin: 0 7px;" >
+            <ion-item class="noPadding txtarea" style="border:1px solid rgba(214, 57, 50, 0.58);background-color: #ffffff;" >
               <ion-textarea text-right rows="6" type="text"  id="email"  name="email" formControlName="remarks">
               </ion-textarea>
             </ion-item>
