@@ -58,7 +58,7 @@ import { SettingPage } from '../pages/setting/setting';
 import { MaindetailPage } from '../pages/maindetail/maindetail';
 import { LaunchNavigator } from '@ionic-native/launch-navigator';
 import { Camera } from '@ionic-native/camera';
-import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer'
+// import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer'
 
 import { FileOpener } from '@ionic-native/file-opener';
 import { PdfPopupPage } from '../pages/pdf-popup/pdf-popup';
@@ -167,7 +167,7 @@ import { PdfPopupPage } from '../pages/pdf-popup/pdf-popup';
     FileTransfer,
     Transfer,
     Camera,
-    DocumentViewer,
+    // DocumentViewer,
     FileOpener
   ]
 })

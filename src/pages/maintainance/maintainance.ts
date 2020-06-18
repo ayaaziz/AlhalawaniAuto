@@ -144,6 +144,8 @@ accestoken:any
     this.page=this.navParams.get("Page")
    if(this.page=="car")
    {
+
+    console.log("isCaaaaaaarPage")
      
     this.markvalue=this.navParams.get("markname")
    this.modelval=this.navParams.get("modelname")
@@ -158,6 +160,10 @@ accestoken:any
    }
    if(!(this.page == "car"))
 {
+
+  console.log("isNotCaaaaaaarPage")
+
+
     this.storage.get('mark').then(val=>{
       if(!(val==null))
       {
@@ -256,15 +262,25 @@ accestoken:any
    
     let num=this.phone.value + ""
     let car=this.car_number.value + ""
-    this.receive_place_lat =this.lat.Lat;
-    this. receive_place_long=this.lat.Long;
-    this.deliver_place_lat = this.lng.Lat;
-    this. deliver_place_long=this.lng.Long;
+
+    if(this.lat) {
+      this.receive_place_lat =this.lat.Lat;
+      this. receive_place_long=this.lat.Long;
+    }
+
+    if(this.lng) {
+      this.deliver_place_lat = this.lng.Lat;
+      this. deliver_place_long=this.lng.Long;
+    }
+
    
 
     console.log(this.car_model.value,"  ,", this.year.value,",",this.mark.value," , ",this.name.value," , ",this.phone.value," , ", this.name.value ," , ",this.car_number.value," , ",this. receive_place_lat,", ",this.receive_place_long, this. deliver_place_long," , ",this.date.value,", ",this.branch_id)
-    if(this.car_model.value==""||   this.year.value=="" || this.mark.value==""|| this.phone.value=="" ||  this. receive_place_lat ==""||this.receive_place_long=="" || this.deliver_place_lat==""|| this. deliver_place_long=="" || this.date.value=="" || this.date.value==null || this.date.value==undefined||this.branch_id==""||this.branch_name.value=="" ||this.branch_name.value==null || this. receive_place_lat ==null||this.receive_place_long==null || this.deliver_place_lat==null|| this. deliver_place_long==null ||this. receive_place_lat ==""||this.receive_place_long==undefined || this.deliver_place_lat==undefined|| this. deliver_place_long==undefined)
+    if(this.car_model.value==""||   this.year.value=="" || this.mark.value==""|| this.phone.value=="" ||  this. receive_place_lat ==""||this.receive_place_long=="" || this.deliver_place_lat==""|| this.deliver_place_long=="" || this.date.value=="" || this.date.value==null || this.date.value==undefined||this.branch_id==""||this.branch_name.value=="" ||this.branch_name.value==null || this. receive_place_lat ==null||this.receive_place_long==null || this.deliver_place_lat==null|| this. deliver_place_long==null ||this. receive_place_lat ==""||this.receive_place_long==undefined || this.deliver_place_lat==undefined|| this. deliver_place_long==undefined)
     {
+
+       this.presentConfirm()
+
 
 if( this.date.value=="" || this.date.value==null || this.date.value==undefined)
 {
@@ -294,7 +310,6 @@ this.branchh1='true'
  {
 this.phonee1='true'
  }
- this.presentConfirm()
     }
    
     
@@ -996,16 +1011,24 @@ this.presentToast1()
   });
   alert.present();
 }
+
+
 confmsg()
 {
+
+  // if(this.car_model.value==""||   this.year.value=="" || this.mark.value==""|| this.phone.value=="" ||  this. receive_place_lat ==""||this.receive_place_long=="" || this.deliver_place_lat==""|| this. deliver_place_long=="" || this.date.value=="" || this.date.value==null || this.date.value==undefined||this.branch_id==""||this.branch_name.value=="" ||this.branch_name.value==null || this. receive_place_lat ==null||this.receive_place_long==null || this.deliver_place_lat==null|| this. deliver_place_long==null ||this. receive_place_lat ==""||this.receive_place_long==undefined || this.deliver_place_lat==undefined|| this. deliver_place_long==undefined)
+
   if(this.remarks.value==null || this.remarks.value=="")
   {
     
     this.remarks.value==""
-  this.mainservice.maintainanceorder(this.accestoken,this.name.value,this.phone.value,this.mark.value,this.car_model.value,this.year.value,this.car_number.value,this.receive_place_lat,this.receive_place_long,this.deliver_place_lat,this.deliver_place_long,this.date.value,this.branch_id,this.remarks.value,this.email.value,this.cent.DeviceId,(data) => this.maintainanceorderSuccessCallback(data), (data) => this.maintainanceorderFailureCallback(data))
+
+    //edittt
+      this.mainservice.maintainanceorder(this.accestoken,this.name.value,this.phone.value,this.mark.value,this.car_model.value,this.year.value,this.car_number.value,this.receive_place_lat,this.receive_place_long,this.deliver_place_lat,this.deliver_place_long,this.date.value,this.branch_id,this.remarks.value,this.email.value,this.cent.DeviceId,(data) => this.maintainanceorderSuccessCallback(data), (data) => this.maintainanceorderFailureCallback(data))
   }
 else{
-this.mainservice.maintainanceorder(this.accestoken,this.name.value,this.phone.value,this.mark.value,this.car_model.value,this.year.value,this.car_number.value,this.receive_place_lat,this.receive_place_long,this.deliver_place_lat,this.deliver_place_long,this.date.value,this.branch_id,this.remarks.value,this.email.value,this.cent.DeviceId,(data) => this.maintainanceorderSuccessCallback(data), (data) => this.maintainanceorderFailureCallback(data))
+   //edittt
+    this.mainservice.maintainanceorder(this.accestoken,this.name.value,this.phone.value,this.mark.value,this.car_model.value,this.year.value,this.car_number.value,this.receive_place_lat,this.receive_place_long,this.deliver_place_lat,this.deliver_place_long,this.date.value,this.branch_id,this.remarks.value,this.email.value,this.cent.DeviceId,(data) => this.maintainanceorderSuccessCallback(data), (data) => this.maintainanceorderFailureCallback(data))
 
 }
 }
@@ -1043,6 +1066,8 @@ present2()
 }
 confirmorder()
 {
+
+  
   this.check=""
   if(this.remarks.value==null || this.remarks.value=="")
           {
@@ -1051,12 +1076,13 @@ confirmorder()
           }
   if(this.page=="car")
   {
-    
+    //edittt
     this.mainservice.sathaorder(this.accestoken,this.name.value,this.phone.value,this.markid,this.modelid,this.yearid,this.typeid,this.car_number.value,this.date.value,this.branch_id,this.remarks.value,this.email.value,this.cent.DeviceId,(data) => this.sathaorderSuccessCallback(data),(data) => this.sathaorderFailureCallback(data))
 
   }
   else{
-    
+
+    //edittt
     this.mainservice.sathaorder(this.accestoken,this.name.value,this.phone.value,this.mark.value,this.car_model.value,this.year.value,this.mintype.value,this.car_number.value,this.date.value,this.branch_id,this.remarks.value,this.email.value,this.cent.DeviceId,(data) => this.sathaorderSuccessCallback(data),(data) => this.sathaorderFailureCallback(data))
 
   }

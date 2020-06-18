@@ -10,7 +10,7 @@ import { ToastController } from 'ionic-angular/components/toast/toast-controller
 import { Storage } from '@ionic/storage';
 import { LazyLoadImageModule } from 'ng-lazyload-image';
 import { GESTURE_PRIORITY_MENU_SWIPE } from 'ionic-angular/gestures/gesture-controller';
-import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer'
+// import { DocumentViewer, DocumentViewerOptions } from '@ionic-native/document-viewer'
 import { File } from '@ionic-native/file';
 import { FileOpener } from '@ionic-native/file-opener';
 import { FileTransfer } from '@ionic-native/file-transfer';
@@ -63,7 +63,7 @@ accestoken:any
               public navParams: NavParams,
               public ViewCtrl:ViewController,
               public popoverCtrl:PopoverController,
-              private document: DocumentViewer,
+              // private document: DocumentViewer,
               private fileOpener:FileOpener,
               private transfer:FileTransfer,
               private file:File,
@@ -386,8 +386,8 @@ ionViewDidLoad()
       if(this.platform.is('ios')) {
         path = this.file.documentsDirectory;
       } else {
-        path = this.file.dataDirectory;
-        // path = this.file.externalApplicationStorageDirectory
+        // path = this.file.dataDirectory;
+        path = this.file.externalApplicationStorageDirectory
       }
 
       console.log("path***** "+path);

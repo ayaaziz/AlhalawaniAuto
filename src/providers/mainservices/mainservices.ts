@@ -423,10 +423,10 @@ export class MainservicesProvider {
 
   branch(maintainance,access_token,branchSuccessCallback,branchFailureCallback) {
     
-    let loading = this.loadingCtrl.create({
-      spinner: '',
-    });
-    loading.present();
+    // let loading = this.loadingCtrl.create({
+    //   spinner: '',
+    // });
+    // loading.present();
   
      
      
@@ -447,12 +447,12 @@ export class MainservicesProvider {
         let decryptedStores =JSON.parse(this.cent.decrypt(data))
        
         branchSuccessCallback(decryptedStores)
-        loading.dismiss()
+        // loading.dismiss()
       },
       err => {
 
         branchFailureCallback(err)
-        loading.dismiss()
+        // loading.dismiss()
       }
     )
  

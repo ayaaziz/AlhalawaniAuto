@@ -195,8 +195,12 @@ export class ChatPage {
 
     
 
-      this.mainservice.chat(this.accestoken,this.mark.value,this.model.value,this.year.value,this.name.value,this.cent.DeviceId,(data) =>this.chatSuccessCallback(data),(data) =>this.chatFailureCallback(data))
-     
+      // this.mainservice.chat(this.accestoken,this.mark.value,this.model.value,this.year.value,this.name.value,this.cent.DeviceId,(data) =>this.chatSuccessCallback(data),(data) =>this.chatFailureCallback(data))
+      this.isenabled=true
+      this.storage.set('mark',this.mark.value)
+      this.storage.set('model',this.model.value)
+      this.storage.set('year',this.year.value)
+      this.mainservice.branch(0,this.accestoken,(data) => this.branchSuccessCallback(data),(data) => this.branchFailureCallback(data))
     
     }
   }
