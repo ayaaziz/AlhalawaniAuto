@@ -419,10 +419,11 @@ else
     });
     toast.present();
   }
-  handleLogin()
+  handleLogin(ev)
 {
+  console.log("event24*****"+JSON.stringify(ev));
   // this.mainservice.chat(this.accestoken,this.markid,this.modlid,this.yearid,this.user,this.data.deviceid,(data) =>this.chatSuccessCallback(data),(data) =>this.chatFailureCallback(data))
-  if(this.data.message == '')
+  if(this.data.message == '' || this.data.message == ' ' || !this.data.message)
   {}
 else
 {
@@ -715,6 +716,10 @@ openImg(img) {
   let popup = this.popoverCtrl.create(PdfPopupPage,{img:img})
 
   popup.present();
+}
+
+onEnter(ev) {
+  console.log("event24*****"+JSON.stringify(ev));
 }
 
 }

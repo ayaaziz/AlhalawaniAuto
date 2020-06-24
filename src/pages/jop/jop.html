@@ -12,7 +12,7 @@
 
 <ion-content padding style="background-color:#fdeeee;">
 
-  <form [formGroup]="data">
+  <form [formGroup]="data" (ngSubmit)="confirmorder()">
     <ion-row style="background-color:#fdeeee">
       <ion-col col-4>
         <ion-label style="color:#d63932" > الاسم بالكامل</ion-label>
@@ -26,10 +26,11 @@
     </ion-row>
 
 
-    <ion-row *ngIf="(name.hasError('required') && name.touched) || namee=='true'">
+    <!-- <ion-row *ngIf="(name.hasError('required') && name.touched) || namee=='true'"> -->
+    <ion-row *ngIf="(name.hasError('required') && name.touched)">    
       <ion-col col-4></ion-col>
         <ion-col col-8 style="margin-top: -14px;margin-bottom: -11px;">
-        <p > * من فضلك ادخل الاسم</p>
+        <p style="color:#d63932;"> * من فضلك أدخل الاسم</p>
       </ion-col>
     </ion-row>
 
@@ -47,10 +48,11 @@
     </ion-row>
 
 
-    <ion-row *ngIf="(phone.hasError('required') && phone.touched) || phonee=='true'">
+    <!-- <ion-row *ngIf="(phone.hasError('required') && phone.touched) || phonee=='true'"> -->
+    <ion-row *ngIf="(phone.hasError('required') && phone.touched)">
       <ion-col col-4></ion-col>
       <ion-col col-8 style="margin-top: -14px;margin-bottom: -11px;">
-        <p > * ادخل رقم الجوال</p>
+        <p style="color:#d63932;"> * من فضلك أدخل رقم الجوال</p>
       </ion-col>
     </ion-row>
   
@@ -69,10 +71,11 @@
     </ion-row>
                      
  
-    <ion-row *ngIf="(experience.hasError('required') && experience.touched) || exp=='true'">
+    <!-- <ion-row *ngIf="(experience.hasError('required') && experience.touched) || exp=='true'"> -->
+    <ion-row *ngIf="(experience.hasError('required') && experience.touched)">
       <ion-col col-4></ion-col>
       <ion-col col-8 style="margin-top: -14px;margin-bottom: -11px;">
-        <p >* ادخل الوظيفة</p>
+        <p style="color:#d63932;">* من فضلك أدخل الوظيفة</p>
       </ion-col>
     </ion-row>       
     
@@ -88,10 +91,11 @@
       </ion-col>
     </ion-row>
 
-    <ion-row *ngIf="(qualification.hasError('required') && qualification.touched) || qua=='true'">
+    <!-- <ion-row *ngIf="(qualification.hasError('required') && qualification.touched) || qua=='true'"> -->
+    <ion-row *ngIf="(qualification.hasError('required') && qualification.touched)">
       <ion-col col-4></ion-col>
       <ion-col col-8 style="margin-top: -14px;margin-bottom: -11px;"> 
-        <p > * من فضلك ادخل مؤهلاتك</p>
+        <p style="color:#d63932;"> * من فضلك أدخل مؤهلاتك</p>
       </ion-col>
     </ion-row>
 
@@ -108,17 +112,18 @@
     </ion-row>
 
 
-    <ion-row *ngIf="(skills.hasError('required') && skills.touched) || skill=='true'">
+    <!-- <ion-row *ngIf="(skills.hasError('required') && skills.touched) || skill=='true'"> -->
+    <ion-row *ngIf="(skills.hasError('required') && skills.touched)">
       <ion-col col-4></ion-col>
       <ion-col col-8 style="margin-top: -14px;margin-bottom: -11px;"> 
-        <p > * من فضلك ادخل مهاراتك</p>
+        <p style="color:#d63932;"> * من فضلك أدخل مهاراتك</p>
       </ion-col>
     </ion-row>
 
 
     <ion-row style="background-color:#fdeeee">
       <ion-col col-4>
-        <ion-label for="email" class="remark" style="color:#d63932">الملاحظات والخبرات </ion-label>
+        <ion-label for="email" class="remark" style="color:#d63932;white-space: normal;">الملاحظات والخبرات </ion-label>
       </ion-col>
 
       <ion-col col-8>
@@ -142,13 +147,14 @@
     <ion-row>
       <ion-col col-4></ion-col>
       <ion-col col-4 class="colb" style=" text-align: left;">
-        <button ion-button class="buton" (click)="uploadd()"> تحميل الملف</button>
+        <button ion-button class="buton" type="button" (click)="uploadd()"> تحميل الملف</button>
       </ion-col>
       <ion-col col-4></ion-col>
     </ion-row>
   
     <ion-row class="form-group">
-      <button ion-button round outline class="button1" (click)="confirmorder()">
+      <!-- <button ion-button round outline class="button1" (click)="confirmorder()"> -->
+      <button ion-button round outline class="button1" type="submit" [disabled]="!data.valid">
         تاكيد الطلب
       </button>
       <button ion-button round outline class="button2" (click)="cancelorder()">

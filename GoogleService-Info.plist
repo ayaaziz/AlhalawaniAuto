@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>958559604712-nqf97asirdlbvcgkgleeamn06ig54prs.apps.googleusercontent.com</string>
+	<string>958559604712-8h8td1hi6hvd8s3mafo2hh2nf5v6lmcp.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.958559604712-nqf97asirdlbvcgkgleeamn06ig54prs</string>
+	<string>com.googleusercontent.apps.958559604712-8h8td1hi6hvd8s3mafo2hh2nf5v6lmcp</string>
 	<key>API_KEY</key>
 	<string>AIzaSyBIPUzqqqcflF93vx2ls8FjAzSd-Rjj3-0</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.ITRoots.AlhalwanyMotors</string>
+	<string>com.AlhalwanyMotors</string>
 	<key>PROJECT_ID</key>
 	<string>alhalwanymotors</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:958559604712:ios:b6e50ccbf39dc14e779e5d</string>
+	<string>1:958559604712:ios:f5ae641747348e5e779e5d</string>
 	<key>DATABASE_URL</key>
 	<string>https://alhalwanymotors.firebaseio.com</string>
 </dict>

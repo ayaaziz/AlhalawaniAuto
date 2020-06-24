@@ -61,7 +61,7 @@ export class WarningPage {
   onScrShotSuccess(data) {
    
       if (this.plt.is('ios')) {
-        let appurl="https://itunes.apple.com/us/app/%D8%A7%D9%84%D8%B6%D8%AD%D9%8A%D8%A7%D9%86-%D9%84%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA/id1421240637?ls=1&mt=8";
+        let appurl="https://apps.apple.com/us/app/%D8%A7%D9%84%D8%AD%D9%84%D9%88%D8%A7%D9%86%D9%8A-%D8%A7%D9%88%D8%AA%D9%88/id1516572071";
 
         //For iOS
         this.socialSharing.share(" للمزيد حول العلامات التحذيريه حمل التطبيق الآن", null,'file://' + data.filePath, appurl)

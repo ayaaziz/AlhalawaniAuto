@@ -26,6 +26,8 @@ fixedtime:any
 alldata:any=[]
 car_number:AbstractControl
 accestoken:any
+trueFlag:boolean = false;
+
   constructor(public mainservice:MainservicesProvider,public storage:Storage,public toastCtrl:ToastController,public Alert:AlertController,public formBuilder:FormBuilder,public mainsrvice:MainservicesProvider,public cent:CentralProvider,public ViewCtrl:ViewController,public navCtrl: NavController, public navParams: NavParams) {
     this.accestoken= localStorage.getItem('adftrmee')
     this.cent.status=0
@@ -53,16 +55,23 @@ accestoken:any
   LogInSuccessCallback(data)
   {
     
+    this.table=false
+    this.trueFlag = true;
+
     console.log("lllllllllllllll"+JSON.stringify(this.alldata))
     this.storage.set("phone",this.phone.value)
     this.storage.set("number",this.car_number.value)
 
     if(data.length==0)
     {
+      this.table=true
+      this.trueFlag = false;
  this.presentoast1()
     }
    else if (data.status==false)
    {
+    this.table=true
+    this.trueFlag = false;
      this.presentoast()
      this.phone.setValue("");
      this.car_number.setValue("");
@@ -73,15 +82,19 @@ else{
   }
   LogInFailuerCallback(data)
   {
+    this.table=true
+    this.trueFlag = false;
 this.presentToast()
   }
   confirm()
   {
 
+
     let num=this.phone.value + ""
     let car=this.car_number.value + ""
     if(this.phone.value=="" || this.car_number.value==""  )
     {
+      this.trueFlag = false;
       this.presentConfirm4()
       if(this.phone.value=="")
       {
@@ -94,17 +107,18 @@ this.presentToast()
     }
     else if (!(num.length ==10)  )
     {
+      this.trueFlag = false;
       this.phone.setValue("");
       this.presentConfirm5()
     }
   
     else if (car.length < 7)
     {
+      this.trueFlag = false;
       this.car_number.setValue("");
       this.presentConfirm2()
     }
     else{
-    this.table=false
    
     this.mainsrvice.LogIn(this.accestoken,this.cent.DeviceId,this.phone.value,this.car_number.value,(data)=>this.LogInSuccessCallback(data),(data)=> this.LogInFailuerCallback(data))
     }
@@ -136,6 +150,7 @@ this.presentToast()
   deldata()
   {
    this.table=true
+   this.trueFlag = false;
   }
   presentConfirm4() {
     let alert = this.toastCtrl.create({

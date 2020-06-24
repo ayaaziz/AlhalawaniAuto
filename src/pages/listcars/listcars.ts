@@ -60,7 +60,7 @@ show:any
   {
     if (this.plt.is('ios')) {
     console.log(name,price,img)
-    this.social.share(name , price , img ,"https://itunes.apple.com/us/app/%D8%A7%D9%84%D8%B6%D8%AD%D9%8A%D8%A7%D9%86-%D9%84%D9%84%D8%B3%D9%8A%D8%A7%D8%B1%D8%A7%D8%AA/id1421240637?ls=1&mt=8").then(() => {
+    this.social.share(name , price , img ,"https://apps.apple.com/us/app/%D8%A7%D9%84%D8%AD%D9%84%D9%88%D8%A7%D9%86%D9%8A-%D8%A7%D9%88%D8%AA%D9%88/id1516572071").then(() => {
       console.log("success")
     }).catch(() => {
       console.log("not available")

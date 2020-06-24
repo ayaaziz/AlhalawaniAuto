@@ -9,7 +9,7 @@ ion-segment {
 }
 
 ion-navbar.toolbar.toolbar-ios.statusbar-padding {
-  padding: 20px 0 0 0 !important;
+  // padding: 20px 0 0 0 !important;
 }
 
 .alert-button-group {
@@ -23,21 +23,21 @@ ion-navbar.toolbar.toolbar-ios.statusbar-padding {
 ion-segment {
   border: 0px solid #d63932 !important;
 }
-.segment-ios .segment-button {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  width: 0;
-  height: 3.2rem;
-  border-width: 1px;
-  border-style: solid;
-   border-color: #d63932;
-  font-size: 1.3rem;
-  line-height: 3rem;
-  color: #488aff;
-  background-color: transparent;
-}
+// .segment-ios .segment-button {
+//   -webkit-box-flex: 1;
+//   -webkit-flex: 1;
+//   -ms-flex: 1;
+//   flex: 1;
+//   width: 0;
+//   height: 3.2rem;
+//   border-width: 1px;
+//   border-style: solid;
+//    border-color: #d63932;
+//   font-size: 1.3rem;
+//   line-height: 3rem;
+//   color: #488aff;
+//   background-color: transparent;
+// }
 .tabs-md-danger .tab-button[aria-selected=true] {
   color: #fff;
   background-color: rgba(165, 28, 28, 0.6196078431372549) !important;
@@ -64,7 +64,6 @@ ion-segment {
   border-color: #d63932;
   opacity: 1;
   color:#fdeeee;
-  ;
   background-color: #d63932;
 }
 .segment-md .segment-button {

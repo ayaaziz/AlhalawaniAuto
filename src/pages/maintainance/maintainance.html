@@ -12,7 +12,7 @@
 
 
   <ion-content padding style="background-color:#fdeeee">
-    <ion-toolbar  color="light">
+    <!-- <ion-toolbar  color="light"> -->
       <ion-segment [(ngModel)]="part">
         <ion-segment-button  value="time" >
             تحديد موعد للصيانة
@@ -21,9 +21,9 @@
           طلب سطحة للصيانة
         </ion-segment-button>
       </ion-segment>
-    </ion-toolbar >
+    <!-- </ion-toolbar > -->
   
-    <div [ngSwitch]="part" >
+    <div [ngSwitch]="part" class="data-panel">
   <div *ngSwitchCase="'order'">
   <form [formGroup]="data"  style="  margin-top: 20px;">
    

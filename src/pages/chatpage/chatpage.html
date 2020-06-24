@@ -143,7 +143,7 @@
           </ion-col>
           <ion-col col-8 >
             <ion-item class="noPadding">
-              <ion-input  type="text" placeholder=" نص الرساله " [(ngModel)]="data.message"  (keyup.enter)="handleLogin()" name="message" style="text-align: right"></ion-input>
+              <ion-input  type="text" placeholder=" نص الرساله " [(ngModel)]="data.message"  (keyup.enter)="sendMessage()" name="message" style="text-align: right"></ion-input>
             </ion-item>
           </ion-col>
           <ion-col col-2 >
@@ -155,15 +155,17 @@
             <ion-icon (click)="getimg()"  name="camera" style="text-align: right"></ion-icon>
           </ion-col>
   
-        <ion-col col-8 >
-          <ion-item class="noPadding">
-            <ion-input  type="text" placeholder=" نص الرساله "  [(ngModel)]="data.message"   name="message" style="text-align: right"></ion-input>
-          </ion-item>
-  
-        </ion-col>
-        <ion-col col-2 style="margin:left">
-            <ion-icon name="paper-plane" (click)="sendMessage()"  ></ion-icon>
+        <!-- <form (ngSubmit)="sendMessage()"> -->
+          <ion-col col-8 >
+            <ion-item class="noPadding">
+              <ion-input  type="text" placeholder=" نص الرسالة "  [(ngModel)]="data.message" (keyup.enter)="sendMessage()" name="message" style="text-align: right"></ion-input>
+            </ion-item>
           </ion-col>
+          <ion-col col-2 style="margin:left">
+            <ion-icon name="paper-plane" (click)="sendMessage()"  ></ion-icon>
+            <!-- <button ion-button type="submit" icon-only><ion-icon name="paper-plane"></ion-icon></button>  -->
+          </ion-col>
+        <!-- </form>           -->
   
       </ion-row>
       </ion-grid>

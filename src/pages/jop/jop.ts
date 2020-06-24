@@ -70,13 +70,14 @@ export class JopPage {
     this.data = this.formBuilder.group({
       name: ['',Validators.required],
       phone: ['',Validators.required,],
-      email: ['',Validators.required],
-      address: ['',Validators.required,],
+      // email: ['',Validators.required],
+      // address: ['',Validators.required,],
       experience: ['',Validators.required,],
-     cv: ['',Validators.required,],
+    //  cv: ['',Validators.required,],
      qualification:['',Validators.required,],
      skills:['',Validators.required,],
-     remarks:['',Validators.required,],
+    //  remarks:['',Validators.required,],
+     remarks:[''],
 
     });
     this.name=this.data.controls['name'];
@@ -84,7 +85,7 @@ export class JopPage {
     this.email=this.data.controls['email'];
     this.address=this.data.controls['address'];
     this.experience=this.data.controls['experience'];
-    this.cv=this.data.controls['cv'];
+    // this.cv=this.data.controls['cv'];
     this.qualification=this.data.controls['qualification']
     this.skills=this.data.controls['skills']
     this.remarks=this.data.controls['remarks']
@@ -102,6 +103,9 @@ jobsfail(data)
 
   confirmorder()
   { 
+
+    if(this.fileExt) {
+
     let num=this.phone.value + ""
 
       if(this.name.value=="" || this.phone.value=="" || this.experience.value=="" || this.skills.value==""|| this.qualification.value=="" )
@@ -169,6 +173,9 @@ else{
 
 } 
 
+    } else {
+      this.presentToastCv()
+    }
  
 
   }
@@ -259,6 +266,16 @@ else{
         });
         toast.present();
       }
+
+
+      presentToastCv() {
+        let toast = this.toastCtrl.create({
+          message: 'من فضلك أدخل ملف السيرة الذاتية',
+          duration: 4000,
+          position: 'bottom'
+        });
+        toast.present();
+      }
   carrierFailureCallback(data)
   {
 this.presentToast1()
@@ -332,7 +349,7 @@ this.presentToast1()
    this.base64.encodeFile(this.nativepath).then((base64File: string) => {
     this.cvdata=base64File
     console.log(this.cvdata)
-    this. filename=this.nativepath.substr(this.nativepath.lastIndexOf('/') + 1)
+    this.filename=this.nativepath.substr(this.nativepath.lastIndexOf('/') + 1)
          this. fileExt = this.filename.split('.').pop();
   }, (err) => {
     console.log("base"+err);
