@@ -496,25 +496,25 @@ notification()
     });
     toast.present();
   }
-  openSnapchat()
-  {
+  openSnapchat() {
     
    this.inap.create('https://www.snapchat.com/add/alhalawaniauto', '_system', 'location=yes');
-   this.menue.close()
-
+   this.menue.close();
   }
-  openinsta()
-  {
-   
+
+  openinsta() {
    this.inap.create('http://www.instagram.com/alhalawaniauto/', '_system', 'location=yes');
-   this.menue.close()
+   this.menue.close();
 
   }
-  openfacebook()
-  {
-   
-   this.inap.create('https://www.facebook.com/alhalawaniauto', '_system', 'location=yes');
-   this.menue.close()
 
+  openfacebook() { 
+   this.inap.create('https://www.facebook.com/alhalawaniauto', '_system', 'location=yes');
+   this.menue.close();
+  }
+
+  openWhatsapp() {
+    this.inap.create('https://wa.me/966551493210', '_system', 'location=yes');
+    this.menue.close();
   }
   }

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, LoadingController } from 'ionic-angular';
 import { ViewController } from 'ionic-angular/navigation/view-controller';
-import {Validators, FormBuilder, FormGroup ,AbstractControl} from '@angular/forms';
+import {Validators, FormBuilder, FormGroup ,AbstractControl, FormControl} from '@angular/forms';
 import { MainservicesProvider } from '../../providers/mainservices/mainservices';
 import { CentralProvider } from '../../providers/central/central';
 import { ToastController } from 'ionic-angular/components/toast/toast-controller';
@@ -36,177 +36,232 @@ export class JopPage {
   url:any
     data:FormGroup
     fixedtime:any
-    name:AbstractControl
-    email:AbstractControl
-    phone:AbstractControl
-    address:AbstractControl
-    skills:AbstractControl
-    qualification:AbstractControl
-    experience:AbstractControl
-    cv:AbstractControl
-    remarks:AbstractControl
+    name:""
+    email:""
+    phone:""
+    address:""
+    skills:""
+    qualification:""
+    experience:""
+    cv:""
+    remarks:""
     alldata:any=[]
     nativepath: string;
     cvdata:any
     fileExt:any
     accestoken:any
+
+    jobForm:FormGroup;
+
   constructor(public loadingCtrl:LoadingController,public filepicker:IOSFilePicker,public base64:Base64,public filepath:FilePath,public storage:Storage,public file:File,public transferob:Transfer,public transfer:FileTransfer,private fileChooser: FileChooser,public toastCtrl:ToastController,public mainservice:MainservicesProvider,public cent:CentralProvider,public formBuilder:FormBuilder,public viewCtrl:ViewController,public navCtrl: NavController, public navParams: NavParams,public plt:Platform) {
     this.accestoken= localStorage.getItem('adftrmee')
     this.cent.status=0
-    this.storage.get('name').then(val=>{
-      if(!(val==null))
-      {
-        this.name.setValue(val)
-      }
-    })
+    // this.storage.get('name').then(val=>{
+      
+    //   if(val) {
+    //     this.name = val;
+    //   } else {
+    //     this.name = "";
+    //   }
+    // })
 
-    this.storage.get('phone').then(val=>{
-      if(!(val==null))
-      {
-        this.phone.setValue(val)
-      }
-    })
+    // this.storage.get('phone').then(val=>{
+    //   if(val) {
+    //     this.phone = val;
+    //   } else {
+    //     this.phone = "";
+    //   }
+    // })
     this.mainservice.jobs(this.accestoken,(data)=>this.jobsSuccess(data),(data)=>this.jobsfail(data))
-    this.data = this.formBuilder.group({
-      name: ['',Validators.required],
-      phone: ['',Validators.required,],
-      // email: ['',Validators.required],
-      // address: ['',Validators.required,],
-      experience: ['',Validators.required,],
-    //  cv: ['',Validators.required,],
-     qualification:['',Validators.required,],
-     skills:['',Validators.required,],
-    //  remarks:['',Validators.required,],
-     remarks:[''],
-
-    });
-    this.name=this.data.controls['name'];
-    this.phone=this.data.controls['phone'];
-    this.email=this.data.controls['email'];
-    this.address=this.data.controls['address'];
-    this.experience=this.data.controls['experience'];
-    // this.cv=this.data.controls['cv'];
-    this.qualification=this.data.controls['qualification']
-    this.skills=this.data.controls['skills']
-    this.remarks=this.data.controls['remarks']
-// this.getcv()
-
-  }
-
-jobsSuccess(data)
-{
-  this.alldata=data
-}
-jobsfail(data)
-{
-}
-
-  confirmorder()
-  { 
-
-    if(this.fileExt) {
-
-    let num=this.phone.value + ""
-
-      if(this.name.value=="" || this.phone.value=="" || this.experience.value=="" || this.skills.value==""|| this.qualification.value=="" )
-{
-  let toast = this.toastCtrl.create({
-    message: ' من فضلك ادخل البيانات كامله',
-    duration: 4000,
-    position: 'bottom'
-  });
-  toast.present();
-  if(this.name.value=="")
-  {
-   
-    this.namee='true'
-  }
-  if(this.phone.value=="")
-  {
-    this.phonee='true'
-  }
- 
-  if(this.experience.value=="")
-  {
-    this.exp='true'
-  }
-  if(this.skills.value=="")
-  {
-    this.skill='true'
-  }
-  if(this.qualification.value=="")
-  {
-    this.qua='true'
-  }
-
-
-} 
-
-  else if (!(num.length ==10)  )
-  {
-this.presentConfirm5()
-  }
-
-else{
+    
  
 
- 
-if(this.fileExt==undefined && this.cvdata==undefined)
-{
-  this.cvdata=null
-  this.fileExt=null
-  this.mainservice.carrier(this.accestoken,this.name.value,this.phone.value,this.experience.value,this.cvdata,this.fileExt,this.qualification.value,this.skills.value,this.remarks.value,this.cent.DeviceId,(data)=>this.success(data),(data)=>this.fail(data))
 
+
+    // this.data = this.formBuilder.group({
+    //   name: ['',Validators.required],
+    //   phone: ['',Validators.required],
+    //   // email: ['',Validators.required],
+    //   // address: ['',Validators.required,],
+    //   experience: ['',Validators.required],
+    // //  cv: ['',Validators.required,],
+    //  qualification:['',Validators.required],
+    //  skills:['',Validators.required],
+    // //  remarks:['',Validators.required,],
+    //  remarks:[''],
+    // });
+    // this.name=this.data.controls['name'];
+    // this.phone=this.data.controls['phone'];
+    // this.email=this.data.controls['email'];
+    // this.address=this.data.controls['address'];
+    // this.experience=this.data.controls['experience'];
+    // // this.cv=this.data.controls['cv'];
+    // this.qualification=this.data.controls['qualification']
+    // this.skills=this.data.controls['skills']
+    // this.remarks=this.data.controls['remarks']
+
+
+    this.initializeForm();
+
+
+  }
+
+  initializeForm() {
+    this.jobForm = new FormGroup({
+      'userName': new FormControl('',Validators.required),
+      'phone': new FormControl('',Validators.required),
+      'experience': new FormControl('',Validators.required),
+      'qualification': new FormControl('',Validators.required),
+      'skills': new FormControl('',Validators.required),
+      'remarks': new FormControl(''),
+    })
+  }
+
+jobsSuccess(data) {
+  this.alldata = data;
 }
 
-else{
-  if (this.fileExt=='pdf' || this.fileExt=='docx'||this.fileExt =='doc' ){
-    this.mainservice.carrier(this.accestoken,this.name.value,this.phone.value,this.experience.value,this.cvdata,this.fileExt,this.qualification.value,this.skills.value,this.remarks.value,this.cent.DeviceId,(data)=>this.success(data),(data)=>this.fail(data))
-
-    }
-    else{
-      this.presentToast2()
-
-    }
+jobsfail(data) {
 }
 
 
-} 
+submitForm() {
 
+  let val = this.jobForm.value;
+  console.log("form values: "+JSON.stringify(val));
+
+  if(!val.userName || !val.phone || !val.experience || !val.qualification || !val.skills) {
+    this.presentUnValid();
+    return;
+  }
+
+  if (val.phone.length != 10) {
+    this.presentConfirm5();
+    return;
+  }
+
+  if(this.fileExt) {
+
+    if (this.fileExt=='pdf' || this.fileExt=='docx'||this.fileExt =='doc' ){
+      this.mainservice.carrier(this.accestoken,val.userName,val.phone,val.experience,this.cvdata,this.fileExt,val.qualification,val.skills,val.remarks,this.cent.DeviceId,(data)=>this.success(data),(data)=>this.fail(data));
     } else {
-      this.presentToastCv()
+      this.presentToast2();
     }
- 
+  } else {
+    this.presentToastCv();
+  }
 
-  }
- 
-  deljop()
-  {
-    this.exp='false'
+  // } else {
+  //   this.presentUnValid();
+  // }
+}
 
-  }
-  delname()
-  {
-    this.namee='false'
-  }
-  delqua()
-  {
-    this.qua='false'
-  }
-  delskill()
-  {
-    this.skill='false'
-  }
-  delexp()
-  {
-    this.exp='false'
-  }
-  
-  delphone()
-  {
+//   confirmorder()
+//   { 
+
+//     if(this.fileExt) {
+
+//     let num=this.phone.value + ""
+
+//       if(this.name.value=="" || this.phone.value=="" || this.experience.value=="" || this.skills.value==""|| this.qualification.value=="" )
+// {
+//   let toast = this.toastCtrl.create({
+//     message: ' من فضلك ادخل البيانات كامله',
+//     duration: 4000,
+//     position: 'bottom'
+//   });
+//   toast.present();
+//   if(this.name.value=="")
+//   {
    
-    this.phonee='false'
-  }
+//     this.namee='true'
+//   }
+//   if(this.phone.value=="")
+//   {
+//     this.phonee='true'
+//   }
+ 
+//   if(this.experience.value=="")
+//   {
+//     this.exp='true'
+//   }
+//   if(this.skills.value=="")
+//   {
+//     this.skill='true'
+//   }
+//   if(this.qualification.value=="")
+//   {
+//     this.qua='true'
+//   }
+
+
+// } 
+
+//   else if (!(num.length ==10)  )
+//   {
+// this.presentConfirm5()
+//   }
+
+// else{
+ 
+
+ 
+// if(this.fileExt==undefined && this.cvdata==undefined)
+// {
+//   this.cvdata=null
+//   this.fileExt=null
+//   this.mainservice.carrier(this.accestoken,this.name.value,this.phone.value,this.experience.value,this.cvdata,this.fileExt,this.qualification.value,this.skills.value,this.remarks.value,this.cent.DeviceId,(data)=>this.success(data),(data)=>this.fail(data))
+
+// }
+
+// else{
+//   if (this.fileExt=='pdf' || this.fileExt=='docx'||this.fileExt =='doc' ){
+//     this.mainservice.carrier(this.accestoken,this.name.value,this.phone.value,this.experience.value,this.cvdata,this.fileExt,this.qualification.value,this.skills.value,this.remarks.value,this.cent.DeviceId,(data)=>this.success(data),(data)=>this.fail(data))
+
+//     }
+//     else{
+//       this.presentToast2()
+
+//     }
+// }
+
+
+// } 
+
+//     } else {
+//       this.presentToastCv()
+//     }
+ 
+
+//   }
+ 
+  // deljop()
+  // {
+  //   this.exp='false'
+
+  // }
+  // delname()
+  // {
+  //   this.namee='false'
+  // }
+  // delqua()
+  // {
+  //   this.qua='false'
+  // }
+  // delskill()
+  // {
+  //   this.skill='false'
+  // }
+  // delexp()
+  // {
+  //   this.exp='false'
+  // }
+  
+  // delphone()
+  // {
+   
+  //   this.phonee='false'
+  // }
    presentConfirm5() {
     let alert = this.toastCtrl.create({
       message: 'رقم الجوال غير صحيح. يجب إدخال ١٠ أرقام',
@@ -215,77 +270,77 @@ else{
     });
     alert.present();
   }
-  success(data)
-  {
-   
-    this.data.reset()
-    this.filename=""
-    this.experience.setValue("اختر الوظيفه")
-    this.presentToast()
-    
-    
+
+  success(data) {
+    this.jobForm.reset();
+    this.filename='';
+    this.experience = '';
+    this.presentToast();
   }
-  fail(data)
-  {
+
+
+  fail(data) {
     this.presentToast1()
   }
+
   cancelorder()
   {
     this.data.reset();
     this.filename=""
-    this.name.setValue("");
-    this.phone.setValue("");
-    this.email.setValue("");
-    this.address.setValue("");
-    this.experience.setValue("");
-    this.cv.setValue("");
-    this.qualification.setValue("");
-    this.skills.setValue("");
-    this.remarks.setValue("");
+    this.name = "";
+    this.phone = "";
+    this.email = "";
+    this.address = "";
+    this.experience = "";
+    this.cv = "";
+    this.qualification = "";
+    this.skills = "";
+    this.remarks = "";
   }
-  carrierSuccessCallback(data)
-  {
 
+  carrierSuccessCallback(data) {
     this.data.reset()
     this.presentToast();
   }
  
-  presentToast(){
+  presentToast() {
     let toast = this.toastCtrl.create({
-        message: 'تم ارسال طلبك بنجاح',
-        duration: 4000,
-        position: 'bottom'
-      });
-      toast.present();
-    }
-    presentToast2(){
-      let toast = this.toastCtrl.create({
-          message: 'الملف لابد ان يكون pdf  او docx',
-          duration: 4000,
-          position: 'bottom'
-        });
-        toast.present();
-      }
-
-
-      presentToastCv() {
-        let toast = this.toastCtrl.create({
-          message: 'من فضلك أدخل ملف السيرة الذاتية',
-          duration: 4000,
-          position: 'bottom'
-        });
-        toast.present();
-      }
-  carrierFailureCallback(data)
-  {
-this.presentToast1()
+      message: 'تم ارسال طلبك بنجاح',
+      duration: 4000,
+      position: 'bottom'
+    });
+    toast.present();
   }
+
+  presentToast2() { 
+    let toast = this.toastCtrl.create({
+      message: 'الملف لابد ان يكون pdf  او docx',
+      duration: 4000,
+      position: 'bottom'
+    });
+    toast.present();
+  }
+
+  presentToastCv() {
+    let toast = this.toastCtrl.create({
+      message: 'من فضلك أدخل ملف السيرة الذاتية',
+      duration: 4000,
+      position: 'bottom'
+    });
+    toast.present();
+  }
+
+  carrierFailureCallback(data) {
+    this.presentToast1()
+  }
+
   private createFileName() {
     var d = new Date(),
-      n = d.getTime(),
-      newFileName = n + ".pdf";
+    n = d.getTime(),
+    newFileName = n + ".pdf";
     return newFileName;
   }
+
   public pathForImage(img) {
     if (img === null) {
       return '';
@@ -293,6 +348,7 @@ this.presentToast1()
       return cordova.file.dataDirectory + img;
     }
   }
+
   private copyFileToLocalDir(namePath, name, newFileName) {
     this.file.copyFile(namePath,name,  cordova.file.dataDirectory, newFileName).then(success => {
       console.log("succes copy file " + newFileName)
@@ -300,8 +356,9 @@ this.presentToast1()
       this.filename = newFileName;
 
     }, error => {
-});
+  });
   }
+
   uploadd()
   {
   
@@ -365,6 +422,7 @@ this.presentToast1()
   }
   
 }
+
   presentToast1() {
     let toast = this.toastCtrl.create({
       message: 'تاكد من اتصالك بالخادم',
@@ -374,29 +432,15 @@ this.presentToast1()
   );
     toast.present();
   }
-  authSuccessCallback(data) {
 
-    let date =new Date();
-    let hours=date.getHours();
-    let minutes=date.getMinutes();
-    let seconds=date.getSeconds();
-    let time=((hours*3600) +( minutes*60) +seconds)
-    this.storage.set('time',time)
-    this.storage.set('fixedtime',data.expires_in)
-    this.storage.set('access_token', data.access_token);        
-    this.cent.time=data.expires_in;
-    this.cent.appAccess=data.access_token;
-    console.log(data.access_token)
-    this.mainservice.jobs(this.cent.appAccess,(data)=>this.jobsSuccess(data),(data)=>this.jobsfail(data))
 
-  
+  presentUnValid() {
+    let toast = this.toastCtrl.create({
+          message: ' من فضلك ادخل البيانات كاملة',
+          duration: 4000,
+          position: 'bottom'
+        });
+        toast.present();
   }
-  authFailureCallback(data)
-  {
-    this.presentToast1()
-  }
-  ionViewDidLoad()
-      {
-    
-      }
+
 }

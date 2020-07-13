@@ -93,7 +93,8 @@
             </ion-col>
         </ion-row>
         
-        <div [hidden]="show" (click)="showGroup()">
+        <!-- <div [hidden]="show" (click)="showGroup()"> -->
+        <div *ngIf="price && price > 0" (click)="showGroup()">
             <ion-row style="height: 38px;background-color:#f3bbbb;margin-bottom: 15px;width: 100%;    margin-top: 20px;"> 
           <ion-col col-10>
            <p style="color:#0e0d0d ; font-size: 17px;

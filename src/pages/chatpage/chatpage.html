@@ -90,7 +90,9 @@
   
   <ion-content padding style="background-color:#fdeeee ;  margin-top: 28px; ">
       <ion-list>
-        <ion-item style="text-align: center;background-color: #e4e3d4" *ngIf="hide==false"> <p style="font-weight: 900;color:#666">شكرا لكم علي اختياركم لخدمه الرد المباشر , نرجو منك الانتظار حتي يتسنى لاحد ممثلي خدمة العملاء بالرد عليكم ... </p> </ion-item>
+        <ion-item *ngIf="plat=='android' && hide==false" style="text-align: center;background-color: #e4e3d4"> <p style="font-weight: 900;color:#666">شكرا لكم علي اختياركم لخدمه الرد المباشر , نرجو منك الانتظار حتي يتسنى لاحد ممثلي خدمة العملاء بالرد عليكم ... </p> </ion-item>
+        <ion-item *ngIf="plat=='ios' && hide==false" style="text-align: center;background-color: #e4e3d4;margin-top: 35px;"> <p style="font-weight: 900;color:#666">شكرا لكم علي اختياركم لخدمه الرد المباشر , نرجو منك الانتظار حتي يتسنى لاحد ممثلي خدمة العملاء بالرد عليكم ... </p> </ion-item>
+
         <ion-item *ngFor="let chat of chats" no-lines>
           <div class="chat-status" text-center *ngIf="chat.type==='join'||chat.type==='exit';else message">
             <span class="chat-date">{{chat.sendDate | date:'short'}}</span>
@@ -143,7 +145,7 @@
           </ion-col>
           <ion-col col-8 >
             <ion-item class="noPadding">
-              <ion-input  type="text" placeholder=" نص الرساله " [(ngModel)]="data.message"  (keyup.enter)="sendMessage()" name="message" style="text-align: right"></ion-input>
+              <ion-input  type="text" placeholder=" نص الرسالة " [(ngModel)]="data.message"  (keyup.enter)="sendMessage()" name="message" style="text-align: right"></ion-input>
             </ion-item>
           </ion-col>
           <ion-col col-2 >

@@ -210,15 +210,16 @@ this.presentToast()
   }
   carmaintenanceSuccessCallback(data)
  {
+   this.price = "";
    
    if (data.length==0)
    {
-    this.show=true
+    // this.show=true
     this.detail=true
     this.presentToast1()
    }
    else {
-  this.show=false
+  // this.show=false
   this.detail=true
 
    let all:any=[];

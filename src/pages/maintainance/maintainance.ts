@@ -398,6 +398,7 @@ this.presentToast1()
   }
   optionsFn()
   {
+
     this.markk='false'
     this.markk1='false'
     this.brandtype=this.mark.value
@@ -863,11 +864,14 @@ this.presentToast1()
     }
     optionsFn3()
   {
+
+
 this.yearr='false'
 this.yearr1='false'
   }
   optionsFn2()
   {
+
     this.typee='false'
     this.carmodel='false'
     let namechoosed
@@ -926,19 +930,22 @@ this.mainservice.carmaintenance(this.accestoken,this.mark.value,this.car_model.v
  
   carmaintenanceSuccessCallback(data)
  {
+
+    this.price = "";
    if (data.length==0)
    {
-this.show=true
+// this.show=true
 this.detail=true
    }
    else {
-  this.show=false
+  // this.show=false
   this.detail=true
     this.distance=false
    let all:any=[];
    all=data
 
    all.forEach(element => {
+
      this.price = element.price
     this.htmlContent = element.description;
   
@@ -975,7 +982,7 @@ this.presentToast1()
     this.storage.set('year',this.year.value)
     this.storage.set('number',this.car_number.value)
     this.data.reset()
-    this.show=true
+    // this.show=true
     // this.mark.setValue("اختر الماركه")
     // this.car_model.setValue("اختر الماركه")
     // this.year.setValue("اختر السنة")

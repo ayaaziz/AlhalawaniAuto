@@ -10,7 +10,6 @@
   </ion-header>
   
 
-
   <ion-content padding style="background-color:#fdeeee">
     <!-- <ion-toolbar  color="light"> -->
       <ion-segment [(ngModel)]="part">
@@ -344,7 +343,8 @@
         <p > * قم باختيار نوع الصيانة</p>
       </ion-col>
       </ion-row>
-      <ion-row [hidden]="show" (click)="showGroup()">
+      <!-- <ion-row [hidden]="show" (click)="showGroup()"> -->
+      <ion-row *ngIf="price && price > 0" (click)="showGroup()">
         <ion-col col-4>
          
         </ion-col>
@@ -453,8 +453,8 @@
             <ion-label for="email" class="date">تاريخ الصيانة</ion-label>
           </ion-col>
           <ion-col col-6>
-            <ion-item class="noPadding" style="border-top:1px solid rgba(214, 57, 50, 0.58);border-bottom:1px solid rgba(214, 57, 50, 0.58);border-right:1px solid rgba(214, 57, 50, 0.58); border-left:transparent; height:35px ;background-color: #ffffff  " >
-              <ion-input text-right type="text" [disabled]="true" [(ngModel)]="da" class="icon" id="email"  name="email" formControlName="date">
+            <ion-item class="noPadding" style="border-top:1px solid rgba(214, 57, 50, 0.58);border-bottom:1px solid rgba(214, 57, 50, 0.58);border-right:1px solid rgba(214, 57, 50, 0.58); border-left:transparent; height:35px ;background-color: #ffffff; " >
+              <ion-input text-right type="text" [disabled]="true" [(ngModel)]="da"  class="icon" id="email"  name="email" formControlName="date">
               </ion-input>
             </ion-item>
        

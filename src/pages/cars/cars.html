@@ -17,15 +17,15 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
 </ion-header>
 
-
-
-<ion-content padding style="background-color:#fdeeee " fullscreen #myContent1>
+<!-- fullscreen -->
+<ion-content padding style="background-color:#fdeeee" #myContent1>
     <ion-refresher (ionRefresh)="doRefresh($event)">
         <ion-refresher-content
         pullingIcon="arrow-dropdown"
         refreshingSpinner="circles">
         </ion-refresher-content>
       </ion-refresher>
+
     <!-- <ion-toolbar > -->
         <ion-segment [(ngModel)]="offers">
           <ion-segment-button value="cars">

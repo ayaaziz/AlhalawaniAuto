@@ -55,19 +55,21 @@ page-jop {
         margin-right: -5px;
      }
 
-     .button1
+     .button1,
+     .button1:focus
      {
-        background-color: #449802;
+        background-color: #790c1b;
 
        // margin-right: 15px;
         color:#ffffff;
-         border: 1px solid #d63932;
+         border: 1px solid #790c1b;
      }
-     .button2
+     .button2,
+     .button2:focus
      {
        background-color: #646363;
        color:#ffffff ; 
-       border: 1px solid #d63932
+       border: 1px solid #646363
      }
 //      .valid
 //      {
