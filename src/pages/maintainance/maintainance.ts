@@ -109,6 +109,9 @@ deliver_place_lat:any
   butDisabled2:any=true
   check:any
 accestoken:any
+maintenance_remark;
+order_my_place_remark;
+
   constructor(public plt:Platform,public storage:Storage,public Alert:AlertController,public datePicker:DatePicker,public selector:WheelSelector,public nativeGeocoder: NativeGeocoder,public toastCtrl:ToastController,public navCtrl: NavController,public modalCtrl: ModalController,public formBuilder:FormBuilder, public navParams: NavParams,public cent:CentralProvider,public viewCtrl:ViewController,public mainservice:MainservicesProvider) {
     this.accestoken= localStorage.getItem('adftrmee')
     this.cent.status=0
@@ -223,6 +226,18 @@ accestoken:any
     this.email=this.data.controls['email'];
 
 
+
+    this.mainservice.config(this.accestoken,(data) => this.configSuccess(data), (error) => this.configFailureCallback(error))
+
+  }
+
+
+  configSuccess(data) {
+
+    // this.alldata.push(data)
+    console.log("data 27-7-2020****"+JSON.stringify(data))
+
+    this.order_my_place_remark = data.order_my_place_remark;
   }
  
  
@@ -392,6 +407,8 @@ this.presentToast1()
     for(var i=0;i<this.alldata.length;i++)
     {
      this.prices=this.alldata[i].maintenance_byplace_price
+
+     this.maintenance_remark = this.alldata[i].maintenance_remark;
     }
     this.present()
   }
@@ -996,8 +1013,8 @@ this.presentToast1()
   present()
   {
   let alert = this.Alert.create({
-    title: ' سعر السطحه',
-    message:this.prices +" ر . س ." ,
+    title: ' سعر السطحة',
+    message:this.prices +" ر . س ."+"("+ this.maintenance_remark+")",
     buttons: [
       {
         text: 'الغاء',
