@@ -29,7 +29,11 @@ export class CentralProvider {
   public default='assets/imgs/default.png'
   public BASE_64_PREFIX='base64'
   // public serviceurl:string="http://www.aldahayanautosa.com/aldahyan/api/";
+
+
   public serviceurl:string="http://alhalawani.aldahayanautosa.com/api/";
+
+  
 
 
   
